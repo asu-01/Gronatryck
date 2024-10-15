@@ -17,7 +17,7 @@
    --monochrome-white: #FFFFFF;
 }
 
-/* Förinställningar*/
+/* Förinställningar för hela sidan*/
 * {
     padding: 0;
     margin: 0;
@@ -42,7 +42,7 @@ body {
 /* Inställningar till hero bilden*/
 
 .hero-image {
-    background-image: url(/img/marcus-ganahl-PoSC-L_4ydU-unsplash.jpg);
+    background-image: url(/visuals/img/marcus-ganahl-PoSC-L_4ydU-unsplash.jpg);
     background-size: cover;
     background-position: 10% 100%;
     width: 100%;
@@ -60,6 +60,8 @@ body {
     padding: 8px 20px 8px 20px;
     background-color: var(--primary-new);
 }
+
+/* Nyheter sektionen*/
 
 .background-block {
     background-color: var(--monochrome-medium);
