@@ -116,7 +116,7 @@ for (const product of productArray) {
   for (const value of valueArray) {
     const dataPlaceHolder = document.createElement("p");
     dataPlaceHolder.innerHTML = value;
-    document.getElementById("body").appendChild(dataPlaceHolder);
+    // document.getElementById("body").appendChild(dataPlaceHolder);
   }
 }
 

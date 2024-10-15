@@ -1,0 +1,47 @@
+
+@import "node_modules/bootstrap/scss/functions";
+
+// OBS! Om variabler ska skrivas över skrivs de under här.
+
+@import "node_modules/bootstrap/scss/variables";
+@import "node_modules/bootstrap/scss/maps";
+
+// Om mappar ska skrivas över skrivs de här under.
+
+@import "node_modules/bootstrap/scss/mixins";
+@import "node_modules/bootstrap/scss/root";
+@import "node_modules/bootstrap/scss/utilities";
+@import "node_modules/bootstrap/scss/reboot";
+@import "node_modules/bootstrap/scss/type";
+@import "node_modules/bootstrap/scss/images";
+@import "node_modules/bootstrap/scss/containers";
+@import "node_modules/bootstrap/scss/grid";
+@import "node_modules/bootstrap/scss/helpers";
+@import "node_modules/bootstrap/scss/utilities/api";
+
+// Övriga komponenter som är valfria att ha skrivs här under.
+
+@import "node_modules/bootstrap/scss/nav";
+@import "node_modules/bootstrap/scss/navbar";
+
+// OBS! egen kod skrivs under här.
+
+    /* Färgpalett */
+    $primary-green: #1D4231;
+    $secondary-green: #44725A;
+    $secondary-lightgreen: #B5D4AE;
+    $secondary-brown: #A98968;
+    $secondary-off-white: #FAF7EB;
+    $primary-new: #44725A;
+ 
+    /* Monokrom */
+    $monochrome-darkest: #101E17;
+    $monochrome-dark: #192B22;
+    $monochrome-medium: #374F43;
+    $monochrome-light: #D1DBD6;
+    $monochrome-lightest: #F0F2F1;
+    $monochrome-white: #FFFFFF;
+
+.nav-link {
+   color: $primary-new;
+}

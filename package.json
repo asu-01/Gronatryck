@@ -5,10 +5,10 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "watch-sass": "sass --watch scss/custom.scss:css/custom_bootstrap.css",
+    "watch-sass": "sass --watch custom.scss:css/custom_bootstrap.css",
     "devserver": "live-server",
     "start": "npm-run-all --parallel devserver watch-sass",
-    "compile-sass": "sass scss/main.scss:css/style.comp.css",
+    "compile-sass": "sass main.scss:css/style.comp.css",
     "concat-css": "concat -o css/style.concat.css css/custom_bootstrap.css css/style.comp.css",
     "prefix-css": "postcss --use autoprefixer -b 'last 10 versions' css/style.concat.css -o css/style.prefix.css",
     "compress-css": "sass css/style.prefix.css css/style.css --output-style compressed",
