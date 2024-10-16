@@ -175,6 +175,10 @@ p {
 
 /* Populära produkter */
 
+.card {
+    border: 1px solid var(--monochrome-light);
+}
+
 .card-img-container {
     position: relative;
 }
@@ -187,8 +191,8 @@ p {
 
 .card-img-container .card-heart-icon {
     position: absolute;
-    top: 5px;
-    right: -10px ;
+    top: -2px;
+    left: 140px ;
 }
 
 .card-body .text-sm {
@@ -240,7 +244,7 @@ p {
   display: flex;
   justify-content: space-around;
   height: 50vh;
-  background-color: var(--monochrome-medium);
+  background-color: var(--primary-green);
 }
 .footer-content  {
   display: flex;
@@ -248,9 +252,7 @@ p {
 
 }
 .footer-logo {
-  /* border: 1px solid pink; */
   height: 15vh;
-  margin-right: 2rem;
 }
 
 .footer-icons {
@@ -259,20 +261,20 @@ p {
   height: 5vh;
 }
 
-.footer-icons-medium {
-  height: 4vh;
+.footer-icons-small {
+  height: 3.1vh;
+  margin-right: 0.9rem;
 }
 
-.footer-icons-small {
-  height: 2.5vh;
-  vertical-align: middle;
-  margin: 0.5rem;
+.footer-icons-medium {
+  height: 4vh;
 }
 
 .footer-icons-container {
   display: flex;
   flex-direction: row; 
   gap: 1rem; 
+  margin-top: 1rem;
   justify-content: center;
 }
 
@@ -280,6 +282,7 @@ p {
   color: var(--secondary-off-white);
   display: flex; 
   align-items: center; 
+  margin-bottom: 0.3rem;
 }
 
 .footer-copyright p {
@@ -290,10 +293,34 @@ p {
 }
 
 .footer-content .links {
-  color:var(--secondary-off-white)
+  color:var(--secondary-off-white);
+  margin: 0.3rem;
+  
 }
 .footer-content .links:hover {
-  color:var(--primary-new)
+  color:var(--primary-new);
 }
+
+.block-line {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-wrapper {
+  display: flex;
+  align-items: flex-start;
+  margin-top: 0.5rem;
+}
+
+.address-wrapper img {
+  margin-right: 0.5rem;
+}
+
+.footer-content .footer-links-heading {
+  margin-bottom: 1rem;
+
+}
+
+
 
 
