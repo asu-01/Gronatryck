@@ -38,6 +38,8 @@ body {
   border-radius: 10px;
 }
 
+/* font stilar */
+
 /* Textstyles klasser för rubriker och brödtext*/
 h1 {
   font-size: 3.815rem;
@@ -109,15 +111,21 @@ p {
 }
 
 .left-header {
-  position: absolute;
-  bottom: 50px;
-  left: 10px;
-  width: 30%;
+    position: absolute;
+    bottom: 100px;
+    left: 10px;
+    width: 60%;
+    padding-left: 20px;
 }
 
 .right-header {
-  position: absolute;
-  bottom: 50px;
-  right: 195px;
-  width: 30%;
+    position: absolute;
+    bottom: 100px;
+    left: 10px;
+    width: 60%;
+    padding-left: 20px;
+}
+
+.button-positon {
+    position: absolute;
 }
