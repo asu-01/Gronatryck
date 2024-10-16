@@ -43,9 +43,10 @@ body {
 /* Inställningar till hero bilden*/
 
 .hero-image {
-  background-image: url(/visuals/img/marcus-ganahl-PoSC-L_4ydU-unsplash.jpg);
+  /* background-image: url(/visuals/img/marcus-ganahl-PoSC-L_4ydU-unsplash.jpg); */
+  background-image: url(/visuals/img/grona_tryck_hero.jpg);
   background-size: cover;
-  background-position: 10% 100%;
+  background-position: 10% 40%;
   width: 100%;
   height: 70vh;
 }
