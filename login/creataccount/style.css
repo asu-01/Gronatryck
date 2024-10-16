@@ -1,158 +1,111 @@
 
-/* import the font in there*/
+
+@import url('https://use.typekit.net/zlf3fvp.css');
 
 :root{
     --primary-color: rgba(28, 66, 48, 255);
     --secoundary-color: rgba(250, 247, 235, 255);
-
-}
-
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    /*font family: lägg in fonten;*/
+    
 }
 
 body{
-    /*lägg in background image*/
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
+    background-color: var(--secoundary-color);
+    font-family: "stolzl", sans-serif;
 }
 
-a{
-    text-decoration: none;
-    color: black;
-}
-
-a:hover{
-    text-decoration: underline;
-}
-
-.wrapper{
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-}
-.login-box{
-    background-color: var(--secoundary-color, 0.3); /*byt till rätt färg*/
-    position: relative;
-    width: 450px;
-    backdrop-filter: blur(25px);
-    border: 2px solid;
-    border-radius: 15px;
-    border-color: var(--primary-color); /*byt till rätt färg*/
-    padding: 7.5em 2.5em 4em 2.5em;
-    box-shadow: 0px 0px 10px 2px var(--primary-color);
-}
-
-.input_box{
-    position: relative;
+.container{
     display: flex;
     flex-direction: column;
-    margin: 20px 0;
-}
-.input-field{
-    width: 100%;
-    height: 55px;
-    font-size: 16px;
-    background: transparent;
-    color: var(--primary-color);
-    background-color: white;
-    padding-inline: 20px 50px;
-    border: 2px solid var(--primary-color);
-    border-radius: 20px;
-    outline: none;
-}
-#user{
-    margin-bottom: 10px;
-}
-.label{
-    position: absolute;
-    top: 15px;
-    left: 20px;
-    transition: .2s;
-}
-.input-field:focus ~ .label, 
-.input-field:valid ~ .label{
-    position: absolute;
-    top: -10px;
-    left: 20px;
-    font-size: 16px;
-    background-color: var(--secoundary-color);
-    border-radius: 30px;
-    color: var(--primary-color);
-    padding: 0 10px;
-}
-.icon{
-    position: absolute;
-    top: 18px;
-    right: 20px;
-}
-.remember-fogot{
-    display: flex;
-    justify-content: space-between;
-    font-size: 15px;
-}
-.input-submit{
-    width: 50%;
-    height: 50px;
+    justify-content: center;
+    align-items: flex-start;
     margin-left: 25%;
-    font-size: 16px;
-    font-weight: 500;
-    border-radius: 30px;
-    cursor: pointer;
-    transition: .3s;
-    border-color: var(--primary-color);
+    width: 50%;
+}
+
+.login-header{
+    display: flex;
+    font-size: 3em;
+    margin-top: 13%;
+    margin-left: 25%;
+    color: var(--primary-color);
+}
+
+.priv-comp-btn{
+    display: flex;
+    margin-top: 3%;
+    font-size: 25px;
+}
+
+.btn{
+    padding: 10px 200px;
+    font-size: 1em;
     background-color: var(--secoundary-color);
-}
-.input-submit:hover{
-    background: var(--primary-color);
-    color: var(--secoundary-color);
-}
-.register{
-    text-align: center;
-}
-.register a{
-    font-weight: 500;
-} 
-.priv-comp {
-    position: absolute;
-    top: 0px;
-    left: 50%;
-    transform: translate(-50%);
-    display: flex;   
-    align-items: center;
-    justify-content: center;                
-    justify-content: space-between;  
-}
-.button {
-    flex: 1;                         
-    margin: 0 10px;                
-    padding: 15px;                  
-    font-size: 18px;     
-    width: 200px;                         
-    border-radius: 0 0 30px 30px;           
-    background-color: var(--secoundary-color); 
     border-color: var(--primary-color);
-    color: var(--primary-color);                   
-    cursor: pointer;                
-    transition: background-color 0.3s; 
+    color: var(--primary-color);
+    cursor: pointer;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    transition: background-color 0.3s ease;
 }
-.button:hover {
+
+.btn.active{
     background-color: var(--primary-color);
     color: var(--secoundary-color);
 }
 
-@media only screen and (max-width: 564px){
-    .wrapper{
-        padding: 20px;
-        .login-box{
-            padding: 7.5em 2.5em 4em 1.5em;
-        }
-    }
+
+.btn:hover{
+    background-color: var(--primary-color);
+    color: var(--secoundary-color);
 }
+
+.login-form{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    border-color: var(--primary-color);
+}
+
+.input-field {
+    padding: 10px;
+    font-size: 1em;
+    border: 2px solid var(--primary-color);
+    border-radius: 10px;
+    width: 100%;
+    margin-top: 0.5%;
+}
+
+
+
+.login-form span{
+    font-size: 1em;
+    margin-top: 5%;
+}
+
+.password-container {
+    display: flex; /* Use flexbox for password row */
+    justify-content: space-between; /* Space elements on the row */
+    align-items: baseline; 
+    width: 100%;
+}
+
+.submit{
+    padding: 10px 200px;
+    font-size: 1em;
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    color: var(--secoundary-color);
+    cursor: pointer;
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
+    margin-top: 10%;
+}
+
+.submit:hover{
+    background-color: var(--secoundary-color);
+    color: var(--primary-color);
+}
+.register-link{
+    margin-top: 3%;
+}
+ 
