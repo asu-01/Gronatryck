@@ -62,8 +62,6 @@ h1, h2, h3, h4, h5, h6, p {
  color: var(--secondary-off-white);
 }
 
-
-
 h1 {
   font-size: 3.815rem;
   font-weight: 700;
@@ -130,7 +128,7 @@ p {
 .nav .nav-links {
     display: flex;
     color: var(--primary-new);
-    padding: 18px 0px 0px 0px;
+    padding: 12px 0px 0px 0px;
 }
 
 .nav .nav-links li {
@@ -205,17 +203,17 @@ p {
   margin: 0rem 1.1rem 0rem 1.1rem;
 }
 
-.news-img-container {
+.news-container {
   display: flex;
   gap: 2%;
 }
 
 .news-img {
-    width: 40%;
+    width: 45%;
     flex: 1;
 }
 
-.left-header {
+/* .left-header {
     position: absolute;
     bottom: 80px;
     left: 30px;
@@ -240,13 +238,24 @@ p {
 .arrow-button {
     transform: rotate(180deg);
     margin: 0px 0px 0px 5px;
-}
+} */
 
 
 /* Populära produkter */
 
+.products-section {
+    margin: 3rem 3rem 4rem 3rem;
+}
+
+.card-container {
+    display: flex;
+    gap: 2%;
+
+}
+
 .card {
     border: 1px solid var(--monochrome-light);
+
 }
 
 .card-img-container {
@@ -271,6 +280,10 @@ p {
 
 .card-body .text-xs {
     font-size: 0.75rem;  
+}
+
+.card-dot-container {
+    display:flex;
 }
 
 .dot {
@@ -301,6 +314,11 @@ p {
     background-clip: content-box;
 }
 
+.card-price-container {
+    display: flex;
+    justify-content: space-between;
+}
+
 /* Swirl pattern  */
 
 
@@ -308,20 +326,17 @@ p {
 /* Hållbart */
 
 .card-section {
-    margin-left: 3rem ;
-}
-
-.card-section-info {
-    width: 45%;
+    margin: 0rem 3rem 3rem 3rem;
 }
 
 .card-container {
     display: flex;
+    gap: 2%;
 }
 
 .card-container .card {
+    flex: 1;
     width: 18rem;
-    padding: 0rem 0rem 0rem 0rem;
 }
 
 .card-body-color {
@@ -371,6 +386,22 @@ p {
 
 
 /* Recensioner */
+
+.review-section {
+    margin: 0rem 3rem 3rem 3rem;
+    
+}
+
+.review-card-container {
+    display: flex;
+    gap: 2%;
+}
+
+.review-card {
+    width: 35%;
+    padding: 3rem 1.5rem 3rem 1.5rem;
+    border: solid 3px var(--primary-new);
+}
 
 /* Footer */
 .footer-container {
