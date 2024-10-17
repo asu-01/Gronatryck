@@ -23,61 +23,50 @@
     <!--Header-->
     <header>
       <!--Navigation-->
-       <nav class="navbar navbar-expand-lg">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="#"><img src="visuals/logo/gronatryck_horizontal_green_rgb.svg" width="150px" height="50px"></img></a>
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarNav"
-            aria-controls="navbarNav"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-          <span class="navbar-toggler-icon"></span>
-          </button>
-          
-          <div class="navbar-collapse" id="navbarNav">  
-            <ul class="navbar-nav">
-              <li class="nav-item">
-                <a class="nav-link active-link" aria-current="page" href="#">Hem</a>
+      <nav class="nav">
+        <div class="nav-content">
+          <img class="nav-logo" src="/visuals/logo/gronatryck_horizontal_green_rgb.svg"></img>
+          <div class="nav-link-container">
+            <ul class="nav-links">
+              <li>
+                <a href="#">Hem</a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Sortiment</a>
+              <li>
+                <a href="#">Sortiment <img class="nav-icons" src="visuals/icons/arrow_icon.svg" alt=""></a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Om oss</a>
+              <li>
+                <a href="#">Om oss <img class="nav-icons" src="visuals/icons/arrow_icon.svg" alt=""></a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Stanley Stella</a>
+              <li>
+                <a href="#">Stanley Stella</a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Kontakt</a>
+              <li>
+                <a href="#">Kontakt</a>
               </li>
             </ul>
-            <div class="icon-container d-flex-inline">
-              <a><img src="visuals/icons/search icon.svg" width="50px"></img></a>
-              <a><img src="visuals/icons/person.svg" width="55px"></img></a>
-              <a><img src="visuals/icons/gronatryck_icon_bag.svg" width="15px"></img></a>
-            <div>
           </div>
-        </div> 
+          <div class="nav-icons">
+              <img src="/visuals/icons/search icon.svg">
+              <img src="/visuals/icons/person.svg">
+              <img src="/visuals/icons/gronatryck_icon_bag.svg">
+            </div>
+          </div>
+        </div>
       </nav>
-
+  
       <!--Hero-->
       <div class="hero-image">   
         <div class="container">  
           <div class="row">
             <div class="col"></div>
             <div class="col"></div>
-            <div class="hero-text col">
+            <div class="hero-text-container col">
               <h1>Din miljömedvetna profilbutik</h1>
               <p>Gröna Tryck är din miljömedvetna butik för hållbara profilkläder och reklamprodukter i norra Europa. Vi erbjuder rättvisemärkta och ekologiska produkter med tryck samt miljösmarta marknadsföringslösningar. 
                 Oavsett dina behov, finns vi här för att hjälpa!</p>
               <button class="button-primary round-corner">
                 <p>Utforska nu</p>
-                <img class="arrow" src="visuals/icons/arrow_icon.svg" width="8px">
+                <img class="arrow-button" src="visuals/icons/arrow_icon.svg" width="8px">
               </button>
             </div>
           </div>  
@@ -90,19 +79,17 @@
       <section class="news">
         <h2>Nyheter</h2>
 
-        <div class="d-flex">
-          <div class="img-container flex-fill me-4 ">
-            <img class="round-corner" src="visuals/img/grona_tryck_news_2.jpg" width="700px">
-            <h3 class="left-header">De nya huvtröjorna från Stanley Stella är här</h3>
-            <button class="button-primary round-corner button-position"><p>UPPTÄCK</p><img class="arrow" src="visuals/icons/arrow_icon.svg" width="8px"> </img></button>
-          </div>
-                
-          <div class="img-container flex-fill me-4">
-            <img class="round-corner" src="visuals/img/grona_tryck_news_1.jpg" width="700px">
-            <h3 class="right-header">Hösten är här och vi har fyllt på med nya artiklar</h3>
-            <button class="button-primary round-corner button-position"><p>UPPTÄCK</p><img class="arrow" src="visuals/icons/arrow_icon.svg" width="8px"> </img></button>
-          </div>
+
+        <div class="news-img-container">
+            <img class="news-img round-corner" src="visuals/img/grona_tryck_news_2.jpg">
+            <!-- <h3 class="left-header">De nya huvtröjorna från Stanley Stella är här</h3> -->
+            <!-- <button class="button-primary round-corner button-position"><p>UPPTÄCK</p><img class="arrow-button" src="visuals/icons/arrow_icon.svg" width="8px"> </img></button> -->
+
+            <img class="news-img round-corner" src="visuals/img/grona_tryck_news_1.jpg">
+            <!-- <h3 class="right-header">Hösten är här och vi har fyllt på med nya artiklar</h3> -->
+            <!-- <button class="button-primary round-corner button-position"><p>UPPTÄCK</p><img class="arrow-button" src="visuals/icons/arrow_icon.svg" width="8px"> </img></button> -->
         </div>
+
       </section>
     </div>
     
@@ -239,24 +226,70 @@
 
     
     <!-- Dekorativ linje-->
-     <div class="decor"></div>
+     <div class="decor"><img src="visuals/icons/swirl_hållbart.svg" alt=""></div>
 
     <!-- Hållbart-->
-     <section class="ms-5">
-      <h2 class="text-color-primary">Hållbart</h2>
+     <section class="card-section">
+      <h2 class="text-color-dark-2">Hållbart</h2>
+      <p class="text-color-dark-2 card-section-info">Utöver att våra produkter är ekologiskt framställda, strävar vi efter en hållbar helhet där miljöhänsyn styr hela verksamheten. Vårt mål är att hjälpa kunder och partners att förstå hur okontrollerad bomullsproduktion påverkar människor och natur. Genom beslut med miljöfokus och tredjepartskontroller säkerställer vi att våra produkter är hållbara. Vi lever med denna filosofi i allt vi gör – från att källsortera till att ta cykeln eller tåget till möten, använda gröna servrar och dricka ekologiskt kaffe. Våra noggrant utvalda leverantörer och deras certifikat beskrivs tydligt på varje produktsida.</p>
 
-      <div class="card" style="width: 18rem;">
-        <img src="/visuals/img/marcus-ganahl-PoSC-L_4ydU-unsplash.jpg" class="card-img-top" alt="GOTS-märke fäst på en bild med en skördesmaskin på ett bomullsfält">
-        <div class="card-body">
-          <h5>GOTS</h5>
-          <p class="card-text">Global Organic Textile Standard (GOTS) är en ledande standard för organiska fibrer med ekologiska och sociala krav.</p>
-          <img src="" alt="">
+      <div class="card-container">
+        <div class="card">
+          <img src="/visuals/img/marcus-ganahl-PoSC-L_4ydU-unsplash.jpg" class="card-img-top" alt="GOTS-märke fäst på en bild med en skördesmaskin på ett bomullsfält">
+          <div class="card-body card-body-color">
+            <h5>GOTS</h5>
+            <p class="card-text small">Global Organic Textile Standard (GOTS) är en ledande standard för organiska fibrer med ekologiska och sociala krav.</p>
+            <img class="arrow-button" src="/visuals/icons/arrow_icon.svg" alt="Gå vidare">
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="/visuals/img/marcus-ganahl-PoSC-L_4ydU-unsplash.jpg" class="card-img-top" alt="GOTS-märke fäst på en bild med en skördesmaskin på ett bomullsfält">
+          <div class="card-body card-body-color">
+            <h5>MILJÖ</h5>
+            <p class="card-text small">För att säkerställa miljövänlighet används certifieringar från oberoende organisationer som utför kvalitetskontroller med fokus på miljö, arbetsvillkor och kvalitet.</p>
+            <img class="arrow-button" src="/visuals/icons/arrow_icon.svg" alt="Gå vidare">
+          </div>
+          </div>
+
+        <div class="card">
+          <img src="/visuals/img/marcus-ganahl-PoSC-L_4ydU-unsplash.jpg" class="card-img-top" alt="GOTS-märke fäst på en bild med en skördesmaskin på ett bomullsfält">
+          <div class="card-body card-body-color">
+            <h5>TRYCK</h5>
+            <p class="card-text small">Vi var först i Sverige med att införa ftalatfri screenfärg som standard 2009. Förutom screentryck erbjuder vi brodyr, DTG, DTF, tampotryck och lasergravyr för hårda material.</p>
+            <img class="arrow-button" src="/visuals/icons/arrow_icon.svg" alt="Gå vidare">
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="/visuals/img/marcus-ganahl-PoSC-L_4ydU-unsplash.jpg" class="card-img-top" alt="GOTS-märke fäst på en bild med en skördesmaskin på ett bomullsfält">
+          <div class="card-body card-body-color">
+            <h5>ARBETSVILLKOR</h5>
+            <p class="card-text small">Vi arbetar endast med certifierade kläder som garanterar rättvisa arbetsvillkor, inklusive levnadslön och fackliga rättigheter.</p>
+            <img class="arrow-button" src="/visuals/icons/arrow_icon.svg" alt="Gå vidare">
+          </div>
         </div>
       </div>
 
      </section>
 
     <!-- Vilka är vi?-->
+<section class=" card-section">
+<div class="card-section-container">
+  <div class="card-section-info">
+<h2 class="text-color-dark-2">Vilka är vi?</h2>
+<p class="text-color-dark-2">Här kan ni se vilka vaurmärken vi jobbar med, vilka företag vi samarbetar med och vilka certikfikat vi använder oss utav på gröna tryck. 
+  Vi samarbetar med flera företag och organisationer på olika nivåer men som gemensamt delar våra värderingar. </p>
+</div>
+  <div class="thumbnail-container">
+    <img class="thumbnail-image--large round-corner" src="visuals/img/our_friends_thumbnail_2.webp" alt="">
+   <img class="thumbnail-image round-corner" src="visuals/img/our_friends_thumbnail_2.webp" alt="">
+    <img class="thumbnail-image round-corner" src="visuals/img/our_friends_thumbnail_2.webp" alt="">
+  </div>
+</div>
+<div class="decor"><img src="visuals/icons/swirl_whoarewe.svg" alt=""></div>
+  
+</section>
 
     <!-- Recensioner-->
 

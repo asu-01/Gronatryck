@@ -30,7 +30,7 @@ body {
 
 /* Färg klasser för text */
 .text-color-offwhite {
-  color: var(--secondary-off-white);
+    color: var(--secondary-off-white);
 }
 
 .text-color-primary {
@@ -43,6 +43,10 @@ body {
 
 .text-color-dark {
     color: var(--monochrome-dark)
+}
+
+.text-color-dark-2 {
+  color: var(--primary-green);
 }
 
 
@@ -98,21 +102,81 @@ p {
     text-decoration: underline;
 }
 
+/* Navbar */
+
+.nav {
+    background-color: var(--secondary-off-white);
+}
+
+.nav .nav-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 0rem 4rem 0rem 1.5rem;
+}
+
+/* Logotyp i navbar */
+.nav .nav-logo{
+    margin-left: 2rem;
+    height: 10vh;
+}
+
+.nav .nav-icons img {
+  height: 4vh;
+}
+
+
+.nav .nav-links {
+    display: flex;
+    color: var(--primary-new);
+    padding: 18px 0px 0px 0px;
+}
+
+.nav .nav-links li {
+    padding: 0px 15px 0px 15px;
+    list-style: none;
+}
+
+.nav .nav-links a {
+    color: var(--primary-new);
+    text-decoration: none;
+    font-size: 1.1rem;
+    margin: 16px;
+
+}
+
+.nav .nav-links a:hover {
+    text-decoration: underline;
+}
+
+.nav .nav-links a:active {
+    color: var(--primary-new);
+    text-decoration: underline;
+}
+
 /* Inställningar till hero bilden*/
 
 .hero-image {
   /* background-image: url(/visuals/img/marcus-ganahl-PoSC-L_4ydU-unsplash.jpg); */
-  background-image: url(/visuals/img/grona_tryck_hero.jpg);
+  background-image: url(/visuals/img/gronatryck_hero_2.jpg);
   background-size: cover;
   background-position: 10% 40%;
   width: 100%;
   height: 90vh;
 }
 
-.hero-text {
+.hero-text-container {
+  width: 90vh;
+  position: absolute;
+  top: 50%; 
+  left: 42%;
+  transform: translateY(-40%);
   margin-top: 6rem;
   margin-right: 4rem;
+  /* border: 1px solid pink; */
 }
+
 
 .button-primary {
   display: inline;  
@@ -123,7 +187,7 @@ p {
   text-align: right;
 }
 
-.button-primary p, .arrow {
+.button-primary p, .arrow-button {
     display: inline-block;
     margin: 0;
 }
@@ -138,36 +202,42 @@ p {
 }
 
 .news {
-  margin: 0px 20px;
+  margin: 0rem 1.1rem 0rem 1.1rem;
 }
 
-.img-container {
-  position: relative;
+.news-img-container {
+  display: flex;
+  gap: 2%;
+}
+
+.news-img {
+    width: 40%;
+    flex: 1;
 }
 
 .left-header {
     position: absolute;
-    bottom: 100px;
+    bottom: 80px;
     left: 30px;
-    width: 60%;
+    width: 80%;
     padding-left: 20px;
 }
 
 .right-header {
     position: absolute;
-    bottom: 100px;
+    bottom: 80px;
     left: 30px;
-    width: 60%;
+    width: 80%;
     padding-left: 20px;
 }
 
 .img-container .button-position {
     position: absolute;
     bottom: 30px;
-    right: 180px;
+    right: 100px;
 }
 
-.arrow {
+.arrow-button {
     transform: rotate(180deg);
     margin: 0px 0px 0px 5px;
 }
@@ -231,9 +301,73 @@ p {
     background-clip: content-box;
 }
 
+/* Swirl pattern  */
+
+
+
 /* Hållbart */
 
+.card-section {
+    margin-left: 3rem ;
+}
+
+.card-section-info {
+    width: 45%;
+}
+
+.card-container {
+    display: flex;
+}
+
+.card-container .card {
+    width: 18rem;
+    padding: 0rem 0rem 0rem 0rem;
+}
+
+.card-body-color {
+    background-color: var(--primary-new);
+}
+
 /* Vilka är vi? */
+
+.card-section-container {
+  display: flex;
+  flex-direction: column;
+   align-items: center; 
+  justify-content: center; 
+}
+
+.card-section-info {
+  width: 80%;
+}
+
+.card-section-info p {
+  width: 70%;
+}
+
+
+.thumbnail-container {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 16px; 
+  margin-bottom: 2rem;
+  width: 80%;
+  justify-content: center;
+}
+
+.thumbnail-image {
+  width: 100%;
+  height: 100%;
+  /* object-fit: cover; */
+ }
+
+ .thumbnail-image--large {
+  grid-row: 1 / span 2; 
+  width: 100%;
+  height: 100%;
+  /* object-fit: cover;  */
+ }
 
 
 /* Recensioner */
