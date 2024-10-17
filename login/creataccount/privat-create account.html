@@ -1,15 +1,47 @@
 <!DOCTYPE html>
 <html lang="sv">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="style.css">
-        <title>Create account</title>
-    </head>
-    <body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Skapa konto, Privat</title>
+</head>
+<body>
+     <h1>Välkommen tillbaka!</h1>
 
-    </body>
-    <footer>
+    <div class="container">
+        <div class="priv-comp-btn">
+            <a href="privat-Login.html">
+                <button class="btn" id="privatBtn" onclick="setActive('privat')">Privat</button>
+            </a>
+            <a href="company-login.html">
+                <button class="btn" id="foretagBtn" onclick="setActive('foretag')">Företag</button>
+            </a>
+        </div>
 
-    </footer>
+        <div class="login-form">
+            <span>Namn</span>
+            <input type="name" placeholder="för- och efternamn" class="input-field" required>
+
+            <div class="password-container">
+                <span>Lösenord</span>
+                <div class="forgot">
+                    <span><a href="#" class="register">Glömmt lösenordet?</a></span>
+                </div>
+            </div>
+            <input type="password" placeholder="***********" class="input-field" required>
+
+            <div class="buttons">
+                <button type="submit" class="submit">Logga in</button>
+            </div>
+
+            <div class="register-link">
+                <span>Har du redan ett konto? <a href="privat-Login.html" class="register">Logga in här</a></span>
+            </div>
+
+        </div>
+
+    </div>
+    <script src="account-funktions.js"></script>
+</body>
 </html>
