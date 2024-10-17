@@ -6,10 +6,13 @@ window.onload = function() {
         document.getElementById('privatLoginBtn').classList.add('active');
     } else if (currentPage === 'company-login.html') {
         document.getElementById('foretagLoginBtn').classList.add('active');
-    } else if(currentPage === 'privat-create-account.html') {
+    } else if(currentPage === 'privat-createAccount.html') {
         document.getElementById('privatCreateBtn').classList.add('active');
-    } else if (currentPage === 'company-create-account.html') {
+    } else if (currentPage === 'company-createAccount.html') {
         document.getElementById('foretagCreateBtn').classList.add('active');
     }
 
 };
+
+
+
