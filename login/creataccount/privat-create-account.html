@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Skapa konto, Privat</title>
+</head>
+<body>
+     <h1>Välkommen tillbaka!</h1>
+
+    <div class="container">
+        <div class="priv-comp-btn">
+            <a href="privat-create-account.html">
+                <button class="btn" id="privatCreateBtn" onclick="setActive('privat')">Privat</button>
+            </a>
+            <a href="company-create-account.html">
+                <button class="btn" id="foretagCreateBtn" onclick="setActive('foretag')">Företag</button>
+            </a>
+        </div>
+
+        <div class="login-form">
+            <span>Namn</span>
+            <input type="name" placeholder="för- och efternamn" class="input-field" required>
+
+            <span>Skriv in din e-post</span>
+            <input type="email" placeholder="exampel@gmail.com" class="input-field" required>
+
+            <span>Välj ett lösenord</span>
+            <input type="password" placeholder="***********" class="input-field" required>
+
+            <span>Bekräfta ditt lösenord</span>    
+            <input type="password" placeholder="***********" class="input-field" required>
+
+            <div class="buttons">
+                <button type="submit" class="submit">Skapa konto</button>
+            </div>
+
+            <div class="register-link">
+                <span>Har du redan ett konto? <a href="privat-Login.html" class="register">Logga in här</a></span>
+            </div>
+
+        </div>
+
+    </div>
+    <script src="account-funktions.js"></script>
+</body>
+</html>
