@@ -32,7 +32,7 @@
                 <a href="#">Hem</a>
               </li>
               <li>
-                <a href="#">Sortiment <img class="nav-icons" src="visuals/icons/arrow_icon.svg" alt=""></a>
+                <a href="#" id="dropdownProducts" class=" btn-dropdown-products">Sortiment <img class="nav-icons" src="visuals/icons/arrow_icon.svg" alt=""></a>
               </li>
               <li>
                 <a href="#">Om oss <img class="nav-icons" src="visuals/icons/arrow_icon.svg" alt=""></a>
@@ -44,6 +44,27 @@
                 <a href="#">Kontakt</a>
               </li>
             </menu>
+             <!-- Start -->
+            <div id="dropdownContainer" class="dropdown-products text-color-offwhite">
+              <div class="dropdown-content round-corner">
+                <div class="dropdown-links-one">
+                  <a>Nyheter</a>
+                  <a>Märken A-O</a>
+                  <a>Bästsäljare</a>
+                  <a>Träning</a>
+                  <a>Friluftsliv</a>
+                  <a>Restlager</a>
+                </div>
+                <div class="dropdown-links-two">
+                <a>Kategori</a>
+                <a>Överdelar</a>
+                <a>Underdelar</a>
+                <a>Övrigt</a>
+                <a>Tjänster</a>
+                </div>
+            </div>
+          </div>
+          <!-- slut -->
           </div>
           <div class="nav-icons">
               <img src="/visuals/icons/search icon.svg">
@@ -58,12 +79,12 @@
       <div class="hero-image">   
         <div class="container">  
           <div class="hero-text-container">
-            <h1>Din miljömedvetna profilbutik</h1>
-            <p>Gröna Tryck är din miljömedvetna butik för hållbara profilkläder och reklamprodukter i norra Europa. Vi erbjuder rättvisemärkta och ekologiska produkter med tryck samt miljösmarta marknadsföringslösningar. 
+            <h1 class="text-color-offwhite">Din miljömedvetna profilbutik</h1>
+            <p class="text-color-offwhite">Gröna Tryck är din miljömedvetna butik för hållbara profilkläder och reklamprodukter i norra Europa. Vi erbjuder rättvisemärkta och ekologiska produkter med tryck samt miljösmarta marknadsföringslösningar. 
                 Oavsett dina behov, finns vi här för att hjälpa!</p>
             <button class="button-primary round-corner">
-              <p>Utforska nu</p>
-              <img class="arrow-button" src="visuals/icons/arrow_icon_white.svg">
+              <p class="text-color-offwhite">Utforska nu</p>
+              <img class="arrow arrow-buttons" src="visuals/icons/arrow_icon_white.svg">
             </button>
           </div>
         </div> 
@@ -73,16 +94,22 @@
     <!--Nyheter cards-->
     <div class="background-block">
       <section class="news">
-        <h2>Nyheter</h2>
-
+        <h2 class="text-color-offwhite">Nyheter</h2>
+        
         <div class="news-container">
+          <div class="card-img-container-one">
             <img class="news-img round-corner" src="visuals/img/grona_tryck_news_2.jpg">
-            <!-- <h3 class="left-header">De nya huvtröjorna från Stanley Stella är här</h3> -->
-            <!-- <button class="button-primary round-corner button-position"><p>UPPTÄCK</p><img class="arrow-button" src="visuals/icons/arrow_icon.svg" width="8px"> </img></button> -->
+            <h3 class="text-color-offwhite news-img-header">De nya huvtröjorna från Stanley Stella är här</h3>
+            <button class="button-primary text-color-offwhite round-corner news-button"><p>UPPTÄCK</p><img class="arrow arrow-buttons" src="visuals/icons/arrow_icon_white.svg"> </img></button>
+            <img class="news-icon" src="/visuals/icons/product_news_icon.svg" alt="Klädnyhet!">
+          </div>
 
+          <div class="card-img-container-two">
             <img class="news-img round-corner" src="visuals/img/grona_tryck_news_1.jpg">
-            <!-- <h3 class="right-header">Hösten är här och vi har fyllt på med nya artiklar</h3> -->
-            <!-- <button class="button-primary round-corner button-position"><p>UPPTÄCK</p><img class="arrow-button" src="visuals/icons/arrow_icon.svg" width="8px"> </img></button> -->
+            <h3 class="text-color-offwhite news-img-header">Hösten är här och vi har fyllt på med nya artiklar</h3>
+            <button class="button-primary text-color-offwhite round-corner news-button"><p>UPPTÄCK</p><img class="arrow arrow-buttons" src="visuals/icons/arrow_icon_white.svg"> </img></button>
+            <img class="news-icon" src="/visuals/icons/product_news_icon.svg" alt="Klädnyhet!">
+          </div>
         </div>
       </section>
     </div>
@@ -99,8 +126,8 @@
         <div class="card">
           <div class="card-img-container">
             <img src="/visuals/img/grona_tryck_card_1.jpg" class="card-img-top" alt="En tjej med vit t-shirt">
-            <img class="card-news-icon" src="/visuals/icons/product_news_icon.svg" alt="Nyhet!" width="50px">
-            <button> 
+            <img class="card-news-icon" src="/visuals/icons/product_news_icon.svg" alt="Klädnyhet!">
+            <button type="button"> 
               <span>
                 <svg class="card-heart-icon" xmlns="http://www.w3.org/2000/svg" width="95" viewBox="0 0 400 400">
                   <path d="m212 218.5-52.1-52.1c-19.4-19.4-13.1-44.3.8-59.2 14.5-15.5 39.1-22.5 58.6-6.3 19.1-15.8 43.5-8.5 58 7 13.9 14.9 20.3 39.6 1.4 58.5l-52.1 52.1c-3.8 3.8-9.9 4.3-14.5 0Zm12.4-110.1c-2.9 2.6-7.5 2.4-10.2 0-31.2-26.9-77.6 22.4-47.9 51.6l52.1 52.1c.5.5 1.3.5 1.8 0l52.1-52.1c29.2-28.2-17.8-77.6-47.9-51.6Z"
@@ -129,8 +156,8 @@
         <div class="card">
           <div class="card-img-container">
             <img src="/visuals/img/grona_tryck_card_2.jpg" class="card-img-top" alt="En tjej med vit t-shirt">
-            <img class="card-news-icon" src="/visuals/icons/product_news_icon.svg" alt="Nyhet!" width="50px">
-            <button> 
+            <img class="card-news-icon" src="/visuals/icons/product_news_icon.svg" alt="Klädnyhet!">
+            <button type="button"> 
               <span>
                 <svg class="card-heart-icon" xmlns="http://www.w3.org/2000/svg" width="95" viewBox="0 0 400 400">
                   <path d="m212 218.5-52.1-52.1c-19.4-19.4-13.1-44.3.8-59.2 14.5-15.5 39.1-22.5 58.6-6.3 19.1-15.8 43.5-8.5 58 7 13.9 14.9 20.3 39.6 1.4 58.5l-52.1 52.1c-3.8 3.8-9.9 4.3-14.5 0Zm12.4-110.1c-2.9 2.6-7.5 2.4-10.2 0-31.2-26.9-77.6 22.4-47.9 51.6l52.1 52.1c.5.5 1.3.5 1.8 0l52.1-52.1c29.2-28.2-17.8-77.6-47.9-51.6Z"
@@ -159,8 +186,8 @@
         <div class="card">
           <div class="card-img-container">
             <img src="/visuals/img/grona_tryck_card_3.jpg" class="card-img-top" alt="En tjej med vit t-shirt">
-            <img class="card-news-icon" src="/visuals/icons/product_news_icon.svg" alt="Nyhet!" width="50px">
-            <button> 
+            <img class="card-news-icon" src="/visuals/icons/product_news_icon.svg" alt="Klädnyhet!">
+            <button type="button"> 
               <span>
                 <svg class="card-heart-icon" xmlns="http://www.w3.org/2000/svg" width="95" viewBox="0 0 400 400">
                   <path d="m212 218.5-52.1-52.1c-19.4-19.4-13.1-44.3.8-59.2 14.5-15.5 39.1-22.5 58.6-6.3 19.1-15.8 43.5-8.5 58 7 13.9 14.9 20.3 39.6 1.4 58.5l-52.1 52.1c-3.8 3.8-9.9 4.3-14.5 0Zm12.4-110.1c-2.9 2.6-7.5 2.4-10.2 0-31.2-26.9-77.6 22.4-47.9 51.6l52.1 52.1c.5.5 1.3.5 1.8 0l52.1-52.1c29.2-28.2-17.8-77.6-47.9-51.6Z"
@@ -189,8 +216,8 @@
         <div class="card">
           <div class="card-img-container">
             <img src="/visuals/img/grona_tryck_card_4.jpg" class="card-img-top" alt="En tjej med vit t-shirt">
-            <img class="card-news-icon" src="/visuals/icons/product_news_icon.svg" width="50" alt="Nyhet!">
-            <button> 
+            <img class="card-news-icon" src="/visuals/icons/product_news_icon.svg" alt="Klädnyhet!">
+            <button type="button"> 
               <span>
                 <svg class="card-heart-icon" xmlns="http://www.w3.org/2000/svg" width="95" viewBox="0 0 400 400">
                   <path d="m212 218.5-52.1-52.1c-19.4-19.4-13.1-44.3.8-59.2 14.5-15.5 39.1-22.5 58.6-6.3 19.1-15.8 43.5-8.5 58 7 13.9 14.9 20.3 39.6 1.4 58.5l-52.1 52.1c-3.8 3.8-9.9 4.3-14.5 0Zm12.4-110.1c-2.9 2.6-7.5 2.4-10.2 0-31.2-26.9-77.6 22.4-47.9 51.6l52.1 52.1c.5.5 1.3.5 1.8 0l52.1-52.1c29.2-28.2-17.8-77.6-47.9-51.6Z"
@@ -220,7 +247,8 @@
 
     
     <!-- Dekorativ linje-->
-     <div class="decor"><img src="visuals/icons/swirl_hållbart.svg" alt=""></div>
+     <!-- <div class="decor"><img src="visuals/icons/swirl_hållbart.svg" alt=""></div> -->
+      <div class="swirl-pattern"></div>
 
     <!-- Hållbart-->
      <section class="card-section">
@@ -229,38 +257,42 @@
 
       <div class="card-container">
         <div class="card">
-          <img src="/visuals/img/marcus-ganahl-PoSC-L_4ydU-unsplash.jpg" class="card-img-top" alt="GOTS-märke fäst på en bild med en skördesmaskin på ett bomullsfält">
+          <div class="card__image-container card__image--gots">
+          </div>
           <div class="card-body card-body-color">
-            <h5>GOTS</h5>
-            <p class="card-text small">Global Organic Textile Standard (GOTS) är en ledande standard för organiska fibrer med ekologiska och sociala krav.</p>
-            <img src="/visuals/icons/arrow_icon_white.svg" alt="Gå vidare">
+            <h5 class="text-color-offwhite">GOTS</h5>
+            <p class="card-text small text-color-offwhite">Global Organic Textile Standard (GOTS) är en ledande standard för organiska fibrer med ekologiska och sociala krav.</p>
+            <img class="arrow arrow--right-position" src="/visuals/icons/arrow_icon_white.svg" alt="Gå vidare pil">
           </div>
         </div>
 
         <div class="card">
-          <img src="/visuals/img/marcus-ganahl-PoSC-L_4ydU-unsplash.jpg" class="card-img-top" alt="GOTS-märke fäst på en bild med en skördesmaskin på ett bomullsfält">
+          <div class="card__image-container card__image--enviroment">
+        </div>
           <div class="card-body card-body-color">
-            <h5>MILJÖ</h5>
-            <p class="card-text small">För att säkerställa miljövänlighet används certifieringar från oberoende organisationer som utför kvalitetskontroller med fokus på miljö, arbetsvillkor och kvalitet.</p>
-            <img src="/visuals/icons/arrow_icon_white.svg" alt="Gå vidare">
+            <h5 class="text-color-offwhite">MILJÖ</h5>
+            <p class="card-text small text-color-offwhite">För att säkerställa miljövänlighet används certifieringar från oberoende organisationer som utför kvalitetskontroller med fokus på miljö, arbetsvillkor och kvalitet.</p>
+            <img class="arrow arrow--right-position" src="/visuals/icons/arrow_icon_white.svg" alt="Gå vidare pil">
           </div>
           </div>
 
         <div class="card">
-          <img src="/visuals/img/marcus-ganahl-PoSC-L_4ydU-unsplash.jpg" class="card-img-top" alt="GOTS-märke fäst på en bild med en skördesmaskin på ett bomullsfält">
+          <div class="card__image-container card__image--print">
+          </div>
           <div class="card-body card-body-color">
-            <h5>TRYCK</h5>
-            <p class="card-text small">Vi var först i Sverige med att införa ftalatfri screenfärg som standard 2009. Förutom screentryck erbjuder vi brodyr, DTG, DTF, tampotryck och lasergravyr för hårda material.</p>
-            <img src="/visuals/icons/arrow_icon_white.svg" alt="Gå vidare">
+            <h5 class="text-color-offwhite">TRYCK</h5>
+            <p class="card-text small text-color-offwhite">Vi var först i Sverige med att införa ftalatfri screenfärg som standard 2009. Förutom screentryck erbjuder vi brodyr, DTG, DTF, tampotryck och lasergravyr för hårda material.</p>
+            <img class="arrow arrow--right-position" src="/visuals/icons/arrow_icon_white.svg" alt="Gå vidare pil">
           </div>
         </div>
 
         <div class="card">
-          <img src="/visuals/img/marcus-ganahl-PoSC-L_4ydU-unsplash.jpg" class="card-img-top" alt="GOTS-märke fäst på en bild med en skördesmaskin på ett bomullsfält">
+          <div class="card__image-container card__image--workingconditions">
+          </div>
           <div class="card-body card-body-color">
-            <h5>ARBETSVILLKOR</h5>
-            <p class="card-text small">Vi arbetar endast med certifierade kläder som garanterar rättvisa arbetsvillkor, inklusive levnadslön och fackliga rättigheter.</p>
-            <img src="/visuals/icons/arrow_icon_white.svg" alt="Gå vidare">
+            <h5 class="text-color-offwhite">ARBETSVILLKOR</h5>
+            <p class="card-text small text-color-offwhite">Vi arbetar endast med certifierade kläder som garanterar rättvisa arbetsvillkor, inklusive levnadslön och fackliga rättigheter.</p>
+            <img class="arrow arrow--right-position" src="/visuals/icons/arrow_icon_white.svg" alt="Gå vidare pil">
           </div>
         </div>
       </div>
@@ -275,20 +307,19 @@
 <p class="text-color-dark-2">Här kan ni se vilka vaurmärken vi jobbar med, vilka företag vi samarbetar med och vilka certikfikat vi använder oss utav på gröna tryck. 
   Vi samarbetar med flera företag och organisationer på olika nivåer men som gemensamt delar våra värderingar. </p>
 </div>
-  <div class="thumbnail-container">
-    <img class="thumbnail-image--large round-corner" src="visuals/img/brands_thumbnail.webp" alt="grona trycks brands">
-   <img class="thumbnail-image round-corner" src="visuals/img/our_friends_thumbnail_2.webp" alt="grona trycks friends">
-    <img class="thumbnail-image round-corner" src="visuals/img/certificate_thumbnail.webp" alt="grona trycks certificates">
-  </div>
+<div class="thumbnail-container">
+  <img class="thumbnail-image round-corner thumbnail-image--large" id="image1" src="visuals/img/brands_thumbnail.webp" alt="grona trycks brands">
+  <img class="thumbnail-image round-corner" id="image2" src="visuals/img/our_friends_thumbnail_2.webp" alt="grona trycks friends">
+  <img class="thumbnail-image round-corner" id="image3" src="visuals/img/certificate_thumbnail.webp" alt="grona trycks certificates">
+</div>
 </div>
   
 </section>
-<!-- <div class="decor"><img class="swirl-upsidedown" src="visuals/icons/swirl_whoarewe.svg" alt=""></div> -->
 
     <!-- Recensioner-->
 
     <section class="review-section">
-      <h2 class="text-color-primary">Recensioner</h3>
+      <h3 class="text-color-dark-2">Recensioner</h3>
       <div class="review-card-container"> 
         <div class="review-card round-corner">
           <p class="text-color-primary"><q>Kunniga. Omtänksamma. Noggranna. Hållbara!</q>
