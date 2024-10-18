@@ -30,25 +30,24 @@ body {
 
 /* Färg klasser för text */
 .text-color-offwhite {
-    color: var(--secondary-off-white);
+  color: var(--secondary-off-white);
 }
 
 .text-color-primary {
-    color: var(--primary-new)
+  color: var(--primary-new);
 }
 
 .text-color-medium {
-    color: var(--monochrome-medium)
+  color: var(--monochrome-medium);
 }
 
 .text-color-dark {
-    color: var(--monochrome-dark)
+  color: var(--monochrome-dark);
 }
 
 .text-color-dark-2 {
   color: var(--primary-green);
 }
-
 
 /* Border-radius klass*/
 .round-corner {
@@ -58,8 +57,14 @@ body {
 /* font stilar */
 
 /* Textstyles för rubriker och brödtext*/
-h1, h2, h3, h4, h5, h6, p {
- color: var(--secondary-off-white);
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  color: var(--secondary-off-white);
 }
 
 h1 {
@@ -91,66 +96,63 @@ p {
 }
 
 .small {
-    font-size: 0.8rem;
+  font-size: 0.8rem;
 }
 
-
 .active-link {
-    color: var(--primary-new);
-    text-decoration: underline;
+  color: var(--primary-new);
+  text-decoration: underline;
 }
 
 /* Navbar */
 
 .nav {
-    background-color: var(--secondary-off-white);
+  background-color: var(--secondary-off-white);
 }
 
 .nav .nav-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    padding: 0rem 4rem 0rem 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 0rem 4rem 0rem 1.5rem;
 }
 
 /* Logotyp i navbar */
-.nav .nav-logo{
-    margin-left: 2rem;
-    height: 10vh;
+.nav .nav-logo {
+  margin-left: 2rem;
+  height: 10vh;
 }
 
 .nav .nav-icons img {
   height: 4vh;
 }
 
-
 .nav .nav-links {
-    display: flex;
-    color: var(--primary-new);
-    padding: 12px 0px 0px 0px;
+  display: flex;
+  color: var(--primary-new);
+  padding: 18px 0px 0px 0px;
 }
 
 .nav .nav-links li {
-    padding: 0px 15px 0px 15px;
-    list-style: none;
+  padding: 0px 15px 0px 15px;
+  list-style: none;
 }
 
 .nav .nav-links a {
-    color: var(--primary-new);
-    text-decoration: none;
-    font-size: 1.1rem;
-    margin: 16px;
-
+  color: var(--primary-new);
+  text-decoration: none;
+  font-size: 1.1rem;
+  margin: 16px;
 }
 
 .nav .nav-links a:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
 .nav .nav-links a:active {
-    color: var(--primary-new);
-    text-decoration: underline;
+  color: var(--primary-new);
+  text-decoration: underline;
 }
 
 /* Inställningar till hero bilden*/
@@ -167,7 +169,7 @@ p {
 .hero-text-container {
   width: 90vh;
   position: absolute;
-  top: 50%; 
+  top: 50%;
   left: 42%;
   transform: translateY(-40%);
   margin-top: 6rem;
@@ -175,9 +177,8 @@ p {
   /* border: 1px solid pink; */
 }
 
-
 .button-primary {
-  display: inline;  
+  display: inline;
   border: none;
   border-radius: 10px;
   padding: 8px 20px 8px 20px;
@@ -185,9 +186,10 @@ p {
   text-align: right;
 }
 
-.button-primary p, .arrow-button {
-    display: inline-block;
-    margin: 0;
+.button-primary p,
+.arrow-button {
+  display: inline-block;
+  margin: 0;
 }
 
 /* Nyheter sektionen*/
@@ -222,17 +224,17 @@ p {
 }
 
 .right-header {
-    position: absolute;
-    bottom: 80px;
-    left: 30px;
-    width: 80%;
-    padding-left: 20px;
+  position: absolute;
+  bottom: 80px;
+  left: 30px;
+  width: 80%;
+  padding-left: 20px;
 }
 
 .img-container .button-position {
-    position: absolute;
-    bottom: 30px;
-    right: 100px;
+  position: absolute;
+  bottom: 30px;
+  right: 100px;
 }
 
 .arrow-button {
@@ -240,6 +242,12 @@ p {
     margin: 0px 0px 0px 5px;
 } */
 
+/* Swirl pattern  */
+
+.swirl-upsidedown {
+  width: 100%;
+  margin-bottom: 2rem;
+}
 
 /* Populära produkter */
 
@@ -254,32 +262,31 @@ p {
 }
 
 .card {
-    border: 1px solid var(--monochrome-light);
-
+  border: 1px solid var(--monochrome-light);
 }
 
 .card-img-container {
-    position: relative;
+  position: relative;
 }
 
 .card-img-container .card-news-icon {
-    position: absolute;
-    top: 10px;
-    left: 10px;
+  position: absolute;
+  top: 10px;
+  left: 10px;
 }
 
 .card-img-container .card-heart-icon {
-    position: absolute;
-    top: 0px;
-    right: -10px ;
+  position: absolute;
+  top: 0px;
+  right: -10px;
 }
 
 .card-body .text-sm {
-    font-size: 0.85rem;
+  font-size: 0.85rem;
 }
 
 .card-body .text-xs {
-    font-size: 0.75rem;  
+  font-size: 0.75rem;
 }
 
 .card-dot-container {
@@ -287,31 +294,31 @@ p {
 }
 
 .dot {
-    display: inline-block;
-    width: 12px;
-    height: 12px;
-    border-radius: 20px;
-    margin: 0px 5px 0px 0px;
-    transform: translateY(1px);
-    border: none;
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border-radius: 20px;
+  margin: 0px 5px 0px 0px;
+  transform: translateY(1px);
+  border: none;
 }
 
 .dot-color-1 {
-    background-color: #E2EBEA ;
+  background-color: #e2ebea;
 }
 
 .dot-color-2 {
-    background-color: #1C4230 ;
+  background-color: #1c4230;
 }
 
 .dot-color-3 {
-    background-color: #D4AF85;
+  background-color: #d4af85;
 }
 
 .dot:focus {
-    border: 1px solid var(--monochrome-darkest);
-    padding: 1px;
-    background-clip: content-box;
+  border: 1px solid var(--monochrome-darkest);
+  padding: 1px;
+  background-clip: content-box;
 }
 
 .card-price-container {
@@ -320,8 +327,6 @@ p {
 }
 
 /* Swirl pattern  */
-
-
 
 /* Hållbart */
 
@@ -340,19 +345,30 @@ p {
 }
 
 .card-body-color {
-    background-color: var(--primary-new);
+  background-color: var(--primary-new);
 }
 
 /* Vilka är vi? */
 
-.card-section-container {
-  display: flex;
-  flex-direction: column;
-   align-items: center; 
-  justify-content: center; 
+.card-section-two {
+  height: 110vh;
+  margin-top: 4rem;
+  background-image: url(/visuals/icons/swirl_whoarewe.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center bottom;
+  margin-bottom: 2rem;
 }
 
-.card-section-info {
+.card-section-two-container {
+  margin-left: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-section-two-info {
   width: 80%;
 }
 
@@ -360,12 +376,11 @@ p {
   width: 70%;
 }
 
-
 .thumbnail-container {
   display: grid;
   grid-template-columns: 2fr 1fr;
   grid-template-rows: 1fr 1fr;
-  gap: 16px; 
+  gap: 16px;
   margin-bottom: 2rem;
   width: 80%;
   justify-content: center;
@@ -375,15 +390,14 @@ p {
   width: 100%;
   height: 100%;
   /* object-fit: cover; */
- }
+}
 
- .thumbnail-image--large {
-  grid-row: 1 / span 2; 
+.thumbnail-image--large {
+  grid-row: 1 / span 2;
   width: 100%;
   height: 100%;
   /* object-fit: cover;  */
- }
-
+}
 
 /* Recensioner */
 
@@ -411,10 +425,9 @@ p {
   height: 50vh;
   background-color: var(--primary-green);
 }
-.footer-content  {
+.footer-content {
   display: flex;
   flex-direction: column;
-
 }
 .footer-logo {
   height: 15vh;
@@ -437,16 +450,16 @@ p {
 
 .footer-icons-container {
   display: flex;
-  flex-direction: row; 
-  gap: 1rem; 
+  flex-direction: row;
+  gap: 1rem;
   margin-top: 1rem;
   justify-content: center;
 }
 
 .footer-content p {
   color: var(--secondary-off-white);
-  display: flex; 
-  align-items: center; 
+  display: flex;
+  align-items: center;
   margin-bottom: 0.3rem;
 }
 
@@ -458,12 +471,11 @@ p {
 }
 
 .footer-content .links {
-  color:var(--secondary-off-white);
+  color: var(--secondary-off-white);
   margin: 0.3rem;
-  
 }
 .footer-content .links:hover {
-  color:var(--primary-new);
+  color: var(--primary-new);
 }
 
 .block-line {
@@ -483,9 +495,4 @@ p {
 
 .footer-content .footer-links-heading {
   margin-bottom: 1rem;
-
 }
-
-
-
-
