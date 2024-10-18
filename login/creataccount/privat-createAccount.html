@@ -7,27 +7,23 @@
     <title>Skapa konto, Privat</title>
 </head>
 <body>
-     <h1>Välkommen tillbaka!</h1>
-
     <div class="container">
+        <h2>Skapa ett konto</h2>
         <div class="priv-comp-btn">
-            <a href="privat-create account.html">
-                <button class="btn" id="privatBtn" onclick="setActive('privat')">Privat</button>
+            <a href="privat-createAccount.html">
+                <button class="btn" id="privatCreateBtn" onclick="setActive('privat')">Privat</button>
             </a>
-            <a href="company-create account.html">
-                <button class="btn" id="foretagBtn" onclick="setActive('foretag')">Företag</button>
+            <a href="company-createAccount.html">
+                <button class="btn" id="foretagCreateBtn" onclick="setActive('foretag')">Företag</button>
             </a>
         </div>
 
         <div class="login-form">
-            <span>Företag/organisation</span>
-            <input type="name" placeholder="Skriv namn" class="input-field" required>
+            <span>Namn</span>
+            <input type="name" placeholder="för- och efternamn" class="input-field" required>
 
-            <span>E-post till företag</span>
+            <span>Skriv in din e-post</span>
             <input type="email" placeholder="exampel@gmail.com" class="input-field" required>
-
-            <span>Land/region</span>
-            <input type="namn" placeholder="Välj land eller region" class="input-field" required>
 
             <span>Välj ett lösenord</span>
             <input type="password" placeholder="***********" class="input-field" required>
@@ -39,8 +35,8 @@
                 <button type="submit" class="submit">Skapa konto</button>
             </div>
 
-            <div class="register-link">
-                <span>Har du redan ett konto? <a href="company-create account.html" class="register">Logga in här</a></span>
+            <div class="login-link">
+                <span>Har du redan ett konto? <a href="privat-Login.html" class="register">Logga in här</a></span>
             </div>
 
         </div>
