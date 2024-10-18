@@ -66,13 +66,13 @@ h2{
    
 }
 
-.priv-comp-btn  a:nth-child(2) .btn{
-    border: 2px solid var(--lightgreen);
-}
-
 .btn.active{
     background-color: var(--primary-color);
     color: var(--secoundary-color);
+}
+
+.btn.inactive{
+    border: 2px solid var(--lightgreen);
 }
 
 .btn:hover{

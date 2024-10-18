@@ -1,18 +1,23 @@
-// Automatically set the active button based on the current URL
 window.onload = function() {
     const currentPage = window.location.pathname.split('/').pop(); // Get the current page name
-
+    const privatBtn = document.getElementById('privatLoginBtn');
+    const foretagBtn = document.getElementById('foretagLoginBtn');
+    const privatCreateBtn = document.getElementById('privatCreateBtn')
+    const foretagCreateBtn = document.getElementById('foretagCreateBtn')
+    
     if (currentPage === 'privat-Login.html') {
-        document.getElementById('privatLoginBtn').classList.add('active');
+        privatBtn.classList.add('active');
+        foretagBtn.classList.add('inactive'); // Add inactive class to the opposite button
     } else if (currentPage === 'company-login.html') {
-        document.getElementById('foretagLoginBtn').classList.add('active');
-    } else if(currentPage === 'privat-createAccount.html') {
-        document.getElementById('privatCreateBtn').classList.add('active');
-    } else if (currentPage === 'company-createAccount.html') {
-        document.getElementById('foretagCreateBtn').classList.add('active');
+        foretagBtn.classList.add('active');
+        privatBtn.classList.add('inactive'); // Add inactive class to the opposite button
     }
 
+    if (currentPage === 'privat-createAccount.html') {
+        privatCreateBtn.classList.add('active');
+        foretagCreateBtn.classList.add('inactive');
+    } else if (currentPage === 'company-createAccount.html') {
+        foretagCreateBtn.classList.add('active');
+        privatCreateBtn.classList.add('inactive');
+    }
 };
-
-
-
