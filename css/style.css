@@ -89,66 +89,55 @@ p {
   font-size: 0.8rem;
 }
 
-.active-link {
-  color: var(--primary-new);
-  text-decoration: underline;
-}
-
 /* Navbar */
 
 .nav {
   background-color: var(--secondary-off-white);
+  padding: 0rem 4rem 0rem 1.5rem;
 }
 
-.nav .nav-content {
+.nav-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  padding: 0rem 4rem 0rem 1.5rem;
 }
 
 /* Logotyp i navbar */
-.nav .nav-logo {
-  margin-left: 2rem;
+.nav-logo {
   height: 10vh;
 }
 
-.nav .nav-icons img {
+.nav-icons img {
   height: 4vh;
 }
 
-.nav .nav-links {
+.nav-links {
   display: flex;
-  color: var(--primary-new);
+  list-style-type: none;
   padding: 18px 0px 0px 0px;
 }
 
-.nav .nav-links li {
-  padding: 0px 15px 0px 15px;
-  list-style: none;
-}
-
-.nav .nav-links a {
+.nav-links a {
   color: var(--primary-new);
   text-decoration: none;
   font-size: 1.1rem;
   margin: 16px;
 }
 
-.nav .nav-links a:hover {
+.nav-links a:hover {
   text-decoration: underline;
 }
 
-.nav .nav-links a:active {
+.nav-links a:active {
   color: var(--primary-new);
   text-decoration: underline;
 }
 
 /* Navbar Dropdown */
 
-.dropdown-products{
-    display: none;
+.dropdown{
+    /* display: none; */
     position: relative;
 }
 
@@ -156,24 +145,19 @@ p {
     display: flex;
     justify-content: flex-start;
     position: absolute;
-    gap: 4rem;
+    gap: 2rem;
+    padding: 10%;
     background-color: var(--primary-new);
-    /* padding: 2rem 5rem 12rem 2rem; */
-    padding: 5% 20% 25% 5%;
-    z-index: 1 ;
+    z-index: 1;
 }
 
-.dropdown-content .dropdown-links-one {
+.dropdown-links {
     display: block;
-    width: 4rem;
+    width: 8rem;
 }
 
-.dropdown-content .dropdown-links-two {
-    display: block;
-    width: 4rem;
-}
-
-.dropdown-products, .btn-dropdown-products:hover {
+.dropdown-links a {
+    margin: 0;
 }
 
 /* Inställningar till hero bilden*/
@@ -195,7 +179,6 @@ p {
   transform: translateY(-40%);
   margin-top: 6rem;
   margin-right: 4rem;
-  /* border: 1px solid pink; */
 }
 
 .button-primary {
@@ -267,7 +250,7 @@ p {
     position: absolute;
     top: 20px;
     left: 20px;
-    width: 10%;
+    width: 7%;
  }
 
 .arrow {
@@ -287,85 +270,96 @@ p {
 /* Populära produkter */
 
 .products-section {
-    margin: 3rem 3rem 4rem 3rem;
-}
-
-.card-container {
-    display: flex;
-    gap: 2%;
-
+  width: 150vh;
+  margin: 3rem 3rem 4rem 3rem;
 }
 
 .card {
-  border: 1px solid var(--monochrome-light);
-  }
-
-.card-img-container {
-  position: relative;
+border: 1px solid var(--monochrome-light);
 }
 
-.card-img-container .card-news-icon {
-  position: absolute;
-  top: 10px;
-  left: 10px;
-  width: 50px;
+.card .card__image-container--popular {
+position: relative;
+
 }
 
-.card-img-container button {
-    background-color: none;
-    border: none;
+.card__image-container--popular .card-news-icon {
+position: absolute;
+top: 10px;
+left: 10px;
 }
 
-.card-img-container .card-heart-icon {
-  position: absolute;
-  top: 0px;
-  right: -10px;
-}
-
-.card-body .text-sm {
-  font-size: 0.85rem;
-}
-
-.card-body .text-xs {
-  font-size: 0.75rem;
-}
-
-.card-dot-container {
-    display: flex;
-}
-
-.dot {
-  display: inline-block;
-  width: 12px;
-  height: 12px;
-  border-radius: 20px;
-  margin: 0px 5px 0px 0px;
-  transform: translateY(1px);
+.card__image-container--popular button {
+background: transparent;
   border: none;
 }
 
+.card__image-container--popular .card-heart-icon {
+position: absolute;
+top: 0px;
+right: -10px;
+width: 25% ;
+}
+
+
+.card-body .text-sm {
+font-size: 0.85rem;
+}
+
+.card-body .text-xs {
+font-size: 0.75rem;
+}
+
+.card-dot-container {
+  display: flex;
+}
+
+.dot {
+display: inline-block;
+width: 12px;
+height: 12px;
+border-radius: 20px;
+margin: 0px 5px 0px 0px;
+transform: translateY(1px);
+border: none;
+}
+
 .dot-color-1 {
-  background-color: #e2ebea;
+background-color: #e2ebea;
 }
 
 .dot-color-2 {
-  background-color: #1c4230;
+background-color: #1c4230;
 }
 
 .dot-color-3 {
-  background-color: #d4af85;
+background-color: #d4af85;
 }
 
 .dot:focus {
-  border: 1px solid var(--monochrome-darkest);
-  padding: 1px;
-  background-clip: content-box;
+border: 1px solid var(--monochrome-darkest);
+padding: 1px;
+background-clip: content-box;
 }
 
 .card-price-container {
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
+
+.card__body--popular {
+margin-top: 0.5rem;
+margin-left: 1rem;
+}
+
+.card__image-container--popular {
+  width: 100%;
+
+} 
+
+
+
 
 /* Swirl pattern  */
 .swirl-pattern {
@@ -476,43 +470,97 @@ height: 60vh;
   width: 50%;
 }
 
-
+/* Thumbnail Grid Container */
 .thumbnail-container {
   display: grid;
   grid-template-columns: 2fr 1fr;
   grid-template-rows: 1fr 1fr;
-  gap: 16px;
+  gap: 1rem;
   margin-bottom: 2rem;
-  width: 80%;
   justify-content: center;
-  transition: all 0.6s ease-in-out; 
-
+  height: auto;
+  max-width: 80vw;
+  position: relative; 
 }
 
+/* Thumbnail Image Styling */
 .thumbnail-image {
   width: 100%;
   height: 100%;
-  cursor: pointer;
-  transition: all 0.6s ease-in-out; 
-  transition: transform 0.6s ease-in-out, opacity 0.3s ease-in-out;
-  
+  object-fit: cover;
+  transition: transform 20s ease-in-out, opacity 20s ease-in-out;
 }
 
+/* Large Image */
 .thumbnail-image--large {
   grid-row: 1 / span 2;
-  width: 100%;
-  height: 100%;
-  z-index: 1; 
+  opacity: 1;
 }
 
- /* transition animation */
-/* Default layout for smaller images */
-.thumbnail-image:not(.thumbnail-image--large) {
-  width: 100%;
-  height: 100%;
-  opacity: 0.7; 
+/* Image Positions for Animation */
+.thumbnail-image:nth-child(1) {
+  grid-row: 1 / span 2;
+  grid-column: 1 / 2;
+  animation: moveImage1 35s infinite ease-in-out;
 }
 
+.thumbnail-image:nth-child(2) {
+  grid-row: 1 / 2;
+  grid-column: 2 / 3;
+  animation: moveImage2 35s infinite ease-in-out;
+}
+
+.thumbnail-image:nth-child(3) {
+  grid-row: 2 / 2;
+  grid-column: 2 / 3;
+  animation: moveImage3 35s infinite ease-in-out;
+}
+
+/* Animations for swapping images within their grid layout */
+@keyframes moveImage1 {
+  0%, 100% {
+    grid-row: 1 / span 2;
+    grid-column: 1 / 2;
+  }
+  33% {
+    grid-row: 1 / 2;
+    grid-column: 2 / 3;
+  }
+  66% {
+    grid-row: 2 / 2;
+    grid-column: 2 / 3;
+  }
+}
+
+@keyframes moveImage2 {
+  0%, 100% {
+    grid-row: 1 / 2;
+    grid-column: 2 / 3;
+  }
+  33% {
+    grid-row: 2 / 2;
+    grid-column: 2 / 3;
+  }
+  66% {
+    grid-row: 1 / span 2;
+    grid-column: 1 / 2;
+  }
+}
+
+@keyframes moveImage3 {
+  0%, 100% {
+    grid-row: 2 / 2;
+    grid-column: 2 / 3;
+  }
+  33% {
+    grid-row: 1 / span 2;
+    grid-column: 1 / 2;
+  }
+  66% {
+    grid-row: 1 / 2;
+    grid-column: 2 / 3;
+  }
+}
 
 /* Recensioner */
 
@@ -550,7 +598,6 @@ height: 60vh;
 }
 
 .footer-icons {
-  /* border: 1px solid pink; */
   display: flex;
   height: 5vh;
 }
