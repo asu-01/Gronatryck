@@ -93,7 +93,7 @@
                 Oavsett dina behov, finns vi här för att hjälpa!</p>
             <button class="button-primary round-corner">
               <p class="text-color-offwhite">Utforska nu</p>
-              <img class="arrow arrow-buttons" src="visuals/icons/arrow_icon_white.svg" alt="Pil på knapp som leder vidare till en ny produkt">
+              <img class="arrow arrow--small arrow--right" src="visuals/icons/arrow_icon_white.svg" alt="Pil på knapp som leder vidare till en ny produkt">
             </button>
           </div>
         </div> 
@@ -109,14 +109,14 @@
           <div class="card-img-container-one">
             <img class="news-img round-corner" src="visuals/img/grona_tryck_news_2.jpg" title="De nya huvtröjorna från Stanley Stella är här." alt="En man och kvinna med ljusgrå huvtröjor">
             <h3 class="text-color-offwhite news-img-header">De nya huvtröjorna från Stanley Stella är här.</h3>
-            <button class="button-primary text-color-offwhite round-corner news-button"><p>UPPTÄCK</p><img class="arrow arrow-buttons" src="visuals/icons/arrow_icon_white.svg" alt="Pil på knapp som leder vidare till en produkt"></button>
+            <button class="button-primary text-color-offwhite round-corner news-button"><p>UPPTÄCK</p><img class="arrow arrow--small arrow--right" src="visuals/icons/arrow_icon_white.svg" alt="Pil på knapp som leder vidare till en produkt"></button>
             <img class="news-icon" src="/visuals/icons/product_news_icon.svg" title="Klädnyhet!" alt="En vit cirkel med texten nyhet! i grön">
           </div>
 
           <div class="card-img-container-two">
             <img class="news-img round-corner" src="visuals/img/grona_tryck_news_1.jpg" title="Hösten är här och vi har fyllt på med nya artiklar!" alt="En kvinna och en man med grön lättlurvig jacka.">
             <h3 class="text-color-offwhite news-img-header">Hösten är här och vi har fyllt på med nya artiklar!</h3>
-            <button class="button-primary text-color-offwhite round-corner news-button"><p>UPPTÄCK</p><img class="arrow arrow-buttons" src="visuals/icons/arrow_icon_white.svg"></button>
+            <button class="button-primary text-color-offwhite round-corner news-button"><p>UPPTÄCK</p><img class="arrow arrow--small arrow--right" src="visuals/icons/arrow_icon_white.svg"></button>
             <img class="news-icon" src="/visuals/icons/product_news_icon.svg" alt="Klädnyhet!" alt="En vit cirkel med texten nyhet! i grön">
           </div>
         </div>
@@ -132,9 +132,11 @@
     <!-- test populära produkter 2 -->
 <section class="card-section">
   <h3 class="text-color-dark-2">Populära produkter</h3>
-
+  <div class="card-popular--wrapper">
   <!-- Arrow for scrolling left -->
-  <img class="arrow arrow-slideshow" src="visuals/icons/arrow_icon.svg" alt="Bläddra bland produkter åt vänster i ett bildspel genom att trycka på pilen">
+  <button class="arrow arrow--left" aria-label="Scroll left">
+    <img class="arrow--medium" src="visuals/icons/arrow_icon.svg" alt="Scroll left">
+  </button>
     
   <div class="card-container">
     <div class="card">
@@ -243,7 +245,10 @@
   </div>
 
   <!-- Arrow for scrolling right -->
-  <img class="arrow arrow-slideshow" src="visuals/icons/arrow_icon.svg" alt="Bläddra bland produkter åt höger i ett bildspel genom att trycka på pilen">
+  <button class="arrow arrow--right" aria-label="Scroll right">
+    <img class="arrow--medium" src="visuals/icons/arrow_icon.svg" alt="Scroll right">
+  </button>
+</div>
 
  </section>
 

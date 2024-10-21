@@ -254,27 +254,39 @@ p {
 }
 
 .arrow {
-  transform: rotate(270deg);
   margin: 0px 0px 0px 5px;
+  background: transparent;
+  border: none;
 }
 
-.arrow-buttons {
-  width: 12%;
+.arrow--small {
+  width: 0.9rem;
 }
 
-.arrow-slideshow {
-  width: 4%;
+.arrow--medium {
+  width: 2.6rem;
+}
+
+.arrow--right {
+  transform: rotate(270deg);
+}
+
+.arrow--left {
+  transform: rotate(90deg);
 }
 
 /* Populära produkter */
 
-.products-section {
-  width: 150vh;
-  margin: 3rem 3rem 4rem 3rem;
-}
-
 .card {
   border: 1px solid var(--monochrome-light);
+}
+
+.card-popular--wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  position: relative;
 }
 
 .card .card__image-container--popular {
@@ -362,7 +374,7 @@ p {
 /* Swirl pattern  */
 .swirl-pattern {
   height: 60vh;
-  background-image: url(/visuals/icons/swirl_hållbart.svg);
+  background-image: url(/visuals/patterns/swirl_hållbart.svg);
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center bottom;
@@ -372,6 +384,7 @@ p {
 
 .card-section {
   margin: 0rem 3rem 3rem 3rem;
+  position: relative;
 }
 
 .card-section .card-section-info {
@@ -382,6 +395,7 @@ p {
   display: flex;
   gap: 2%;
   flex-wrap: wrap;
+  flex: 1;
 }
 
 .card-container .card {
@@ -442,7 +456,7 @@ p {
 .card-section-two {
   height: 110vh;
   margin-top: 4rem;
-  background-image: url(/visuals/icons/swirl_whoarewe.svg);
+  background-image: url(/visuals/patterns/swirl_whoarewe.svg);
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center bottom;
