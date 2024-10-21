@@ -136,28 +136,28 @@ p {
 
 /* Navbar Dropdown */
 
-.dropdown{
-    /* display: none; */
-    position: relative;
+.dropdown {
+  /* display: none; */
+  position: relative;
 }
 
 .dropdown-content {
-    display: flex;
-    justify-content: flex-start;
-    position: absolute;
-    gap: 2rem;
-    padding: 10%;
-    background-color: var(--primary-new);
-    z-index: 1;
+  display: flex;
+  justify-content: flex-start;
+  position: absolute;
+  gap: 2rem;
+  padding: 10%;
+  background-color: var(--primary-new);
+  z-index: 1;
 }
 
 .dropdown-links {
-    display: block;
-    width: 8rem;
+  display: block;
+  width: 8rem;
 }
 
 .dropdown-links a {
-    margin: 0;
+  margin: 0;
 }
 
 /* Inställningar till hero bilden*/
@@ -210,52 +210,52 @@ p {
 }
 
 .news-container {
-    display: grid;
-    grid-template-rows: 1fr;
-    grid-template-columns: 1fr 1fr;
-    gap: 2%;
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: 1fr 1fr;
+  gap: 2%;
 }
 
-.card-img-container-one{
-    position: relative;
-    grid-column-start: 1;
-    grid-column-end: 1;
+.card-img-container-one {
+  position: relative;
+  grid-column-start: 1;
+  grid-column-end: 1;
 }
 
-.card-img-container-two{
-    position: relative;
-    grid-column-start: 2;
-    grid-column-end: 2;
+.card-img-container-two {
+  position: relative;
+  grid-column-start: 2;
+  grid-column-end: 2;
 }
 
 .news-img {
-    width: 100%;
+  width: 100%;
 }
 
- .news-img-header {
-    position: absolute;
-    bottom: 100px;
-    left: 30px;
-    width: 80%;
-    padding-left: 20px;
- }
+.news-img-header {
+  position: absolute;
+  bottom: 100px;
+  left: 30px;
+  width: 80%;
+  padding-left: 20px;
+}
 
- .news-button {
-    position: absolute;
-    bottom: 20px;
-    right: 30px;
- }
+.news-button {
+  position: absolute;
+  bottom: 20px;
+  right: 30px;
+}
 
- .news-icon{
-    position: absolute;
-    top: 20px;
-    left: 20px;
-    width: 7%;
- }
+.news-icon {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  width: 7%;
+}
 
 .arrow {
-    transform: rotate(270deg);
-    margin: 0px 0px 0px 5px;
+  transform: rotate(270deg);
+  margin: 0px 0px 0px 5px;
 }
 
 .arrow-buttons {
@@ -263,9 +263,8 @@ p {
 }
 
 .arrow-slideshow {
-    width: 4%;
+  width: 4%;
 }
-
 
 /* Populära produkter */
 
@@ -275,39 +274,38 @@ p {
 }
 
 .card {
-border: 1px solid var(--monochrome-light);
+  border: 1px solid var(--monochrome-light);
 }
 
 .card .card__image-container--popular {
-position: relative;
-
+  position: relative;
 }
 
 .card__image-container--popular .card-news-icon {
-position: absolute;
-top: 10px;
-left: 10px;
+  position: absolute;
+  top: 10px;
+  left: 10px;
 }
 
 .card__image-container--popular button {
-background: transparent;
+  background: transparent;
   border: none;
+  gap: 0;
+  margin: 0;
 }
 
 .card__image-container--popular .card-heart-icon {
-position: absolute;
-top: 0px;
-right: -10px;
-width: 25% ;
+  position: absolute;
+  top: 10px;
+  right: 10px;
 }
 
-
 .card-body .text-sm {
-font-size: 0.85rem;
+  font-size: 0.85rem;
 }
 
 .card-body .text-xs {
-font-size: 0.75rem;
+  font-size: 0.75rem;
 }
 
 .card-dot-container {
@@ -315,31 +313,31 @@ font-size: 0.75rem;
 }
 
 .dot {
-display: inline-block;
-width: 12px;
-height: 12px;
-border-radius: 20px;
-margin: 0px 5px 0px 0px;
-transform: translateY(1px);
-border: none;
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border-radius: 20px;
+  margin: 0px 5px 0px 0px;
+  transform: translateY(1px);
+  border: none;
 }
 
 .dot-color-1 {
-background-color: #e2ebea;
+  background-color: #e2ebea;
 }
 
 .dot-color-2 {
-background-color: #1c4230;
+  background-color: #1c4230;
 }
 
 .dot-color-3 {
-background-color: #d4af85;
+  background-color: #d4af85;
 }
 
 .dot:focus {
-border: 1px solid var(--monochrome-darkest);
-padding: 1px;
-background-clip: content-box;
+  border: 1px solid var(--monochrome-darkest);
+  padding: 1px;
+  background-clip: content-box;
 }
 
 .card-price-container {
@@ -349,23 +347,23 @@ background-clip: content-box;
 }
 
 .card__body--popular {
-margin-top: 0.5rem;
-margin-left: 1rem;
+  margin-top: 0.5rem;
+  margin-left: 1rem;
 }
 
 .card__image-container--popular {
   width: 100%;
+}
 
-} 
-
-
-
+.card__image--popular {
+  width: 100%;
+}
 
 /* Swirl pattern  */
 .swirl-pattern {
-height: 60vh;
- background-image: url(/visuals/icons/swirl_hållbart.svg);
- background-repeat: no-repeat;
+  height: 60vh;
+  background-image: url(/visuals/icons/swirl_hållbart.svg);
+  background-repeat: no-repeat;
   background-size: contain;
   background-position: center bottom;
 }
@@ -373,7 +371,7 @@ height: 60vh;
 /* Hållbart */
 
 .card-section {
-    margin: 0rem 3rem 3rem 3rem;
+  margin: 0rem 3rem 3rem 3rem;
 }
 
 .card-section .card-section-info {
@@ -381,15 +379,15 @@ height: 60vh;
 }
 
 .card-container {
-    display: flex;
-    gap: 2%;
-    flex-wrap: wrap; 
- }
+  display: flex;
+  gap: 2%;
+  flex-wrap: wrap;
+}
 
 .card-container .card {
   flex: 1;
-  min-width: 15rem; 
-  max-width: calc(25% - 2%); 
+  min-width: 15rem;
+  max-width: calc(25% - 2%);
   display: flex;
   flex-direction: column;
   border-radius: 0.5rem;
@@ -427,20 +425,17 @@ height: 60vh;
   background-color: var(--primary-new);
 }
 
-
 .arrow--right-position {
-  transform: rotate(270deg); 
-  width: 1.2rem; 
+  transform: rotate(270deg);
+  width: 1.2rem;
   margin: 0.7rem;
-  height: auto; 
-  position: absolute; 
-  right: 10px; 
-  bottom: 10px; 
+  height: auto;
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
   cursor: pointer;
-  flex-shrink: 0; 
+  flex-shrink: 0;
 }
-
-
 
 /* Vilka är vi? */
 
@@ -480,7 +475,7 @@ height: 60vh;
   justify-content: center;
   height: auto;
   max-width: 80vw;
-  position: relative; 
+  position: relative;
 }
 
 /* Thumbnail Image Styling */
@@ -518,7 +513,8 @@ height: 60vh;
 
 /* Animations for swapping images within their grid layout */
 @keyframes moveImage1 {
-  0%, 100% {
+  0%,
+  100% {
     grid-row: 1 / span 2;
     grid-column: 1 / 2;
   }
@@ -533,7 +529,8 @@ height: 60vh;
 }
 
 @keyframes moveImage2 {
-  0%, 100% {
+  0%,
+  100% {
     grid-row: 1 / 2;
     grid-column: 2 / 3;
   }
@@ -548,7 +545,8 @@ height: 60vh;
 }
 
 @keyframes moveImage3 {
-  0%, 100% {
+  0%,
+  100% {
     grid-row: 2 / 2;
     grid-column: 2 / 3;
   }
@@ -565,20 +563,19 @@ height: 60vh;
 /* Recensioner */
 
 .review-section {
-    margin: 0rem 3rem 3rem 3rem;
-    
+  margin: 0rem 3rem 3rem 3rem;
 }
 
 .review-card-container {
-    display: flex;
-    gap: 2%;
+  display: flex;
+  gap: 2%;
 }
 
 .review-card {
   margin-top: 1rem;
-    width: 35%;
-    padding: 2rem 1.5rem 2rem 1.5rem;
-    border: solid 3px var(--primary-new);
+  width: 35%;
+  padding: 2rem 1.5rem 2rem 1.5rem;
+  border: solid 3px var(--primary-new);
 }
 
 /* Footer */
