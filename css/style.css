@@ -202,7 +202,7 @@ p {
   background-color: var(--monochrome-medium);
   padding: 2%;
   width: 100%;
-  height: 120vh;
+  height: 110vh;
 }
 
 .news {
@@ -592,12 +592,13 @@ p {
   border: solid 3px var(--primary-new);
 }
 
-/* Footer */
+/*----------- Footer -------------*/
 .footer-container {
   padding-top: 3rem;
   display: flex;
   justify-content: space-around;
   height: 50vh;
+  flex-wrap: wrap;
   background-color: var(--primary-green);
 }
 .footer-content {
@@ -665,4 +666,90 @@ p {
 
 .footer-content .footer-links-heading {
   margin-bottom: 1rem;
+}
+
+.hidden-links {
+  display: flex;
+  flex-direction: column;
+}
+
+.toggle-links {
+  display: none;
+}
+
+/* Mobile screens media queries */
+@media screen and (max-width: 768px) {
+  .footer-container {
+    height: 100vh;
+    flex-direction: column;
+  }
+
+  .footer-content {
+    margin-left: 1.6rem;
+  }
+  .footer-logo {
+    height: 10vh;
+  }
+
+  .footer-icons {
+    height: 3vh;
+  }
+
+  .footer-icons-small {
+    height: 1.7vh;
+    margin-right: 0.9rem;
+  }
+
+  .footer-icons-medium {
+    height: 2.1vh;
+  }
+
+  .footer-icons-container {
+    margin-bottom: 1.2rem;
+  }
+
+  .footer-links-heading {
+    font-size: 1.3rem;
+  }
+
+  /* Adjust order for specific footer sections */
+  .footer-content:nth-child(1) {
+    /* "GT logo" section */
+    order: 5;
+  }
+
+  .footer-content:nth-child(2) {
+    /* "Contact" section */
+    order: 1;
+  }
+
+  .footer-content:nth-child(3) {
+    /* "Read more" section */
+    order: 3;
+  }
+
+  .footer-content:nth-child(4) {
+    /* Extra links section */
+    order: 2;
+  }
+  .footer-content:nth-child(5) {
+    /* Social media section */
+    order: 4;
+  }
+
+  .hidden-links {
+    display: none;
+    flex-direction: column;
+    margin-top: 0.5rem;
+  }
+
+  .toggle-links {
+    display: block;
+    background-color: transparent;
+    color: var(--secondary-off-white);
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    margin: 0.5rem 0;
+  }
 }

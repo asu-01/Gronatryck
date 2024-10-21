@@ -162,3 +162,14 @@ for (const product of productArray) {
 //     });
 //   });
 // });
+// ----------------    toggle functionality for mobile footer --------------------//
+
+function toggleLinks(linkId) {
+  const links = document.getElementById(linkId);
+  if (links.style.display === "none" || links.style.display === "") {
+    links.style.display = "flex"; // Show the links
+  } else {
+    links.style.display = "none"; // Hide the links
+  }
+}
+
