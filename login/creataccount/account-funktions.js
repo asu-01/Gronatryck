@@ -1,5 +1,5 @@
 window.onload = function() {
-    const currentPage = window.location.pathname.split('/').pop(); // Get the current page name
+    const currentPage = window.location.pathname.split('/').pop();
     const privatBtn = document.getElementById('privatLoginBtn');
     const foretagBtn = document.getElementById('foretagLoginBtn');
     const privatCreateBtn = document.getElementById('privatCreateBtn')
@@ -7,10 +7,10 @@ window.onload = function() {
     
     if (currentPage === 'privat-Login.html') {
         privatBtn.classList.add('active');
-        foretagBtn.classList.add('inactive'); // Add inactive class to the opposite button
+        foretagBtn.classList.add('inactive');
     } else if (currentPage === 'company-login.html') {
         foretagBtn.classList.add('active');
-        privatBtn.classList.add('inactive'); // Add inactive class to the opposite button
+        privatBtn.classList.add('inactive');
     }
 
     if (currentPage === 'privat-createAccount.html') {
@@ -21,3 +21,14 @@ window.onload = function() {
         privatCreateBtn.classList.add('inactive');
     }
 };
+
+// funktion för att skapa konto och lagra konto information
+document.getElementById('createAccountForm')?.addEventListener('submit', function(event){
+    event.preventDefault();
+})
+
+    const name = document.getElementById('name').value;
+    const email = document.getElementById('name').value;
+    const password = document.getElementById('name').value;
+    const confirmPassword = document.getElementById('name').value;
+    const region = document.getElementById('name').value;
