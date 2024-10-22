@@ -1,0 +1,81 @@
+:root {
+    /* Färgpalett */
+    --primary-green: #1d4231;
+    --secondary-green: #44725a;
+    --secondary-lightgreen: #b5d4ae;
+    --secondary-brown: #a98968;
+    --secondary-off-white: #faf7eb;
+    --primary-new: #44725a;
+  
+    /* Monokrom */
+    --monochrome-darkest: #101e17;
+    --monochrome-dark: #192b22;
+    --monochrome-medium: #374f43;
+    --monochrome-light: #d1dbd6;
+    --monochrome-lightest: #f0f2f1;
+    --monochrome-white: #ffffff;
+  }
+
+.body {
+    width: 100%;
+}
+
+.catalogue {
+    margin: 10% 6% 0% 6%;
+}
+
+.catalogue-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+.catalogue-category {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.catalogue-category img{
+    filter: brightness(0.8);
+    width: 8rem;
+}
+
+.catalogue-filter {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 8%;
+}
+
+.catalogue-products {
+    display: flex;
+    flex-wrap: wrap;
+    /* Rem eller procent?*/
+    gap:1.5rem 1.5rem;
+}
+
+.catalogue-products .card {
+    width: calc((100% - 4.5rem) / 4)
+}
+
+/* .catalogue-btn {
+    display: flex;
+    align-self: center;
+} */
+
+.filter-icon {
+    height: 2vh;
+}
+
+a {
+    text-decoration: none;
+    color: var(--primary-new);
+}
+
+a:hover,
+a:active {
+    text-decoration: underline;
+}
+
+
