@@ -25,38 +25,45 @@
       <!--Navigation-->
       <nav class="nav">
         <div class="nav-container">
-
-          <img class="nav-logo" src="/visuals/logo/gronatryck_horizontal_green_rgb.svg" title="Logotyp för grönatryck" alt="En cirkelformad logotyp placerad brevid texten grönatryck och som innehåller bokstaven G samt texturen av trädringar"></img>
-          
+          <img class="nav-logo" src="/visuals/logo/gronatryck_horizontal_green_rgb.svg" title="Logotyp för grönatryck" alt="En cirkelformad logotyp placerad brevid texten grönatryck och som innehåller bokstaven G samt texturen av trädringar">
           <ul class="nav-links">
                 <li>
                   <a href="#">Hem</a>
                 </li>
 
                 <!--Dropdown sortiment-->
-                <li>
-                  <a id="dropdownProducts" href="#" class="btn-dropdown-products">Sortiment <img class="nav-icons" src="visuals/icons/arrow_icon.svg" alt="En nedåtvänd pil för att visa att sortiment-länken kan utökas"></a>
+                <li id="dropdownContainer">
+                  <a id="dropdownLink" href="#">Sortiment <img class="nav-icons" src="visuals/icons/arrow_icon.svg" alt="En nedåtvänd pil för att visa att sortiment-länken kan utökas"></a>
               
-
-                  <div id="dropdownContainer" class="dropdown">
-                      <div class="dropdown-content round-corner text-color-offwhite">
-                        <div class="dropdown-links">
-                          <a>Nyheter</a>
-                          <a>Märken A-O</a>
-                          <a>Bästsäljare</a>
-                          <a>Träning</a>
-                          <a>Friluftsliv</a>
-                          <a>Restlager</a>
-                        </div>
-                        <div class="dropdown-links">
-                          <a>Alla Kategorier</a>
-                          <a>Överdelar</a>
-                          <a>Underdelar</a>
-                          <a>Övrigt</a>
-                          <a>Tjänster</a>
-                        </div>
+                  <div id="dropdownList" class="dropdown">
+                    <div class="dropdown-content round-corner text-color-offwhite">
+                      <div class="dropdown-links">
+                        <a href="#">Nyheter</a>
+                        <a href="#">Märken A-O</a>
+                        <a href="#">Bästsäljare</a>
+                        <a href="#">Träning</a>
+                        <a href="#">Friluftsliv</a>
+                        <a href="#">Restlager</a>
                       </div>
-                    </div>      
+                      <div class="dropdown-links">
+                        <a href="#">Alla Kategorier</a>
+                        <a id="expand" href="#">Överdelar</a>
+                         <!--Underkategorier till överdelar-->
+                        <div id="subcategory" class="dropdown-subcategory">
+                          <a href="#">T-shirts</a>
+                          <a href="#">Huvtröjor</a>
+                          <a href="#">Jackor</a>
+                          <a href="#">Skjortor</a>
+                          <a href="#">Linnen & Tunikor</a>
+                        </div>
+                        <!--slut-->
+                        <a href="#">Underdelar</a>
+                        <a href="#">Övrigt</a>
+                        <a href="#">Tjänster</a>
+                      </div>
+                    </div>
+                  </div> 
+                
                 </li>
 
                 
@@ -400,5 +407,7 @@
     <!--Scripts-->
     <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="js/script.js"></script>
+    <script src="js/dropdown.js"></script>
+    <script src="js/animation.js"></script>
   </body>
 </html>

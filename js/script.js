@@ -120,18 +120,6 @@ for (const product of productArray) {
   }
 }
 
-/* Dropdown eventlyssnare och funktion */
-// const dropdown = document.getElementById("dropdownContainer");
-// const dropdownProducts = document.getElementById("dropdownProducts");
-
-// dropdownProducts.addEventListener("mouseenter", () => {
-//   dropdown.style.display = "block";
-// });
-
-// dropdownProducts.addEventListener("mouseout", () => {
-//   dropdown.style.display = "none";
-// });
-
 // for (let i = 0; i < productArray.length; i++) {}
 
 // Ta bort data
@@ -139,6 +127,29 @@ for (const product of productArray) {
 
 // Uppdatera data
 // localStorage.setItem()
+
+/* Dropdown sortiment */
+const dropdownBtn = document.getElementById("dropdownContainer");
+const dropdownList = document.getElementById("dropdownList");
+
+dropdownBtn.addEventListener("mouseenter", () => {
+  dropdownList.style.display = "block";
+});
+
+dropdownBtn.addEventListener("mouseleave", () => {
+  dropdownList.style.display = "none";
+});
+
+/* Dropdown överdelar */
+
+const expandBtn = document.getElementById("expand");
+const subcategory = document.getElementById("subcategory");
+
+function show() {}
+
+expandBtn.addEventListener("click", (e) => {
+  subcategory.classList.toggle("open");
+});
 
 // ----------------    animation grid css 'vilka är vi' --------------------//
 

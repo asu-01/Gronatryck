@@ -137,7 +137,7 @@ p {
 /* Navbar Dropdown */
 
 .dropdown{
-    /* display: none; */
+    display: none;
     position: relative;
 }
 
@@ -145,19 +145,38 @@ p {
     display: flex;
     justify-content: flex-start;
     position: absolute;
-    gap: 2rem;
-    padding: 10%;
+    gap: 0.5rem;
+    padding: 2rem 2rem 10rem 2rem;
     background-color: var(--primary-new);
     z-index: 1;
 }
 
 .dropdown-links {
-    display: block;
-    width: 8rem;
+    width: 10rem;
 }
 
 .dropdown-links a {
+    display: block;
+    color: var(--secondary-off-white);
     margin: 0;
+}
+
+.dropdown-links a:active, 
+.dropdown-links a:hover {
+    color: var(--secondary-off-white);
+    text-decoration: underline;
+}
+
+.dropdown-subcategory{
+    display: none;
+}
+
+.dropdown-subcategory.open {
+    display: block;
+}
+
+.dropdown-subcategory a {
+    font-size: 0.8rem;
 }
 
 /* Inställningar till hero bilden*/
@@ -265,7 +284,6 @@ p {
 .arrow-slideshow {
     width: 4%;
 }
-
 
 /* Populära produkter */
 
