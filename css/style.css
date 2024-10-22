@@ -105,11 +105,15 @@ p {
 
 /* Logotyp i navbar */
 .nav-logo {
+  margin-left: 3rem;
   height: 10vh;
+  cursor: pointer;
 }
 
 .nav-icons img {
-  height: 4vh;
+  /* height: 3vh; */
+  width: 6vh;
+  padding-left: 1.5rem;
 }
 
 .nav-links {
@@ -136,7 +140,7 @@ p {
 
 /* Navbar Dropdown */
 
-.dropdown{
+.dropdown {
     display: none;
     position: relative;
 }
@@ -145,14 +149,15 @@ p {
     display: flex;
     justify-content: flex-start;
     position: absolute;
+    top: 1rem;
     gap: 0.5rem;
-    padding: 2rem 2rem 10rem 2rem;
+    padding: 2rem 2rem 2rem 2rem;
     background-color: var(--primary-new);
     z-index: 1;
 }
 
 .dropdown-links {
-    width: 10rem;
+    width: 12rem;
 }
 
 .dropdown-links a {
@@ -171,13 +176,16 @@ p {
     display: none;
 }
 
-.dropdown-subcategory.open {
+.dropdown-subcategory.open, .dropdown.open {
     display: block;
 }
 
 .dropdown-subcategory a {
     font-size: 0.8rem;
 }
+
+
+
 
 /* Inställningar till hero bilden*/
 
@@ -221,7 +229,7 @@ p {
   background-color: var(--monochrome-medium);
   padding: 2%;
   width: 100%;
-  height: 110vh;
+  height: 120vh;
 }
 
 .news {
@@ -283,7 +291,7 @@ p {
 }
 
 .arrow--medium {
-  width: 2.6rem;
+  width: 2rem;
 }
 
 .arrow--right {
@@ -298,6 +306,23 @@ p {
 
 .card {
   border: 1px solid var(--monochrome-light);
+}
+
+.card-section {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin-top: 4rem;
+}
+
+.card-section-heading {
+  grid-column: 1 / -1;
+  margin-left: 3.2rem;
+  font-weight: 900;
+}
+
+.card-popular--wrapper {
+  grid-column: 1 / -1;
+  justify-content: center;
 }
 
 .card-popular--wrapper {
@@ -390,23 +415,33 @@ p {
   width: 100%;
 }
 
-/* Swirl pattern  */
 .swirl-pattern {
+  margin-top: 5rem;
+  height: 55vh;
+  transform: scaleX(-1);
+  background-image: url(/visuals/patterns/swirl/swirl_1_ny_green_1.svg);
+  background-repeat: no-repeat; 
+  background-size: 120vw;
+  background-position: top;
+}
+
+.swirl-pattern--double {
   height: 60vh;
-  background-image: url(/visuals/patterns/swirl_hållbart.svg);
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: center bottom;
+  background-image: url(/visuals/patterns/swirl/swirl_1_double_green.svg);
+  background-repeat: no-repeat; 
+  background-size: 120vw;
+  background-position: top;
 }
 
 /* Hållbart */
 
-.card-section {
+.card-section--two {
   margin: 0rem 3rem 3rem 3rem;
   position: relative;
+  
 }
 
-.card-section .card-section-info {
+.card-section--two .card-section-info {
   width: 50%;
 }
 
@@ -475,9 +510,9 @@ p {
 .card-section-two {
   height: 110vh;
   margin-top: 4rem;
-  background-image: url(/visuals/patterns/swirl_whoarewe.svg);
+  background-image: url(/visuals/patterns/swirl/swirl_1_ny_alternative_green.svg);
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: 250vh;
   background-position: center bottom;
   margin-bottom: 2rem;
 }
@@ -611,6 +646,13 @@ p {
   border: solid 3px var(--primary-new);
 }
 
+.review-icons {
+  display: flex;
+  justify-content: end;
+  gap:1%;
+  height: 3vh;
+}
+
 /*----------- Footer -------------*/
 .footer-container {
   padding-top: 3rem;
@@ -698,13 +740,55 @@ p {
 
 /* Mobile screens media queries */
 @media screen and (max-width: 768px) {
+  
+    /* Mobile nav */
+.nav-logo {
+  margin-left: 2rem;
+  height: 7vh;
+  cursor: pointer;
+}
+
+.nav-icons img {
+  /* height: 3vh; */
+  width: 6vh;
+  padding-left: 1.5rem;
+}
+
+.nav-links {
+  display: none;
+  flex-direction: column;
+  list-style-type: none;
+  padding: 18px 0px 0px 0px;
+}
+
+.nav-links a {
+  color: var(--primary-new);
+  text-decoration: none;
+  font-size: 1.1rem;
+  margin: 16px;
+}
+
+.nav-links a:hover {
+  text-decoration: underline;
+}
+
+.nav-links a:active {
+  color: var(--primary-new);
+  text-decoration: underline;
+}
+  
+  
+  /* Mobile footer */
   .footer-container {
     height: 100vh;
     flex-direction: column;
   }
 
   .footer-content {
+    display: flex;
     margin-left: 1.6rem;
+    justify-content: space-between;
+    width: 100%;
   }
   .footer-logo {
     height: 10vh;
@@ -720,11 +804,15 @@ p {
   }
 
   .footer-icons-medium {
-    height: 2.1vh;
+    height: 3.3vh;
   }
 
   .footer-icons-container {
     margin-bottom: 1.2rem;
+  }
+
+  .footer-icons-container-left {
+    justify-content: left;
   }
 
   .footer-links-heading {
@@ -763,12 +851,14 @@ p {
   }
 
   .toggle-links {
-    display: block;
+    display: flex;
     background-color: transparent;
     color: var(--secondary-off-white);
     border: none;
     cursor: pointer;
     font-size: 1rem;
-    margin: 0.5rem 0;
+    border: 1px solid blue;
+    width: 5%;
+    
   }
 }
