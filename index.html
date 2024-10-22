@@ -100,7 +100,7 @@
                 Oavsett dina behov, finns vi här för att hjälpa!</p>
             <button class="button-primary round-corner">
               <p class="text-color-offwhite">Utforska nu</p>
-              <img class="arrow arrow-buttons" src="visuals/icons/arrow_icon_white.svg" alt="Pil på knapp som leder vidare till en ny produkt">
+              <img class="arrow arrow--small arrow--right" src="visuals/icons/arrow_icon_white.svg" alt="Pil på knapp som leder vidare till en ny produkt">
             </button>
           </div>
         </div> 
@@ -116,14 +116,14 @@
           <div class="card-img-container-one">
             <img class="news-img round-corner" src="visuals/img/grona_tryck_news_2.jpg" title="De nya huvtröjorna från Stanley Stella är här." alt="En man och kvinna med ljusgrå huvtröjor">
             <h3 class="text-color-offwhite news-img-header">De nya huvtröjorna från Stanley Stella är här.</h3>
-            <button class="button-primary text-color-offwhite round-corner news-button"><p>UPPTÄCK</p><img class="arrow arrow-buttons" src="visuals/icons/arrow_icon_white.svg" alt="Pil på knapp som leder vidare till en produkt"></button>
+            <button class="button-primary text-color-offwhite round-corner news-button"><p>UPPTÄCK</p><img class="arrow arrow--small arrow--right" src="visuals/icons/arrow_icon_white.svg" alt="Pil på knapp som leder vidare till en produkt"></button>
             <img class="news-icon" src="/visuals/icons/product_news_icon.svg" title="Klädnyhet!" alt="En vit cirkel med texten nyhet! i grön">
           </div>
 
           <div class="card-img-container-two">
             <img class="news-img round-corner" src="visuals/img/grona_tryck_news_1.jpg" title="Hösten är här och vi har fyllt på med nya artiklar!" alt="En kvinna och en man med grön lättlurvig jacka.">
             <h3 class="text-color-offwhite news-img-header">Hösten är här och vi har fyllt på med nya artiklar!</h3>
-            <button class="button-primary text-color-offwhite round-corner news-button"><p>UPPTÄCK</p><img class="arrow arrow-buttons" src="visuals/icons/arrow_icon_white.svg"></button>
+            <button class="button-primary text-color-offwhite round-corner news-button"><p>UPPTÄCK</p><img class="arrow arrow--small arrow--right" src="visuals/icons/arrow_icon_white.svg"></button>
             <img class="news-icon" src="/visuals/icons/product_news_icon.svg" alt="Klädnyhet!" alt="En vit cirkel med texten nyhet! i grön">
           </div>
         </div>
@@ -139,19 +139,21 @@
     <!-- test populära produkter 2 -->
 <section class="card-section">
   <h3 class="text-color-dark-2">Populära produkter</h3>
-
+  <div class="card-popular--wrapper">
   <!-- Arrow for scrolling left -->
-  <img class="arrow arrow-slideshow" src="visuals/icons/arrow_icon.svg" alt="Bläddra bland produkter åt vänster i ett bildspel genom att trycka på pilen">
+  <button class="arrow arrow--left" aria-label="Scroll left">
+    <img class="arrow--medium" src="visuals/icons/arrow_icon.svg" alt="Scroll left">
+  </button>
     
   <div class="card-container">
     <div class="card">
       <div class="card__image-container--popular">
         <img src="/visuals/img/grona_tryck_card_1.jpg" class="card-img-top" title="Vit t-shirt i bomull" alt="En tjej klädd i en vit t-shirt">
         <img class="card-news-icon" src="/visuals/icons/product_news_icon.svg" alt="Klädnyhet!">
-        <button type="button" aria-label="Lägg till i favoriter">
-          <span>
-            <img class="card-heart-icon" src="/visuals/icons/heart.svg" alt="Lägg till i favoriter">
-          </span>
+        <button class="card-heart-icon" type="button" aria-label="Lägg till i favoriter">
+          <svg  width="30" height="auto" viewBox="0 0 143 130" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M64.3268 126.845L12.2268 74.7448C-7.17321 55.3448 -0.873207 30.4448 13.0268 15.5448C27.5268 0.0447998 52.1268 -6.9552 71.6268 9.2448C90.7268 -6.5552 115.127 0.744804 129.627 16.2448C143.527 31.1448 149.927 55.8448 131.027 74.7448L78.9268 126.845C75.1268 130.645 69.0268 131.145 64.4268 126.845H64.3268ZM76.7268 16.7448C73.8268 19.3448 69.2268 19.1448 66.5268 16.7448C35.3268 -10.1552 -11.0732 39.1448 18.6268 68.3448L70.7268 120.445C71.2268 120.945 72.0268 120.945 72.5268 120.445L124.627 68.3448C153.827 40.1448 106.827 -9.2552 76.7268 16.7448Z" fill="#1C4230"/>
+            </svg>
         </button>
       </div>
       <div class="card-body card__body--popular">
@@ -174,10 +176,10 @@
       <div class="card__image-container--popular">
         <img src="/visuals/img/grona_tryck_card_2.jpg" class="card-img-top" alt="En kille klädd i en tegelröd t-shirt">
         <img class="card-news-icon" src="/visuals/icons/product_news_icon.svg" alt="Klädnyhet!">
-        <button type="button" aria-label="Lägg till i favoriter">
-          <span>
-            <img class="card-heart-icon" src="/visuals/icons/heart.svg" alt="Lägg till i favoriter">
-          </span>
+        <button class="card-heart-icon" type="button" aria-label="Lägg till i favoriter">
+          <svg  width="30" height="auto" viewBox="0 0 143 130" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M64.3268 126.845L12.2268 74.7448C-7.17321 55.3448 -0.873207 30.4448 13.0268 15.5448C27.5268 0.0447998 52.1268 -6.9552 71.6268 9.2448C90.7268 -6.5552 115.127 0.744804 129.627 16.2448C143.527 31.1448 149.927 55.8448 131.027 74.7448L78.9268 126.845C75.1268 130.645 69.0268 131.145 64.4268 126.845H64.3268ZM76.7268 16.7448C73.8268 19.3448 69.2268 19.1448 66.5268 16.7448C35.3268 -10.1552 -11.0732 39.1448 18.6268 68.3448L70.7268 120.445C71.2268 120.945 72.0268 120.945 72.5268 120.445L124.627 68.3448C153.827 40.1448 106.827 -9.2552 76.7268 16.7448Z" fill="#1C4230"/>
+            </svg>
         </button>
       </div>
       <div class="card-body card__body--popular">
@@ -200,10 +202,10 @@
       <div class="card__image-container--popular">
         <img src="/visuals/img/grona_tryck_card_3.jpg" class="card-img-top" alt="En kille och tjej klädd i cremé-färgade sweaters">
         <img class="card-news-icon" src="/visuals/icons/product_news_icon.svg" alt="Klädnyhet!">
-        <button type="button" aria-label="Lägg till i favoriter">
-          <span>
-            <img class="card-heart-icon" src="/visuals/icons/heart.svg" alt="Lägg till i favoriter">
-          </span>
+        <button class="card-heart-icon" type="button" aria-label="Lägg till i favoriter">
+          <svg  width="30" height="auto" viewBox="0 0 143 130" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M64.3268 126.845L12.2268 74.7448C-7.17321 55.3448 -0.873207 30.4448 13.0268 15.5448C27.5268 0.0447998 52.1268 -6.9552 71.6268 9.2448C90.7268 -6.5552 115.127 0.744804 129.627 16.2448C143.527 31.1448 149.927 55.8448 131.027 74.7448L78.9268 126.845C75.1268 130.645 69.0268 131.145 64.4268 126.845H64.3268ZM76.7268 16.7448C73.8268 19.3448 69.2268 19.1448 66.5268 16.7448C35.3268 -10.1552 -11.0732 39.1448 18.6268 68.3448L70.7268 120.445C71.2268 120.945 72.0268 120.945 72.5268 120.445L124.627 68.3448C153.827 40.1448 106.827 -9.2552 76.7268 16.7448Z" fill="#1C4230"/>
+            </svg>
         </button>
       </div>
       <div class="card-body card__body--popular">
@@ -226,10 +228,10 @@
       <div class="card__image-container--popular">
         <img src="/visuals/img/grona_tryck_card_4.jpg" class="card-img-top" alt="En kille och en tjej klädd i en varm beige väst med dragkedja och framficka">
         <img class="card-news-icon" src="/visuals/icons/product_news_icon.svg" alt="Klädnyhet!">
-        <button type="button" aria-label="Lägg till i favoriter">
-          <span>
-            <img class="card-heart-icon" src="/visuals/icons/heart.svg" alt="Lägg till i favoriter">
-          </span>
+        <button class="card-heart-icon" type="button" aria-label="Lägg till i favoriter">
+          <svg  width="30" height="auto" viewBox="0 0 143 130" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M64.3268 126.845L12.2268 74.7448C-7.17321 55.3448 -0.873207 30.4448 13.0268 15.5448C27.5268 0.0447998 52.1268 -6.9552 71.6268 9.2448C90.7268 -6.5552 115.127 0.744804 129.627 16.2448C143.527 31.1448 149.927 55.8448 131.027 74.7448L78.9268 126.845C75.1268 130.645 69.0268 131.145 64.4268 126.845H64.3268ZM76.7268 16.7448C73.8268 19.3448 69.2268 19.1448 66.5268 16.7448C35.3268 -10.1552 -11.0732 39.1448 18.6268 68.3448L70.7268 120.445C71.2268 120.945 72.0268 120.945 72.5268 120.445L124.627 68.3448C153.827 40.1448 106.827 -9.2552 76.7268 16.7448Z" fill="#1C4230"/>
+            </svg>
         </button>
     </div>
       <div class="card-body card__body--popular">
@@ -250,7 +252,10 @@
   </div>
 
   <!-- Arrow for scrolling right -->
-  <img class="arrow arrow-slideshow" src="visuals/icons/arrow_icon.svg" alt="Bläddra bland produkter åt höger i ett bildspel genom att trycka på pilen">
+  <button class="arrow arrow--right" aria-label="Scroll right">
+    <img class="arrow--medium" src="visuals/icons/arrow_icon.svg" alt="Scroll right">
+  </button>
+</div>
 
  </section>
 
@@ -341,68 +346,84 @@
     </div>
     </section>
 
-    <!-- Footer-->
+<!-----------Footer ----------->
     <footer>
       <div class="footer-container">
-      <div class="footer-content">
-        <!-- Logo -->
-        <img class="footer-logo" src="visuals/logo/gronatryck_horizontal_offwhite_rgb.svg" alt="grona tryck logotype">
-        
-        <!-- Icons container underneath the logo -->
-        <div class="footer-icons-container">
-          <img class="footer-icons" src="visuals/icons/gronatryck_icon_organicproduction.svg" alt="Ikon för organisk produktion">
-          <img class="footer-icons" src="visuals/icons/gronatryck_icon_recycledmaterial.svg" alt="Ikon för återvinnet material ">
-          <img class="footer-icons" src="visuals/icons/gronatryck_icon_fairtrademark.svg" alt="Fairtrademark ikon">
-          <img class="footer-icons" src="visuals/icons/gronatryck_icon_phthalate-free.svg" alt="Ikon för ftalatfri">
-         
-        </div>
-      </div>
-      
-      <div class="footer-content">
-        <p class="footer-links-heading">Kontakt</p>
-        <p><img class="footer-icons footer-icons-small" src="visuals/icons/mail_icon_offwhite.svg" alt="Brev ikon">kontakt@gronatryck.se</p>
-        <p><img class="footer-icons footer-icons-small" src="visuals/icons/phone_offwhite.svg" alt="Mobil ikon"> +46 090 13 13 40</p>
-        <div class="footer-wrapper">
-          <img class="footer-icons footer-icons-small" src="visuals/icons/gronatryck_icon_pin_offwhite.svg" alt="Kartnål ikon">
-          <div class="block-line">
-           <p>Västra Kyrkogatan 1B</p>
-           <p>903 29 Umeå</p>
-          <p>Sverige</p>
+        <div class="footer-content">
+          <!-- Logo -->
+          <img class="footer-logo" src="visuals/logo/gronatryck_horizontal_offwhite_rgb.svg" alt="grona tryck logotype">
+          <div class="footer-icons-container">
+            <img class="footer-icons" src="visuals/icons/gronatryck_icon_organicproduction.svg" alt="Ikon för organisk produktion">
+            <img class="footer-icons" src="visuals/icons/gronatryck_icon_recycledmaterial.svg" alt="Ikon för återvinnet material ">
+            <img class="footer-icons" src="visuals/icons/gronatryck_icon_fairtrademark.svg" alt="Fairtrademark ikon">
+            <img class="footer-icons" src="visuals/icons/gronatryck_icon_phthalate-free.svg" alt="Ikon för ftalatfri">
           </div>
         </div>
-        </div> 
-        
-      
-      
-      <div class="footer-content">
-        <p class="footer-links-heading" >Läs mer</p>
-        <a class="links" href="#">Certifikat och märkningar</a>
-        <a class="links" href="#">Våra klädmärken</a>
-        <a class="links" href="#">Kontakta oss</a>
-        <a class="links" href="#">Vanliga frågor</a>
+    
+        <div class="footer-content">
+          <p class="footer-links-heading">Kontakt</p>
+          <button class="toggle-links" onclick="toggleLinks('kontakt-links')"><svg width="15" height="10" viewBox="0 0 15 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M1.78846 1.5L7.89423 9L14 1.5" stroke="#faf7eb" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" />
+        </svg></button>
+          <div class="hidden-links" id="kontakt-links">
+            <p><img class="footer-icons footer-icons-small" src="visuals/icons/mail_icon_offwhite.svg" alt="Brev ikon">kontakt@gronatryck.se</p>
+            <p><img class="footer-icons footer-icons-small" src="visuals/icons/phone_offwhite.svg" alt="Mobil ikon"> +46 090 13 13 40</p>
+            <div class="footer-wrapper">
+              <img class="footer-icons footer-icons-small" src="visuals/icons/gronatryck_icon_pin_offwhite.svg" alt="Kartnål ikon">
+              <div class="block-line">
+                <p>Västra Kyrkogatan 1B</p>
+                <p>903 29 Umeå</p>
+                <p>Sverige</p>
+              </div>
+            </div>
+          </div>
+        </div>
+    
+        <div class="footer-content">
+          <p class="footer-links-heading">Läs mer</p>
+          <button class="toggle-links" onclick="toggleLinks('las-mer-links')"><svg width="15" height="10" viewBox="0 0 15 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M1.78846 1.5L7.89423 9L14 1.5" stroke="#faf7eb" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" />
+        </svg></button>
+          <div class="hidden-links" id="las-mer-links">
+            <a class="links" href="#">Certifikat och märkningar</a>
+            <a class="links" href="#">Våra klädmärken</a>
+            <a class="links" href="#">Kontakta oss</a>
+            <a class="links" href="#">Vanliga frågor</a>
+          </div>
+        </div>
+    
+        <div class="footer-content">
+          <p class="footer-links-heading">Snabba Länkar</p>
+          <button class="toggle-links" onclick="toggleLinks('snabba-lankar-links')"><svg width="15" height="10" viewBox="0 0 15 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M1.78846 1.5L7.89423 9L14 1.5" stroke="#faf7eb" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" />
+        </svg></button>
+          <div class="hidden-links" id="snabba-lankar-links">
+            <a class="links" href="#">Vi bakom företaget</a>
+            <a class="links" href="#">Jobba hos oss</a>
+            <a class="links" href="#">Köpvillkor</a>
+            <a class="links" href="#">Logga in</a>
+          </div>
+        </div>
+    
+        <div class="footer-content">
+          <p class="footer-links-heading">Sociala medier</p>
+          <div class="footer-icons-container">
+            <a href="http://www.instagram.com/gronatryck/"><img class="footer-icons footer-icons-medium" src="visuals/icons/gronatryck_icon_instagram.svg" alt="Instagram logotyp och länk"></a>
+            <a href="#"><img class="footer-icons footer-icons-medium" src="visuals/icons/gronatryck_icon_facebook.svg" alt="Facebook logotyp och länk"></a>
+            <a href="#"><img class="footer-icons footer-icons-medium" src="visuals/icons/gronatryck_icon_linkedin.svg" alt="Linkedin logotyp och länk"></a>
+            <a href="#"><img class="footer-icons footer-icons-medium" src="visuals/icons/gronatryck_icon_youtube.svg" alt="Youtube logotyp och länk"></a>
+          </div>
+        </div>
       </div>
-      <div class="footer-content">
-        <p class="footer-links-heading">Snabba Länkar</p>
-        <a class="links" href="#">Vi bakom företaget</a>
-        <a class="links" href="#">Jobba hos oss</a>
-        <a class="links" href="#">Köpvillkor</a>
-        <a class="links" href="#">Logga in</a>
-      </div>
-      <div class="footer-content">
-      <p class="footer-links-heading">Sociala medier</p>
-      <div class="footer-icons-container">
-      <a href="http://www.instagram.com/gronatryck/"><img class="footer-icons footer-icons-medium" src="visuals/icons/gronatryck_icon_instagram.svg" alt="Instagram logotyp och länk"></a>
-      <a href="#"><img class="footer-icons footer-icons-medium" src="visuals/icons/gronatryck_icon_facebook.svg" alt="Facebook logotyp och länk"></a>
-      <a href="#"><img class="footer-icons footer-icons-medium" src="visuals/icons/gronatryck_icon_linkedin.svg" alt="Linkedin logotyp och länk"></a>
-      <a href="#"><img class="footer-icons footer-icons-medium" src="visuals/icons/gronatryck_icon_youtube.svg" alt="Youtube logotyp och länk"></a>
-      </div>
-      </div>
-    </div>
       <div class="footer-copyright">
-        <p class="small">Copyright 2024 &copy; Gröna tryck </p> 
+        <p class="small">Copyright 2024 &copy; Gröna tryck </p>
       </div>
-      
     </footer>
+    
+    
 
     <!--Scripts-->
     <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>

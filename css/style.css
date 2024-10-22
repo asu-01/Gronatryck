@@ -221,7 +221,7 @@ p {
   background-color: var(--monochrome-medium);
   padding: 2%;
   width: 100%;
-  height: 120vh;
+  height: 110vh;
 }
 
 .news {
@@ -229,103 +229,114 @@ p {
 }
 
 .news-container {
-    display: grid;
-    grid-template-rows: 1fr;
-    grid-template-columns: 1fr 1fr;
-    gap: 2%;
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: 1fr 1fr;
+  gap: 2%;
 }
 
-.card-img-container-one{
-    position: relative;
-    grid-column-start: 1;
-    grid-column-end: 1;
+.card-img-container-one {
+  position: relative;
+  grid-column-start: 1;
+  grid-column-end: 1;
 }
 
-.card-img-container-two{
-    position: relative;
-    grid-column-start: 2;
-    grid-column-end: 2;
+.card-img-container-two {
+  position: relative;
+  grid-column-start: 2;
+  grid-column-end: 2;
 }
 
 .news-img {
-    width: 100%;
+  width: 100%;
 }
 
- .news-img-header {
-    position: absolute;
-    bottom: 100px;
-    left: 30px;
-    width: 80%;
-    padding-left: 20px;
- }
+.news-img-header {
+  position: absolute;
+  bottom: 100px;
+  left: 30px;
+  width: 80%;
+  padding-left: 20px;
+}
 
- .news-button {
-    position: absolute;
-    bottom: 20px;
-    right: 30px;
- }
+.news-button {
+  position: absolute;
+  bottom: 20px;
+  right: 30px;
+}
 
- .news-icon{
-    position: absolute;
-    top: 20px;
-    left: 20px;
-    width: 7%;
- }
+.news-icon {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  width: 7%;
+}
 
 .arrow {
-    transform: rotate(270deg);
-    margin: 0px 0px 0px 5px;
+  margin: 0px 0px 0px 5px;
+  background: transparent;
+  border: none;
 }
 
-.arrow-buttons {
-  width: 12%;
+.arrow--small {
+  width: 0.9rem;
 }
 
-.arrow-slideshow {
-    width: 4%;
+.arrow--medium {
+  width: 2.6rem;
+}
+
+.arrow--right {
+  transform: rotate(270deg);
+}
+
+.arrow--left {
+  transform: rotate(90deg);
 }
 
 /* Populära produkter */
 
-.products-section {
-  width: 150vh;
-  margin: 3rem 3rem 4rem 3rem;
+.card {
+  border: 1px solid var(--monochrome-light);
 }
 
-.card {
-border: 1px solid var(--monochrome-light);
+.card-popular--wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  position: relative;
 }
 
 .card .card__image-container--popular {
-position: relative;
-
+  position: relative;
 }
 
 .card__image-container--popular .card-news-icon {
-position: absolute;
-top: 10px;
-left: 10px;
+  position: absolute;
+  top: 10px;
+  left: 10px;
 }
 
 .card__image-container--popular button {
-background: transparent;
+  background: transparent;
   border: none;
+  gap: 0;
+  margin: 0;
 }
 
 .card__image-container--popular .card-heart-icon {
-position: absolute;
-top: 0px;
-right: -10px;
-width: 25% ;
+  position: absolute;
+  top: 10px;
+  right: 10px;
 }
 
-
 .card-body .text-sm {
-font-size: 0.85rem;
+  font-size: 0.85rem;
 }
 
 .card-body .text-xs {
-font-size: 0.75rem;
+  font-size: 0.75rem;
 }
 
 .card-dot-container {
@@ -333,31 +344,31 @@ font-size: 0.75rem;
 }
 
 .dot {
-display: inline-block;
-width: 12px;
-height: 12px;
-border-radius: 20px;
-margin: 0px 5px 0px 0px;
-transform: translateY(1px);
-border: none;
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border-radius: 20px;
+  margin: 0px 5px 0px 0px;
+  transform: translateY(1px);
+  border: none;
 }
 
 .dot-color-1 {
-background-color: #e2ebea;
+  background-color: #e2ebea;
 }
 
 .dot-color-2 {
-background-color: #1c4230;
+  background-color: #1c4230;
 }
 
 .dot-color-3 {
-background-color: #d4af85;
+  background-color: #d4af85;
 }
 
 .dot:focus {
-border: 1px solid var(--monochrome-darkest);
-padding: 1px;
-background-clip: content-box;
+  border: 1px solid var(--monochrome-darkest);
+  padding: 1px;
+  background-clip: content-box;
 }
 
 .card-price-container {
@@ -367,23 +378,23 @@ background-clip: content-box;
 }
 
 .card__body--popular {
-margin-top: 0.5rem;
-margin-left: 1rem;
+  margin-top: 0.5rem;
+  margin-left: 1rem;
 }
 
 .card__image-container--popular {
   width: 100%;
+}
 
-} 
-
-
-
+.card__image--popular {
+  width: 100%;
+}
 
 /* Swirl pattern  */
 .swirl-pattern {
-height: 60vh;
- background-image: url(/visuals/icons/swirl_hållbart.svg);
- background-repeat: no-repeat;
+  height: 60vh;
+  background-image: url(/visuals/patterns/swirl_hållbart.svg);
+  background-repeat: no-repeat;
   background-size: contain;
   background-position: center bottom;
 }
@@ -391,7 +402,8 @@ height: 60vh;
 /* Hållbart */
 
 .card-section {
-    margin: 0rem 3rem 3rem 3rem;
+  margin: 0rem 3rem 3rem 3rem;
+  position: relative;
 }
 
 .card-section .card-section-info {
@@ -399,15 +411,16 @@ height: 60vh;
 }
 
 .card-container {
-    display: flex;
-    gap: 2%;
-    flex-wrap: wrap; 
- }
+  display: flex;
+  gap: 2%;
+  flex-wrap: wrap;
+  flex: 1;
+}
 
 .card-container .card {
   flex: 1;
-  min-width: 15rem; 
-  max-width: calc(25% - 2%); 
+  min-width: 15rem;
+  max-width: calc(25% - 2%);
   display: flex;
   flex-direction: column;
   border-radius: 0.5rem;
@@ -445,27 +458,24 @@ height: 60vh;
   background-color: var(--primary-new);
 }
 
-
 .arrow--right-position {
-  transform: rotate(270deg); 
-  width: 1.2rem; 
+  transform: rotate(270deg);
+  width: 1.2rem;
   margin: 0.7rem;
-  height: auto; 
-  position: absolute; 
-  right: 10px; 
-  bottom: 10px; 
+  height: auto;
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
   cursor: pointer;
-  flex-shrink: 0; 
+  flex-shrink: 0;
 }
-
-
 
 /* Vilka är vi? */
 
 .card-section-two {
   height: 110vh;
   margin-top: 4rem;
-  background-image: url(/visuals/icons/swirl_whoarewe.svg);
+  background-image: url(/visuals/patterns/swirl_whoarewe.svg);
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center bottom;
@@ -498,7 +508,7 @@ height: 60vh;
   justify-content: center;
   height: auto;
   max-width: 80vw;
-  position: relative; 
+  position: relative;
 }
 
 /* Thumbnail Image Styling */
@@ -536,7 +546,8 @@ height: 60vh;
 
 /* Animations for swapping images within their grid layout */
 @keyframes moveImage1 {
-  0%, 100% {
+  0%,
+  100% {
     grid-row: 1 / span 2;
     grid-column: 1 / 2;
   }
@@ -551,7 +562,8 @@ height: 60vh;
 }
 
 @keyframes moveImage2 {
-  0%, 100% {
+  0%,
+  100% {
     grid-row: 1 / 2;
     grid-column: 2 / 3;
   }
@@ -566,7 +578,8 @@ height: 60vh;
 }
 
 @keyframes moveImage3 {
-  0%, 100% {
+  0%,
+  100% {
     grid-row: 2 / 2;
     grid-column: 2 / 3;
   }
@@ -583,28 +596,28 @@ height: 60vh;
 /* Recensioner */
 
 .review-section {
-    margin: 0rem 3rem 3rem 3rem;
-    
+  margin: 0rem 3rem 3rem 3rem;
 }
 
 .review-card-container {
-    display: flex;
-    gap: 2%;
+  display: flex;
+  gap: 2%;
 }
 
 .review-card {
   margin-top: 1rem;
-    width: 35%;
-    padding: 2rem 1.5rem 2rem 1.5rem;
-    border: solid 3px var(--primary-new);
+  width: 35%;
+  padding: 2rem 1.5rem 2rem 1.5rem;
+  border: solid 3px var(--primary-new);
 }
 
-/* Footer */
+/*----------- Footer -------------*/
 .footer-container {
   padding-top: 3rem;
   display: flex;
   justify-content: space-around;
   height: 50vh;
+  flex-wrap: wrap;
   background-color: var(--primary-green);
 }
 .footer-content {
@@ -672,4 +685,90 @@ height: 60vh;
 
 .footer-content .footer-links-heading {
   margin-bottom: 1rem;
+}
+
+.hidden-links {
+  display: flex;
+  flex-direction: column;
+}
+
+.toggle-links {
+  display: none;
+}
+
+/* Mobile screens media queries */
+@media screen and (max-width: 768px) {
+  .footer-container {
+    height: 100vh;
+    flex-direction: column;
+  }
+
+  .footer-content {
+    margin-left: 1.6rem;
+  }
+  .footer-logo {
+    height: 10vh;
+  }
+
+  .footer-icons {
+    height: 3vh;
+  }
+
+  .footer-icons-small {
+    height: 1.7vh;
+    margin-right: 0.9rem;
+  }
+
+  .footer-icons-medium {
+    height: 2.1vh;
+  }
+
+  .footer-icons-container {
+    margin-bottom: 1.2rem;
+  }
+
+  .footer-links-heading {
+    font-size: 1.3rem;
+  }
+
+  /* Adjust order for specific footer sections */
+  .footer-content:nth-child(1) {
+    /* "GT logo" section */
+    order: 5;
+  }
+
+  .footer-content:nth-child(2) {
+    /* "Contact" section */
+    order: 1;
+  }
+
+  .footer-content:nth-child(3) {
+    /* "Read more" section */
+    order: 3;
+  }
+
+  .footer-content:nth-child(4) {
+    /* Extra links section */
+    order: 2;
+  }
+  .footer-content:nth-child(5) {
+    /* Social media section */
+    order: 4;
+  }
+
+  .hidden-links {
+    display: none;
+    flex-direction: column;
+    margin-top: 0.5rem;
+  }
+
+  .toggle-links {
+    display: block;
+    background-color: transparent;
+    color: var(--secondary-off-white);
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    margin: 0.5rem 0;
+  }
 }
