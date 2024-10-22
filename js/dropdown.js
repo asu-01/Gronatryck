@@ -51,3 +51,31 @@ function toggleLinks(linkId) {
     links.style.display = "none"; // Hide the links
   }
 }
+
+// ----------------    toggle functionality for mobile navbar--------------------//
+//   // Toggle mobile menu (hamburger icon)
+const mobileIcon = document.querySelector('.mobile-icon');
+const navLinks = document.querySelector('.nav-links');
+
+mobileIcon.addEventListener('click', () => {
+  navLinks.classList.toggle('open');
+});
+
+// Toggle dropdown content for mobile
+const dropdownToggles = document.querySelectorAll('.dropdown-toggle');
+
+dropdownToggles.forEach(toggle => {
+  toggle.addEventListener('click', () => {
+    const dropdownContent = toggle.nextElementSibling;
+
+    // Close other open dropdowns
+    document.querySelectorAll('.dropdown-content').forEach(content => {
+      if (content !== dropdownContent) {
+        content.classList.remove('open');
+      }
+    });
+
+    // Toggle the clicked dropdown content
+    dropdownContent.classList.toggle('open');
+  });
+});
