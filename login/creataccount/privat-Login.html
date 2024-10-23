@@ -19,9 +19,9 @@
             </a>
         </div>
 
-        <div class="login-form">
+        <form class="login-form" id="loginForm">
             <span>E-post</span>
-            <input type="email" placeholder="exampel@gmail.com" class="input-field" required>
+            <input type="email" id="email" placeholder="exampel@gmail.com" class="input-field" required>
 
             <div class="password-container">
                 <span>Lösenord</span>
@@ -29,7 +29,7 @@
                     <span><a href="#" class="register">Glömmt lösenordet?</a></span>
                 </div>
             </div>
-            <input type="password" placeholder="***********" class="input-field" required>
+            <input type="password" id="password" placeholder="***********" class="input-field" required>
 
             <div class="buttons">
                 <button type="submit" class="submit">Logga in</button>
@@ -39,7 +39,7 @@
                 <span>Har du inget konto? <a href="privat-createAccount.html" class="register">Skapa ett här</a></span>
             </div>
 
-        </div>
+        </form>
 
     </div>
     <script src="account-funktions.js"></script>
