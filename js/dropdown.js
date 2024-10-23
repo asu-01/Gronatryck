@@ -11,18 +11,24 @@
 // });
 
 // ----------------    toggle functionality for desktop navigation --------------------//
-
 const dropdownBtn = document.getElementsByClassName("dropdown-btn");
 const dropdownList = document.getElementsByClassName("dropdown");
 
 console.log(dropdownList);
 console.log(dropdownBtn);
 
-/* Till för att toggla dropdown menyer */
+/* Function to determine if the screen is mobile */
+function isMobile() {
+  return window.innerWidth <= 768;
+}
+
+/* Add event listeners for toggling dropdown menus */
 for (let i = 0; i < dropdownBtn.length; i++) {
   dropdownBtn[i].addEventListener("click", () => {
-    dropdownList[i].classList.toggle("open");
-    // dropdownList[i].classList.remove("close");
+    if (!isMobile()) {
+      // Check if not on mobile
+      dropdownList[i].classList.toggle("open");
+    }
   });
 
   dropdownList[i].addEventListener("click", () => {
@@ -30,15 +36,15 @@ for (let i = 0; i < dropdownBtn.length; i++) {
   });
 }
 
-/* Dropdown för underkategori överdelar */
-
+/* Dropdown for subcategory */
 const expandBtn = document.getElementById("expand");
 const subcategory = document.getElementById("subcategory");
 
-function show() {}
-
 expandBtn.addEventListener("click", (e) => {
-  subcategory.classList.toggle("open");
+  if (!isMobile()) {
+    // Check if not on mobile
+    subcategory.classList.toggle("open");
+  }
 });
 
 // ----------------    toggle functionality for mobile footer --------------------//
@@ -54,28 +60,28 @@ function toggleLinks(linkId) {
 
 // ----------------    toggle functionality for mobile navbar--------------------//
 //   // Toggle mobile menu (hamburger icon)
-const mobileIcon = document.querySelector('.mobile-icon');
-const navLinks = document.querySelector('.nav-links');
+const mobileIcon = document.querySelector(".mobile-icon");
+const navLinks = document.querySelector(".nav-links");
 
-mobileIcon.addEventListener('click', () => {
-  navLinks.classList.toggle('open');
+mobileIcon.addEventListener("click", () => {
+  navLinks.classList.toggle("open");
 });
 
 // Toggle dropdown content for mobile
-const dropdownToggles = document.querySelectorAll('.dropdown-toggle');
+const dropdownToggles = document.querySelectorAll(".dropdown-toggle");
 
-dropdownToggles.forEach(toggle => {
-  toggle.addEventListener('click', () => {
+dropdownToggles.forEach((toggle) => {
+  toggle.addEventListener("click", () => {
     const dropdownContent = toggle.nextElementSibling;
 
     // Close other open dropdowns
-    document.querySelectorAll('.dropdown-content').forEach(content => {
+    document.querySelectorAll(".dropdown-content").forEach((content) => {
       if (content !== dropdownContent) {
-        content.classList.remove('open');
+        content.classList.remove("open");
       }
     });
 
     // Toggle the clicked dropdown content
-    dropdownContent.classList.toggle('open');
+    dropdownContent.classList.toggle("open");
   });
 });

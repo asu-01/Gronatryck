@@ -35,6 +35,7 @@
     display: flex;
     justify-content: center;
     gap: 1.5rem;
+    margin-top: 1.5rem;
 }
 
 .catalogue-category img{
@@ -56,7 +57,13 @@
 }
 
 .catalogue-products .card {
-    width: calc((100% - 4.5rem) / 4)
+    width: calc((100% - 4.5rem) / 4);
+    height: calc((100% - 4.5rem) / 3);
+}
+
+.card-body p,
+.card-body h5 {
+    white-space: nowrap;
 }
 
 /* .catalogue-btn {
@@ -66,6 +73,7 @@
 
 .filter-icon {
     height: 2vh;
+    transform: translateY(-2px);
 }
 
 a {
@@ -76,6 +84,66 @@ a {
 a:hover,
 a:active {
     text-decoration: underline;
+}
+
+/* .card-body .text-sm {
+    font-size: 1vmax;
+} */
+
+.catalogue-btn-container {
+    display: flex;
+    justify-content: center;
+    margin: 1.5rem;
+}
+
+.card-body .text-sm {
+    font-size: 1vmax;
+} 
+
+/* Media quaries för responsivitet */
+
+@media screen and (max-width: 1200px) {
+
+    .catalogue-category{
+        flex-wrap: wrap;
+    }
+
+    .card-body .text-sm {
+        font-size: 0.8rem;
+    } 
+
+    /* .catalogue-category a:nth-child(4) img,
+    .catalogue-category a:nth-child(5) img {
+    } */
+
+    .catalogue-products .card {
+        width: calc((100% - 3rem) / 3);
+    }
+    
+}
+
+@media screen and (max-width: 992px) {
+
+    .catalogue-category {
+        justify-content: flex-start;
+    }
+    
+    .catalogue-products .card {
+        width: calc((100% - 1.5rem) / 2)
+    }
+
+    .card-body .text-sm {
+        font-size: 0.9rem;
+    } 
+    
+}
+
+@media screen and (max-width: 576px) {
+
+    .catalogue-btn {
+        text-align: center;
+        width: 100%;
+    }
 }
 
 
