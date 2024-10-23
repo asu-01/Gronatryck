@@ -795,10 +795,10 @@ p {
 
   .nav-icons img {
     width: 6vh;
-  }
-
-  .nav-icons img {
     height: 2rem;
+  }
+  .nav-links .arrow {
+    width: 4%;
   }
 
   .nav-links {
