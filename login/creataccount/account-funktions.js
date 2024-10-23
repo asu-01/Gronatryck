@@ -1,10 +1,9 @@
 window.onload = function() {
-
     const currentPage = window.location.pathname.split('/').pop();
     const privatBtn = document.getElementById('privatLoginBtn');
     const foretagBtn = document.getElementById('foretagLoginBtn');
-    const privatCreateBtn = document.getElementById('privatCreateBtn')
-    const foretagCreateBtn = document.getElementById('foretagCreateBtn')
+    const privatCreateBtn = document.getElementById('privatCreateBtn');
+    const foretagCreateBtn = document.getElementById('foretagCreateBtn');
     
     if (currentPage === 'privat-Login.html') {
         privatBtn.classList.add('active');
@@ -22,15 +21,22 @@ window.onload = function() {
         privatCreateBtn.classList.add('inactive');
     }
     
-     // Attach event listeners to buttons after the DOM is loaded
-     document.querySelectorAll('.tab-btn').forEach(button => {
+    document.querySelectorAll('.tab-btn').forEach(button => {
         button.addEventListener('click', function() {
-            openTab(this);  // Pass the button itself as an argument
+            openTab(this);
         });
+    });
+
+    document.getElementById('customer1-btn').addEventListener('click', function() {
+        toggleCustomerDetails('customer1-details');
+    });
+
+    document.getElementById('customer2-btn').addEventListener('click', function() {
+        toggleCustomerDetails('customer2-details');
     });
 };
 
-// funktion för att skapa konto och lagra konto information
+// Funktion för att skapa konto och lagra konto information
 document.getElementById('createAccountForm')?.addEventListener('submit', function(event) {
     event.preventDefault();
 
@@ -45,7 +51,7 @@ document.getElementById('createAccountForm')?.addEventListener('submit', functio
         return;
     }
 
-    // spara användarinformation i localstorage
+    // Spara användarinformation i localstorage
     const userData = {
         name: name,
         email: email,
@@ -58,7 +64,7 @@ document.getElementById('createAccountForm')?.addEventListener('submit', functio
     window.location.href = 'privat-Login.html';
 });
 
-//login för privata användare
+// Login för privata användare
 document.getElementById('loginForm')?.addEventListener('submit', function(event) {
     event.preventDefault();
 
@@ -67,45 +73,168 @@ document.getElementById('loginForm')?.addEventListener('submit', function(event)
 
     const storeduser = JSON.parse(localStorage.getItem('privatUser'));
 
-    // fördefinerade login info för admin
+    // Fördefinerade login info för admin
     const adminEmail = "harviwilliam@gmail.com";
     const adminPassword = "admin123";
 
-    // kollar om login infon är samma som fördefinerade infon
+    // Kollar om login infon är samma som fördefinerade infon
     if (loginEmail === adminEmail && loginPassword === adminPassword) {
         alert('Admin inloggning lyckades!');
         window.location.href = 'admin.html';
-    }
-    
-    else if (storeduser && storeduser.email === loginEmail && storeduser.password === loginPassword) {
+    } else if (storeduser && storeduser.email === loginEmail && storeduser.password === loginPassword) {
         alert('Inloggning lyckades!');
         window.location.href = 'index.html';
-    } 
-    
-    else {
+    } else {
         alert('Felaktig e-post eller lösenord. Försök igen');
     }
 });
 
+// Funktion för knapparna i admin
 function openTab(button) {
-
     const tabName = button.id === 'orders-btn' ? 'orders' :
                     button.id === 'customers-btn' ? 'customers' :
-                    button.id === 'allOrders-btn' ? 'allOrders' :'';
+                    button.id === 'allOrders-btn' ? 'allOrders' : '';
 
-    // gömma alla tab content
+    // Gömma alla tab content
     const tabContents = document.querySelectorAll('.tab-content');
     tabContents.forEach(function(content) {
         content.style.display = 'none';
     });
 
-    // tar bort active classen från alla knappar
+    // Tar bort active classen från alla knappar
     const tabButtons = document.querySelectorAll('.tab-btn');
     tabButtons.forEach(function(btn) {
         btn.classList.remove('active');
     });
 
-    // visa innehållet av varje tab och lägga till activ funktionen på den klickade knappen
+    // Visa innehållet av varje tab och lägga till activ funktionen på den klickade knappen
     document.getElementById(tabName).style.display = 'block';
     button.classList.add('active');
 }
+
+document.addEventListener('DOMContentLoaded', function () {
+    let currentEditCustomer = null;
+
+    // Funktion för att ladda in kund listan i localstorage
+    loadCustomers();
+
+    function loadCustomers() {
+        const customerList = document.querySelector('.customer-list');
+        customerList.innerHTML = '';
+        const customers = JSON.parse(localStorage.getItem('customers')) || [];
+
+        customers.forEach((customer, index) => {
+            const customerDiv = document.createElement('div');
+            customerDiv.classList.add('customer');
+            customerDiv.dataset.index = index;
+
+            customerDiv.innerHTML = `
+                <div class="customer-name">${customer.organization}</div> <!-- Display Organization Name -->
+                <div class="customer-details" style="display: none;">
+                    <p>Kontakt person: ${customer.name}</p> <!-- Display Contact Person Name First -->
+                    <p>E-post: ${customer.email}</p>
+                    <p>Mobil nummer: ${customer.phone}</p>
+                    <p>Företags Nummer: ${customer.orgNumber}</p>
+                    <button class="edit-customer-btn">Edit</button>
+                    <button class="delete-customer-btn">Delete</button>
+                </div>
+            `;
+            customerList.appendChild(customerDiv);
+
+            attachCustomerListeners(customerDiv, customer);
+        });
+    }
+
+    // Sparar kundinfon till localstorage
+    function saveCustomers(customers) {
+        localStorage.setItem('customers', JSON.stringify(customers));
+        loadCustomers();
+    }
+
+    // Event listener för lägga till kunder
+    document.getElementById('add-customer-btn').addEventListener('click', function () {
+        const newOrganization = prompt('Skriv företags namn:'); 
+        const newName = prompt('Skriv kontakt person:'); 
+        const newEmail = prompt('Skriv kontakt personens e-post:');
+        const newPhone = prompt('Skriv kontakt personens mobilnummer:');
+        const newOrgNumber = prompt('Skriv företags nummer:');
+
+        if (newOrganization && newName && newEmail && newPhone && newOrgNumber) {
+            const customers = JSON.parse(localStorage.getItem('customers')) || [];
+            customers.push({
+                organization: newOrganization, 
+                name: newName, 
+                email: newEmail,
+                phone: newPhone,
+                orgNumber: newOrgNumber
+            });
+            saveCustomers(customers);
+        }
+    });
+
+    // Funktion för att lägga till listeners till varje kund
+    function attachCustomerListeners(customerDiv, customer) {
+        const customerName = customerDiv.querySelector('.customer-name');
+        const customerDetails = customerDiv.querySelector('.customer-details');
+        const editButton = customerDiv.querySelector('.edit-customer-btn');
+        const deleteButton = customerDiv.querySelector('.delete-customer-btn');
+
+        // Visa kundinfo när namnet är klickad
+        customerName.addEventListener('click', function () {
+            customerDetails.style.display = customerDetails.style.display === 'none' ? 'block' : 'none';
+        });
+
+        // Event listener för radera knappen
+        deleteButton.addEventListener('click', function () {
+            const customerIndex = customerDiv.dataset.index;
+            const customers = JSON.parse(localStorage.getItem('customers')) || [];
+
+            if (confirm(`Are you sure you want to delete ${customerName.textContent}?`)) {
+                customers.splice(customerIndex, 1);
+                saveCustomers(customers);
+            }
+        });
+
+        // Event listener för ändra knappen
+        editButton.addEventListener('click', function () {
+            currentEditCustomer = customerDiv.dataset.index;
+            openEditModal(customer);
+        });
+    }
+
+    function openEditModal(customer) {
+        const modal = document.getElementById('edit-modal');
+        const organizationField = document.getElementById('edit-organization');
+        const nameField = document.getElementById('edit-name');
+        const emailField = document.getElementById('edit-email');
+        const phoneField = document.getElementById('edit-phone');
+        const orgNumberField = document.getElementById('edit-org-number');
+
+        organizationField.value = customer.organization;
+        nameField.value = customer.name;
+        emailField.value = customer.email;
+        phoneField.value = customer.phone;
+        orgNumberField.value = customer.orgNumber;
+
+        modal.style.display = 'block';
+    }
+
+    document.querySelector('.close-btn').addEventListener('click', function () {
+        document.getElementById('edit-modal').style.display = 'none';
+    });
+
+    document.getElementById('save-edit-btn').addEventListener('click', function () {
+        const customers = JSON.parse(localStorage.getItem('customers')) || [];
+        if (currentEditCustomer !== null) {
+            customers[currentEditCustomer] = {
+                organization: document.getElementById('edit-organization').value,
+                name: document.getElementById('edit-name').value,
+                email: document.getElementById('edit-email').value,
+                phone: document.getElementById('edit-phone').value,
+                orgNumber: document.getElementById('edit-org-number').value
+            };
+            saveCustomers(customers);
+            document.getElementById('edit-modal').style.display = 'none';
+        }
+    });
+});
