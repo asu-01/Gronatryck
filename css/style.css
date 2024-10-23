@@ -111,7 +111,6 @@ p {
 }
 
 .nav-icons img {
-  /* height: 3vh; */
   width: 6vh;
   padding-left: 1.5rem;
 }
@@ -436,7 +435,6 @@ p {
   background-size: 150vw;
   background-position: bottom;
   margin-bottom: 10rem;
-  
 }
 
 .swirl-pattern--double {
@@ -751,6 +749,36 @@ p {
   display: none;
 }
 
+/*----------- Smaller desktop  ---------------*/
+@media screen and (max-width: 1200px) {
+  /*  nav bar  */
+  .nav-links a {
+    font-size: 90%;
+  }
+  .nav-logo {
+    height: 5vh;
+  }
+
+  .nav-icons img {
+    width: 5vh;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  /*  nav bar  */
+  .nav-links a {
+    font-size: 70%;
+  }
+
+  .nav-links .arrow {
+    width: 10%;
+  }
+
+  .nav-icons img {
+    width: 4vh;
+  }
+}
+
 /*-------- Mobile screens media queries ------------*/
 @media screen and (max-width: 768px) {
   /* Mobile nav */
@@ -764,6 +792,11 @@ p {
     display: flex;
     width: 35vw;
   }
+
+  .nav-icons img {
+    width: 6vh;
+  }
+
   .nav-icons img {
     height: 2rem;
   }
@@ -789,13 +822,11 @@ p {
     justify-content: space-between;
     align-items: center;
     border-bottom: 0.5px solid var(--secondary-off-white);
-    
   }
 
-  .nav-links  a .arrow {
+  .nav-links a .arrow {
     justify-content: end;
     color: var(--secondary-off-white);
-
   }
 
   .nav-links a {
@@ -839,7 +870,6 @@ p {
     width: 90%;
   }
 
-
   .footer-icons-small {
     height: 1.7vh;
     margin-right: 0.9rem;
@@ -865,9 +895,7 @@ p {
     justify-content: space-between;
     padding-bottom: 1rem;
     border-bottom: 0.5px solid var(--secondary-off-white);
-    
   }
-
 
   /* Adjust order for specific footer sections */
   .footer-content:nth-child(1) {
