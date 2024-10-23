@@ -97,7 +97,7 @@ a:active {
 }
 
 .card-body .text-sm {
-    font-size: 1vmax;
+    font-size: 0.95vw;
 } 
 
 /* Media quaries för responsivitet */
@@ -109,7 +109,7 @@ a:active {
     }
 
     .card-body .text-sm {
-        font-size: 0.8rem;
+        font-size: 1.85vmin;
     } 
 
     /* .catalogue-category a:nth-child(4) img,
@@ -133,9 +133,33 @@ a:active {
     }
 
     .card-body .text-sm {
-        font-size: 0.9rem;
+        font-size: 1.95vmin;
     } 
+
+    .catalogue-breadcrumb {
+        display: none;
+    }
     
+}
+
+@media screen and (max-width: 768px) { 
+
+    .catalogue-category a {
+        display: block;
+        width: calc((50% - 3rem) / 2);
+        height: 8rem;
+        overflow: hidden;
+    }
+
+    .catalogue-category img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .catalogue-category a:nth-child(-n + 3) {
+        width: calc((100% - 3rem) / 2);
+    }
 }
 
 @media screen and (max-width: 576px) {
@@ -143,6 +167,14 @@ a:active {
     .catalogue-btn {
         text-align: center;
         width: 100%;
+    }
+
+    .card-body .text-sm {
+        font-size: 1.95vmin;
+    } 
+
+    h5 {
+        font-size: 3.8vmin;
     }
 }
 

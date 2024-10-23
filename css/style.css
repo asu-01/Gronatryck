@@ -409,7 +409,7 @@ p {
 
 .card__body--popular {
   margin-top: 0.5rem;
-  margin-left: 1rem;
+  margin: 0rem 1rem 0rem 1rem;
 }
 
 .card__image-container--popular {
