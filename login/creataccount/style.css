@@ -138,7 +138,7 @@ h2{
 }
 
 .sidebar {
-    width: 250px;
+    width: 20%;
     background-color: var(--secoundary-color);
     padding: 20px;
     display: flex;
@@ -155,7 +155,9 @@ h2{
     cursor: pointer;
     font-size: 16px;
     margin-bottom: 10px;
-
+    margin-top: 5%;
+    width: 70%;
+    margin-left: 15%;
 }
 
 .sidebar .tab-btn:hover, .sidebar .tab-btn.active {
@@ -165,7 +167,8 @@ h2{
 
 .content {
     flex-grow: 1;
-    padding: 20px;
+    padding-left: 3%;
+    padding-top: 2%;
     background-color: white;
     overflow-y: auto;
 }
@@ -188,6 +191,75 @@ h2{
 }
 
 
+/*customer css*/
+.customer-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
 
+.customer {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start; /* Ensures that items are aligned on the same height */
+    gap: 20px; /* Space between the name and details */
+    padding: 10px 0;
+    border-bottom: 1px solid var(--primary-color);
+    margin-top: 1%;
+}
 
+.customer-name {
+    background-color: var(--secoundary-color);
+    border: 2px solid var(--primary-color);
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    color: var(--primary-color);
+    width: 150px;
+    text-align: left;
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
+    flex-shrink: 0; /* Prevents the button from shrinking */
+}
+
+.customer-name:hover {
+    background-color: var(--primary-color);
+    color: var(--secoundary-color);
+}
+
+.customer-details {
+    display: none;
+    padding: 10px;
+    flex-grow: 1;
+    background-color: var(--secoundary-color);
+    color: var(--primary-color);
+    border: 2px solid var(--primary-color);
+    border-radius: 10px;
+    height: auto;
+}
+
+.customer-details p {
+    margin: 1%;
+}
+
+.customer.active .customer-details{
+    display: block;
+}
  
+
+/*css för add, del och edit knappar*/
+
+#add-customer-btn{
+    display: flex;
+    justify-content: center;
+    width: 10%;
+    padding: 10px; 
+    margin-top: 20px; 
+    margin-left: 85%;
+    background-color: var(--primary-color); 
+    color: var(--secoundary-color); 
+    border: 2px solid var(--primary-color);
+    border-radius: 10px; 
+    cursor: pointer; 
+    font-size: 16px; 
+}

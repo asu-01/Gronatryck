@@ -22,9 +22,18 @@
                 <p>Här visas alla pågående orderar.</p>
             </div>
 
+
             <div class="tab-content" id="customers" style="display: none;">
                 <h3>Kunder</h3>
-                <p>Här visas alla kunder.</p>
+                <p>Klicka på en kund för att se detaljerad information.</p>
+                
+                <button id="add-customer-btn">Lägg till kund</button>
+
+                <div class="customer-list">
+                    <!-- kunder läses in här genom js-->
+                    </div>
+
+                   
             </div>
 
             <div class="tab-content" id="allOrders" style="display: none;">
@@ -32,6 +41,7 @@
                 <p>Här visas alla beställningar.</p>
             </div>
         </div>
+    </div>
     </div>
 
     <script src="account-funktions.js"></script>
