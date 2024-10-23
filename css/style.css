@@ -516,7 +516,7 @@ p {
   flex-shrink: 0;
 }
 
-/* Vilka är vi? */
+/*---------------- Vilka är vi? ------------------*/
 
 .card-section-two {
   height: 110vh;
@@ -529,7 +529,6 @@ p {
 }
 
 .card-section-two-container {
-  margin-left: 3rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -537,11 +536,16 @@ p {
 }
 
 .card-section-two-info {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  margin-bottom: 2rem;
   width: 80%;
 }
 
 .card-section-two-info p {
-  width: 50%;
+  text-align: left;
+  width: 70%;
 }
 
 /* Thumbnail Grid Container */
@@ -567,16 +571,13 @@ p {
 
 /* Large Image */
 .thumbnail-image--large {
-  grid-row: 1 / span 2;
   opacity: 1;
-}
-
-/* Image Positions for Animation */
-.thumbnail-image:nth-child(1) {
   grid-row: 1 / span 2;
   grid-column: 1 / 2;
   animation: moveImage1 35s infinite ease-in-out;
 }
+
+/* Image Positions for image 2 and 3 */
 
 .thumbnail-image:nth-child(2) {
   grid-row: 1 / 2;
@@ -591,7 +592,7 @@ p {
 }
 
 /* Animations for swapping images within their grid layout */
-@keyframes moveImage1 {
+/* @keyframes moveImage1 {
   0%,
   100% {
     grid-row: 1 / span 2;
@@ -637,7 +638,7 @@ p {
     grid-row: 1 / 2;
     grid-column: 2 / 3;
   }
-}
+} */
 
 /* Recensioner */
 
@@ -762,6 +763,51 @@ p {
   .nav-icons img {
     width: 5vh;
   }
+
+  /* vilka är vi section */
+  .thumbnail-container {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    gap: 1rem;
+  }
+
+  /* Large Image (First Row) */
+  .thumbnail-image--large {
+    grid-column: 1 / span 2;
+    grid-row: 1 / span 1;
+    width: 100%;
+    height: auto;
+  }
+
+  /* Smaller Images (Side by Side in Second Row) */
+  .thumbnail-image:nth-child(2),
+  .thumbnail-image:nth-child(3) {
+    width: 100%;
+    height: auto;
+  }
+
+  .thumbnail-image:nth-child(2) {
+    grid-column: 1 / span 1;
+    grid-row: 2 / span 1;
+  }
+
+  .thumbnail-image:nth-child(3) {
+    grid-column: 2 / span 1;
+    grid-row: 2 / span 1;
+  }
+
+  .card-section-two {
+    height: 150vh;
+  }
+
+  /* Hållbart  */
+  .card-section--two .card-section-info {
+    width: 70%;
+  }
+  /* Reviews */
+  .review-icons {
+    height: 2vh;
+  }
 }
 
 @media screen and (max-width: 992px) {
@@ -777,10 +823,28 @@ p {
   .nav-icons img {
     width: 4vh;
   }
+
+  /* Vilka är vi  */
+
+  .card-section-two-info p {
+    width: 100%;
+  }
+
+  .card-section-two {
+    height: 120vh;
+  }
+
+  .review-card {
+    width: 70%;
+  }
 }
 
 /*-------- Mobile screens media queries ------------*/
 @media screen and (max-width: 768px) {
+  .card-section-two {
+    height: 90vh;
+  }
+
   /* Mobile nav */
   .nav-logo {
     margin-left: 1rem;
@@ -842,6 +906,14 @@ p {
   .mobile-icon {
     display: inline-flex;
     cursor: pointer;
+  }
+
+  .review-card p {
+    font-size: 90%;
+  }
+
+  .review-icons {
+    height: 1vh;
   }
 
   /*------------ Mobile footer */
