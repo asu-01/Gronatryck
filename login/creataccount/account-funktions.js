@@ -184,7 +184,7 @@ document.addEventListener('DOMContentLoaded', function () {
             customerDetails.style.display = customerDetails.style.display === 'none' ? 'block' : 'none';
         });
 
-        // Event listener för radera knappen
+        //funktion och Event listener för radera knappen
         deleteButton.addEventListener('click', function () {
             const customerIndex = customerDiv.dataset.index;
             const customers = JSON.parse(localStorage.getItem('customers')) || [];
@@ -195,46 +195,50 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         });
 
-        // Event listener för ändra knappen
+        //funktion och Event listener för ändra knappen
         editButton.addEventListener('click', function () {
             currentEditCustomer = customerDiv.dataset.index;
             openEditModal(customer);
         });
-    }
 
-    function openEditModal(customer) {
-        const modal = document.getElementById('edit-modal');
-        const organizationField = document.getElementById('edit-organization');
-        const nameField = document.getElementById('edit-name');
-        const emailField = document.getElementById('edit-email');
-        const phoneField = document.getElementById('edit-phone');
-        const orgNumberField = document.getElementById('edit-org-number');
-
-        organizationField.value = customer.organization;
-        nameField.value = customer.name;
-        emailField.value = customer.email;
-        phoneField.value = customer.phone;
-        orgNumberField.value = customer.orgNumber;
-
-        modal.style.display = 'block';
-    }
-
-    document.querySelector('.close-btn').addEventListener('click', function () {
-        document.getElementById('edit-modal').style.display = 'none';
-    });
-
-    document.getElementById('save-edit-btn').addEventListener('click', function () {
-        const customers = JSON.parse(localStorage.getItem('customers')) || [];
-        if (currentEditCustomer !== null) {
-            customers[currentEditCustomer] = {
-                organization: document.getElementById('edit-organization').value,
-                name: document.getElementById('edit-name').value,
-                email: document.getElementById('edit-email').value,
-                phone: document.getElementById('edit-phone').value,
-                orgNumber: document.getElementById('edit-org-number').value
-            };
-            saveCustomers(customers);
-            document.getElementById('edit-modal').style.display = 'none';
+        function openEditModal(customer) {
+            const modal = document.getElementById('edit-modal');
+            const organizationField = document.getElementById('edit-organization');
+            const nameField = document.getElementById('edit-name');
+            const emailField = document.getElementById('edit-email');
+            const phoneField = document.getElementById('edit-phone');
+            const orgNumberField = document.getElementById('edit-org-number');
+        
+            organizationField.value = customer.organization;
+            nameField.value = customer.name;
+            emailField.value = customer.email;
+            phoneField.value = customer.phone;
+            orgNumberField.value = customer.orgNumber;
+        
+            modal.style.display = 'flex';
         }
-    });
+        
+        // Close modal
+        document.querySelector('.close-btn').addEventListener('click', function () {
+            document.getElementById('edit-modal').style.display = 'none';
+        });
+
+        document.getElementById('save-edit-btn').addEventListener('click', function () {
+            const customers = JSON.parse(localStorage.getItem('customers')) || [];
+            if (currentEditCustomer !== null) {
+                customers[currentEditCustomer] = {
+                    organization: document.getElementById('edit-organization').value,
+                    name: document.getElementById('edit-name').value,
+                    email: document.getElementById('edit-email').value,
+                    phone: document.getElementById('edit-phone').value,
+                    orgNumber: document.getElementById('edit-org-number').value
+                };
+                saveCustomers(customers);
+                document.getElementById('edit-modal').style.display = 'none';
+            }
+        });
+    }
+
 });
+
+
