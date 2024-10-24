@@ -1,0 +1,16 @@
+.aboutus-container {
+  position: relative;
+  width: 100%;
+  height: 270vh;
+}
+
+.aboutus-img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 0;
+}
+
+.aboutus-text {
+  width: 50%;
+  margin-left: 3rem;
+}
