@@ -38,6 +38,19 @@
     margin-top: 1.5rem;
 }
 
+.catalogue-category a {
+    display: block;
+    position: relative;
+    color: var(--secondary-off-white);
+}
+
+.category-text {
+    position: absolute;
+    bottom: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
 .catalogue-category img{
     filter: brightness(0.8);
     width: 8rem;
@@ -105,7 +118,7 @@ a:active {
 @media screen and (max-width: 1200px) {
 
     .catalogue-category{
-        flex-wrap: wrap;
+        flex-flow: row wrap;
     }
 
     .card-body .text-sm {
@@ -124,13 +137,39 @@ a:active {
 
 @media screen and (max-width: 992px) {
 
+    .catalogue-container {
+        align-items: flex-start;
+    }
+
     .catalogue-category {
         justify-content: flex-start;
+        width: 100%;
+    }
+
+    .catalogue-category a {
+        width: calc((50% - 2.25rem) / 2);
+        height: 8rem;
+        overflow: hidden;
+    }
+
+    .catalogue-category img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .catalogue-category a:nth-child(-n + 3) {
+        width: calc((100% - 1.5rem) / 2);
     }
     
     .catalogue-products .card {
         width: calc((100% - 1.5rem) / 2)
     }
+
+    /* .catalogue-products:nth-child(9n) {
+        width: 100%;
+
+    } */
 
     .card-body .text-sm {
         font-size: 1.95vmin;
@@ -144,33 +183,16 @@ a:active {
 
 @media screen and (max-width: 768px) { 
 
-    .catalogue-category a {
-        display: block;
-        width: calc((50% - 3rem) / 2);
-        height: 8rem;
-        overflow: hidden;
-    }
-
-    .catalogue-category img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-    }
-
-    .catalogue-category a:nth-child(-n + 3) {
-        width: calc((100% - 3rem) / 2);
-    }
 }
 
 @media screen and (max-width: 576px) {
 
-    .catalogue-btn {
-        text-align: center;
+    .catalogue-products .card {
         width: 100%;
     }
 
     .card-body .text-sm {
-        font-size: 1.95vmin;
+        font-size: 2.6vmin;
     } 
 
     h5 {
