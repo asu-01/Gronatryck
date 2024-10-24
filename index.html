@@ -116,44 +116,69 @@
         </div>
       </nav>
   
-      <!--Hero-->
-      <div class="hero-image" role="img" aria-label="En grupp varmklädda människor i en skog">   
-        <div class="container">  
-          <div class="hero-text-container">
-            <h1 class="text-color-offwhite">Din miljömedvetna profilbutik</h1>
-            <p class="text-color-offwhite">Gröna Tryck är din miljömedvetna butik för hållbara profilkläder och reklamprodukter i norra Europa. Vi erbjuder rättvisemärkta och ekologiska produkter med tryck samt miljösmarta marknadsföringslösningar. 
-                Oavsett dina behov, finns vi här för att hjälpa!</p>
-            <button class="button-primary round-corner">
-              <p class="text-color-offwhite">Utforska nu</p>
-              <img class="arrow arrow--small arrow--right" src="visuals/icons/arrow_icon_white.svg" alt="Pil på knapp som leder vidare till en ny produkt">
-            </button>
+   <!-- Hero Section -->
+<div class="hero-image" role="img" aria-label="En grupp varmklädda människor i en skog">   
+  <div class="hero-slideshow">
+      <div class="hero-slide active">
+          <img class="hero-slides" src="visuals/img/gronatryck_hero_2.jpg" alt="Hero Image 1">
+          <div class="slide-text">
+              <h1 class="text-color-offwhite">Din miljömedvetna profilbutik</h1>
+              <p class="text-color-offwhite">Gröna Tryck är din miljömedvetna butik för hållbara profilkläder och reklamprodukter i norra Europa. Vi erbjuder rättvisemärkta och ekologiska produkter med tryck samt miljösmarta marknadsföringslösningar. Oavsett dina behov, finns vi här för att hjälpa!</p>
           </div>
-        </div> 
       </div>
-    </header>
+      <div class="hero-slide">
+          <img class="hero-slides" src="visuals/img/Puffer Gilet_French Navy_Duo_Front_Main_0.jpg" alt="Hero Image 2">
+          <div class="slide-text">
+              <h1 class="text-color-offwhite">Stanley Stella</h1>
+              <p class="text-color-offwhite">Gröna Tryck är din miljömedvetna butik för hållbara profilkläder och reklamprodukter i norra Europa. Vi erbjuder rättvisemärkta och ekologiska produkter med tryck samt miljösmarta marknadsföringslösningar. Oavsett dina behov, finns vi här för att hjälpa!</p>
+          </div>
+      </div>
+      <div class="hero-slide">
+          <img class="hero-slides" src="visuals/img/gronattryck_hero_3.jpg" alt="Hero Image 3">
+          <div class="slide-text">
+              <h1 class="text-color-offwhite">Kampanj för hållbara kläder</h1>
+              <p class="text-color-offwhite">Vi erbjuder ett brett utbud av hållbara kläder som är både stiliga och miljövänliga. Upptäck vår senaste kollektion idag!</p>
+          </div>
+      </div>
+  </div>
+  <div class="pagination-bullets">
+      <button class="dot pagination-bullet dot-color-1" type="button" aria-label="pagination bullet 1" onclick="currentSlide(1)"></button>
+      <button class="dot pagination-bullet dot-color-1" type="button" aria-label="pagination bullet 2" onclick="currentSlide(2)"></button>
+      <button class="dot pagination-bullet dot-color-1" type="button" aria-label="pagination bullet 3" onclick="currentSlide(3)"></button>
+  </div>
+</div>
+
+
+
+    
     
     <!--Nyheter cards-->
+    <!-- <img src="visuals/patterns/swirl/swirl_1_ny_green_1.svg" alt="swirl pattern"> -->
     <div class="background-block">
       <section class="news">
-        <h2 class="text-color-offwhite">Nyheter</h2>
+        <h2 class="text-color-dark">Nyheter</h2>
         
         <div class="news-container">
           <div class="card-img-container-one">
             <img class="news-img round-corner" src="visuals/img/grona_tryck_news_2.jpg" title="De nya huvtröjorna från Stanley Stella är här." alt="En man och kvinna med ljusgrå huvtröjor">
             <h3 class="text-color-offwhite news-img-header">De nya huvtröjorna från Stanley Stella är här.</h3>
             <button class="button-primary text-color-offwhite round-corner news-button"><p>UPPTÄCK</p><img class="arrow arrow--small arrow--right" src="visuals/icons/arrow_icon_white.svg" alt="Pil på knapp som leder vidare till en produkt"></button>
-            <img class="news-icon" src="/visuals/icons/product_news_icon.svg" title="Klädnyhet!" alt="En vit cirkel med texten nyhet! i grön">
           </div>
-
           <div class="card-img-container-two">
             <img class="news-img round-corner" src="visuals/img/grona_tryck_news_1.jpg" title="Hösten är här och vi har fyllt på med nya artiklar!" alt="En kvinna och en man med grön lättlurvig jacka.">
-            <h3 class="text-color-offwhite news-img-header">Hösten är här och vi har fyllt på med nya artiklar!</h3>
+            <h5 class="text-color-offwhite news-img-header">Hösten är här och vi har fyllt på med nya artiklar!</h3>
             <button class="button-primary text-color-offwhite round-corner news-button"><p>UPPTÄCK</p><img class="arrow arrow--small arrow--right" src="visuals/icons/arrow_icon_white.svg"></button>
-            <img class="news-icon" src="/visuals/icons/product_news_icon.svg" alt="Klädnyhet!" alt="En vit cirkel med texten nyhet! i grön">
+          </div>
+          <div class="card-img-container-three">
+            <img class="news-img round-corner" src="visuals/img/grona_tryck_card_4.jpg" title="Hösten är här och vi har fyllt på med nya artiklar!" alt="En kvinna och en man med grön lättlurvig jacka.">
+            <h5 class="text-color-offwhite news-img-header">Hösten är här och vi har fyllt på med nya artiklar!</h3>
+            <button class="button-primary text-color-offwhite round-corner news-button"><p>UPPTÄCK</p><img class="arrow arrow--small arrow--right" src="visuals/icons/arrow_icon_white.svg"></button>
+          </div>
           </div>
         </div>
       </section>
     </div>
+    <div class=" swirl-pattern swirl-pattern--rotate"></div>
     
     <!-- Produktinformation-->
     <p id="productInfo"></p>
@@ -211,7 +236,7 @@
         <p class="text-color-dark text-sm">T-shirt</p>
         <h5 class="text-color-primary">Crafter heritage</h5>
         <div class="card-dot-container">
-          <button class="dot dot-color-1" type="button" aria-label="Färg 1"></button>
+          <button class=" dot dot-color-1" type="button" aria-label="Färg 1"></button>
           <button class="dot dot-color-2" type="button" aria-label="Färg 2"></button>
           <button class="dot dot-color-3" type="button" aria-label="Färg 3"></button>
           <p class="text-color-dark text-xs">+5 färger</p>
@@ -387,7 +412,7 @@
         <div class="footer-content">
           <!-- Logo -->
           <img class="footer-logo" src="visuals/logo/gronatryck_horizontal_offwhite_rgb.svg" alt="grona tryck logotype">
-          <div class="footer-icons-container">
+          <div class="footer-icons-container footer-icons-container--hallbart">
             <img class="footer-icons" src="visuals/icons/gronatryck_icon_organicproduction.svg" alt="Ikon för organisk produktion">
             <img class="footer-icons" src="visuals/icons/gronatryck_icon_recycledmaterial.svg" alt="Ikon för återvinnet material ">
             <img class="footer-icons" src="visuals/icons/gronatryck_icon_fairtrademark.svg" alt="Fairtrademark ikon">
@@ -465,5 +490,6 @@
     <script src="js/script.js"></script>
     <script src="js/dropdown.js"></script>
     <script src="js/animation.js"></script>
+    <script src="js/slideshow.js"></script>
   </body>
 </html>

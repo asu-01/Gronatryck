@@ -35,6 +35,20 @@
     display: flex;
     justify-content: center;
     gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.catalogue-category a {
+    display: block;
+    position: relative;
+    color: var(--secondary-off-white);
+}
+
+.category-text {
+    position: absolute;
+    bottom: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .catalogue-category img{
@@ -56,7 +70,13 @@
 }
 
 .catalogue-products .card {
-    width: calc((100% - 4.5rem) / 4)
+    width: calc((100% - 4.5rem) / 4);
+    height: calc((100% - 4.5rem) / 3);
+}
+
+.card-body p,
+.card-body h5 {
+    white-space: nowrap;
 }
 
 /* .catalogue-btn {
@@ -66,6 +86,7 @@
 
 .filter-icon {
     height: 2vh;
+    transform: translateY(-2px);
 }
 
 a {
@@ -76,6 +97,107 @@ a {
 a:hover,
 a:active {
     text-decoration: underline;
+}
+
+/* .card-body .text-sm {
+    font-size: 1vmax;
+} */
+
+.catalogue-btn-container {
+    display: flex;
+    justify-content: center;
+    margin: 1.5rem;
+}
+
+.card-body .text-sm {
+    font-size: 0.95vw;
+} 
+
+/* Media quaries för responsivitet */
+
+@media screen and (max-width: 1200px) {
+
+    .catalogue-category{
+        flex-flow: row wrap;
+    }
+
+    .card-body .text-sm {
+        font-size: 1.85vmin;
+    } 
+
+    /* .catalogue-category a:nth-child(4) img,
+    .catalogue-category a:nth-child(5) img {
+    } */
+
+    .catalogue-products .card {
+        width: calc((100% - 3rem) / 3);
+    }
+    
+}
+
+@media screen and (max-width: 992px) {
+
+    .catalogue-container {
+        align-items: flex-start;
+    }
+
+    .catalogue-category {
+        justify-content: flex-start;
+        width: 100%;
+    }
+
+    .catalogue-category a {
+        width: calc((50% - 2.25rem) / 2);
+        height: 8rem;
+        overflow: hidden;
+    }
+
+    .catalogue-category img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .catalogue-category a:nth-child(-n + 3) {
+        width: calc((100% - 1.5rem) / 2);
+    }
+    
+    .catalogue-products .card {
+        width: calc((100% - 1.5rem) / 2)
+    }
+
+    /* .catalogue-products:nth-child(9n) {
+        width: 100%;
+
+    } */
+
+    .card-body .text-sm {
+        font-size: 1.95vmin;
+    } 
+
+    .catalogue-breadcrumb {
+        display: none;
+    }
+    
+}
+
+@media screen and (max-width: 768px) { 
+
+}
+
+@media screen and (max-width: 576px) {
+
+    .catalogue-products .card {
+        width: 100%;
+    }
+
+    .card-body .text-sm {
+        font-size: 2.6vmin;
+    } 
+
+    h5 {
+        font-size: 3.8vmin;
+    }
 }
 
 
