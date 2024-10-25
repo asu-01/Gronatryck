@@ -108,7 +108,7 @@
           <div class="nav-icons">
               <img src="/visuals/icons/gronatryck_icon_search.svg" alt="Öppna sökfunktion">
               <img src="/visuals/icons/gronatryck_icon_user.svg" alt="Gå till mina sidor">
-              <img src="/visuals/icons/gronatryck_icon_bag (1).svg" alt="Gå till din beställningslista">
+              <a href="order-list.html"><img src="/visuals/icons/gronatryck_icon_bag (1).svg" alt="Gå till din beställningslista"></a>
                 <!-- Mobile hamburger menu icon -->
               <img class="mobile-icon" src="visuals/icons/hamburger_menu_icon.svg" alt="Hamburgar meny, tre streck">
             </div>
@@ -171,14 +171,14 @@
           <div class="card-img-container-two">
             <img class="news-img round-corner" src="visuals/img/news/gronatryck_news_2_fall.jpg" title="Hösten är här och vi har fyllt på med de senaste artiklarna från de hetaste märkena!" alt="En kvinna och en man med grön lättlurvig jacka.">
             <div class="news-img-text">
-            <h5 class="text-color-offwhite">Hösten är här och vi har fyllt på med de senaste artiklarna från de hetaste märkena!</h5>
+            <h5 class="text-color-offwhite">Hösten är här och vi har de senaste artiklarna!</h5>
             <button class="button-primary text-color-offwhite round-corner news-button"><p>UPPTÄCK</p><img class="arrow arrow--small arrow--right" src="visuals/icons/arrow_icon_white.svg"></button>
           </div>
           </div>
           <div class="card-img-container-three">
             <img class="news-img round-corner" src="visuals/img/news/gronatryck_news_3_sport.jpg" title="Hösten är här och vi har fyllt på med nya artiklar!" alt="En kvinna och en man med grön lättlurvig jacka.">
             <div class="news-img-text">
-            <p class="text-color-offwhite">Nya träningskläder för höst och vinter finns nu på Gröna tryck. Allt du behöver för att träna med gott samvete. </p>
+            <h5 class="text-color-offwhite">Nya träningskläder för höst och vinter finns nu på Gröna tryck. </h5>
             <button class="button-primary text-color-offwhite round-corner news-button"><p>UPPTÄCK</p><img class="arrow arrow--small arrow--right" src="visuals/icons/arrow_icon_white.svg"></button>
           </div>
           </div>
@@ -197,20 +197,16 @@
   <h5 class="card-section-heading text-color-dark-2">Populära produkter</h5>
   <div class="card-popular--wrapper">
   <!-- Arrow for scrolling left -->
-  <button class="arrow arrow--left" aria-label="Scroll left">
+  <button class="arrow arrow--left" aria-label="Scroll left" onclick="changeCardSlide(-1)">
     <img class="arrow--medium" src="visuals/icons/arrow_icon.svg" alt="Scroll left">
   </button>
     
   <div class="card-container">
+    <div class="card-slide">
     <div class="card">
       <div class="card__image-container--popular">
         <img src="/visuals/img/grona_tryck_card_1.jpg" class="card-img-top" title="Vit t-shirt i bomull" alt="En tjej klädd i en vit t-shirt">
         <img class="card-news-icon" src="/visuals/icons/product_news_icon.svg" alt="Klädnyhet!">
-        <!-- <button class="card-heart-icon" type="button" aria-label="Lägg till i favoriter">
-          <svg  width="30" height="auto" viewBox="0 0 143 130" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M64.3268 126.845L12.2268 74.7448C-7.17321 55.3448 -0.873207 30.4448 13.0268 15.5448C27.5268 0.0447998 52.1268 -6.9552 71.6268 9.2448C90.7268 -6.5552 115.127 0.744804 129.627 16.2448C143.527 31.1448 149.927 55.8448 131.027 74.7448L78.9268 126.845C75.1268 130.645 69.0268 131.145 64.4268 126.845H64.3268ZM76.7268 16.7448C73.8268 19.3448 69.2268 19.1448 66.5268 16.7448C35.3268 -10.1552 -11.0732 39.1448 18.6268 68.3448L70.7268 120.445C71.2268 120.945 72.0268 120.945 72.5268 120.445L124.627 68.3448C153.827 40.1448 106.827 -9.2552 76.7268 16.7448Z" fill="#1C4230"/>
-            </svg>
-        </button> -->
       </div>
       <div class="card-body card__body--popular">
         <p class="text-color-dark text-sm">T-shirt</p>
@@ -227,16 +223,13 @@
           </div>
       </div>
     </div>
+    </div>
 
-    <div class="card">
+    <div class="card-slide">
+      <div class="card">
       <div class="card__image-container--popular">
         <img src="/visuals/img/grona_tryck_card_2.jpg" class="card-img-top" alt="En kille klädd i en tegelröd t-shirt">
         <img class="card-news-icon" src="/visuals/icons/product_news_icon.svg" alt="Klädnyhet!">
-        <!-- <button class="card-heart-icon" type="button" aria-label="Lägg till i favoriter">
-          <svg  width="30" height="auto" viewBox="0 0 143 130" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M64.3268 126.845L12.2268 74.7448C-7.17321 55.3448 -0.873207 30.4448 13.0268 15.5448C27.5268 0.0447998 52.1268 -6.9552 71.6268 9.2448C90.7268 -6.5552 115.127 0.744804 129.627 16.2448C143.527 31.1448 149.927 55.8448 131.027 74.7448L78.9268 126.845C75.1268 130.645 69.0268 131.145 64.4268 126.845H64.3268ZM76.7268 16.7448C73.8268 19.3448 69.2268 19.1448 66.5268 16.7448C35.3268 -10.1552 -11.0732 39.1448 18.6268 68.3448L70.7268 120.445C71.2268 120.945 72.0268 120.945 72.5268 120.445L124.627 68.3448C153.827 40.1448 106.827 -9.2552 76.7268 16.7448Z" fill="#1C4230"/>
-            </svg>
-        </button> -->
       </div>
       <div class="card-body card__body--popular">
         <p class="text-color-dark text-sm">T-shirt</p>
@@ -253,7 +246,9 @@
         </div>
       </div>
       </div>
+    </div>
 
+    <div class="card-slide">
     <div class="card">
       <div class="card__image-container--popular">
         <img src="/visuals/img/grona_tryck_card_3.jpg" class="card-img-top" alt="En kille och tjej klädd i cremé-färgade sweaters">
@@ -274,7 +269,9 @@
         </div>
       </div>
     </div>
+    </div>
 
+    <div class="card-slide">
     <div class="card">
       <div class="card__image-container--popular">
         <img src="/visuals/img/grona_tryck_card_4.jpg" class="card-img-top" alt="En kille och en tjej klädd i en varm beige väst med dragkedja och framficka">
@@ -294,23 +291,111 @@
           <p class="text-color-dark text-sm">från 410 kr/st</p>
         </div>
       </div>
-    </div>
+      </div>
+
+     <!-- four more cards  -->
+     <div class="card-slide">
+      <div class="card">
+        <div class="card__image-container--popular">
+          <img src="/visuals/img/grona_tryck_card_1.jpg" class="card-img-top" title="Vit t-shirt i bomull" alt="En tjej klädd i en vit t-shirt">
+          <img class="card-news-icon" src="/visuals/icons/product_news_icon.svg" alt="Klädnyhet!">
+        </div>
+        <div class="card-body card__body--popular">
+          <p class="text-color-dark text-sm">T-shirt</p>
+          <h5 class="text-color-primary">Classic bomull</h5>
+          <div class="card-dot-container">
+            <button class="dot dot-color-1" type="button" aria-label="Färg 1"></button>
+            <button class="dot dot-color-2" type="button" aria-label="Färg 2"></button>
+            <button class="dot dot-color-3" type="button" aria-label="Färg 3"></button>
+            <p class="text-color-dark text-xs">+5 färger</p>
+            </div>
+            <div class="card-price-container">
+              <p class="text-color-medium text-sm">minimum 25 st.</p>
+              <p class="text-color-dark text-sm">från 410 kr/st</p>
+            </div>
+        </div>
+      </div>
+      </div>
+  
+      <div class="card-slide">
+        <div class="card">
+        <div class="card__image-container--popular">
+          <img src="/visuals/img/grona_tryck_card_2.jpg" class="card-img-top" alt="En kille klädd i en tegelröd t-shirt">
+          <img class="card-news-icon" src="/visuals/icons/product_news_icon.svg" alt="Klädnyhet!">
+        </div>
+        <div class="card-body card__body--popular">
+          <p class="text-color-dark text-sm">T-shirt</p>
+          <h5 class="text-color-primary">Crafter heritage</h5>
+          <div class="card-dot-container">
+            <button class=" dot dot-color-1" type="button" aria-label="Färg 1"></button>
+            <button class="dot dot-color-2" type="button" aria-label="Färg 2"></button>
+            <button class="dot dot-color-3" type="button" aria-label="Färg 3"></button>
+            <p class="text-color-dark text-xs">+5 färger</p>
+          </div>
+          <div class="card-price-container">
+            <p class="text-color-medium text-sm">minimum 25 st.</p>
+            <p class="text-color-dark text-sm">från 410 kr/st</p>
+          </div>
+        </div>
+        </div>
+      </div>
+  
+      <div class="card-slide">
+      <div class="card">
+        <div class="card__image-container--popular">
+          <img src="/visuals/img/grona_tryck_card_3.jpg" class="card-img-top" alt="En kille och tjej klädd i cremé-färgade sweaters">
+          <img class="card-news-icon" src="/visuals/icons/product_news_icon.svg" alt="Klädnyhet!">
+        </div>
+        <div class="card-body card__body--popular">
+          <p class="text-color-dark text-sm">T-shirt</p>
+          <h5 class="text-color-primary">Knoxer natural</h5>
+          <div class="card-dot-container">
+            <button class="dot dot-color-1" type="button" aria-label="Färg 1"></button>
+            <button class="dot dot-color-2" type="button" aria-label="Färg 2"></button>
+            <button class="dot dot-color-3" type="button" aria-label="Färg 3"></button>
+            <p class="text-color-dark text-xs">+5 färger</p>
+          </div>
+          <div class="card-price-container">
+            <p class="text-color-medium text-sm">minimum 25 st.</p>
+            <p class="text-color-dark text-sm">från 410 kr/st</p>
+          </div>
+        </div>
+      </div>
+      </div>
+  
+      <div class="card-slide">
+      <div class="card">
+        <div class="card__image-container--popular">
+          <img src="/visuals/img/grona_tryck_card_4.jpg" class="card-img-top" alt="En kille och en tjej klädd i en varm beige väst med dragkedja och framficka">
+          <img class="card-news-icon" src="/visuals/icons/product_news_icon.svg" alt="Klädnyhet!">
+      </div>
+        <div class="card-body card__body--popular">
+          <p class="text-color-dark text-sm">T-shirt</p>
+          <h5 class="text-color-primary">Liner desert</h5>
+          <div class="card-dot-container">
+            <button class="dot dot-color-1" type="button" aria-label="Färg 1"></button>
+            <button class="dot dot-color-2" type="button" aria-label="Färg 2"></button>
+            <button class="dot dot-color-3" type="button" aria-label="Färg 3"></button>
+            <p class="text-color-dark text-xs">+5 färger</p>
+          </div>
+          <div class="card-price-container">
+            <p class="text-color-medium text-sm">minimum 25 st.</p>
+            <p class="text-color-dark text-sm">från 410 kr/st</p>
+          </div>
+        </div>
+        </div>
+        
+    
   </div>
 
   <!-- Arrow for scrolling right -->
-  <button class="arrow arrow--right" aria-label="Scroll right">
+  <button class="arrow arrow--right" aria-label="Scroll right" onclick="changeCardSlide(1)">
     <img class="arrow--medium" src="visuals/icons/arrow_icon.svg" alt="Scroll right">
   </button>
 </div>
 
  </section>
 
-    
-    <!-- Dekorativ linje-->
-     <!-- <div class="swirl-container">
-     <img class="swirl-pattern" src="visuals/patterns/swirl/swirl_1_ny_green_1.svg" alt="">
-
-    </div> -->
     
     <div class="swirl-pattern" alt="hej"></div>
 

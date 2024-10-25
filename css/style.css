@@ -420,6 +420,28 @@ p {
   position: relative;
 }
 
+/* slideshow with cards */
+.card-popular--wrapper .card-container {
+  display: flex;
+  gap: 1rem;
+  overflow: hidden; /* Hide overflow to make it a slideshow */
+}
+
+.card-popular--wrapper .card-slide {
+  display: none; 
+}
+
+/* Show the first card */
+.card-popular--wrapper .card-slide:first-child {
+  display: block; /* Show first card initially */
+}
+
+.card-slide {
+  display: flex; 
+}
+
+
+
 .card .card__image-container--popular {
   position: relative;
 }
