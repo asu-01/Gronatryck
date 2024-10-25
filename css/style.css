@@ -304,13 +304,16 @@ p {
 
 .news {
   margin: 0rem 1.1rem 0rem 1.1rem;
+  /* border: 1px solid blue;
+  width: 80%; */
 }
 
 .news-container {
   margin-top: 20rem;
   display: grid;
+  /* width: 90%; */
   grid-template-columns: 2fr 1fr;
-  grid-template-rows: auto auto auto;
+  grid-template-rows: auto 1fr 1fr;
   gap: 2%;
 }
 
@@ -327,7 +330,8 @@ p {
   grid-row: 2 / span 2;
   grid-column: 1 / 2;
   position: relative;
-  height: 100%;
+  width: 100%;
+  object-fit: cover;
 }
 
 /* Image Positions for image 2 and 3 */
@@ -335,15 +339,12 @@ p {
   position: relative;
   grid-row: 2 / 3;
   grid-column: 2 / 3;
-  height: 100%;
-  object-fit: cover;
 }
 
 .card-img-container-three {
   position: relative;
   grid-row: 3 / 4;
   grid-column: 2 / 3;
-  height: 100%;
 }
 
 .news-img {
@@ -352,19 +353,16 @@ p {
   object-fit: cover;
 }
 
-.news-img-header {
+.news-img-text {
   position: absolute;
-  bottom: 100px;
-  left: 30px;
+  bottom: 10%;
+  left: 5%;
   width: 60%;
   padding-left: 20px;
-  border-radius: 2rem;
 }
 
 .news-button {
   position: absolute;
-  bottom: 20px;
-  right: 30px;
 }
 
 /* Pilarna */
@@ -961,14 +959,18 @@ p {
   /* Text container hero slideshow */
   .slide-text {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: left;
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
   }
 
   .slide-text h1 {
-    font-size: 2.815rem;
-    margin: 0;
+    width: 100%;
+    font-size: 2.015rem;
+  }
+  .slide-text p {
+    width: 100%;
   }
 
   /* nyheter */
