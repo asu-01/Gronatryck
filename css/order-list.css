@@ -1,0 +1,64 @@
+
+.body {
+    width: 100%;
+}
+
+.order {
+    margin: 10% 6% 0% 6%;
+}
+
+.order .breadcrumb {
+    margin: 1rem 0rem 1rem 0rem;
+}
+
+.order-container {
+    display: flex;
+    gap: 1rem;
+    margin: 4rem 0rem 4rem 0rem;
+}
+
+.order-list-item {
+    display: flex;
+    justify-content: space-between;
+}
+
+.item-wrapper {
+    display: flex;
+}
+
+.item-image {
+    width: 20%;
+}
+
+.item-group-2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.item-group-2 p {
+    margin: 0;
+}
+
+.amount {
+    background-color:lightgray;
+    border: 2px solid gray;
+    width: 12rem;
+}
+
+.amount img {
+    width: 10%;
+}
+
+.order-list {
+    width: 60% ;
+}
+
+.order-sum {
+    width: 40%;
+}
+
+.sum-price {
+    display: flex;
+    justify-content: space-between;
+}

@@ -17,8 +17,8 @@
 .catalogue-category {
     display: flex;
     justify-content: center;
-    gap: 1.5rem;
-    margin-top: 1.5rem;
+    gap: 1rem;
+    margin-top: 1rem;
 }
 
 .catalogue-category a {
@@ -50,7 +50,7 @@
     display: flex;
     flex-wrap: wrap;
     /* Rem eller procent?*/
-    gap:1.5rem 1.5rem;
+    gap:1rem 1rem;
 }
 
 .catalogue-products .card {
