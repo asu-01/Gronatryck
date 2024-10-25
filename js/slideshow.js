@@ -1,66 +1,44 @@
-// Slideshow hero section on home page //
+// Slideshow hero section on home page
 
-let slideIndex = 1;
-showSlides(slideIndex);
+let slideIndex = 1; // Start from the first slide
+showSlides(slideIndex); // Display the first slide
 
+// Change slide by n (e.g., -1 for previous, +1 for next)
 function changeSlide(n) {
-  showSlides((slideIndex += n));
+  showSlides((slideIndex += n)); // Update slide index
 }
 
+// Set slide to the current index
 function currentSlide(n) {
   showSlides((slideIndex = n));
 }
 
 function showSlides(n) {
-  let slides = document.getElementsByClassName("hero-slide");
-  let dots = document.getElementsByClassName("pagination-bullet");
+  let slides = document.getElementsByClassName("hero-slide"); // Get all slides
+  let dots = document.getElementsByClassName("pagination-bullet"); // Get all pagination bullets
 
-  if (n > slides.length) {
-    slideIndex = 1;
-  }
-  if (n < 1) {
-    slideIndex = slides.length;
-  }
-
-  // Hide all slides
+  // Loop through slides and hide them
   for (let i = 0; i < slides.length; i++) {
-    slides[i].style.display = "block";
+    slides[i].style.display = "none"; // Hide all slides
   }
 
-  // Remove "active" class from all bullets
+  // Loop through dots and remove "active" class
   for (let i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" active", "");
+    dots[i].className = dots[i].className.replace(" active", ""); // Remove active class from all bullets
+  }
+
+  // Check if n exceeds the number of slides
+  if (n > slides.length) {
+    slideIndex = 1; // Wrap to first slide
+  }
+  // Check if n is less than 1
+  if (n < 1) {
+    slideIndex = slides.length; // Wrap to last slide
   }
 
   // Show the current slide and add "active" class to the corresponding bullet
-  slides[slideIndex - 1].style.display = "block";
-  dots[slideIndex - 1].className += " active";
-}
-
-//-------- Slideshow popular cards ---------//
-
-let currentCardIndex = 0; // Current index of the first visible card
-const cardsPerSlide = 4; // Number of cards displayed at once
-
-function changeCardSlide(n) {
-  const cardContainer = document.querySelector(".card-container");
-  const cards = document.querySelectorAll(".card");
-
-  // Calculate the new index
-  currentCardIndex += n;
-
-  // Check boundaries
-  if (currentCardIndex < 0) {
-    currentCardIndex = 0; // Prevent moving before the first card
+  slides[slideIndex - 1].style.display = "block"; // Show current slide
+  if (dots[slideIndex - 1]) { // Ensure the bullet exists
+    dots[slideIndex - 1].className += " active"; // Add active class to the current bullet
   }
-  if (currentCardIndex > cards.length - cardsPerSlide) {
-    currentCardIndex = cards.length - cardsPerSlide; // Prevent moving past the last set of cards
-  }
-
-  // Update the scroll position
-  const cardWidth = document.querySelector(".card").offsetWidth; // Get the width of a single card
-  cardContainer.scrollTo({
-    left: cardWidth * currentCardIndex,
-    behavior: "smooth", // Smooth scroll
-  });
 }

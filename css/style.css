@@ -304,14 +304,11 @@ p {
 
 .news {
   margin: 0rem 1.1rem 0rem 1.1rem;
-  /* border: 1px solid blue;
-  width: 80%; */
 }
 
 .news-container {
   margin-top: 20rem;
   display: grid;
-  /* width: 90%; */
   grid-template-columns: 2fr 1fr;
   grid-template-rows: auto 1fr 1fr;
   gap: 2%;
