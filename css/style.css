@@ -409,41 +409,24 @@ p {
 
 .card-popular--wrapper {
   grid-column: 1 / -1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  gap: 1rem;
   justify-content: center;
 }
 
-.card-popular--wrapper {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 1rem;
-  position: relative;
-}
-
-/* slideshow with cards */
 .card-popular--wrapper .card-container {
   display: flex;
-  gap: 1rem;
-  overflow: hidden; /* Hide overflow to make it a slideshow */
-}
-
-.card-popular--wrapper .card-slide {
-  display: none; 
-}
-
-/* Show the first card */
-.card-popular--wrapper .card-slide:first-child {
-  display: block; /* Show first card initially */
+  overflow: hidden;
+  width: 100%;
 }
 
 .card-slide {
-  display: flex; 
-}
-
-
-
-.card .card__image-container--popular {
-  position: relative;
+  display: flex;
+  flex-shrink: 0;
+  width: 100%;
 }
 
 .card__image-container--popular .card-news-icon {
@@ -457,12 +440,6 @@ p {
   border: none;
   gap: 0;
   margin: 0;
-}
-
-.card__image-container--popular .card-heart-icon {
-  position: absolute;
-  top: 10px;
-  right: 10px;
 }
 
 .card-body .text-sm {
@@ -509,19 +486,6 @@ p {
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
-
-.card__body--popular {
-  margin-top: 0.5rem;
-  margin: 0rem 1rem 0rem 1rem;
-}
-
-.card__image-container--popular {
-  width: 100%;
-}
-
-.card__image--popular {
-  width: 100%;
 }
 
 .swirl-pattern {

@@ -24,7 +24,7 @@ function showSlides(n) {
 
   // Hide all slides
   for (let i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
+    slides[i].style.display = "block";
   }
 
   // Remove "active" class from all bullets
