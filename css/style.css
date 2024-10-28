@@ -352,14 +352,21 @@ p {
 
 .news-img-text {
   position: absolute;
-  bottom: 20%;
+  bottom: 10%;
   left: 5%;
   width: 70%;
-  padding-left: 20px;
+}
+
+.card-img-container-two .news-img-text,
+.card-img-container-three .news-img-text {
+  bottom: 17%;
+  left: 7%;
 }
 
 .news-button {
   position: absolute;
+  cursor: pointer;
+  z-index: 11;
 }
 
 /* Pilarna */
