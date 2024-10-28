@@ -36,17 +36,17 @@
         <div class="product-img-wrapper--small round-corner">
           <img
             class="product-img--small round-corner"
-            src="visuals/img/grona_tryck_card_2.jpg"
+            src="visuals/img/t-shirt/gronatryck_product_2.jpg"
             alt=""
           />
           <img
             class="product-img--small round-corner"
-            src="visuals/img/grona_tryck_card_2.jpg"
+            src="visuals/img/t-shirt/gronatryck_product_3.jpg"
             alt=""
           />
           <img
             class="product-img--small round-corner"
-            src="visuals/img/grona_tryck_card_2.jpg"
+            src="visuals/img/t-shirt/gronatryck_product_4.jpg"
             alt=""
           />
         </div>
@@ -139,13 +139,29 @@
               class="products-icon"
               src="visuals/icons/gronatryck_price_tag.svg"
               alt=""
-            />Prisinformation
+            />Prisinformation 
           </p>
           <img
             class="arrow arrow--small"
             src="visuals/icons/arrow_icon.svg"
             alt=""
+            onclick="toggleInfo(this)"
           />
+          <div class="product-info--hidden">
+          <p>Vid köp av 25st utan tryck från 109kr/st exkl. moms.
+          </p>
+          <p>
+            Prislista: 
+            50-99st: 96st/kr exkl. moms
+            100-249st: 87st/kr exkl. moms
+            250-499st: 79st/kr exkl. moms 										
+            500st+: 74st/kr exkl. moms 
+          </p>
+        <p>
+            Minimum antal tryck av samma motiv: 25 st 
+            Minimum antal plagg av samma modell: 10 st
+            Blanda med andra plagg från samma klädmärke, färger och storlekar.</p>
+          </div> 
         </div>
         <div class="product-menu-item">
           <p class="text-color-dark-2">
@@ -364,4 +380,7 @@
       </div>
     </div>
   </section>
+
+  <script src="js/script.js"></script>
+  <script src="js/dropdown.js"></script>
 </body>

@@ -85,3 +85,12 @@ dropdownToggles.forEach((toggle) => {
     dropdownContent.classList.toggle("open");
   });
 });
+
+// Toggle for menu on product page
+function toggleInfo(arrowElement) {
+  const infoDiv = arrowElement.nextElementSibling;
+  infoDiv.classList.toggle("show");
+
+  // Optionally rotate the arrow
+  arrowElement.classList.toggle("rotated");
+}
