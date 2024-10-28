@@ -352,14 +352,21 @@ p {
 
 .news-img-text {
   position: absolute;
-  bottom: 20%;
+  bottom: 10%;
   left: 5%;
   width: 70%;
-  padding-left: 20px;
+}
+
+.card-img-container-two .news-img-text,
+.card-img-container-three .news-img-text {
+  bottom: 17%;
+  left: 7%;
 }
 
 .news-button {
   position: absolute;
+  cursor: pointer;
+  z-index: 11;
 }
 
 /* Pilarna */
@@ -392,41 +399,23 @@ p {
   border: 1px solid var(--monochrome-light);
 }
 
-.card-section {
+.card-slider {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  margin-top: 4rem;
+  display: flex;
+  flex-direction: row;
+  gap: 1.5%;
+  overflow-x: scroll;
+  scroll-behavior: smooth;
+  max-width: 100%;
 }
-
-.card-section-heading {
+.card-slider-heading {
   grid-column: 1 / -1;
   margin-left: 3.2rem;
   font-weight: 900;
+  margin-bottom: 1.4rem;
 }
 
-.card-popular--wrapper {
-  grid-column: 1 / -1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  gap: 1rem;
-  justify-content: center;
-}
-
-.card-popular--wrapper .card-container {
-  display: flex;
-  overflow: hidden;
-  width: 100%;
-}
-
-.card-slide {
-  display: flex;
-  flex-shrink: 0;
-  width: 100%;
-}
-
-.card__image-container--popular .card-news-icon {
+.card-wrapper .card-news-icon {
   position: absolute;
   top: 10px;
   left: 10px;
