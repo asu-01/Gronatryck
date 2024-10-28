@@ -89,6 +89,22 @@ p {
   font-size: 0.8rem;
 }
 
+@media screen and (max-width: 1200px) {
+
+}
+
+@media screen and (max-width: 992px) {
+  
+}
+
+@media screen and (max-width: 768px) {
+  
+}
+
+@media screen and (max-width: 576px) {
+  
+}
+
 /* Navbar */
 
 .nav {
@@ -238,7 +254,17 @@ p {
   border-radius: 10px;
   padding: 0.6rem 1rem 0.6rem 1rem;
   background-color: var(--primary-new);
+  text-align: center;
+}
+.button-secondary {
+  display: inline;
+  border: none;
+  border-radius: 10px;
+  padding: 0.6rem 1rem 0.6rem 1rem;
+  background-color: var(--secondary-off-white);
+  border: 2px solid var(--primary-green);
   text-align: right;
+  color: var(--primary-green);
 }
 
 .button-primary p,
@@ -397,6 +423,28 @@ p {
 
 .card {
   border: 1px solid var(--monochrome-light);
+  width: 18rem;
+  /* width: calc((100% - 6%) / 2); */
+}
+
+@media screen and (max-width: 1200px) {
+
+  .card-wrapper:nth-child() {
+    
+  }
+  
+}
+
+@media screen and (max-width: 992px) {
+  
+}
+
+@media screen and (max-width: 768px) {
+  
+}
+
+@media screen and (max-width: 576px) {
+  
 }
 
 .card-slider {
@@ -458,8 +506,8 @@ p {
 
 .dot {
   display: inline-block;
-  width: 12px;
-  height: 12px;
+  width: .7rem;
+  height: .7rem;
   border-radius: 20px;
   margin: 0px 5px 0px 0px;
   transform: translateY(1px);
@@ -477,6 +525,18 @@ p {
 .dot-color-3 {
   background-color: #d4af85;
 }
+.dot-color-4 {
+  background-color: #e14635;
+}
+.dot-color-5 {
+  background-color: #1710a6;
+}
+
+.dot--large {
+  height: 15px;
+  width: 20px;
+  border-radius: 50%;
+}
 
 .dot:focus {
   border: 1px solid var(--monochrome-darkest);
@@ -489,6 +549,8 @@ p {
   justify-content: space-between;
   align-items: center;
 }
+
+/* Decorationslinjer */
 
 .swirl-pattern {
   margin-top: 5rem;
@@ -531,6 +593,7 @@ p {
   gap: 2%;
   flex-wrap: wrap;
   flex: 1;
+  width: 100%;
 }
 
 .card-container .card {
@@ -734,6 +797,13 @@ p {
   gap: 1%;
   height: 3vh;
 }
+
+/* 
+@media screen and (max-width: 1200px) {
+  .review-section {
+    margin: 20rem 3rem 3rem 3rem;
+  }
+} */
 
 /*----------- Footer -------------*/
 .footer-container {

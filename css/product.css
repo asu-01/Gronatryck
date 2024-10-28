@@ -1,0 +1,121 @@
+.product-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: start;
+}
+
+/* Text block */
+.product-text-container {
+    grid-column: 2;
+    margin-top: 2rem;
+    width: 70%;
+}
+.product-text-container h4, .product-text-container p {
+    width: 100%;
+}
+
+.product-img-container {
+    margin-top: 2rem;
+    max-width: 34rem;
+}
+
+.product-img-certificates img {
+    width: 4.2rem;
+    margin-right: 1rem;
+    margin-bottom: 1.2rem;
+    height: auto;
+}
+
+.product-extra-infobox {
+    margin-top: 1rem;
+    padding: 1rem;
+    border-radius: 1rem;
+    border: 2px solid var(--primary-green);
+}
+
+/* Quantity box for product */
+.button-quantity {
+    display: flex;
+    border-radius: 0.7rem;
+    overflow: hidden;
+    width: 16rem;
+    height: 3rem;
+    border: 2px solid var(--primary-new);
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+  }
+  
+  .button-quantity button {
+    background-color: var(--primary-new);
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    width: 16rem;
+    height: auto;
+    text-align: center;
+    transition: background-color 0.2s;
+  }
+  
+  
+  .input-box {
+    text-align: center;
+    border: none;
+    padding: 8px 19px;
+    outline: none;
+  }
+  
+  /* Hide the number input spin buttons */
+  .input-box::-webkit-inner-spin-button,
+  .input-box::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  
+  .input-box[type="number"] {
+    -moz-appearance: textfield;
+  }
+
+
+/* Large image styling */
+.product-img--large {
+    width: 100%;
+    grid-row: 1;
+    margin-bottom: 1rem;
+    cursor: pointer;
+}
+
+.product-img-wrapper--small {
+    display: flex; 
+    justify-content: space-between;
+    gap: 3%;
+    width: 100%; 
+    grid-row: 2; 
+    cursor: pointer;
+}
+
+/* Small images styling */
+.product-img--small {
+    width: 100%; 
+    max-width: 12rem;
+    grid-row: 2; 
+}
+
+/* Expan products menu */
+
+.product-menu-container {
+    display: flex;
+    flex-direction: column;
+    margin-top: 5rem;
+}
+.products-icon {
+    width: 3rem;
+    margin-bottom: 1rem;
+    margin-right: 1rem;
+}
+
+.product-menu-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid var(--primary-new);
+}
