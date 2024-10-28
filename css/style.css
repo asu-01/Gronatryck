@@ -397,7 +397,6 @@ p {
   display: flex;
   flex-direction: row;
   gap: 1.5%;
-  /* overflow: hidden; */
   overflow-x: scroll;
   scroll-behavior: smooth;
   max-width: 100%;
@@ -406,6 +405,7 @@ p {
   grid-column: 1 / -1;
   margin-left: 3.2rem;
   font-weight: 900;
+  margin-bottom: 1.4rem;
 }
 
 .card-wrapper .card-news-icon {
