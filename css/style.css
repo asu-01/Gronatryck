@@ -403,9 +403,7 @@ p {
   display: grid;
   display: flex;
   flex-direction: row;
-  gap: 1.5%;
-  overflow-x: scroll;
-  scroll-behavior: smooth;
+  gap: 2%;
   max-width: 100%;
 }
 .card-slider-heading {
@@ -419,6 +417,24 @@ p {
   position: absolute;
   top: 10px;
   left: 10px;
+}
+.card-slider-container {
+  position: relative;
+  display: flex;
+  margin-left: 3.3rem;
+}
+.card-slider-container .arrow {
+  position: absolute;
+  border: none;
+  cursor: pointer;
+  z-index: 10;
+  top: 50%;
+}
+.card-slider-container .arrow--left {
+  left: -3%;
+}
+.card-slider-container .arrow--right {
+  left: 90%;
 }
 
 .card__image-container--popular button {

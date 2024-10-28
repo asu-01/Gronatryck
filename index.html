@@ -196,10 +196,12 @@
 
     <section>
       <h3 class="text-color-dark-2 card-slider-heading">Populära produkter</h3>
-      <div class=" card-slider">
-        <button class="arrow arrow--left" aria-label="Scroll left" onclick="changeCardSlide(-1)">
-          <img class="arrow--medium" src="visuals/icons/arrow_icon.svg" alt="Scroll left">
-        </button>
+      <div class="card-slider-container">
+      <button class="arrow arrow--left" aria-label="Scroll left" onclick="changeCardSlide(-1)">
+        <img class="arrow--medium" src="visuals/icons/arrow_icon.svg" alt="Scroll left">
+      </button>
+      <div class="card-slider">
+
           <div class=" card-wrapper">
           <div class="card" style="width: 18rem;">
             <img src="visuals/img/grona_tryck_card_1.jpg" class="card-img-top" alt="...">
@@ -286,8 +288,10 @@
             </div>
           </div>
          </div>
+
+       
       
-        
+        <!-- four extra cards for slideshow -->
         <div class="card-wrapper">
           <div class="card" style="width: 18rem;">
             <img src="visuals/img/grona_tryck_card_5.jpg" class="card-img-top" alt="...">
@@ -370,11 +374,11 @@
             </div>
           </div>
          </div>
-         <!-- Arrow for scrolling right -->
-        <button class="arrow arrow--right" aria-label="Scroll right" onclick="changeCardSlide(1)">
-          <img class="arrow--medium" src="visuals/icons/arrow_icon.svg" alt="Scroll right">
-        </button>
-      
+        </div>
+           <!-- Arrow for scrolling right -->
+           <button class="arrow arrow--right" aria-label="Scroll right" onclick="changeCardSlide(1)">
+            <img class="arrow--medium" src="visuals/icons/arrow_icon.svg" alt="Scroll right">
+          </button>
         </div>
     </section>
 
