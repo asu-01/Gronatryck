@@ -179,6 +179,56 @@ document.addEventListener('DOMContentLoaded', function () {
         const editButton = customerDiv.querySelector('.edit-customer-btn');
         const deleteButton = customerDiv.querySelector('.delete-customer-btn');
 
+        //funktioner för att ändra utseende på radera och ändra knappar
+        const buttonContainer = document.createElement('div');
+        buttonContainer.style.display = 'flex';
+        buttonContainer.style.justifyContent = 'space-between';
+        buttonContainer.style.width = '100%';
+
+        editButton.style.backgroundColor = '#faf7eb';
+        editButton.style.color = '#44725a';
+        editButton.style.padding = '10px';
+        editButton.style.border = '2px solid';
+        editButton.style.borderRadius = '10px';
+        editButton.style.width = '48%';
+        editButton.style.cursor = 'pointer';
+        editButton.style.transition = 'background-color 0.3s ease, color 0.3s ease';
+        
+        deleteButton.style.backgroundColor = '#faf7eb';
+        deleteButton.style.color = '#dc3545';
+        deleteButton.style.padding = '10px';
+        deleteButton.style.border = '2px solid #dc3545';
+        deleteButton.style.width = '48%';
+        deleteButton.style.borderRadius = '10px';
+        deleteButton.style.cursor = 'pointer';
+        deleteButton.style.transition = 'background-color 0.3s ease, color 0.3s ease';
+
+        //funktion för hover effect
+        editButton.addEventListener('mouseenter', function () {
+            editButton.style.backgroundColor = '#44725a';
+            editButton.style.color = '#faf7eb';
+            editButton.style.border = '2px solid #44725a';
+        });
+    
+        editButton.addEventListener('mouseleave', function () {
+            editButton.style.backgroundColor = '#faf7eb';
+            editButton.style.color = '#44725a';
+        });
+
+        deleteButton.addEventListener('mouseenter', function () {
+            deleteButton.style.backgroundColor = '#dc3545';
+            deleteButton.style.color = '#faf7eb';
+        });
+    
+        deleteButton.addEventListener('mouseleave', function () {
+            deleteButton.style.backgroundColor = '#faf7eb';
+            deleteButton.style.color = '#dc3545';
+        });
+
+        buttonContainer.appendChild(editButton);
+        buttonContainer.appendChild(deleteButton);
+        customerDetails.appendChild(buttonContainer);
+
         // Visa kundinfo när namnet är klickad
         customerName.addEventListener('click', function () {
             customerDetails.style.display = customerDetails.style.display === 'none' ? 'block' : 'none';
@@ -237,8 +287,10 @@ document.addEventListener('DOMContentLoaded', function () {
                 document.getElementById('edit-modal').style.display = 'none';
             }
         });
-    }
+    }    
 
 });
+
+
 
 
