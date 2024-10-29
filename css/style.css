@@ -89,22 +89,6 @@ p {
   font-size: 0.8rem;
 }
 
-@media screen and (max-width: 1200px) {
-
-}
-
-@media screen and (max-width: 992px) {
-  
-}
-
-@media screen and (max-width: 768px) {
-  
-}
-
-@media screen and (max-width: 576px) {
-  
-}
-
 /* Navbar */
 
 .nav {
@@ -278,7 +262,6 @@ p {
   top: 50%;
   border: none;
   cursor: pointer;
-  z-index: 10;
 }
 
 .hero-image .arrow--left {
@@ -455,7 +438,7 @@ p {
   position: absolute;
   border: none;
   cursor: pointer;
-  z-index: 10;
+  z-index: 2;
   top: 50%;
 }
 .card-slider-container .arrow--left {
@@ -486,8 +469,8 @@ p {
 
 .dot {
   display: inline-block;
-  width: .7rem;
-  height: .7rem;
+  width: 0.7rem;
+  height: 0.7rem;
   border-radius: 20px;
   margin: 0px 5px 0px 0px;
   transform: translateY(1px);
@@ -994,6 +977,51 @@ p {
 
 /*-------- Mobile screens media queries ------------*/
 @media screen and (max-width: 768px) {
+  /* Mobile navigation open style */
+
+  .nav-links.open {
+    display: flex;
+  }
+
+  .dropdown {
+    display: block;
+  }
+  .dropdown-content {
+    background: none;
+    position: relative;
+    border: none;
+    padding: 0;
+  }
+
+  .dropdown-content.open {
+    width: 100%;
+    border: none;
+  }
+
+  .dropdown-links {
+    display: none;
+    border-bottom: none;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+  }
+
+  .dropdown-links.open {
+    display: block;
+  }
+
+  .dropdown-links.open a {
+    border-bottom: none;
+    font-size: 1rem;
+    margin-left: 1rem;
+  }
+
+  /* Rotate the arrow when .rotated is added */
+  .arrow.rotated {
+    transform: rotate(180deg);
+    transition: transform 0.3s ease;
+  }
+
   /* Text container hero slideshow */
   .slide-text {
     display: flex;
@@ -1206,4 +1234,7 @@ p {
     font-size: 1rem;
     padding-left: 0.5rem;
   }
+}
+
+@media screen and (max-width: 576px) {
 }

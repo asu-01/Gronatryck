@@ -10,12 +10,57 @@
 //   dropdownList.style.display = "none";
 // });
 
-// ----------------    toggle functionality for desktop navigation --------------------//
-const dropdownBtn = document.getElementsByClassName("dropdown-btn");
-const dropdownList = document.getElementsByClassName("dropdown");
+// ---------- toggle functionality for desktop navigation --------------------//
+// const dropdownBtn = document.getElementsByClassName("dropdown-btn");
+// const dropdownList = document.getElementsByClassName("dropdown");
 
-console.log(dropdownList);
-console.log(dropdownBtn);
+// console.log(dropdownList);
+// console.log(dropdownBtn);
+
+// /* Function to determine if the screen is mobile */
+// function isMobile() {
+//   return window.innerWidth <= 768;
+// }
+
+// /* Add event listeners for toggling dropdown menus */
+// for (let i = 0; i < dropdownBtn.length; i++) {
+//   dropdownBtn[i].addEventListener("click", () => {
+//     if (!isMobile()) {
+//       // Check if not on mobile
+//       dropdownList[i].classList.toggle("open");
+//     }
+//   });
+
+//   dropdownList[i].addEventListener("click", () => {
+//     dropdownList[i].classList.remove("open");
+//   });
+// }
+
+// /* Dropdown for subcategory */
+// const expandBtn = document.getElementById("expand");
+// const subcategory = document.getElementById("subcategory");
+
+// expandBtn.addEventListener("click", (e) => {
+//   if (!isMobile()) {
+//     // Check if not on mobile
+//     subcategory.classList.toggle("open");
+//   }
+// });
+
+// Mobile icon and navigation links
+// Existing mobile icon and navigation links
+const mobileIcon = document.querySelector(".mobile-icon");
+const navLinks = document.querySelector(".nav-links");
+
+/* Toggle navLinks visibility when mobileIcon is clicked */
+mobileIcon.addEventListener("click", (event) => {
+  event.stopPropagation(); // Prevent interference with other click events
+  navLinks.classList.toggle("open");
+});
+
+/* Select dropdown buttons and links */
+const dropdownBtn = document.querySelectorAll(".dropdown-btn");
+const dropdownList = document.querySelectorAll(".dropdown");
 
 /* Function to determine if the screen is mobile */
 function isMobile() {
@@ -23,31 +68,72 @@ function isMobile() {
 }
 
 /* Add event listeners for toggling dropdown menus */
-for (let i = 0; i < dropdownBtn.length; i++) {
-  dropdownBtn[i].addEventListener("click", () => {
-    if (!isMobile()) {
-      // Check if not on mobile
-      dropdownList[i].classList.toggle("open");
+dropdownBtn.forEach((btn, index) => {
+  btn.addEventListener("click", (event) => {
+    event.stopPropagation(); // Prevent interference with other events
+
+    // Only apply mobile dropdown toggle
+    if (isMobile()) {
+      const dropdownLinks = dropdownList[index].querySelector(".dropdown-links");
+
+      // Toggle visibility of dropdown-links in mobile
+      dropdownLinks.classList.toggle("open");
+
+      // Rotate arrow icon for mobile
+      const arrowIcon = btn.querySelector(".arrow");
+      if (arrowIcon) {
+        arrowIcon.classList.toggle("rotated");
+      }
+
+      // Close other dropdowns if any are open
+      closeOtherDropdowns(dropdownLinks);
+    } else {
+      // Desktop behavior
+      dropdownList[index].classList.toggle("open");
     }
   });
+});
 
-  dropdownList[i].addEventListener("click", () => {
-    dropdownList[i].classList.remove("open");
+/* Mobile-specific function to toggle dropdowns */
+function toggleInfo(arrowElement) {
+  // Determine if we are on mobile
+  if (!isMobile()) return; // Only run in mobile view
+
+  const dropdownContent = arrowElement.nextElementSibling.querySelector(".dropdown-links");
+
+  // Toggle the dropdown visibility
+  dropdownContent.classList.toggle("open");
+
+  // Toggle the arrow rotation
+  const arrowIcon = arrowElement.querySelector(".arrow");
+  if (arrowIcon) {
+    arrowIcon.classList.toggle("rotated");
+  }
+
+  // Close other dropdowns if any are open
+  closeOtherDropdowns(dropdownContent);
+}
+
+/* Updated closeOtherDropdowns to accept dropdown to keep open */
+function closeOtherDropdowns(except) {
+  document.querySelectorAll(".dropdown-links").forEach((dropdown) => {
+    if (dropdown !== except) {
+      dropdown.classList.remove("open");
+    }
   });
 }
 
-/* Dropdown for subcategory */
-const expandBtn = document.getElementById("expand");
-const subcategory = document.getElementById("subcategory");
-
-expandBtn.addEventListener("click", (e) => {
-  if (!isMobile()) {
-    // Check if not on mobile
-    subcategory.classList.toggle("open");
-  }
+/* Close all dropdowns when clicking outside */
+document.addEventListener("click", () => {
+  dropdownList.forEach((dropdown) => {
+    const dropdownLinks = dropdown.querySelector(".dropdown-links");
+    dropdownLinks.classList.remove("open");
+  });
 });
 
-// ----------------    toggle functionality for mobile footer --------------------//
+
+
+// ---------   toggle functionality for mobile footer --------------------//
 
 function toggleLinks(linkId) {
   const links = document.getElementById(linkId);
@@ -60,31 +146,34 @@ function toggleLinks(linkId) {
 
 // ----------------    toggle functionality for mobile navbar--------------------//
 //   // Toggle mobile menu (hamburger icon)
-const mobileIcon = document.querySelector(".mobile-icon");
-const navLinks = document.querySelector(".nav-links");
+// const mobileIcon = document.querySelector(".mobile-icon");
+// const navLinks = document.querySelector(".nav-links");
 
-mobileIcon.addEventListener("click", () => {
-  navLinks.classList.toggle("open");
-});
+// mobileIcon.addEventListener("click", () => {
+//   navLinks.classList.toggle("open");
+// });
 
-// Toggle dropdown content for mobile
-const dropdownToggles = document.querySelectorAll(".dropdown-toggle");
+// // Toggle dropdown content for mobile
+// const dropdownToggles = document.querySelectorAll(".dropdown-toggle");
 
-dropdownToggles.forEach((toggle) => {
-  toggle.addEventListener("click", () => {
-    const dropdownContent = toggle.nextElementSibling;
+// dropdownToggles.forEach((toggle) => {
+//   toggle.addEventListener("click", () => {
+//     const dropdownContent = toggle.nextElementSibling;
 
-    // Close other open dropdowns
-    document.querySelectorAll(".dropdown-content").forEach((content) => {
-      if (content !== dropdownContent) {
-        content.classList.remove("open");
-      }
-    });
+//     // Close other open dropdowns
+//     document.querySelectorAll(".dropdown-content").forEach((content) => {
+//       if (content !== dropdownContent) {
+//         content.classList.remove("open");
+//       }
+//     });
 
-    // Toggle the clicked dropdown content
-    dropdownContent.classList.toggle("open");
-  });
-});
+//     // Toggle the clicked dropdown content
+//     dropdownContent.classList.toggle("open");
+//   });
+// });
+
+
+
 
 //-------- Toggle for menu on product page ------------//
 
@@ -103,3 +192,5 @@ function toggleInfo(arrowElement) {
   // Optionally rotate the arrow icon to indicate the expanded/collapsed state
   arrowElement.classList.toggle("rotated");
 }
+
+
