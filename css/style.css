@@ -137,7 +137,8 @@ p {
   text-decoration: underline;
 }
 
-.mobile-icon {
+/* hide on desktop */
+.hamburger-icon {
   display: none;
 }
 
@@ -280,7 +281,6 @@ p {
   position: absolute;
   left: 50%;
   bottom: 1.5rem;
-  z-index: 20;
   display: flex;
   cursor: pointer;
   justify-content: center;
@@ -761,13 +761,6 @@ p {
   height: 3vh;
 }
 
-/* 
-@media screen and (max-width: 1200px) {
-  .review-section {
-    margin: 20rem 3rem 3rem 3rem;
-  }
-} */
-
 /*----------- Footer -------------*/
 .footer-container {
   padding-top: 3rem;
@@ -880,6 +873,7 @@ p {
 
   .nav-icons img {
     width: 5vh;
+    cursor: pointer;
   }
 
   /* vilka är vi section */
@@ -977,51 +971,6 @@ p {
 
 /*-------- Mobile screens media queries ------------*/
 @media screen and (max-width: 768px) {
-  /* Mobile navigation open style */
-
-  .nav-links.open {
-    display: flex;
-  }
-
-  .dropdown {
-    display: block;
-  }
-  .dropdown-content {
-    background: none;
-    position: relative;
-    border: none;
-    padding: 0;
-  }
-
-  .dropdown-content.open {
-    width: 100%;
-    border: none;
-  }
-
-  .dropdown-links {
-    display: none;
-    border-bottom: none;
-    width: 100%;
-    padding: 0;
-    margin: 0;
-  }
-
-  .dropdown-links.open {
-    display: block;
-  }
-
-  .dropdown-links.open a {
-    border-bottom: none;
-    font-size: 1rem;
-    margin-left: 1rem;
-  }
-
-  /* Rotate the arrow when .rotated is added */
-  .arrow.rotated {
-    transform: rotate(180deg);
-    transition: transform 0.3s ease;
-  }
-
   /* Text container hero slideshow */
   .slide-text {
     display: flex;
@@ -1093,12 +1042,14 @@ p {
     display: none;
     flex-direction: column;
     width: 100%;
-    height: 70vh;
+    height: auto;
     position: absolute;
     top: 7vh;
     left: 0;
     background-color: var(--primary-green);
     z-index: 2;
+    transition: max-height 0.3s ease;
+    overflow: hidden;
   }
 
   .nav-links a,
@@ -1112,24 +1063,59 @@ p {
     border-bottom: 0.5px solid var(--secondary-off-white);
   }
 
-  .nav-links a .arrow {
-    justify-content: end;
-    color: var(--secondary-off-white);
-  }
-
   .nav-links a {
     color: var(--secondary-off-white);
     text-align: left;
     font-size: 1.1rem;
   }
 
+  /* Mobile navigation open style */
+
   .nav-links.open {
     display: flex;
   }
 
-  .mobile-icon {
+  .dropdown .dropdown.open {
+    display: block;
+    opacity: 1;
+  }
+  .dropdown-content {
+    background: none;
+    position: relative;
+    border: none;
+    padding: 0;
+  }
+
+  .dropdown-content.open {
+    width: 100%;
+    border: none;
+  }
+
+  .dropdown-links {
+    display: none;
+    border-bottom: none;
+    width: 100%;
+  }
+
+  .dropdown-links.open {
+    display: block;
+  }
+
+  .dropdown-links.open a {
+    border-bottom: none;
+    font-size: 1rem;
+    margin-left: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  /* Rotate the arrow when .rotated is added */
+  .arrow.rotated {
+    transform: rotate(180deg);
+    transition: transform 0.3s ease;
+  }
+
+  .hamburger-icon {
     display: inline-flex;
-    cursor: pointer;
   }
 
   .review-card p {

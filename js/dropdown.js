@@ -47,37 +47,40 @@
 //   }
 // });
 
-// Mobile icon and navigation links
-// Existing mobile icon and navigation links
-const mobileIcon = document.querySelector(".mobile-icon");
+// ---------  Hamburger icon and navigation links ------ //
+ 
+const hamburgerIcon = document.querySelector(".hamburger-icon");
 const navLinks = document.querySelector(".nav-links");
 
-/* Toggle navLinks visibility when mobileIcon is clicked */
-mobileIcon.addEventListener("click", (event) => {
+/* Toggle navLinks visibility when hamburgerIcon is clicked */
+hamburgerIcon.addEventListener("click", (event) => {
   event.stopPropagation(); // Prevent interference with other click events
   navLinks.classList.toggle("open");
 });
 
 /* Select dropdown buttons and links */
 const dropdownBtn = document.querySelectorAll(".dropdown-btn");
-const dropdownList = document.querySelectorAll(".dropdown");
+const dropdownLists = document.querySelectorAll(".dropdown");
 
-/* Function to determine if the screen is mobile */
+// Function to determine if the screen is mobile
 function isMobile() {
   return window.innerWidth <= 768;
 }
 
-/* Add event listeners for toggling dropdown menus */
+// Add event listeners for toggling dropdown menus
 dropdownBtn.forEach((btn, index) => {
   btn.addEventListener("click", (event) => {
     event.stopPropagation(); // Prevent interference with other events
 
-    // Only apply mobile dropdown toggle
+    // If on mobile
     if (isMobile()) {
-      const dropdownLinks = dropdownList[index].querySelector(".dropdown-links");
+      const dropdown = dropdownLists[index];
+      dropdown.classList.toggle("open");
 
-      // Toggle visibility of dropdown-links in mobile
-      dropdownLinks.classList.toggle("open");
+      const dropdownLinksSections = dropdown.querySelectorAll(".dropdown-links");
+      dropdownLinksSections.forEach((section) => {
+        section.classList.toggle("open"); // Toggle visibility of all links
+      });
 
       // Rotate arrow icon for mobile
       const arrowIcon = btn.querySelector(".arrow");
@@ -85,50 +88,56 @@ dropdownBtn.forEach((btn, index) => {
         arrowIcon.classList.toggle("rotated");
       }
 
-      // Close other dropdowns if any are open
-      closeOtherDropdowns(dropdownLinks);
+      // Adjust the height of the nav container if dropdown is opened
+      const nav = document.querySelector(".nav");
+      if (dropdown.classList.contains("open")) {
+        nav.style.height = `${nav.scrollHeight}px`; // Expand to fit content
+      } else {
+        nav.style.height = ""; // Reset height to auto
+      }
+
+      // Close other dropdowns
+      closeOtherDropdowns(index);
     } else {
-      // Desktop behavior
-      dropdownList[index].classList.toggle("open");
+      // Handle desktop dropdown toggle
+      const dropdown = dropdownLists[index];
+      dropdown.classList.toggle("open");
     }
   });
 });
 
-/* Mobile-specific function to toggle dropdowns */
-function toggleInfo(arrowElement) {
-  // Determine if we are on mobile
-  if (!isMobile()) return; // Only run in mobile view
-
-  const dropdownContent = arrowElement.nextElementSibling.querySelector(".dropdown-links");
-
-  // Toggle the dropdown visibility
-  dropdownContent.classList.toggle("open");
-
-  // Toggle the arrow rotation
-  const arrowIcon = arrowElement.querySelector(".arrow");
-  if (arrowIcon) {
-    arrowIcon.classList.toggle("rotated");
-  }
-
-  // Close other dropdowns if any are open
-  closeOtherDropdowns(dropdownContent);
-}
-
-/* Updated closeOtherDropdowns to accept dropdown to keep open */
-function closeOtherDropdowns(except) {
-  document.querySelectorAll(".dropdown-links").forEach((dropdown) => {
-    if (dropdown !== except) {
+// Close other dropdowns when one is opened
+function closeOtherDropdowns(openIndex) {
+  dropdownBtn.forEach((btn, index) => {
+    if (index !== openIndex) {
+      const dropdown = dropdownLists[index];
       dropdown.classList.remove("open");
+
+      const dropdownLinksSections = dropdown.querySelectorAll(".dropdown-links");
+      dropdownLinksSections.forEach((section) => {
+        section.classList.remove("open"); // Hide all dropdown links for closed dropdowns
+      });
+
+      // Reset arrow rotation for closed dropdowns
+      const arrowIcon = btn.querySelector(".arrow");
+      if (arrowIcon) {
+        arrowIcon.classList.remove("rotated");
+      }
     }
   });
 }
 
-/* Close all dropdowns when clicking outside */
-document.addEventListener("click", () => {
-  dropdownList.forEach((dropdown) => {
-    const dropdownLinks = dropdown.querySelector(".dropdown-links");
-    dropdownLinks.classList.remove("open");
-  });
+// Close all dropdowns when clicking outside
+document.addEventListener("click", (event) => {
+  if (!navLinks.contains(event.target) && !hamburgerIcon.contains(event.target)) {
+    dropdownLists.forEach((dropdown) => {
+      dropdown.classList.remove("open");
+      const dropdownLinks = dropdown.querySelectorAll(".dropdown-links");
+      dropdownLinks.forEach((section) => {
+        section.classList.remove("open");
+      });
+    });
+  }
 });
 
 
@@ -144,33 +153,6 @@ function toggleLinks(linkId) {
   }
 }
 
-// ----------------    toggle functionality for mobile navbar--------------------//
-//   // Toggle mobile menu (hamburger icon)
-// const mobileIcon = document.querySelector(".mobile-icon");
-// const navLinks = document.querySelector(".nav-links");
-
-// mobileIcon.addEventListener("click", () => {
-//   navLinks.classList.toggle("open");
-// });
-
-// // Toggle dropdown content for mobile
-// const dropdownToggles = document.querySelectorAll(".dropdown-toggle");
-
-// dropdownToggles.forEach((toggle) => {
-//   toggle.addEventListener("click", () => {
-//     const dropdownContent = toggle.nextElementSibling;
-
-//     // Close other open dropdowns
-//     document.querySelectorAll(".dropdown-content").forEach((content) => {
-//       if (content !== dropdownContent) {
-//         content.classList.remove("open");
-//       }
-//     });
-
-//     // Toggle the clicked dropdown content
-//     dropdownContent.classList.toggle("open");
-//   });
-// });
 
 
 
