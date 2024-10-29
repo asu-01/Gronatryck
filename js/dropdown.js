@@ -86,11 +86,20 @@ dropdownToggles.forEach((toggle) => {
   });
 });
 
-// Toggle for menu on product page
-function toggleInfo(arrowElement) {
-  const infoDiv = arrowElement.nextElementSibling;
-  infoDiv.classList.toggle("show");
+//-------- Toggle for menu on product page ------------//
 
-  // Optionally rotate the arrow
+function toggleInfo(arrowElement) {
+  // Locate the next sibling element of the parent, which should be the product-info--hidden div
+  const infoDiv = arrowElement.parentElement.nextElementSibling;
+  const menuItem = arrowElement.parentElement;
+
+  // Toggle the "show" class to reveal or hide the info section
+  if (infoDiv && infoDiv.classList.contains("product-info--hidden")) {
+    infoDiv.classList.toggle("show");
+  }
+  // Toggle the expanded border effect on the product-menu-item div
+  menuItem.classList.toggle("expanded");
+
+  // Optionally rotate the arrow icon to indicate the expanded/collapsed state
   arrowElement.classList.toggle("rotated");
 }

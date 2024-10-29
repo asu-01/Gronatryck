@@ -8,28 +8,128 @@ function articleIdGenerator() {
 const JSONdata = [
   {
     article: `${articleIdGenerator()}`,
-    title: "Fleecetröja",
-    color: "Röd",
-    size: "S",
-    prices: {
-      25: 563,
-      50: 570,
-      100: 563,
-      250: 478,
-      500: 450,
+    category: "T-shirt",
+    title: "Classic Bomull",
+    img: {
+      Röd: "visuals/img/grona_tryck_card_2.jpg",
+      Beige: "visuals/img/t-shirt/gronatryck_product_2.jpg",
+      Vit: "visuals/img/t-shirt/gronatryck_product_3.jpg",
     },
+    color: ["Röd", "Beige", "Vit"],
+    prices: [
+      {
+        minAmount: 50,
+        maxAmount: 99,
+        price: 200,
+      },
+      {
+        minAmount: 100,
+        maxAmount: 249,
+        price: 200,
+      },
+      {
+        minAmount: 250,
+        maxAmount: 499,
+        price: 200,
+      },
+      {
+        minAmount: 500,
+        price: 200,
+      },
+    ],
+  },
+  {
+    article: `${articleIdGenerator()}`,
+    category: "Västar",
+    title: "Classic Bomull",
+    img: {
+      Röd: "visuals/img/grona_tryck_card_4.jpg",
+      Beige: "visuals/img/t-shirt/gronatryck_product_2.jpg",
+      Vit: "visuals/img/t-shirt/gronatryck_product_3.jpg",
+    },
+    color: ["Röd", "Beige", "Vit"],
+    prices: [
+      {
+        minAmount: 50,
+        maxAmount: 99,
+        price: 200,
+      },
+      {
+        minAmount: 100,
+        maxAmount: 249,
+        price: 200,
+      },
+      {
+        minAmount: 250,
+        maxAmount: 499,
+        price: 200,
+      },
+      {
+        minAmount: 500,
+        price: 200,
+      },
+    ],
   },
 ];
 
 // JavaScript objektet konverteras till en JSON sträng och sparas ned localStorage som json-products.
 localStorage.setItem("json-products", JSON.stringify(JSONdata));
 
-// Skriver ut produktdata på hemsidan när den laddas
+// Skriver ut cards med produktdata på hemsidan när den laddas
 window.onload = function printData() {
+  const cardContainer = document.querySelector(".catalogue-products");
   const retrievedData = localStorage.getItem("json-products");
-
   const parsedJSON = JSON.parse(retrievedData);
-  console.log(parsedJSON);
+
+  parsedJSON.forEach((result) => {
+    const content = `<div class="card">
+          <a href="product.html">
+            <img
+              src="${Object.values(result.img)[0]}"
+              class="card-img-top"
+              title="Vit t-shirt i bomull"
+              alt="En tjej klädd i en vit t-shirt"
+            />
+            <img
+              class="card-news-icon"
+              src="/visuals/icons/product_news_icon.svg"
+              alt="Klädnyhet!"
+            />
+            <div class="card-body card__body--popular">
+              <p class="text-color-dark text-sm">${result.category}</p>
+              <h5 class="text-color-primary">${result.title}</h5>
+              <div class="card-dot-container">
+                <button
+                  class="dot dot-color-1"
+                  type="button"
+                  aria-label="Färg 1"
+                ></button>
+                <button
+                  class="dot dot-color-2"
+                  type="button"
+                  aria-label="Färg 2"
+                ></button>
+                <button
+                  class="dot dot-color-3"
+                  type="button"
+                  aria-label="Färg 3"
+                ></button>
+                <p class="text-color-dark text-xs">+${
+                  result.color.length
+                } färger</p>
+              </div>
+              <div class="card-price-container">
+                <p class="text-color-medium text-sm">minimum 25 st.</p>
+                <p class="text-color-dark text-sm">från ${
+                  result.prices[0].price
+                } kr/st</p>
+              </div>
+            </div>
+          </a>
+        </div>`;
+
+    cardContainer.innerHTML += content;
+  });
 };
 
 // JSON data hämtas från localStorage.
@@ -68,25 +168,25 @@ console.log(UpdatedList);
 
 */
 
-const amountTest = 32;
-const articleIdTest = 1000;
+// for (const product of productArray) {
+//   const valueArray = Object.values(product);
+//   for (const value of valueArray) {
+//     const dataPlaceHolder = document.createElement("p");
+//     dataPlaceHolder.innerHTML = value;
+//     // document.getElementById("body").appendChild(dataPlaceHolder);
+//   }
+// }
 
-for (const product of productArray) {
-  const valueArray = Object.values(product);
-  for (const value of valueArray) {
-    const dataPlaceHolder = document.createElement("p");
-    dataPlaceHolder.innerHTML = value;
-    // document.getElementById("body").appendChild(dataPlaceHolder);
-  }
-}
+// const amountTest = 32;
+// const articleIdTest = 1000;
 
-// Funktion för att hämta ut rätt pris baserat på mängd, WIP.
-function getPrice() {
-  for (product of productArray) {
-    console.log(product.article);
-  }
-}
+// // Funktion för att hämta ut rätt pris baserat på mängd, WIP.
+// function getPrice() {
+//   for (product of productArray) {
+//     console.log(product.article);
+//   }
+// }
 
 // Jag vill ha ut priset för en specifik artikel baserad på antalet produkter som en användare klickar i.
 
-getPrice();
+// getPrice();

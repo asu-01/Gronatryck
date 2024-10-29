@@ -427,26 +427,6 @@ p {
   /* width: calc((100% - 6%) / 2); */
 }
 
-@media screen and (max-width: 1200px) {
-
-  .card-wrapper:nth-child() {
-    
-  }
-  
-}
-
-@media screen and (max-width: 992px) {
-  
-}
-
-@media screen and (max-width: 768px) {
-  
-}
-
-@media screen and (max-width: 576px) {
-  
-}
-
 .card-slider {
   display: grid;
   display: flex;
@@ -461,7 +441,7 @@ p {
   margin-bottom: 1.4rem;
 }
 
-.card-wrapper .card-news-icon {
+.card-news-icon {
   position: absolute;
   top: 10px;
   left: 10px;

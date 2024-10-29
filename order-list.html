@@ -37,11 +37,23 @@
                     <div class="item-group-1">
                         <h6 class="bold">Huvtröja</h6>
                         <p>Färg: Ljusgrå</p>
-                        <form class="amount">
+                        <div class="button-quantity">
+                            <button class="minus" aria-label="Decrease">&minus;</button>
+                            <input
+                              type="number"
+                              class="input-box"
+                              value="10"
+                              min="10"
+                              max="100"
+                              name="amount"
+                            />
+                            <button class="plus" aria-label="Increase">&plus;</button>
+                          </div>
+                        <!-- <form class="amount">
                             <div class="amount-decrease"><img src="/visuals/icons/gronatryck_icon_minus (1).svg" /></div>
                             <input type="text" class="amount-input" value="0"></input>
                             <div class="amount-increase"><img src="/visuals/icons/gronatryck_icon_plus (1).svg" /></div>
-                        </form>
+                        </form> -->
                     </div>
                 </div>
                 <div class="item-group-2">
@@ -56,11 +68,18 @@
                         <div class="item-group-1">
                             <h6 class="bold">Huvtröja</h6>
                             <p>Färg: Ljusgrå</p>
-                            <form class="amount">
-                                <div class="amount-decrease"><img src="/visuals/icons/gronatryck_icon_minus (1).svg" /></div>
-                                <input type="text" class="amount-input" value="0"></input>
-                                <div class="amount-increase"><img src="/visuals/icons/gronatryck_icon_plus (1).svg" /></div>
-                            </form>
+                            <div class="button-quantity">
+                                <button class="minus" aria-label="Decrease">&minus;</button>
+                                <input
+                                  type="number"
+                                  class="input-box"
+                                  value="10"
+                                  min="10"
+                                  max="100"
+                                  name="amount"
+                                />
+                                <button class="plus" aria-label="Increase">&plus;</button>
+                              </div>
                         </div>
                     </div>
                     <div class="item-group-2">
@@ -75,11 +94,18 @@
                         <div class="item-group-1">
                             <h6 class="bold">Huvtröja</h6>
                             <p>Färg: Ljusgrå</p>
-                        <form class="amount">
-                            <div class="amount-decrease"><img src="/visuals/icons/gronatryck_icon_minus (1).svg" /></div>
-                            <input type="text" class="amount-input" value="0"></input>
-                            <div class="amount-increase"><img src="/visuals/icons/gronatryck_icon_plus (1).svg" /></div>
-                        </form>
+                            <div class="button-quantity">
+                                <button class="minus" aria-label="Decrease">&minus;</button>
+                                <input
+                                  type="number"
+                                  class="input-box"
+                                  value="10"
+                                  min="10"
+                                  max="100"
+                                  name="amount"
+                                />
+                                <button class="plus" aria-label="Increase">&plus;</button>
+                              </div>
                     </div>
                     </div>
                     <div class="item-group-2">
@@ -109,5 +135,7 @@
 
       </div>
     </section>
+
+    <script src="/js/amount.js"></script>
   </body>
 </html>

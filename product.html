@@ -14,6 +14,7 @@
   </head>
 </html>
 <body>
+  <!-- Breadcumbs för sortiment -->
   <section class="container catalogue">
     <div class="breadcrumb text-color-primary">
       <a href="index.html">Hem</a>
@@ -26,6 +27,10 @@
       <img class="arrow--right" src="/visuals/icons/arrow_icon.svg" />
       <a>Classic fit</a>
     </div>
+  </section>
+
+  <section class="container">
+    <!-- Produkt bilder  -->
     <div class="product-container">
       <div class="product-img-container">
         <img
@@ -51,6 +56,7 @@
           />
         </div>
       </div>
+      <!-- Produkt information -->
       <div class="product-text-container">
         <h4 class="text-color-dark-2">Classic fit</h4>
         <p class="text-color-dark-2">
@@ -68,7 +74,7 @@
           <img src="visuals/certificates/peta-approved-vegan.svg" alt="" />
         </div>
         <div>
-          <h6>Antal</h6>
+          <h6 class="text-color-dark-2">Antal</h6>
           <div class="button-quantity">
             <button class="minus" aria-label="Decrease">&minus;</button>
             <input
@@ -82,7 +88,7 @@
           </div>
         </div>
         <div>
-          <h6>Färger</h6>
+          <h6 class="text-color-dark-2">Färger</h6>
           <div class="card-dot-container">
             <button
               class="dot dot-color-1 dot--large"
@@ -131,7 +137,10 @@
           beställningen tillsammans mer er.
         </p>
       </div>
+    </section>
 
+      <!-- Produkt meny -->
+    <section class="container catalogue products-menu">
       <div class="product-menu-container">
         <div class="product-menu-item">
           <p class="text-color-dark-2">
@@ -139,7 +148,7 @@
               class="products-icon"
               src="visuals/icons/gronatryck_price_tag.svg"
               alt=""
-            />Prisinformation 
+            />Prisinformation
           </p>
           <img
             class="arrow arrow--small"
@@ -147,21 +156,18 @@
             alt=""
             onclick="toggleInfo(this)"
           />
-          <div class="product-info--hidden">
-          <p>Vid köp av 25st utan tryck från 109kr/st exkl. moms.
+        </div>
+        <div class="product-info--hidden text-color-dark-2">
+          <p>Vid köp av 25st utan tryck från 109kr/st exkl. moms.</p>
+          <p>
+            Prislista: 50-99st: 96st/kr exkl. moms 100-249st: 87st/kr exkl.
+            moms 250-499st: 79st/kr exkl. moms 500st+: 74st/kr exkl. moms
           </p>
           <p>
-            Prislista: 
-            50-99st: 96st/kr exkl. moms
-            100-249st: 87st/kr exkl. moms
-            250-499st: 79st/kr exkl. moms 										
-            500st+: 74st/kr exkl. moms 
+            Minimum antal tryck av samma motiv: 25 st Minimum antal plagg av
+            samma modell: 10 st Blanda med andra plagg från samma klädmärke,
+            färger och storlekar.
           </p>
-        <p>
-            Minimum antal tryck av samma motiv: 25 st 
-            Minimum antal plagg av samma modell: 10 st
-            Blanda med andra plagg från samma klädmärke, färger och storlekar.</p>
-          </div> 
         </div>
         <div class="product-menu-item">
           <p class="text-color-dark-2">
@@ -175,8 +181,17 @@
             class="arrow arrow--small"
             src="visuals/icons/arrow_icon.svg"
             alt=""
+            onclick="toggleInfo(this)"
           />
         </div>
+          <div class="product-info--hidden text-color-dark-2"> 
+            <p> StSt Eco 073, Freestyler Vintage
+            Art nr. 2574 </p>
+          <p>En rejäl t-shirt gjord av “vintage infärgad” 100% ekologisk rättvisemärkt, ringspunnen och kammad bomull. Passformen är en “relaxed fit” med klassisk halsmudd. Tröjan har kraftiga sömmar och på det hela taget är det som ett rejält plagg med hög hållbarhet. Passar därför perfekt för långvarigt bruk och för t.ex. arbetstillfällen där en tåligare t-shirt behövs.</p>
+          <p>Materialvalet är 100% ekologisk, kammad och ringspunnen bomull som ger en slät och fin textil skön att bära mot kroppen och som lämpar sig mycket bra att trycka på. Förutom den ekologiska kontrollen av material och tillverkning har plagget även genomgott kvalitettester för slitage, färg- tvätt och ljusbeständigheten i textilen. Vi använder screenfärger fria från gifter såsom ftalater.</p>
+          </div>
+
+
         <div class="product-menu-item">
           <p class="text-color-dark-2">
             <img
@@ -189,8 +204,25 @@
             class="arrow arrow--small"
             src="visuals/icons/arrow_icon.svg"
             alt=""
+            onclick="toggleInfo(this)"
           />
         </div>
+          <div class="product-info--hidden text-color-dark-2">
+            <p>Material:
+              100% ekologisk rättvisemärkt, ringspunnen kammad bomull
+              </p>
+              <p> Vikt:
+                240g/m2</p>
+              <p>Storlekar:
+                XXS-3XL
+              </p>
+              <p>Egenskaper:
+                Ribbad halsmudd
+                Oversize
+                Förtvättad</p>
+
+          </div>
+
         <div class="product-menu-item">
           <p class="text-color-dark-2">
             <img
@@ -203,7 +235,20 @@
             class="arrow arrow--small"
             src="visuals/icons/arrow_icon.svg"
             alt=""
+            onclick="toggleInfo(this)"
           />
+        </div>
+        <div class="product-info--hidden text-color-dark-2">
+          <p>På Gröna tryck är det enkelt att skicka iväg en beställning där du kan känna dig trygg genom hela processen.
+            
+          </p>
+          <p>Detta behöver vi för att ge dig en offert direkt:
+
+          <p>Ungefärligt antal av varje modell.</p>
+          <p>Bifogad logotyp eller motiv</p>
+          <p>Skriv önskad plaggfärg/er</p>
+          <p>Vill du blanda plagg? Skriv med artikelnummer eller be oss rekommendera i formuläret nedan></p></p>
+          <p>Vill du att vi tar fram ett förslag? T.ex. matcha utifrån företagets eller organisationens profilfärger och krav? Vi kan också ge förslag på passform och material beroende på bransch eller stil. Både klädtillverkning, screentryck och brodyr är hantverk som ligger oss varmt om hjärtat. Vi har arbetat med ekologiska profilkläder sedan 2008 och hjälper dig gärna att hitta det bästa utifrån era behov.</p>
         </div>
         <div class="product-menu-item">
           <p class="text-color-dark-2">
@@ -217,12 +262,21 @@
             class="arrow arrow--small"
             src="visuals/icons/arrow_icon.svg"
             alt=""
+            onclick="toggleInfo(this)"
           />
+        </div>
+        <div class="product-info--hidden">
+          <p>Lägg till omdömen här.</p>
         </div>
       </div>
     </div>
     <div>
-      <h4>Relaterade produkter</h4>
+ </section>
+    
+
+      <!-- Relaterade produkter  -->
+      <section class="container related-products"> 
+      <h4 class="text-color-dark-2">Relaterade produkter</h4>
       <div class="card-slider">
         <div class="card-wrapper">
           <div class="card">
@@ -268,7 +322,7 @@
         <div class="card-wrapper">
           <div class="card">
             <img
-              src="visuals/img/grona_tryck_card_2.jpg"
+              src="visuals/img/grona_tryck_card_6.jpg"
               class="card-img-top"
               alt="..."
             />
@@ -380,6 +434,7 @@
       </div>
     </div>
   </section>
+
 
   <script src="js/script.js"></script>
   <script src="js/dropdown.js"></script>

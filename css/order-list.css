@@ -25,14 +25,22 @@
     margin: 10% 6% 0% 6%;
 }
 
+
 .order .breadcrumb {
     margin: 1rem 0rem 2rem 0rem;
 }
 
+
+/* Beställningslista */
 .order-container {
     display: flex;
     gap: 2rem;
     margin: 3rem 0rem 2rem 0rem;
+}
+
+.order-list {
+    width: 60% ;
+    margin-top: 2;
 }
 
 .order-list-item {
@@ -70,53 +78,50 @@
     color: red;
     text-decoration: underline;
 }
-/* 
-.amount {
 
-} */
-
-
-
-.item-group-1 div {
-    display: inline-block;
-    width: 20px;
-    background-color: var(--monochrome-white);
-    border: solid 2px var(--monochrome-light);
-}
-
-.amount-input {
-    width: 4rem;
-    text-align: center;
-    background-color: var(--monochrome-white);
+/* Quantity button for product */
+.button-quantity {
+    display: flex;
+    border-radius: 0.7rem;
+    overflow: hidden;
+    width: 10rem;
+    height: 2rem;
+    border: 2px solid var(--primary-new);
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+  }
+  
+  .button-quantity button {
+    background-color: var(--primary-new);
+    color: #fff;
     border: none;
-    border-top: 2px solid var(--monochrome-light);
-    border-bottom: 2px solid var(--monochrome-light);
+    cursor: pointer;
+    width: 16rem;
+    height: auto;
+    text-align: center;
+    transition: background-color 0.2s;
+  }
+  
+  .input-box {
+    text-align: center;
+    border: none;
+    padding: 8px 8px;
+    outline: none;
+  }
 
+  /* Hide the number input spin buttons */
+.input-box::-webkit-inner-spin-button,
+.input-box::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 
-.amount div {
-        cursor: pointer;
-}
-
-.amount-increase {
-    margin-left: -5px;
-    border-radius: 0px 10px 10px 0px;
-}
-
-.amount-decrease {
-    margin-right: -5px;
-    border-radius: 10px 0px 0px 10px;
+.input-box[type="number"] {
+  -moz-appearance: textfield;
 }
 
 
-.add {
-    margin-left: -15px;
-}
-
-.order-list {
-    width: 60% ;
-    margin-top: 2;
-}
+/* Summering av pris */
 
 .order-sum {
     width: 40%;
@@ -137,6 +142,7 @@
 .bold {
     font-weight: 700;
 }
+
 /* Media Queries */
 @media screen and (max-width: 1200px) {
 
@@ -148,9 +154,6 @@
   
 @media screen and (max-width: 992px) {
 
-    /* .order h2 {
-        font-size: 2.4rem;
-    } */
 
     .order-sum h4 {
         font-size: 1.8rem;
@@ -159,20 +162,6 @@
     .item-image {
         width: 8rem;
     }
-
-    /* .order-sum p{
-        font-size: 0.9rem;
-    } */
-
-    /* .item-group-1 p,
-    .item-group-2 button,
-    .item-group-2 p {
-        font-size: 0.9rem;
-    } */
-
-    /* .item-group-1 h6 {
-        font-size: 1.15rem;
-    } */
 
     .order-sum p,
     .order-list p,
@@ -216,8 +205,30 @@
   
 @media screen and (max-width: 576px) {
 
-    .item-group-1 h6 {
-        font-size: 1.15rem;
+    .order h2 {
+        font-size: 8.5vmin;
     }
+
+    .item-group-1 h6 {
+        font-size: 1rem;
+    }
+
+    .order-sum p,
+    .order-list p,
+    .order-list button {
+        font-size: 0.8rem;
+    }
+
+    .button-quantity {
+        width: 6rem;
+        height: 2rem;
+      }
+
+      .input-box {
+        padding: 6px 1px;
+        font-size: 0.8rem;
+      }
+      
+      
   
   }
