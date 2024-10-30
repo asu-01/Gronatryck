@@ -38,45 +38,45 @@ function showSlides(n) {
 
   // Show the current slide and add "active" class to the corresponding bullet
   slides[slideIndex - 1].style.display = "block"; // Show current slide
-  if (dots[slideIndex - 1]) { // Ensure the bullet exists
+  if (dots[slideIndex - 1]) {
+    // Ensure the bullet exists
     dots[slideIndex - 1].className += " active"; // Add active class to the current bullet
   }
 }
 
 // ---------------   Popular cards ---------------------- //
-let cardIndex = 1; // Start with the first card
-showCards(cardIndex, "card-wrapper"); // Display the first set of visible cards
+// let cardIndex = 1; // Start with the first card
+// showCards(cardIndex, "card-wrapper"); // Display the first set of visible cards
 
-// Change card by n (e.g., -1 for previous, +1 for next)
-function changeCardSlide(n) {
-  showCards((cardIndex += n), "card-wrapper");
-}
+// // Change card by n (e.g., -1 for previous, +1 for next)
+// function changeCardSlide(n) {
+//   showCards((cardIndex += n), "card-wrapper");
+// }
 
-// Function to display cards based on the index
-function showCards(n, cardClass) {
-  let cards = document.getElementsByClassName(cardClass);
-  let visibleCards = 4; // Adjust based on how many cards should be visible at a time
+// // Function to display cards based on the index
+// function showCards(n, cardClass) {
+//   let cards = document.getElementsByClassName(cardClass);
+//   let visibleCards = 4;
 
-  // Hide all cards
-  for (let i = 0; i < cards.length; i++) {
-    cards[i].style.display = "none";
-  }
+//   // Hide all cards
+//   for (let i = 0; i < cards.length; i++) {
+//     cards[i].style.display = "none";
+//   }
 
-  // Wrap around if out of bounds
-  if (n > cards.length - visibleCards + 1) {
-    cardIndex = 1;
-  }
-  if (n < 1) {
-    cardIndex = cards.length - visibleCards + 1;
-  }
+//   // Wrap around if out of bounds
+//   if (n > cards.length - visibleCards + 1) {
+//     cardIndex = 1;
+//   }
+//   if (n < 1) {
+//     cardIndex = cards.length - visibleCards + 1;
+//   }
 
-  // Display the current visible set of cards
-  for (let i = 0; i < visibleCards; i++) {
-    if (cards[cardIndex - 1 + i]) {
-      cards[cardIndex - 1 + i].style.display = "block";
-    }
-  }
-}
+//   // Display the current visible set of cards
+//   for (let i = 0; i < visibleCards; i++) {
+//     if (cards[cardIndex - 1 + i]) {
+//       cards[cardIndex - 1 + i].style.display = "flex";
+//     }
+//   }
+// }
 
-
-
+// ---------------   Popular cards ---------------------- //

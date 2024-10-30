@@ -57,16 +57,17 @@ const JSONdata = [
       {
         minAmount: 100,
         maxAmount: 249,
-        price: 200,
+        price: 300,
       },
       {
         minAmount: 250,
         maxAmount: 499,
-        price: 200,
+        price: 400,
       },
       {
         minAmount: 500,
-        price: 200,
+        maxAmount: 1000,
+        price: 500,
       },
     ],
   },
@@ -131,6 +132,40 @@ window.onload = function printData() {
     cardContainer.innerHTML += content;
   });
 };
+
+// let minAmount = prices.map((a) => a.minAmount);
+// let maxAmount = prices.map((a) => a.maxAmount);
+
+const retrievedData = localStorage.getItem("json-products");
+const parsedJSON = JSON.parse(retrievedData);
+
+const amountBtn = document.querySelector(".button-quantity");
+console.log(amountBtn);
+
+const amountInput = document.querySelector(".input-box");
+
+amountInput.addEventListener("input", getPrice);
+amountBtn.addEventListener("click", getPrice);
+
+// console.log(amount);
+
+// Hämtar rätt pris beroende på antal produkter (WIP)
+function getPrice() {
+  parsedJSON.forEach((product) => {
+    const priceList = product.prices;
+    for (const priceItem of priceList) {
+      let amount = amountInput.value;
+      if (priceItem.minAmount < amount && amount < priceItem.maxAmount) {
+        document.querySelector(
+          "h5"
+        ).innerHTML = `Estimerat pris: ${priceItem.price}kr`;
+      }
+    }
+  });
+}
+
+// Gör JSON-objekt till modul för att kunnas användas på andra sidor.
+// module.exports = JSONdata;
 
 // JSON data hämtas från localStorage.
 

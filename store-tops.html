@@ -13,6 +13,116 @@
     <link rel="stylesheet" href="css/store-tops.css" />
   </head>
   <body>
+    <header>
+      <!--Navigation-->
+      <nav class="nav">
+        <div class="nav-container">
+          <a href="index.html"><img class="nav-logo" src="/visuals/logo/gronatryck_horizontal_green_rgb.svg" title="Logotyp för grönatryck" alt="En cirkelformad logotyp placerad brevid texten grönatryck och som innehåller bokstaven G samt texturen av trädringar"></a>
+          <ul class="nav-links">
+                <li>
+                  <a href="index.html">Hem</a>
+                </li>
+                 
+              
+                <!--Dropdown sortiment desktop -->
+                <li id="dropdownContainer">
+                  <a id="dropdownLink" class="dropdown-btn " href="#">Sortiment 
+                    <!-- <img class="arrow " src="visuals/icons/arrow_icon.svg" alt="En nedåtvänd pil för att visa att sortiment-länken kan utökas"> -->
+                    <svg class="arrow " width="15" height="10" viewBox="0 0 15 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M1.78846 1.5L7.89423 9L14 1.5" stroke="#44725A" stroke-width="2" stroke-linecap="round"
+                          stroke-linejoin="round" />
+                  </svg>
+                  </a>
+                    
+              
+                  <div id="dropdownList" class="dropdown">
+                    <div class="dropdown-content round-corner text-color-offwhite product-info--hidden">
+                      <div class="dropdown-links">
+                        <a href="#">Nyheter</a>
+                        <a href="#">Märken A-O</a>
+                        <a href="#">Bästsäljare</a>
+                        <a href="#">Träning</a>
+                        <a href="#">Friluftsliv</a>
+                        <a href="#">Restlager</a>
+                      </div>
+                      <div class="dropdown-links">
+                        <a href="store.html">Alla Kategorier</a>
+                        <a id="expand" href="store-tops.html">Överdelar</a>
+                         <!--Underkategorier till överdelar-->
+                        <div id="subcategory" class="dropdown-subcategory">
+                          <a href="#">T-shirts</a>
+                          <a href="#">Huvtröjor</a>
+                          <a href="#">Jackor</a>
+                          <a href="#">Skjortor</a>
+                          <a href="#">Linnen & Tunikor</a>
+                        </div>
+                        <!--slut-->
+                        <a href="#">Underdelar</a>
+                        <a href="#">Övrigt</a>
+                        <a href="#">Tjänster</a>
+                      </div>
+                    </div>
+                  </div> 
+                </li>
+         
+          
+                <!--Dropdown om oss-->
+                <li>
+                <a class="dropdown-btn" href="#">Om oss  <!-- <img class="arrow " src="visuals/icons/arrow_icon.svg" alt="En nedåtvänd pil för att visa att sortiment-länken kan utökas"> -->
+                  <svg class="arrow " width="15" height="10" viewBox="0 0 15 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1.78846 1.5L7.89423 9L14 1.5" stroke="#44725A" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                </svg></a>
+              
+                <div id="dropdownList" class="dropdown">
+                  <div class="dropdown-content round-corner text-color-offwhite">
+                    <div class="dropdown-links">
+                      <a href="aboutus.html">Vi bakom företaget</a>
+                      <a href="#">Hållbart</a>
+                      <a href="#">Certifikat & märkningar</a>
+                      <a href="#">Jobba hos oss</a>
+                      <a href="#">Köpvillkor</a>
+                    </div>
+                  </div>
+                </div>
+
+                </li>
+
+                <li>
+                <a href="#">Stanley Stella</a>
+                </li>
+                
+    
+                <!--Dropdown kontakt-->
+                <li>
+                  <a class="dropdown-btn" href="#">Kontakt  <!-- <img class="arrow " src="visuals/icons/arrow_icon.svg" alt="En nedåtvänd pil för att visa att sortiment-länken kan utökas"> -->
+                    <svg class="arrow " width="15" height="10" viewBox="0 0 15 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M1.78846 1.5L7.89423 9L14 1.5" stroke="#44725A" stroke-width="2" stroke-linecap="round"
+                          stroke-linejoin="round" />
+                  </svg></a>
+                
+                  <div id="dropdownList" class="dropdown">
+                    <div class="dropdown-content round-corner text-color-offwhite">
+                      <div class="dropdown-links">
+                        <a href="contactus.html">Kontakta oss</a>
+                        <a href="#">Vanliga frågor</a>
+                      </div>
+                    </div>
+                  </div> 
+                </li>
+          </ul>
+
+          <div class="nav-icons">
+              <img src="/visuals/icons/gronatryck_icon_search.svg" alt="Öppna sökfunktion">
+              <img src="/visuals/icons/gronatryck_icon_user.svg" alt="Gå till mina sidor">
+              <a href="order-list.html"><img src="/visuals/icons/gronatryck_icon_bag (1).svg" alt="Gå till din beställningslista"></a>
+                <!-- Hamburger menu icon for mobile -->
+              <img class="hamburger-icon" src="visuals/icons/hamburger_menu_icon.svg" alt="Hamburgar meny, tre streck">
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
     <section class="catalogue">
       <div class="breadcrumb text-color-primary">
         <a href="index.html">Hem</a>
@@ -83,6 +193,8 @@
         </p>
       </div>
       <div class="catalogue-products">
+
+        
         <!-- Produkt cards-->
         <div class="card">
           <a href="product.html">
@@ -657,5 +769,192 @@
         </button>
       </div>
     </section>
+    <!-----------Footer ----------->
+    <footer>
+      <div class="footer-container">
+        <div class="footer-content">
+          <!-- Logo -->
+          <img
+            class="footer-logo"
+            src="visuals/logo/gronatryck_horizontal_offwhite_rgb.svg"
+            alt="grona tryck logotype"
+          />
+          <div class="footer-icons-container footer-icons-container--hallbart">
+            <img
+              class="footer-icons"
+              src="visuals/icons/gronatryck_icon_organicproduction.svg"
+              alt="Ikon för organisk produktion"
+            />
+            <img
+              class="footer-icons"
+              src="visuals/icons/gronatryck_icon_recycledmaterial.svg"
+              alt="Ikon för återvinnet material "
+            />
+            <img
+              class="footer-icons"
+              src="visuals/icons/gronatryck_icon_fairtrademark.svg"
+              alt="Fairtrademark ikon"
+            />
+            <img
+              class="footer-icons"
+              src="visuals/icons/gronatryck_icon_phthalate-free.svg"
+              alt="Ikon för ftalatfri"
+            />
+          </div>
+        </div>
+
+        <div class="footer-content">
+          <p class="footer-links-heading">
+            Kontakt
+            <button class="toggle-links" onclick="toggleLinks('kontakt-links')">
+              <svg
+                width="15"
+                height="10"
+                viewBox="0 0 15 10"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M1.78846 1.5L7.89423 9L14 1.5"
+                  stroke="#faf7eb"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </button>
+          </p>
+
+          <div class="hidden-links" id="kontakt-links">
+            <p class="text-color-offwhite">
+              <img
+                class="footer-icons footer-icons-small"
+                src="visuals/icons/mail_icon_offwhite.svg"
+                alt="Brev ikon"
+              />kontakt@gronatryck.se
+            </p>
+            <p class="text-color-offwhite">
+              <img
+                class="footer-icons footer-icons-small"
+                src="visuals/icons/phone_offwhite.svg"
+                alt="Mobil ikon"
+              />
+              +46 090 13 13 40
+            </p>
+            <div class="footer-wrapper">
+              <img
+                class="footer-icons footer-icons-small"
+                src="visuals/icons/gronatryck_icon_pin_offwhite.svg"
+                alt="Kartnål ikon"
+              />
+              <div class="block-line">
+                <p class="text-color-offwhite">Västra Kyrkogatan 1B</p>
+                <p class="text-color-offwhite">903 29 Umeå</p>
+                <p class="text-color-offwhite">Sverige</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-content">
+          <p class="footer-links-heading">
+            Läs mer
+            <button class="toggle-links" onclick="toggleLinks('las-mer-links')">
+              <svg
+                width="15"
+                height="10"
+                viewBox="0 0 15 10"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M1.78846 1.5L7.89423 9L14 1.5"
+                  stroke="#faf7eb"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </button>
+          </p>
+
+          <div class="hidden-links" id="las-mer-links">
+            <a class="links" href="#">Certifikat och märkningar</a>
+            <a class="links" href="#">Våra klädmärken</a>
+            <a class="links" href="#">Kontakta oss</a>
+            <a class="links" href="#">Vanliga frågor</a>
+          </div>
+        </div>
+
+        <div class="footer-content">
+          <p class="footer-links-heading">
+            Snabba Länkar
+            <button
+              class="toggle-links"
+              onclick="toggleLinks('snabba-lankar-links')"
+            >
+              <svg
+                width="15"
+                height="10"
+                viewBox="0 0 15 10"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M1.78846 1.5L7.89423 9L14 1.5"
+                  stroke="#faf7eb"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </button>
+          </p>
+
+          <div class="hidden-links" id="snabba-lankar-links">
+            <a class="links" href="#">Vi bakom företaget</a>
+            <a class="links" href="#">Jobba hos oss</a>
+            <a class="links" href="#">Köpvillkor</a>
+            <a class="links" href="#">Logga in</a>
+          </div>
+        </div>
+
+        <div class="footer-content">
+          <p class="footer-links-heading">Sociala medier</p>
+          <div class="footer-icons-container footer-icons-container-left">
+            <a href="http://www.instagram.com/gronatryck/"
+              ><img
+                class="footer-icons footer-icons-medium"
+                src="visuals/icons/gronatryck_icon_instagram.svg"
+                alt="Instagram logotyp och länk"
+            /></a>
+            <a href="https://www.facebook.com/gronatryck/?locale=sv_SE"
+              ><img
+                class="footer-icons footer-icons-medium"
+                src="visuals/icons/gronatryck_icon_facebook.svg"
+                alt="Facebook logotyp och länk"
+            /></a>
+            <a
+              href="https://www.linkedin.com/company/gronatryck/?originalSubdomain=se"
+              ><img
+                class="footer-icons footer-icons-medium"
+                src="visuals/icons/gronatryck_icon_linkedin.svg"
+                alt="Linkedin logotyp och länk"
+            /></a>
+            <a href="https://www.youtube.com/channel/UCmp_MT60FRolVuW2af3fSIg"
+              ><img
+                class="footer-icons footer-icons-medium"
+                src="visuals/icons/gronatryck_icon_youtube.svg"
+                alt="Youtube logotyp och länk"
+            /></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-copyright">
+        <p class="small">Copyright 2024 &copy; Gröna tryck</p>
+      </div>
+    </footer>
+    <script src="js/script.js"></script>
+    <script src="js/dropdown.js"></script>
   </body>
 </html>
