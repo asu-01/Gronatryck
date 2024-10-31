@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="sv">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="author" content="Alva Sundberg och Olivia Hansson" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Project Gronatryck</title>
+    <link rel="stylesheet" href="css/custom_bootstrap.css" />
+    <!-- Länkar till Stoltz typsnitt från Adobe fonts -->
+    <link rel="stylesheet" href="https://use.typekit.net/zlf3fvp.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/product.css" />
+    <link rel="stylesheet" href="css/store.css" />
+  </head>
+</html>
+<body>
+  <header>
+    <!--Navigation-->
+    <nav class="nav">
+      <div class="nav-container">
+        <a href="index.html"><img class="nav-logo" src="/visuals/logo/gronatryck_horizontal_green_rgb.svg" title="Logotyp för grönatryck" alt="En cirkelformad logotyp placerad brevid texten grönatryck och som innehåller bokstaven G samt texturen av trädringar"></a>
+        <ul class="nav-links">
+              <li>
+                <a href="index.html">Hem</a>
+              </li>
+               
+            
+              <!--Dropdown sortiment desktop -->
+              <li id="dropdownContainer">
+                <a id="dropdownLink" class="dropdown-btn " href="#">Sortiment 
+                  <!-- <img class="arrow " src="visuals/icons/arrow_icon.svg" alt="En nedåtvänd pil för att visa att sortiment-länken kan utökas"> -->
+                  <svg class="arrow " width="15" height="10" viewBox="0 0 15 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1.78846 1.5L7.89423 9L14 1.5" stroke="#44725A" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                </svg>
+                </a>
+                  
+            
+                <div id="dropdownList" class="dropdown">
+                  <div class="dropdown-content round-corner text-color-offwhite product-info--hidden">
+                    <div class="dropdown-links">
+                      <a href="#">Nyheter</a>
+                      <a href="#">Märken A-O</a>
+                      <a href="#">Bästsäljare</a>
+                      <a href="#">Träning</a>
+                      <a href="#">Friluftsliv</a>
+                      <a href="#">Restlager</a>
+                    </div>
+                    <div class="dropdown-links">
+                      <a href="store.html">Alla Kategorier</a>
+                      <a id="expand" href="store-tops.html">Överdelar</a>
+                       <!--Underkategorier till överdelar-->
+                      <div id="subcategory" class="dropdown-subcategory">
+                        <a href="#">T-shirts</a>
+                        <a href="#">Huvtröjor</a>
+                        <a href="#">Jackor</a>
+                        <a href="#">Skjortor</a>
+                        <a href="#">Linnen & Tunikor</a>
+                      </div>
+                      <!--slut-->
+                      <a href="#">Underdelar</a>
+                      <a href="#">Övrigt</a>
+                      <a href="#">Tjänster</a>
+                    </div>
+                  </div>
+                </div> 
+              </li>
+       
+        
+              <!--Dropdown om oss-->
+              <li>
+              <a class="dropdown-btn" href="#">Om oss  <!-- <img class="arrow " src="visuals/icons/arrow_icon.svg" alt="En nedåtvänd pil för att visa att sortiment-länken kan utökas"> -->
+                <svg class="arrow " width="15" height="10" viewBox="0 0 15 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M1.78846 1.5L7.89423 9L14 1.5" stroke="#44725A" stroke-width="2" stroke-linecap="round"
+                      stroke-linejoin="round" />
+              </svg></a>
+            
+              <div id="dropdownList" class="dropdown">
+                <div class="dropdown-content round-corner text-color-offwhite">
+                  <div class="dropdown-links">
+                    <a href="aboutus.html">Vi bakom företaget</a>
+                    <a href="#">Hållbart</a>
+                    <a href="#">Certifikat & märkningar</a>
+                    <a href="#">Jobba hos oss</a>
+                    <a href="#">Köpvillkor</a>
+                  </div>
+                </div>
+              </div>
+
+              </li>
+
+              <li>
+              <a href="#">Stanley Stella</a>
+              </li>
+              
+  
+              <!--Dropdown kontakt-->
+              <li>
+                <a class="dropdown-btn" href="#">Kontakt  <!-- <img class="arrow " src="visuals/icons/arrow_icon.svg" alt="En nedåtvänd pil för att visa att sortiment-länken kan utökas"> -->
+                  <svg class="arrow " width="15" height="10" viewBox="0 0 15 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1.78846 1.5L7.89423 9L14 1.5" stroke="#44725A" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                </svg></a>
+              
+                <div id="dropdownList" class="dropdown">
+                  <div class="dropdown-content round-corner text-color-offwhite">
+                    <div class="dropdown-links">
+                      <a href="contactus.html">Kontakta oss</a>
+                      <a href="#">Vanliga frågor</a>
+                    </div>
+                  </div>
+                </div> 
+              </li>
+        </ul>
+
+        <div class="nav-icons">
+            <img src="/visuals/icons/gronatryck_icon_search.svg" alt="Öppna sökfunktion">
+            <img src="/visuals/icons/gronatryck_icon_user.svg" alt="Gå till mina sidor">
+            <a href="order-list.html"><img src="/visuals/icons/gronatryck_icon_bag (1).svg" alt="Gå till din beställningslista"></a>
+              <!-- Hamburger menu icon for mobile -->
+            <img class="hamburger-icon" src="visuals/icons/hamburger_menu_icon.svg" alt="Hamburgar meny, tre streck">
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <!-- Breadcumbs för sortiment -->
+  <section class="container catalogue">
+    <div class="breadcrumb text-color-primary">
+      <a href="index.html">Hem</a>
+      <img class="arrow--right" src="/visuals/icons/arrow_icon.svg" />
+      <a href="store.html">Alla kategorier</a>
+      <img class="arrow--right" src="/visuals/icons/arrow_icon.svg" />
+      <a href="store-tops.html">Överdelar</a>
+      <img class="arrow--right" src="/visuals/icons/arrow_icon.svg" />
+      <a href="store-t-shirts.html">T-shirts</a>
+      <img class="arrow--right" src="/visuals/icons/arrow_icon.svg" />
+      <a>Classic fit</a>
+    </div>
+  </section>
+
+  <section class="container">
+    <!-- Produkt bilder  -->
+    <div class="product-container">
+      <div class="product-img-container">
+        <img
+          class="product-img--large round-corner"
+          src="visuals/img/grona_tryck_card_2.jpg"
+          alt=""
+        />
+        <div class="product-img-wrapper--small round-corner">
+          <img
+            class="product-img--small round-corner"
+            src="visuals/img/t-shirt/gronatryck_product_2.jpg"
+            alt=""
+          />
+          <img
+            class="product-img--small round-corner"
+            src="visuals/img/t-shirt/gronatryck_product_3.jpg"
+            alt=""
+          />
+          <img
+            class="product-img--small round-corner"
+            src="visuals/img/t-shirt/gronatryck_product_4.jpg"
+            alt=""
+          />
+        </div>
+      </div>
+      <!-- Produkt information -->
+      <div class="product-text-container">
+        <h4 class="text-color-dark-2">Classic fit</h4>
+        <p class="text-color-dark-2">
+          Unisex t-shirt unikt infärgade i vintagenyanser där varje tröja
+          skiljer sig lite från nästa. Infärgningen finns i åtta olika varianter
+          och kan matchas fritt med med övriga vintagefärgade t-shirts och
+          sweatshirts.
+        </p>
+        <div class="product-img-certificates">
+          <img src="visuals/certificates/fairwear.svg" alt="" />
+          <img
+            src="visuals/certificates/organic-blende-content-standard.svg"
+            alt=""
+          />
+          <img src="visuals/certificates/peta-approved-vegan.svg" alt="" />
+        </div>
+        <div>
+          <h6 class="text-color-dark-2">Antal</h6>
+          <div class="button-quantity">
+            <button class="minus" aria-label="Decrease">&minus;</button>
+            <input
+              type="number"
+              class="input-box"
+              value="10"
+              min="10"
+              max="100"
+            />
+            <button class="plus" aria-label="Increase">&plus;</button>
+          </div>
+        </div>
+        <div>
+          <h6 class="text-color-dark-2">Färger</h6>
+          <div class="card-dot-container">
+            <button
+              class="dot dot-color-1 dot--large dot-active"
+              type="button"
+              aria-label="Färg 1"
+            ></button>
+            <button
+              class="dot dot-color-2 dot--large"
+              type="button"
+              aria-label="Färg 2"
+            ></button>
+            <button
+              class="dot dot-color-3 dot--large"
+              type="button"
+              aria-label="Färg 3"
+            ></button>
+            <button
+              class="dot dot-color-4 dot--large"
+              type="button"
+              aria-label="Färg 4"
+            ></button>
+            <button
+              class="dot dot-color-5 dot--large"
+              type="button"
+              aria-label="Färg 5"
+            ></button>
+            <p class="text-color-dark text-xs">+5 färger</p>
+          </div>
+        </div>
+        <div>
+          <h5 class="text-color-dark-2">Estimerat pris: 600kr</h5>
+        </div>
+        <button class="button-primary text-color-offwhite">
+          Beställ nu
+          <img
+            class="arrow arrow--small arrow--right"
+            src="/visuals/icons/arrow_icon_white.svg"
+          />
+        </button>
+        <button class="button-secondary text-color-offwhite">
+          Kontakta oss
+          <img class="arrow--right" src="/visuals/icons/arrow_icon.svg" />
+        </button>
+        <p class="text-color-dark-2 product-extra-infobox">
+          Ingen order är bindande fören vi har gått igenom allt och godkänt
+          beställningen tillsammans mer er.
+        </p>
+      </div>
+    </section>
+
+      <!-- Produkt meny -->
+    <section class="container catalogue products-menu">
+      <div class="product-menu-container">
+        <div class="product-menu-item">
+          <p class="text-color-dark-2">
+            <img
+              class="products-icon"
+              src="visuals/icons/gronatryck_price_tag.svg"
+              alt=""
+            />Prisinformation
+          </p>
+          <img
+            class="arrow arrow--small"
+            src="visuals/icons/arrow_icon.svg"
+            alt=""
+            onclick="toggleInfo(this)"
+          />
+        </div>
+        <div class="product-info--hidden text-color-dark-2">
+          <p>Vid köp av 25st utan tryck från 109kr/st exkl. moms.</p>
+          <p>
+            Prislista: 50-99st: 96st/kr exkl. moms 100-249st: 87st/kr exkl.
+            moms 250-499st: 79st/kr exkl. moms 500st+: 74st/kr exkl. moms
+          </p>
+          <p>
+            Minimum antal tryck av samma motiv: 25 st Minimum antal plagg av
+            samma modell: 10 st Blanda med andra plagg från samma klädmärke,
+            färger och storlekar.
+          </p>
+        </div>
+        <div class="product-menu-item">
+          <p class="text-color-dark-2">
+            <img
+              class="products-icon"
+              src="visuals/icons/gronatryck_icon_tshirt.svg"
+              alt=""
+            />Artikelinformation
+          </p>
+          <img
+            class="arrow arrow--small"
+            src="visuals/icons/arrow_icon.svg"
+            alt=""
+            onclick="toggleInfo(this)"
+          />
+        </div>
+          <div class="product-info--hidden text-color-dark-2"> 
+            <p> StSt Eco 073, Freestyler Vintage
+            Art nr. 2574 </p>
+          <p>En rejäl t-shirt gjord av “vintage infärgad” 100% ekologisk rättvisemärkt, ringspunnen och kammad bomull. Passformen är en “relaxed fit” med klassisk halsmudd. Tröjan har kraftiga sömmar och på det hela taget är det som ett rejält plagg med hög hållbarhet. Passar därför perfekt för långvarigt bruk och för t.ex. arbetstillfällen där en tåligare t-shirt behövs.</p>
+          <p>Materialvalet är 100% ekologisk, kammad och ringspunnen bomull som ger en slät och fin textil skön att bära mot kroppen och som lämpar sig mycket bra att trycka på. Förutom den ekologiska kontrollen av material och tillverkning har plagget även genomgott kvalitettester för slitage, färg- tvätt och ljusbeständigheten i textilen. Vi använder screenfärger fria från gifter såsom ftalater.</p>
+          </div>
+
+
+        <div class="product-menu-item">
+          <p class="text-color-dark-2">
+            <img
+              class="products-icon"
+              src="visuals/icons/gronatryck_article_list.svg"
+              alt=""
+            />Specifikationer
+          </p>
+          <img
+            class="arrow arrow--small"
+            src="visuals/icons/arrow_icon.svg"
+            alt=""
+            onclick="toggleInfo(this)"
+          />
+        </div>
+          <div class="product-info--hidden text-color-dark-2">
+            <p>Material:
+              100% ekologisk rättvisemärkt, ringspunnen kammad bomull
+              </p>
+              <p> Vikt:
+                240g/m2</p>
+              <p>Storlekar:
+                XXS-3XL
+              </p>
+              <p>Egenskaper:
+                Ribbad halsmudd
+                Oversize
+                Förtvättad</p>
+
+          </div>
+
+        <div class="product-menu-item">
+          <p class="text-color-dark-2">
+            <img
+              class="products-icon"
+              src="visuals/icons/gronatryck_icon_bag.svg"
+              alt=""
+            />Hur handlar jag?
+          </p>
+          <img
+            class="arrow arrow--small"
+            src="visuals/icons/arrow_icon.svg"
+            alt=""
+            onclick="toggleInfo(this)"
+          />
+        </div>
+        <div class="product-info--hidden text-color-dark-2">
+          <p>På Gröna tryck är det enkelt att skicka iväg en beställning där du kan känna dig trygg genom hela processen.
+            
+          </p>
+          <p>Detta behöver vi för att ge dig en offert direkt:
+
+          <p>Ungefärligt antal av varje modell.</p>
+          <p>Bifogad logotyp eller motiv</p>
+          <p>Skriv önskad plaggfärg/er</p>
+          <p>Vill du blanda plagg? Skriv med artikelnummer eller be oss rekommendera i formuläret nedan></p></p>
+          <p>Vill du att vi tar fram ett förslag? T.ex. matcha utifrån företagets eller organisationens profilfärger och krav? Vi kan också ge förslag på passform och material beroende på bransch eller stil. Både klädtillverkning, screentryck och brodyr är hantverk som ligger oss varmt om hjärtat. Vi har arbetat med ekologiska profilkläder sedan 2008 och hjälper dig gärna att hitta det bästa utifrån era behov.</p>
+        </div>
+        <div class="product-menu-item">
+          <p class="text-color-dark-2">
+            <img
+              class="products-icon"
+              src="visuals/icons/gronatryck_icon_ star_filled.svg"
+              alt=""
+            />Omdömen
+          </p>
+          <img
+            class="arrow arrow--small"
+            src="visuals/icons/arrow_icon.svg"
+            alt=""
+            onclick="toggleInfo(this)"
+          />
+        </div>
+        <div class="product-info--hidden">
+          <p>Lägg till omdömen här.</p>
+        </div>
+      </div>
+    </div>
+    <div>
+ </section>
+    
+
+      <!-- Relaterade produkter  -->
+      <section class="container related-products"> 
+      <h4 class="text-color-dark-2">Relaterade produkter</h4>
+      <div class="card-slider">
+        <div class="card-container card-container--popular">
+          <div class="card">
+            <img
+              src="visuals/img/grona_tryck_card_1.jpg"
+              class="card-img-top"
+              alt="..."
+            />
+            <img
+              class="card-news-icon"
+              src="/visuals/icons/product_news_icon.svg"
+              alt="Klädnyhet!"
+            />
+            <div class="card-body">
+              <p class="text-color-dark">T-shirt</p>
+              <h5 class="text-color-primary">Classic bomull</h5>
+              <div class="card-dot-container">
+                <button
+                  class="dot dot-color-1"
+                  type="button"
+                  value="Röd"
+                  aria-label="Färg 1"
+                ></button>
+                <button
+                  class="dot dot-color-2"
+                  type="button"
+                  value="Beige"
+                  aria-label="Färg 2"
+                ></button>
+                <button
+                  class="dot dot-color-3"
+                  type="button"
+                  value="Vit"
+                  aria-label="Färg 3"
+                ></button>
+                <p class="text-color-dark text-xs">+5 färger</p>
+              </div>
+              <div class="card-price-container">
+                <p class="text-color-medium text-sm">minimum 25 st.</p>
+                <p class="text-color-dark text-sm">från 410 kr/st</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card-container card-container--popular">
+          <div class="card">
+            <img
+              src="visuals/img/grona_tryck_card_6.jpg"
+              class="card-img-top"
+              alt="..."
+            />
+            <div class="card-body">
+              <p class="text-color-dark">T-shirt</p>
+              <h5 class="text-color-primary">Crafter heritage</h5>
+              <div class="card-dot-container">
+                <button
+                  class="dot dot-color-1"
+                  type="button"
+                  aria-label="Färg 1"
+                ></button>
+                <button
+                  class="dot dot-color-2"
+                  type="button"
+                  aria-label="Färg 2"
+                ></button>
+                <button
+                  class="dot dot-color-3"
+                  type="button"
+                  aria-label="Färg 3"
+                ></button>
+                <p class="text-color-dark text-xs">+5 färger</p>
+              </div>
+              <div class="card-price-container">
+                <p class="text-color-medium text-sm">minimum 25 st.</p>
+                <p class="text-color-dark text-sm">från 410 kr/st</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card-container card-container--popular">
+          <div class="card">
+            <img
+              src="visuals/img/grona_tryck_card_3.jpg"
+              class="card-img-top"
+              alt="..."
+            />
+            <div class="card-body">
+              <p class="text-color-dark">Sweatshirts & huvtröjor</p>
+              <h5 class="text-color-primary">Knoxer natural</h5>
+              <div class="card-dot-container">
+                <button
+                  class="dot dot-color-1"
+                  type="button"
+                  aria-label="Färg 1"
+                ></button>
+                <button
+                  class="dot dot-color-2"
+                  type="button"
+                  aria-label="Färg 2"
+                ></button>
+                <button
+                  class="dot dot-color-3"
+                  type="button"
+                  aria-label="Färg 3"
+                ></button>
+                <p class="text-color-dark text-xs">+5 färger</p>
+              </div>
+              <div class="card-price-container">
+                <p class="text-color-medium text-sm">minimum 25 st.</p>
+                <p class="text-color-dark text-sm">från 410 kr/st</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card-container card-container--popular">
+          <div class="card">
+            <img
+              src="visuals/img/grona_tryck_card_4.jpg"
+              class="card-img-top"
+              alt="..."
+            />
+            <img
+              class="card-news-icon"
+              src="/visuals/icons/product_news_icon.svg"
+              alt="Klädnyhet!"
+            />
+            <div class="card-body">
+              <p class="text-color-dark">Jackor & västar</p>
+              <h5 class="text-color-primary">Liner desert</h5>
+              <div class="card-dot-container">
+                <button
+                  class="dot dot-color-1"
+                  type="button"
+                  aria-label="Färg 1"
+                ></button>
+                <button
+                  class="dot dot-color-2"
+                  type="button"
+                  aria-label="Färg 2"
+                ></button>
+                <button
+                  class="dot dot-color-3"
+                  type="button"
+                  aria-label="Färg 3"
+                ></button>
+                <p class="text-color-dark text-xs">+5 färger</p>
+              </div>
+              <div class="card-price-container">
+                <p class="text-color-medium text-sm">minimum 25 st.</p>
+                <p class="text-color-dark text-sm">från 410 kr/st</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-----------Footer ----------->
+  <footer>
+    <div class="footer-container">
+      <div class="footer-content">
+        <!-- Logo -->
+        <img class="footer-logo" src="visuals/logo/gronatryck_horizontal_offwhite_rgb.svg" alt="grona tryck logotype">
+        <div class="footer-icons-container footer-icons-container--hallbart">
+          <img class="footer-icons" src="visuals/icons/gronatryck_icon_organicproduction.svg" alt="Ikon för organisk produktion">
+          <img class="footer-icons" src="visuals/icons/gronatryck_icon_recycledmaterial.svg" alt="Ikon för återvinnet material ">
+          <img class="footer-icons" src="visuals/icons/gronatryck_icon_fairtrademark.svg" alt="Fairtrademark ikon">
+          <img class="footer-icons" src="visuals/icons/gronatryck_icon_phthalate-free.svg" alt="Ikon för ftalatfri">
+        </div>
+      </div>
+  
+      <div class="footer-content">
+        <p class="footer-links-heading">Kontakt <button class="toggle-links" onclick="toggleLinks('kontakt-links')"><svg width="15" height="10" viewBox="0 0 15 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M1.78846 1.5L7.89423 9L14 1.5" stroke="#faf7eb" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round" />
+      </svg></button></p>
+        
+        <div class="hidden-links" id="kontakt-links">
+          <p class="text-color-offwhite"><img class="footer-icons footer-icons-small" src="visuals/icons/mail_icon_offwhite.svg" alt="Brev ikon">kontakt@gronatryck.se</p>
+          <p class="text-color-offwhite"><img class="footer-icons footer-icons-small" src="visuals/icons/phone_offwhite.svg" alt="Mobil ikon"> +46 090 13 13 40</p>
+          <div class="footer-wrapper">
+            <img class="footer-icons footer-icons-small" src="visuals/icons/gronatryck_icon_pin_offwhite.svg" alt="Kartnål ikon">
+            <div class="block-line">
+              <p class="text-color-offwhite">Västra Kyrkogatan 1B</p>
+              <p class="text-color-offwhite">903 29 Umeå</p>
+              <p class="text-color-offwhite">Sverige</p>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+      <div class="footer-content">
+        <p class="footer-links-heading">Läs mer <button class="toggle-links" onclick="toggleLinks('las-mer-links')"><svg width="15" height="10" viewBox="0 0 15 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M1.78846 1.5L7.89423 9L14 1.5" stroke="#faf7eb" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round" />
+      </svg></button></p>
+        
+        <div class="hidden-links" id="las-mer-links">
+          <a class="links" href="#">Certifikat och märkningar</a>
+          <a class="links" href="#">Våra klädmärken</a>
+          <a class="links" href="#">Kontakta oss</a>
+          <a class="links" href="#">Vanliga frågor</a>
+        </div>
+      </div>
+  
+      <div class="footer-content">
+        <p class="footer-links-heading">Snabba Länkar <button class="toggle-links" onclick="toggleLinks('snabba-lankar-links')"><svg width="15" height="10" viewBox="0 0 15 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M1.78846 1.5L7.89423 9L14 1.5" stroke="#faf7eb" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round" />
+      </svg></button></p>
+        
+        <div class="hidden-links" id="snabba-lankar-links">
+          <a class="links" href="#">Vi bakom företaget</a>
+          <a class="links" href="#">Jobba hos oss</a>
+          <a class="links" href="#">Köpvillkor</a>
+          <a class="links" href="#">Logga in</a>
+        </div>
+      </div>
+  
+      <div class="footer-content">
+        <p class="footer-links-heading">Sociala medier</p>
+        <div class="footer-icons-container footer-icons-container-left">
+          <a href="http://www.instagram.com/gronatryck/"><img class="footer-icons footer-icons-medium" src="visuals/icons/gronatryck_icon_instagram.svg" alt="Instagram logotyp och länk"></a>
+          <a href="https://www.facebook.com/gronatryck/?locale=sv_SE"><img class="footer-icons footer-icons-medium" src="visuals/icons/gronatryck_icon_facebook.svg" alt="Facebook logotyp och länk"></a>
+          <a href="https://www.linkedin.com/company/gronatryck/?originalSubdomain=se"><img class="footer-icons footer-icons-medium" src="visuals/icons/gronatryck_icon_linkedin.svg" alt="Linkedin logotyp och länk"></a>
+          <a href="https://www.youtube.com/channel/UCmp_MT60FRolVuW2af3fSIg"><img class="footer-icons footer-icons-medium" src="visuals/icons/gronatryck_icon_youtube.svg" alt="Youtube logotyp och länk"></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <p class="small">Copyright 2024 &copy; Gröna tryck </p>
+    </div>
+  </footer>
+
+
+  <script src="js/script.js"></script>
+  <script src="js/dropdown.js"></script>
+  <script src="js/add-to-cart.js"></script>
+  <script src="js/amount.js"></script>
+  <script src="js/color.js"></script>
+  <script src="js/price.js"></script>
+</body>

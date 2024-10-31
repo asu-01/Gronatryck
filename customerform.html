@@ -7,10 +7,11 @@
     <title>Project Gronatryck</title>
     <link rel="stylesheet" href="css/custom_bootstrap.css" />
     <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/aboutus.css" />
-      <!-- Länkar till Stoltz typsnitt från Adobe fonts -->
-    <link rel="stylesheet" href="https://use.typekit.net/zlf3fvp.css">
+    <link rel="stylesheet" href="css/form.css" />
+    <!-- Länkar till Stoltz typsnitt från Adobe fonts -->
+    <link rel="stylesheet" href="https://use.typekit.net/zlf3fvp.css" />
   </head>
+
   <body>
     <header>
       <!--Navigation-->
@@ -122,21 +123,34 @@
         </div>
       </nav>
     </header>
-    <div class="aboutus-container">
-        <img class="aboutus-img" src="visuals/img/about us/gronatryck_pictures_about-us.png" alt="two men smiling">
-        <div class="aboutus-text">
-        <h3 class="text-color-dark-2">Vi bakom företaget</h3>
-        <p class="text-color-dark-2">Vår resa började redan 2006 som UF företaget Loko lifestyle där vi satte upp vårt eget screentryckeri i en gammal skyddsbunker, redo att producera våra egna kläder. Men redan innan tryckeriet var helt färdigt började vänner och bekanta komma in med beställningar, och vi insåg snart att vi trivdes bättre med att trycka åt andra än att driva vårt eget klädmärke. Då var vi ett gäng problemlösare med en idé om att trycka med så liten miljöpåverkan som möjligt – en filosofi som fortfarande driver oss idag. Detta utvecklades till namnet Screen och design 2008-2009. Ett minnesvärt telefonsamtal med en kund, som frågade om det var vi som "trycker med den gröna färgen", ledde till att namnet Gröna Tryck föddes 2009. Det blev startskottet för vår resa mot att bli en ledande aktör inom hållbara profilkläder och reklamprodukter.
-           <p>Idag är vi experter på att leverera helhetslösningar för hållbara och rättvisemärkta producerade profilprodukter. Med långvariga samarbeten med förädlare och tryckerier i Sverige, Europa och Asien kan vi skräddarsy produkter och lösningar som lever upp till våra höga krav på kvalitet, miljö och rättvisemärkt. Även om vi har växt och expanderat, håller vi fast vid våra rötter – vårt lilla tryckeri i Umeå där allt en gång började 
-            finns fortfarande kvar och fortsätter vara hjärtat i vår verksamhet.</p>
-            </p>
-            <p>Joel & Josef på Gröna tryck</p>
-        </div>
-    </div>
-
-    <div class="aboutus-container">
-        <img class="aboutus-img" src="visuals/img/about us/gronatryck_aboutus_2with_quote.png" alt="">
-    </div>
+    <section class="container">
+      <div class="customer-form-container">
+          <h3 class="text-color-dark-2">Kontaktformulär</h3>
+          <form class="customer-form" action="">
+              <label for="name">Namn</label>
+              <input class="input-field round-corner" type="text" id="name" placeholder="Namn Namnsson" required>
+              
+              <label for="email">E-post</label>
+              <input class="input-field round-corner" type="email" id="email" placeholder="exempel@gmail.com" required>
+              
+              <label for="company">Företag/Organisation</label>
+              <input class="input-field round-corner" type="text" id="company" placeholder="Fyll i ditt företag/organisation här">
+              
+              <label for="subject">Meddelande</label>
+              <textarea class="input-field round-corner" id="subject" name="subject" placeholder="Skriv ditt meddelande här" style="height:9rem"></textarea>
+              
+              <label>Ladda upp ditt tryck här</label>
+              <div class="upload-box-container round-corner">
+                  <img src="visuals/icons/gronatryck_upload_icon.svg" alt="upload icon">
+                  <p class="text-color-dark-2">Droppa filer eller <a href="">ladda upp</a></p>
+                  <p class="text-color-primary">Stödjer filer som JPG, PNG, PDF</p>
+              </div>
+              
+              <button type="submit" class="button--submit text-color-offwhite round-corner">Skicka iväg!</button>
+          </form>
+      </div>
+  </section>
+  
 
     <!-----------Footer ----------->
     <footer>
@@ -323,9 +337,7 @@
         <p class="small">Copyright 2024 &copy; Gröna tryck</p>
       </div>
     </footer>
-
-
-    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="js/script.js"></script>
+    <!-- javascript for header and footer -->
     <script src="js/dropdown.js"></script>
   </body>
+</html>

@@ -1,0 +1,89 @@
+.customer-form-container {
+  margin: 4rem;
+}
+
+.customer-form-container h3 {
+  margin-bottom: 1.5rem;
+}
+
+.customer-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.customer-form label {
+  margin-bottom: 0.5rem;
+}
+
+.input-field {
+  padding: 2rem;
+  border: 1px solid var(--monochrome-light);
+  width: 97%;
+  height: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.upload-box-container {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  background-color: white;
+  height: 35vh;
+  width: 97%;
+  border: 2px dashed var(--primary-new);
+}
+.upload-box-container img {
+  height: 6vh;
+  margin-bottom: 1rem;
+  cursor: pointer;
+}
+
+.button--submit {
+  padding: 1rem;
+  width: 20%;
+  background-color: var(--primary-new);
+  border: none;
+  cursor: pointer;
+  margin-top: 10%;
+  margin-bottom: 1rem;
+  align-self: center;
+}
+
+@media screen and (max-width: 1200px) {
+  .button--submit {
+    width: 40%;
+  }
+}
+@media screen and (max-width: 992px) {
+  .button--submit {
+    width: 50%;
+  }
+  .customer-form-container h3 {
+    font-size: 2.041rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  .button--submit {
+    width: 100%;
+  }
+  .customer-form-container {
+    margin: 0.5rem;
+  }
+  .customer-form-container h3 {
+    font-size: 1.8rem;
+    margin-top: 2rem;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .button--submit {
+    width: 100%;
+  }
+  .customer-form-container {
+    margin: 1rem;
+  }
+  .customer-form-container h3 {
+    font-size: 1.7rem;
+  }
+}
