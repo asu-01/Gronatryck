@@ -21,6 +21,15 @@
             <div class="tab-content" id="orders" style="display: block;">
                 <h3>Pågående Orderar</h3>
                 <p>Här visas alla pågående orderar.</p>
+                <div id="add-order-form">
+                    <input type="text" id="companyName" placeholder="Företagsnamn">
+                    <input type="number" id="price" placeholder="Pris (kr)">
+                    <input type="text" id="productInfo" placeholder="Produktinformation">
+                    <button id="add-order-btn">Lägg till order</button>
+                </div>
+                <div id="order-list">
+                    <!-- Orderar läses in här genom js -->
+                </div>
             </div>
 
 
