@@ -10,12 +10,13 @@ const JSONdata = [
     article: `${articleIdGenerator()}`,
     category: "T-shirt",
     title: "Classic Bomull",
+    // desc: "",
     img: {
       Röd: "visuals/img/grona_tryck_card_2.jpg",
       Beige: "visuals/img/t-shirt/gronatryck_product_2.jpg",
       Vit: "visuals/img/t-shirt/gronatryck_product_3.jpg",
     },
-    color: ["Röd", "Beige", "Vit"],
+    color: ["Röd", "Beige", "Vit", "Rosa"],
     prices: [
       {
         minAmount: 50,
@@ -41,7 +42,8 @@ const JSONdata = [
   {
     article: `${articleIdGenerator()}`,
     category: "Västar",
-    title: "Classic Bomull",
+    title: "Test",
+    // desc: "",
     img: {
       Röd: "visuals/img/grona_tryck_card_4.jpg",
       Beige: "visuals/img/t-shirt/gronatryck_product_2.jpg",
@@ -83,8 +85,8 @@ window.onload = function printData() {
   const parsedJSON = JSON.parse(retrievedData);
 
   parsedJSON.forEach((result) => {
-    const content = `<div class="card">
-          <a href="product.html">
+    const content = `<div id="${result.article}" class="card">
+          <a href="product.html?id=${result.article}">
             <img
               src="${Object.values(result.img)[0]}"
               class="card-img-top"
@@ -139,13 +141,16 @@ window.onload = function printData() {
 const retrievedData = localStorage.getItem("json-products");
 const parsedJSON = JSON.parse(retrievedData);
 
-const amountBtn = document.querySelector(".button-quantity");
+const amountBtn = document.querySelectorAll(".button-quantity button");
 console.log(amountBtn);
 
 const amountInput = document.querySelector(".input-box");
 
 amountInput.addEventListener("input", getPrice);
-amountBtn.addEventListener("click", getPrice);
+
+amountBtn.forEach((btn) => {
+  btn.addEventListener("click", getPrice);
+});
 
 // console.log(amount);
 
@@ -163,6 +168,35 @@ function getPrice() {
     }
   });
 }
+
+// const largeImg = document.querySelector(".product-img--large");
+// const smallImg = document.querySelectorAll(".product-img--small");
+// const dot = document.querySelectorAll(".dot-color");
+// const priceDisplay = document.querySelector("h5");
+
+/* Lägger till rätt data på produktsida beroende på klickat card */
+
+document.addEventListener("DOMContentLoaded", changeData);
+
+function changeData(e) {
+  for (product of parsedJSON) {
+    let productId = new URLSearchParams(window.location.search).get("id");
+    if (productId === product.article) {
+      document.querySelector("h4").innerHTML = product.title;
+      document.querySelector(
+        ".card-dot-container p"
+      ).innerHTML = `+${product.color.length} färger`;
+    }
+  }
+}
+
+/* Lägg till i produktlista */
+function addToCart() {
+  let productId = new URLSearchParams(window.location.search).get("id");
+}
+
+/* Sparar ner tillagda produkter i localstorage */
+function saveCartData() {}
 
 // Gör JSON-objekt till modul för att kunnas användas på andra sidor.
 // module.exports = JSONdata;

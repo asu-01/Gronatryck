@@ -124,6 +124,8 @@
       </div>
     </nav>
   </header>
+
+
   <!-- Breadcumbs för sortiment -->
   <section class="container catalogue">
     <div class="breadcrumb text-color-primary">
@@ -168,7 +170,7 @@
       </div>
       <!-- Produkt information -->
       <div class="product-text-container">
-        <h4 class="text-color-dark-2">Classic fit</h4>
+        <h4 id="articleName" class="text-color-dark-2">Classic fit</h4>
         <p class="text-color-dark-2">
           Unisex t-shirt unikt infärgade i vintagenyanser där varje tröja
           skiljer sig lite från nästa. Infärgningen finns i åtta olika varianter
@@ -190,6 +192,7 @@
             <input
               type="number"
               class="input-box"
+              id="quantityInput"
               value="10"
               min="10"
               max="100"
@@ -231,16 +234,16 @@
         <div>
           <h5 class="text-color-dark-2">Estimerat pris: 600kr</h5>
         </div>
-        <button class="button-primary text-color-offwhite">
-          Beställ nu
-          <img
+        <button onclick="showAlertBox()" class="button-primary text-color-offwhite">
+          Lägg till
+          <!-- <img
             class="arrow arrow--small arrow--right"
             src="/visuals/icons/arrow_icon_white.svg"
-          />
+          /> -->
         </button>
         <button class="button-secondary text-color-offwhite">
           Kontakta oss
-          <img class="arrow--right" src="/visuals/icons/arrow_icon.svg" />
+          <!-- <img class="arrow--right" src="/visuals/icons/arrow_icon.svg" /> -->
         </button>
         <p class="text-color-dark-2 product-extra-infobox">
           Ingen order är bindande fören vi har gått igenom allt och godkänt
@@ -521,17 +524,17 @@
               <h5 class="text-color-primary">Liner desert</h5>
               <div class="card-dot-container">
                 <button
-                  class="dot dot-color-1"
+                  class="dot dot-color"
                   type="button"
                   aria-label="Färg 1"
                 ></button>
                 <button
-                  class="dot dot-color-2"
+                  class="dot dot-color"
                   type="button"
                   aria-label="Färg 2"
                 ></button>
                 <button
-                  class="dot dot-color-3"
+                  class="dot dot-color"
                   type="button"
                   aria-label="Färg 3"
                 ></button>
@@ -547,6 +550,23 @@
       </div>
     </div>
   </section>
+
+
+
+  <!-- alertbox/pop up for orderlist -->
+<div id="alertBox" class="alert-box-container round-corner">
+  <h5 class="text-color-offwhite">Produkten har lagts till i beställningslistan! </h5>
+      
+  <div class="alert-box-content">
+      <img class="alert-box-img" src="visuals/img/t-shirt/gronatryck_product_1.jpg" alt="">
+      <div class="alert-box-details">
+        <h6 id="alertArticlename" class="text-color-offwhite"></h6>
+        <p id="alertQuantity" class="text-color-offwhite"></p>
+      </div>
+      <button onclick="hideAlertBox()" class="button-primary text-color-offwhite">Ångra</button>
+    </div>
+  </div>
+
 
   <!-----------Footer ----------->
   <footer>
@@ -627,9 +647,10 @@
 
 
   <script src="js/script.js"></script>
-  <script src="js/dropdown.js"></script>
   <script src="js/add-to-cart.js"></script>
   <script src="js/amount.js"></script>
   <script src="js/color.js"></script>
   <script src="js/price.js"></script>
+  <script src="js/dropdown.js"></script>
+  <script src="js/alert-box.js"></script>
 </body>
