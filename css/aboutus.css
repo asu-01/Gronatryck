@@ -4,13 +4,20 @@
   height: 270vh;
 }
 
-.aboutus-img {
+.aboutus-content {
+  display: flex;
   width: 100%;
-  height: auto;
-  margin-bottom: 0;
+  margin-top: 4rem;
+  margin-left: 5%;
 }
 
 .aboutus-text {
-  width: 50%;
-  margin-left: 3rem;
+  width: 40%;
+  margin-right: 2rem;
+}
+
+.aboutus-img {
+  display: flex;
+  width: 100%;
+  height: auto;
 }
