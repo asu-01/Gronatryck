@@ -1007,7 +1007,7 @@ p {
     width: 70%;
   }
 
-  .slide-text button {
+  .slide-text:first-child button {
     width: 30%;
     height: 10%;
   }
