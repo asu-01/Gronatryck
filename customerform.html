@@ -124,32 +124,33 @@
       </nav>
     </header>
     <section class="container">
-     <!-- <h3>Kontaktformulär</h3> -->
-     <div class="customer-form-container">
-        <h3>Kontaktformulär</h3>
-     <form class="customer-form" action="">
-
-
-        <span>Namn</span>
-        <input class="input-field round-corner" type="name" id="name" placeholder="Namn Namnsson" class="input-field" required>
-        <span>E-post</span>
-        <input  class="input-field round-corner  type="email" id="email" placeholder="exampel@gmail.com" class="input-field" required>
-        <span>Företag/Organisation</span>
-        <input  class="input-field round-corner"  type="email" id="email" placeholder="Fyll i ditt företag/organisation här" class="input-field">
-        <label for="subject">Meddelande</label>
-        <textarea class="input-field round-corner" id="subject" name="subject" placeholder="Skriv ditt meddelande här" style="height:9rem"></textarea>
-        <span>Ladda upp ditt tryck här</span>
-    
-        <div class="upload-box-container round-corner">
-            <img src="visuals/icons/gronatryck_upload_icon.svg" alt="upload icon">
-            <p class="text-color-dark-2">Droppa filer eller <a href="">ladda upp</a></p>
-            <p class="text-color-primary">Stödjer filer som JPG, PNG, PDF</p>
-        </div>
-        <button type="submit"  class="button--submit" ><p class="text-color-offwhite">Skicka iväg!</p></button>
-       
-     </form>
-    </div>
-    </section>
+      <div class="customer-form-container">
+          <h3 class="text-color-dark-2">Kontaktformulär</h3>
+          <form class="customer-form" action="">
+              <label for="name">Namn</label>
+              <input class="input-field round-corner" type="text" id="name" placeholder="Namn Namnsson" required>
+              
+              <label for="email">E-post</label>
+              <input class="input-field round-corner" type="email" id="email" placeholder="exempel@gmail.com" required>
+              
+              <label for="company">Företag/Organisation</label>
+              <input class="input-field round-corner" type="text" id="company" placeholder="Fyll i ditt företag/organisation här">
+              
+              <label for="subject">Meddelande</label>
+              <textarea class="input-field round-corner" id="subject" name="subject" placeholder="Skriv ditt meddelande här" style="height:9rem"></textarea>
+              
+              <label>Ladda upp ditt tryck här</label>
+              <div class="upload-box-container round-corner">
+                  <img src="visuals/icons/gronatryck_upload_icon.svg" alt="upload icon">
+                  <p class="text-color-dark-2">Droppa filer eller <a href="">ladda upp</a></p>
+                  <p class="text-color-primary">Stödjer filer som JPG, PNG, PDF</p>
+              </div>
+              
+              <button type="submit" class="button--submit text-color-offwhite round-corner">Skicka iväg!</button>
+          </form>
+      </div>
+  </section>
+  
 
     <!-----------Footer ----------->
     <footer>
@@ -336,5 +337,7 @@
         <p class="small">Copyright 2024 &copy; Gröna tryck</p>
       </div>
     </footer>
+    <!-- javascript for header and footer -->
+    <script src="js/dropdown.js"></script>
   </body>
 </html>
