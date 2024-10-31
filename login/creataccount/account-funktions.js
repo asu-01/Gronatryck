@@ -135,8 +135,8 @@ document.addEventListener('DOMContentLoaded', function () {
                     <p>E-post: ${customer.email}</p>
                     <p>Mobil nummer: ${customer.phone}</p>
                     <p>Företags Nummer: ${customer.orgNumber}</p>
-                    <button class="edit-customer-btn">Edit</button>
-                    <button class="delete-customer-btn">Delete</button>
+                    <button class="edit-customer-btn">Ändra kund information</button>
+                    <button class="delete-customer-btn">Radera kund</button>
                 </div>
             `;
             customerList.appendChild(customerDiv);
@@ -186,7 +186,7 @@ document.addEventListener('DOMContentLoaded', function () {
         buttonContainer.style.width = '100%';
 
         editButton.style.backgroundColor = '#faf7eb';
-        editButton.style.color = '#44725a';
+        editButton.style.color = '#1d4231';
         editButton.style.padding = '10px';
         editButton.style.border = '2px solid';
         editButton.style.borderRadius = '10px';
@@ -205,14 +205,14 @@ document.addEventListener('DOMContentLoaded', function () {
 
         //funktion för hover effect
         editButton.addEventListener('mouseenter', function () {
-            editButton.style.backgroundColor = '#44725a';
+            editButton.style.backgroundColor = '#1d4231';
             editButton.style.color = '#faf7eb';
-            editButton.style.border = '2px solid #44725a';
+            editButton.style.border = '2px solid #1d4231';
         });
     
         editButton.addEventListener('mouseleave', function () {
             editButton.style.backgroundColor = '#faf7eb';
-            editButton.style.color = '#44725a';
+            editButton.style.color = '#1d4231';
         });
 
         deleteButton.addEventListener('mouseenter', function () {
@@ -290,6 +290,258 @@ document.addEventListener('DOMContentLoaded', function () {
     }    
 
 });
+
+
+//funktion för pågående ordrar
+
+document.addEventListener('DOMContentLoaded', function () {
+    const ordersContainer = document.getElementById('order-list');
+    const addOrderBtn = document.getElementById('add-order-btn');
+    const allOrdersContainer = document.getElementById('allOrders');
+
+    let orderNumber = parseInt(localStorage.getItem('lastOrderNumber')) || 1;
+    let deliveredOrders = JSON.parse(localStorage.getItem('deliveredOrders')) || {};
+
+    loadOrders();
+    loadDeliveredOrders();
+
+    function loadOrders() {
+        const orders = JSON.parse(localStorage.getItem('orders')) || [];
+        ordersContainer.innerHTML = '';
+
+        orders.forEach((order, index) => {
+            const orderDiv = document.createElement('div');
+            orderDiv.classList.add('order');
+            orderDiv.dataset.index = index;
+
+            orderDiv.innerHTML = `
+                <h4>Ordernummer: ${order.ordernumber}</h4>
+                <h4>Företagsnamn: ${order.companyName}</h4>
+                <p>Pris: ${order.price} kr</p>
+                <p>Produktinformation: ${order.productInfo}</p>
+                <p>Status: <span class="status">${order.status}</span></p>
+                <select class="status-update">
+                    <option value="bearbetas" ${order.status === 'bearbetas' ? 'selected' : ''}>Bearbetas</option>
+                    <option value="färdigtryckt" ${order.status === 'färdigtryckt' ? 'selected' : ''}>Färdigtryckt</option>
+                    <option value="skickad" ${order.status === 'skickad' ? 'selected' : ''}>Skickad</option>
+                    <option value="levererat" ${order.status === 'levererat' ? 'selected' : ''}>Levererat</option>
+                </select>
+                <button class="delete-order-btn">Radera order</button>
+            `;
+
+            ordersContainer.appendChild(orderDiv);
+
+            const statusSelect = orderDiv.querySelector('.status-update');
+            statusSelect.addEventListener('change', function () {
+                if (statusSelect.value === 'levererat') {
+                    if (confirm("Är du säker på att du vill flytta ordern till 'Alla Beställningar'?")) {
+                        moveToDelivered(index);
+                    }
+                }
+            });
+
+            const deleteButton = orderDiv.querySelector('.delete-order-btn');
+            deleteButton.addEventListener('click', function () {
+                deleteOrder(index);
+            });
+        });
+    }
+
+    function saveOrders(orders) {
+        localStorage.setItem('orders', JSON.stringify(orders));
+        localStorage.setItem('lastOrderNumber', orderNumber - 1);
+        loadOrders();
+    }
+
+    function addOrder() {
+        const companyName = document.getElementById('companyName').value;
+        const price = document.getElementById('price').value;
+        const productInfo = document.getElementById('productInfo').value;
+
+        if (companyName && price && productInfo) {
+            const orders = JSON.parse(localStorage.getItem('orders')) || [];
+            orders.push({
+                ordernumber: orderNumber++,
+                companyName,
+                price,
+                productInfo,
+                status: 'bearbetas'
+            });
+            saveOrders(orders);
+            clearOrderForm();
+        } else {
+            alert('Alla fält måste vara ifyllda!');
+        }
+    }
+
+    addOrderBtn.addEventListener('click', addOrder);
+
+    function moveToDelivered(index) {
+        const orders = JSON.parse(localStorage.getItem('orders')) || [];
+        const order = orders.splice(index, 1)[0];
+
+        if (!deliveredOrders[order.companyName]) {
+            deliveredOrders[order.companyName] = [];
+        }
+        deliveredOrders[order.companyName].push(order);
+
+        localStorage.setItem('orders', JSON.stringify(orders));
+        localStorage.setItem('deliveredOrders', JSON.stringify(deliveredOrders));
+
+        loadOrders();
+        updateDeliveredOrdersTab();
+    }
+
+    function loadDeliveredOrders() {
+        allOrdersContainer.innerHTML = '';
+        
+        
+        const groupedOrders = {};
+        for (const [companyName, orders] of Object.entries(deliveredOrders)) {
+            orders.forEach(order => {
+                const date = order.creationDate ? new Date(order.creationDate) : new Date(); // Use the order's creation date if available
+                const monthYear = `${date.getFullYear()}-${date.getMonth() + 1}`; // Format: YYYY-MM
+                
+                if (!groupedOrders[monthYear]) {
+                    groupedOrders[monthYear] = {};
+                }
+                if (!groupedOrders[monthYear][companyName]) {
+                    groupedOrders[monthYear][companyName] = [];
+                }
+                groupedOrders[monthYear][companyName].push(order);
+            });
+        }
+    
+        
+        for (const [monthYear, companies] of Object.entries(groupedOrders)) {
+            const monthYearTab = document.createElement('div');
+            monthYearTab.classList.add('month-year-tab');
+            monthYearTab.innerHTML = `<h3>${monthYear}</h3>`;
+    
+            
+            const buttonsContainer = document.createElement('div');
+            buttonsContainer.style.display = 'flex';
+            buttonsContainer.style.flexWrap = 'wrap';
+            buttonsContainer.style.gap = '10px';
+    
+            for (const [companyName, orders] of Object.entries(companies)) {
+                const viewOrdersButton = document.createElement('button');
+                viewOrdersButton.textContent = `${companyName}`;
+                viewOrdersButton.addEventListener('click', function () {
+                    displayCompanyOrders(companyName);
+                });
+    
+                
+                viewOrdersButton.style.backgroundColor = '#faf7eb';
+                viewOrdersButton.style.color = '#1d4231';
+                viewOrdersButton.style.width = 'auto'; 
+                viewOrdersButton.style.padding = '10px';
+                viewOrdersButton.style.borderRadius = '10px';
+                viewOrdersButton.style.border = '2px solid #1d4231';
+                viewOrdersButton.style.cursor = 'pointer';
+    
+                
+                viewOrdersButton.addEventListener('mouseover', function () {
+                    viewOrdersButton.style.backgroundColor = '#1d4231';
+                    viewOrdersButton.style.color = '#faf7eb';
+                });
+                viewOrdersButton.addEventListener('mouseout', function () {
+                    viewOrdersButton.style.backgroundColor = '#faf7eb';
+                    viewOrdersButton.style.color = '#1d4231';
+                });
+    
+                buttonsContainer.appendChild(viewOrdersButton);
+            }
+            
+            monthYearTab.appendChild(buttonsContainer);
+            allOrdersContainer.appendChild(monthYearTab);
+        }
+    }
+    
+    
+
+    function displayCompanyOrders(companyName) {
+        const companyOrders = deliveredOrders[companyName] || [];
+    
+        
+        const companyOrdersDisplay = document.createElement('div');
+        companyOrdersDisplay.classList.add('company-orders-display');
+        companyOrdersDisplay.innerHTML = `<h3>Beställningar för ${companyName}</h3>`;
+    
+        const backButton = document.createElement('button');
+        backButton.textContent = "Tillbaka";
+        backButton.addEventListener('click', loadDeliveredOrders);
+
+        backButton.style.backgroundColor = '#1d4231';
+        backButton.style.color = '#faf7eb';
+        backButton.style.width = 'auto'; 
+        backButton.style.padding = '10px';
+        backButton.style.borderRadius = '10px';
+        backButton.style.border = '2px solid #1d4231';
+        backButton.style.cursor = 'pointer';
+        backButton.style.marginLeft = '89.2%';
+        backButton.style.marginBottom = '10px';
+    
+        companyOrdersDisplay.appendChild(backButton);
+    
+        companyOrders.forEach(order => {
+            const orderDiv = document.createElement('div');
+            orderDiv.classList.add('order');
+            orderDiv.innerHTML = `
+                <h4>Ordernummer: ${order.ordernumber}</h4>
+                <p>Pris: ${order.price} kr</p>
+                <p>Produktinformation: ${order.productInfo}</p>
+                <p>Status: <span class="status">${order.status}</span></p>
+            `;
+            companyOrdersDisplay.appendChild(orderDiv);
+        });
+    
+        allOrdersContainer.innerHTML = '';
+        allOrdersContainer.appendChild(companyOrdersDisplay);
+    }
+    
+
+    function deleteOrder(index) {
+        const orders = JSON.parse(localStorage.getItem('orders')) || [];
+        if (confirm(`Är du säker på att du vill radera order för ${orders[index].companyName}?`)) {
+            orders.splice(index, 1);
+            saveOrders(orders);
+        }
+    }
+
+    function clearOrderForm() {
+        document.getElementById('companyName').value = '';
+        document.getElementById('price').value = '';
+        document.getElementById('productInfo').value = '';
+    }
+});
+
+
+function updateDeliveredOrdersTab() {
+    const allOrdersContainer = document.getElementById('allOrders');
+    allOrdersContainer.innerHTML = '';
+
+    for (const [companyName, orders] of Object.entries(deliveredOrders)) {
+        const companyTab = document.createElement('div');
+        companyTab.classList.add('company-tab');
+        companyTab.innerHTML = `<h3>${companyName}</h3>`;
+
+        const viewOrdersButton = document.createElement('button');
+        viewOrdersButton.textContent = `Visa beställningar för ${companyName}`;
+        viewOrdersButton.addEventListener('click', function () {
+            displayCompanyOrders(companyName);
+        });
+
+        companyTab.appendChild(viewOrdersButton);
+        allOrdersContainer.appendChild(companyTab);
+    }
+}
+
+
+
+
+
+
 
 
 
