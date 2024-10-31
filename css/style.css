@@ -56,37 +56,71 @@ body {
 
 /* font stilar */
 
-/* Textstyles för rubriker och brödtext*/
+/* Typescale för rubriker och brödtext */
 h1 {
+  /* 61px */
   font-size: 3.815rem;
   font-weight: 700;
   font-style: normal;
 }
 
 h2 {
+  /* 48px */
   font-size: 3.052rem;
   font-weight: 700;
   font-style: normal;
 }
 
 h3 {
+  /* 39px */
   font-size: 2.441rem;
 }
 h4 {
+  /* 31px */
   font-size: 1.953rem;
 }
 h5 {
+  /* 25px */
   font-size: 1.563rem;
 }
 h6 {
+  /* 20px */
   font-size: 1.25rem;
 }
 p {
+  /* 16px */
   font-size: 1rem;
 }
 
 .small {
+  /* 12px */
   font-size: 0.8rem;
+}
+
+/* Spacing and layout sizes  */
+.spacing--xs {
+  /* 8pt */
+  /* 0.6669rem */
+}
+.spacing--s {
+  /* 16pt */
+  /* 1.3331rem */
+}
+.spacing--m {
+  /* 24pt */
+  /* 2rem */
+}
+.spacing--l {
+  /* 32pt */
+  /* 2.6669rem */
+}
+.spacing--xl {
+  /* 48pt */
+  /* 4rem */
+}
+.spacing--xxl {
+  /* 80pt */
+  /* 6.6662rem */
 }
 
 /* Navbar */
