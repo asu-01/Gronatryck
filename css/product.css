@@ -170,50 +170,58 @@
   padding-top: 2rem;
   padding-left: 2rem;
   width: 30rem;
-  height: 32rem;
+  height: 18rem;
   background-color: var(--primary-green);
   display: none;
-  position: fixed;
-  top: 50%;
-  left: 50%;
+  position: absolute;
+  top: 25%;
+  left: 82%;
   transform: translate(-50%, -50%);
   z-index: 1000;
 }
 
 .alert-box-content {
   margin-top: 1rem;
+  width: 75%;
 }
 
 .alert-box-details {
+  display: flex;
+  flex-direction: row;
+  margin-top: 1rem;
+}
+.alert-box-details p {
+  margin-left: 1rem;
+}
+
+.alert-box-container button {
   margin-top: 1rem;
 }
 
-.alert-box-container svg {
-  height: 2vh;
-}
-
-.alert-box-img {
-  width: 12rem;
+.alert-box-img img {
+  width: 5rem;
+  object-fit: contain;
 }
 
 /* Order bag icon */
-.icon-orderbag--number {
-  /* display: none; */
-  display: flex;
-  width: 1.5rem;
-  height: 1.5rem;
-  background-color: var(--primary-green);
+.icon-orderbag--amount {
+  /* display: flex; */
+  width: 1rem;
+  height: 1rem;
+  background-color: var(--primary-new);
   justify-content: center;
   align-items: center;
   border-radius: 50%;
+  display: none;
   position: absolute;
   top: 5%;
-  right: 50px;
+  right: 60px;
 }
 
-.icon-orderbag--number p {
+.icon-orderbag--amount p {
   position: absolute;
   top: 3%;
+  font-size: 0.7rem;
 }
 
 @media screen and (max-width: 1200px) {
