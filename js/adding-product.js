@@ -72,16 +72,22 @@ document.addEventListener("DOMContentLoaded", function () {
   };
 
   window.hideAlertBox = function () {
-    document.getElementById("alertBox").style.display = "none";
+    const alertBox = document.getElementById("alertBox");
+    if (alertBox) {
+      alertBox.style.display = "none";
+    }
+  
+    // Reset the amount bubble to "none" or hide it
+    const amountBubble = document.getElementsByClassName("icon-orderbag--amount")[0];
+    if (amountBubble) {
+      amountBubble.style.display = "none";  // Hide the bubble entirely
+  
+      // Alternatively, if you want to keep it visible but show zero quantity:
+      // amountBubble.querySelector("p").textContent = ""; // or "0"
+    }
   };
 
-  // Close alert box when clicking outside of it
-  // document.addEventListener("click", function (event) {
-  //   const alertBox = document.getElementById("alertBox");
-  //   if (!alertBox.contains(event.target)) {
-  //     hideAlertBox();
-  //   }
-  // });
+ 
 });
 
 // Function to change quantity
