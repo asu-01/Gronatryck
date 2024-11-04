@@ -59,7 +59,7 @@ const JSONdata = [
     img: "visuals/img/grona_tryck_card_4.jpg",
     colors: [
       {
-        colorName: "Tegelröd",
+        colorName: "Röd",
         colorCode: "#9c541f",
         url: "visuals/img/grona_tryck_card_2.jpg",
       },
