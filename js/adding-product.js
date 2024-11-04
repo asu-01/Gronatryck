@@ -10,13 +10,13 @@ document.addEventListener("DOMContentLoaded", function () {
     // Update the alert box with the quantity
     document.getElementById(
       "alertQuantity"
-    ).textContent = `${articleName} har nu lagts till i beställningslistan.\nAntal: ${quantity} st. Färg: Röd.`;
+    ).textContent = `Antal: ${quantity} st. Färg: Röd.`;
     document.getElementById("alertBox").style.display = "flex";
 
     // Update the article name in the alert box
-    // document.getElementById(
-    //   "alertArticlename"
-    // ).textContent = `${articleName} har lagts till i beställningslistan!`;
+    document.getElementById(
+      "alertArticlename"
+    ).textContent = `${articleName} har lagts till i beställningslistan!`;
 
     // Make the amount bubble visible
     const amountBubble = document.getElementsByClassName(
