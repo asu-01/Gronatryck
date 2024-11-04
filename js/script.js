@@ -15,12 +15,17 @@ const JSONdata = [
     colors: [
       {
         colorName: "Tegelröd",
-        colorCode: "#9c441f",
+        colorCode: "#913d23",
         url: "visuals/img/grona_tryck_card_2.jpg",
       },
       {
         colorName: "Beige",
-        colorCode: "#a6927e",
+        colorCode: "#2dab11",
+        url: "visuals/img/grona_tryck_card_2.jpg",
+      },
+      {
+        colorName: "Beige",
+        colorCode: "#ecf0eb",
         url: "visuals/img/grona_tryck_card_2.jpg",
       },
     ],
@@ -54,12 +59,288 @@ const JSONdata = [
   {
     articleId: `${articleIdGenerator()}`,
     category: "Västar",
-    title: "Test",
+    title: "Varm väst",
     desc: "",
     img: "visuals/img/grona_tryck_card_4.jpg",
     colors: [
       {
         colorName: "Röd",
+        colorCode: "#9c541f",
+        url: "visuals/img/grona_tryck_card_2.jpg",
+      },
+      {
+        colorName: "Beige",
+        colorCode: "#a6987e",
+        url: "visuals/img/grona_tryck_card_2.jpg",
+      },
+    ],
+    priceList: [
+      {
+        minAmount: 25,
+        maxAmount: 49,
+        price: 100,
+      },
+      {
+        minAmount: 50,
+        maxAmount: 99,
+        price: 200,
+      },
+      {
+        minAmount: 100,
+        maxAmount: 249,
+        price: 300,
+      },
+      {
+        minAmount: 250,
+        maxAmount: 499,
+        price: 400,
+      },
+      {
+        minAmount: 500,
+        maxAmount: 1000,
+        price: 500,
+      },
+    ],
+  },
+  {
+    articleId: `${articleIdGenerator()}`,
+    category: "Jackor",
+    title: "Pufferjacka",
+    desc: "",
+    img: "visuals/img/grona_tryck_card_5.jpg",
+    colors: [
+      {
+        colorName: "Röd",
+        colorCode: "#9c541f",
+        url: "visuals/img/grona_tryck_card_2.jpg",
+      },
+      {
+        colorName: "Beige",
+        colorCode: "#a6987e",
+        url: "visuals/img/grona_tryck_card_2.jpg",
+      },
+    ],
+    priceList: [
+      {
+        minAmount: 25,
+        maxAmount: 49,
+        price: 100,
+      },
+      {
+        minAmount: 50,
+        maxAmount: 99,
+        price: 200,
+      },
+      {
+        minAmount: 100,
+        maxAmount: 249,
+        price: 300,
+      },
+      {
+        minAmount: 250,
+        maxAmount: 499,
+        price: 400,
+      },
+      {
+        minAmount: 500,
+        maxAmount: 1000,
+        price: 500,
+      },
+    ],
+  },
+  {
+    articleId: `${articleIdGenerator()}`,
+    category: "Sweatshirts",
+    title: "Mysig sweatshirt",
+    desc: "",
+    img: "visuals/img/grona_tryck_card_3.jpg",
+    colors: [
+      {
+        colorName: "Röd",
+        colorCode: "#9c541f",
+        url: "visuals/img/grona_tryck_card_2.jpg",
+      },
+      {
+        colorName: "Beige",
+        colorCode: "#a6987e",
+        url: "visuals/img/grona_tryck_card_2.jpg",
+      },
+    ],
+    priceList: [
+      {
+        minAmount: 25,
+        maxAmount: 49,
+        price: 100,
+      },
+      {
+        minAmount: 50,
+        maxAmount: 99,
+        price: 200,
+      },
+      {
+        minAmount: 100,
+        maxAmount: 249,
+        price: 300,
+      },
+      {
+        minAmount: 250,
+        maxAmount: 499,
+        price: 400,
+      },
+      {
+        minAmount: 500,
+        maxAmount: 1000,
+        price: 500,
+      },
+    ],
+  },
+  {
+    articleId: `${articleIdGenerator()}`,
+    category: "Väskor",
+    title: "Totebag",
+    desc: "",
+    img: "visuals/img/Tote Bag_White_Studio_Front_Main_6.jpg",
+    colors: [
+      {
+        colorName: "Vit",
+        colorCode: "#9c541f",
+        url: "visuals/img/grona_tryck_card_2.jpg",
+      },
+      {
+        colorName: "Beige",
+        colorCode: "#a6987e",
+        url: "visuals/img/grona_tryck_card_2.jpg",
+      },
+    ],
+    priceList: [
+      {
+        minAmount: 25,
+        maxAmount: 49,
+        price: 100,
+      },
+      {
+        minAmount: 50,
+        maxAmount: 99,
+        price: 200,
+      },
+      {
+        minAmount: 100,
+        maxAmount: 249,
+        price: 300,
+      },
+      {
+        minAmount: 250,
+        maxAmount: 499,
+        price: 400,
+      },
+      {
+        minAmount: 500,
+        maxAmount: 1000,
+        price: 500,
+      },
+    ],
+  },
+  {
+    articleId: `${articleIdGenerator()}`,
+    category: "Huvtröjor",
+    title: "Huvtröja",
+    desc: "",
+    img: "visuals/img/grona_tryck_card_6.jpg",
+    colors: [
+      {
+        colorName: "Vit",
+        colorCode: "#9c541f",
+        url: "visuals/img/grona_tryck_card_2.jpg",
+      },
+      {
+        colorName: "Beige",
+        colorCode: "#a6987e",
+        url: "visuals/img/grona_tryck_card_2.jpg",
+      },
+    ],
+    priceList: [
+      {
+        minAmount: 25,
+        maxAmount: 49,
+        price: 100,
+      },
+      {
+        minAmount: 50,
+        maxAmount: 99,
+        price: 200,
+      },
+      {
+        minAmount: 100,
+        maxAmount: 249,
+        price: 300,
+      },
+      {
+        minAmount: 250,
+        maxAmount: 499,
+        price: 400,
+      },
+      {
+        minAmount: 500,
+        maxAmount: 1000,
+        price: 500,
+      },
+    ],
+  },
+  {
+    articleId: `${articleIdGenerator()}`,
+    category: "Jackor",
+    title: "Jacka",
+    desc: "",
+    img: "visuals/img/grona_tryck_card_8.jpg",
+    colors: [
+      {
+        colorName: "Beige",
+        colorCode: "#9c541f",
+        url: "visuals/img/grona_tryck_card_2.jpg",
+      },
+      {
+        colorName: "Beige",
+        colorCode: "#a6987e",
+        url: "visuals/img/grona_tryck_card_2.jpg",
+      },
+    ],
+    priceList: [
+      {
+        minAmount: 25,
+        maxAmount: 49,
+        price: 100,
+      },
+      {
+        minAmount: 50,
+        maxAmount: 99,
+        price: 200,
+      },
+      {
+        minAmount: 100,
+        maxAmount: 249,
+        price: 300,
+      },
+      {
+        minAmount: 250,
+        maxAmount: 499,
+        price: 400,
+      },
+      {
+        minAmount: 500,
+        maxAmount: 1000,
+        price: 500,
+      },
+    ],
+  },
+  {
+    articleId: `${articleIdGenerator()}`,
+    category: "T-shirts",
+    title: "Classic Bomull",
+    desc: "",
+    img: "visuals/img/grona_tryck_card_1.jpg",
+    colors: [
+      {
+        colorName: "Vit",
         colorCode: "#9c541f",
         url: "visuals/img/grona_tryck_card_2.jpg",
       },

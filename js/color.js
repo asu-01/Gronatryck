@@ -2,6 +2,7 @@
 const productImg = document.querySelector(".product-img--large");
 
 // Hämta färg-knappar
+const colorBtn = document.querySelectorAll(".dot");
 
 window.onload = function printColor() {
   const retrievedData = localStorage.getItem("json-products");
@@ -11,9 +12,10 @@ window.onload = function printColor() {
   const colorBtn = document.querySelectorAll(".dot");
 
   for (product of parsedJSON) {
+    let productId = new URLSearchParams(window.location.search).get("id");
     for (color of product.colors) {
       const dot = ` <input
-        class="dot dot-color-1 dot--large"
+        class="dot dot-color dot--large"
         type="button"
         aria-label="Färg 1"
         style="background-color: ${color.colorCode};"

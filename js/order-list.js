@@ -59,7 +59,10 @@ function addToList() {
 
   // Hämtar alla produktval som användaren matat in på produktsidan
   let productAmount = amountInput.value;
-  // let productColor = document.querySelector(".dot-color").style.backgroundColor;
+  let productColor = document.querySelector(".active");
+
+  productColor = productColor.forEach((color) => color.style.backgroundColor);
+
   let productTitle = document.getElementById("articleName").textContent;
   let productPrice = document
     .querySelector(".product-text-container h5")
@@ -74,10 +77,12 @@ function addToList() {
     id: productId,
     img: productImg,
     title: productTitle,
-    // color: productColor,
+    color: productColor,
     amount: productAmount,
     price: productPrice,
   };
+
+  console.log(product);
 
   // Redan existerande JSON data i beställningslista hämtas och konverteras
   let currentCartData = localStorage.getItem("cart-products");
