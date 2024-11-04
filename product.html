@@ -100,7 +100,9 @@
                   <svg class="arrow " width="15" height="10" viewBox="0 0 15 10" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M1.78846 1.5L7.89423 9L14 1.5" stroke="#44725A" stroke-width="2" stroke-linecap="round"
                         stroke-linejoin="round" />
-                </svg></a>
+                </svg>
+        
+              </a>
               
                 <div id="dropdownList" class="dropdown">
                   <div class="dropdown-content round-corner text-color-offwhite">
@@ -116,7 +118,8 @@
         <div class="nav-icons">
             <img src="/visuals/icons/gronatryck_icon_search.svg" alt="Öppna sökfunktion">
             <img src="/visuals/icons/gronatryck_icon_user.svg" alt="Gå till mina sidor">
-            <a href="order-list.html"><img src="/visuals/icons/gronatryck_icon_bag (1).svg" alt="Gå till din beställningslista"></a>
+            <a href="order-list.html"><img class="icon-orderbag" src="/visuals/icons/gronatryck_icon_bag (1).svg" alt="Gå till din beställningslista">
+            <span class="icon-orderbag--amount"><p class="text-color-offwhite">1</p></span></a>
               <!-- Hamburger menu icon for mobile -->
             <img class="hamburger-icon" src="visuals/icons/hamburger_menu_icon.svg" alt="Hamburgar meny, tre streck">
           </div>
@@ -552,15 +555,19 @@
 
   <!-- alertbox/pop up for orderlist -->
 <div id="alertBox" class="alert-box-container round-corner">
-  <h5 class="text-color-offwhite">Produkten har lagts till i beställningslistan! </h5>
-      
   <div class="alert-box-content">
-      <img class="alert-box-img" src="visuals/img/t-shirt/gronatryck_product_1.jpg" alt="">
-      <div class="alert-box-details">
-        <h6 id="alertArticlename" class="text-color-offwhite"></h6>
-        <p id="alertQuantity" class="text-color-offwhite"></p>
-      </div>
-      <button onclick="hideAlertBox()" class="button-primary text-color-offwhite">Ångra</button>
+    <h6 id="alertArticlename" class="text-color-offwhite"></h6>
+    <div class="alert-box-details">
+      <div class="alert-box-img">
+      <img src="visuals/img/t-shirt/gronatryck_product_1.jpg" alt="">
+    </div>
+      <!-- <p id="alertArticlename" class="text-color-offwhite"></p> -->
+      <p id="alertQuantity" class="text-color-offwhite"></p>
+    </div>
+    <button class="button-primary"><a class=" text-color-offwhite" href="order-list.html">Gå till beställning</a></button>
+    <button onclick="hideAlertBox()" class="button-secondary text-color-offwhite">Ångra</button>
+      
+
     </div>
   </div>
 
@@ -648,6 +655,6 @@
   <script src="js/color.js"></script>
   <script src="js/price.js"></script>
   <script src="js/dropdown.js"></script>
-  <script src="js/alert-box.js"></script>
+  <script src="js/adding-product.js"></script>
   <script src="js/order-list.js"></script>
 </body>
