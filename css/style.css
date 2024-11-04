@@ -26,6 +26,7 @@
 body {
   background-color: var(--secondary-off-white);
   font-family: "stolzl", sans-serif;
+
 }
 
 /* Färg klasser för text */
@@ -122,6 +123,10 @@ p {
 .spacing--xxl {
   /* 80pt */
   /* 6.6662rem */
+}
+
+a {
+  text-decoration: none;
 }
 
 /* Navbar */
@@ -283,7 +288,7 @@ p {
   border-radius: 10px;
   padding: 0.6rem 1rem 0.6rem 1rem;
   background-color: var(--secondary-off-white);
-  border: 2px solid var(--primary-green);
+  border: 2px solid var(--primary-new);
   text-align: right;
   color: var(--primary-green);
 }
@@ -332,6 +337,26 @@ p {
 .pagination-bullet.active {
   background-color: #717171;
 }
+
+.chat-icon {
+  position: fixed;    
+  bottom: 20px;          
+  right: 20px;           
+  width: 3.5rem;         
+  height: 3.5rem;   
+  border-radius: 50%;        
+  cursor: pointer;       
+  z-index: 1000;         
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--primary-new);
+}
+.chat-icon img {
+ width: 5vh;
+}
+
+
 
 /*--------------- Nyheter sektionen -------------*/
 
@@ -570,7 +595,7 @@ p {
 }
 
 .card-section--two .card-section-info {
-  width: 50%;
+  width: 60%;
 }
 
 .card-container {
@@ -641,7 +666,7 @@ p {
 
 .card-section-two {
   height: 110vh;
-  margin-top: 4rem;
+  margin-top: 8rem;
   background-image: url(/visuals/patterns/swirl/swirl_1_ny_alternative_green.svg);
   background-repeat: no-repeat;
   background-size: 250vh;
@@ -794,10 +819,12 @@ p {
   height: 50vh;
   flex-wrap: wrap;
   background-color: var(--primary-green);
+  overflow: hidden;
 }
 .footer-content {
   display: flex;
   flex-direction: column;
+  overflow: hidden;
 }
 .footer-logo {
   height: 15vh;

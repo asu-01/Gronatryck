@@ -43,9 +43,8 @@
 
 .aboutus-img-wrapper {
   display: flex;
-  width: 40rem;
-  height: 30rem;
-  border: 1px solid blue;
+  width: 30rem;
+  height: 25rem;
   overflow: hidden;
 }
 .aboutus-img--small {
