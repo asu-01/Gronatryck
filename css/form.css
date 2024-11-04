@@ -16,11 +16,15 @@
 }
 
 .input-field {
-  padding: 2rem;
+  padding: 1rem;
   border: 1px solid var(--monochrome-light);
   width: 97%;
-  height: 2rem;
+  height: 4rem;
   margin-bottom: 1.5rem;
+}
+
+.customer-form textarea {
+  resize: none;
 }
 
 .upload-box-container {

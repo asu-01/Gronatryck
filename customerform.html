@@ -139,10 +139,10 @@
           <h3 class="text-color-dark-2">Kontaktformulär</h3>
           <form class="customer-form" action="">
               <label for="name">Namn</label>
-              <input class="input-field round-corner" type="text" id="name" placeholder="Namn Namnsson" required>
+              <input class="input-field round-corner" type="text" id="name" placeholder="För- och efternamn" required>
               
               <label for="email">E-post</label>
-              <input class="input-field round-corner" type="email" id="email" placeholder="exempel@gmail.com" required>
+              <input class="input-field round-corner" type="email" id="email" placeholder="exempel@gmail.se" required>
               
               <label for="company">Företag/Organisation</label>
               <input class="input-field round-corner" type="text" id="company" placeholder="Fyll i ditt företag/organisation här">
@@ -153,11 +153,12 @@
               <label>Ladda upp ditt tryck här</label>
               <div class="upload-box-container round-corner">
                   <img src="visuals/icons/gronatryck_upload_icon.svg" alt="upload icon">
-                  <p class="text-color-dark-2">Droppa filer här eller <a href="">ladda upp</a></p>
+                  <p class="text-color-dark-2">Droppa dina filer här eller <a href="">ladda upp</a></p>
                   <p class="text-color-primary">Tillåtna filformat: jpg, jpeg, eps, cdr, ai, pdf & png</p>
               </div>
               
-              <a href="confirmation.html"><button class="button--submit text-color-offwhite round-corner">Skicka iväg!</button></a>
+              <button type="button" class="button--submit text-color-offwhite round-corner" id="submitButton">Skicka iväg!</button>
+    </form>
           </form>
       </div>
   </section>
@@ -350,5 +351,6 @@
     </footer>
     <!-- javascript for header and footer -->
     <script src="js/dropdown.js"></script>
+    <script src="js/sendform.js"></script>
   </body>
 </html>
