@@ -496,7 +496,7 @@ p {
   border: none;
 }
 
-.dot-color-1 {
+/* .dot-color-1 {
   background-color: #e2ebea;
 }
 
@@ -512,7 +512,7 @@ p {
 }
 .dot-color-5 {
   background-color: #1710a6;
-}
+} */
 
 .dot--large {
   height: 15px;
