@@ -61,7 +61,7 @@ function addToList() {
   let productAmount = amountInput.value;
   let productColor = document.querySelector(".active");
 
-  productColor = productColor.forEach((color) => color.style.backgroundColor);
+  //   productColor = productColor.forEach((color) => color.style.backgroundColor);
 
   let productTitle = document.getElementById("articleName").textContent;
   let productPrice = document

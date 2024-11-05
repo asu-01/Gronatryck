@@ -14,19 +14,19 @@ const JSONdata = [
     img: "visuals/img/grona_tryck_card_2.jpg",
     colors: [
       {
+        colorName: "Beige",
+        colorCode: "#cfb4a5",
+        url: "visuals/img/t-shirt/gronatryck_product_1.jpg",
+      },
+      {
+        colorName: "Vit",
+        colorCode: "#ffffff",
+        url: "visuals/img/grona_tryck_card_2.jpg",
+      },
+      {
         colorName: "Tegelröd",
         colorCode: "#913d23",
-        url: "visuals/img/grona_tryck_card_2.jpg",
-      },
-      {
-        colorName: "Beige",
-        colorCode: "#2dab11",
-        url: "visuals/img/grona_tryck_card_2.jpg",
-      },
-      {
-        colorName: "Beige",
-        colorCode: "#ecf0eb",
-        url: "visuals/img/grona_tryck_card_2.jpg",
+        url: "visuals/img/t-shirt/gronatryck_product_1.jpg",
       },
     ],
     priceList: [
@@ -64,13 +64,13 @@ const JSONdata = [
     img: "visuals/img/grona_tryck_card_4.jpg",
     colors: [
       {
-        colorName: "Röd",
-        colorCode: "#9c541f",
+        colorName: "Beige",
+        colorCode: "#a6987e",
         url: "visuals/img/grona_tryck_card_2.jpg",
       },
       {
-        colorName: "Beige",
-        colorCode: "#a6987e",
+        colorName: "Svart",
+        colorCode: "#0f1112",
         url: "visuals/img/grona_tryck_card_2.jpg",
       },
     ],
@@ -110,13 +110,13 @@ const JSONdata = [
     img: "visuals/img/grona_tryck_card_5.jpg",
     colors: [
       {
-        colorName: "Röd",
-        colorCode: "#9c541f",
+        colorName: "Camoflauge",
+        colorCode: "#485942",
         url: "visuals/img/grona_tryck_card_2.jpg",
       },
       {
-        colorName: "Beige",
-        colorCode: "#a6987e",
+        colorName: "Turkos",
+        colorCode: "#0a3837",
         url: "visuals/img/grona_tryck_card_2.jpg",
       },
     ],
@@ -156,14 +156,19 @@ const JSONdata = [
     img: "visuals/img/grona_tryck_card_3.jpg",
     colors: [
       {
-        colorName: "Röd",
-        colorCode: "#9c541f",
-        url: "visuals/img/grona_tryck_card_2.jpg",
+        colorName: "Gräddvit",
+        colorCode: "#e8e0ca",
+        url: "/visuals/img/Knoxer_Natural Raw_Packshot_Front_Main_0.jpg",
       },
       {
-        colorName: "Beige",
-        colorCode: "#a6987e",
-        url: "visuals/img/grona_tryck_card_2.jpg",
+        colorName: "Mörkblå",
+        colorCode: "#091933",
+        url: "/visuals/img/Knoxer_French Navy_Packshot_Front_Main_0.jpg",
+      },
+      {
+        colorName: "Svart",
+        colorCode: "#0f1112",
+        url: "/visuals/img/Knoxer_French Navy_Packshot_Front_Main_0.jpg",
       },
     ],
     priceList: [
@@ -203,12 +208,7 @@ const JSONdata = [
     colors: [
       {
         colorName: "Vit",
-        colorCode: "#9c541f",
-        url: "visuals/img/grona_tryck_card_2.jpg",
-      },
-      {
-        colorName: "Beige",
-        colorCode: "#a6987e",
+        colorCode: "#ffffff",
         url: "visuals/img/grona_tryck_card_2.jpg",
       },
     ],
@@ -477,21 +477,4 @@ function getPrice() {
       }
     }
   });
-}
-
-// Lägger till rätt data på produktsida beroende på valt produktcard (WIP)
-
-document.addEventListener("DOMContentLoaded", changeData);
-
-function changeData(e) {
-  for (product of parsedJSON) {
-    let productId = new URLSearchParams(window.location.search).get("id");
-    if (productId === product.article) {
-      document.querySelector("h4").innerHTML = product.title;
-      document.querySelector(
-        ".card-dot-container p"
-      ).innerHTML = `+${product.color.length} färger`;
-      // document.querySelectorAll(".dot-color").style.backgroundColor = ;
-    }
-  }
 }
