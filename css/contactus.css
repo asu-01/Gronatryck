@@ -2,10 +2,22 @@
   margin: 5% auto;
 }
 
+.contactus-container h2 {
+  margin-bottom: 4%;
+}
+
+/* .contactus-text {
+  width:;
+} */
+
+.contactus-text h6 {
+  font-weight: 900;
+}
+
 .contactus-content {
   display: flex;
   flex-direction: row;
-  gap: 20px;
+ gap: 2%;
 }
 .swirl-pattern {
   height: 45vh;
@@ -13,6 +25,10 @@
 
 .contactus-text-container {
   flex: 1;
+}
+
+.contactus-text {
+  margin-bottom: 2rem;
 }
 
 .contactus-img {
@@ -23,6 +39,11 @@
   width: 100%;
   height: auto;
   border-radius: 8px;
+}
+
+ .customer-form-container {
+  width: 70%;
+
 }
 
 /* Responsive adjustments */

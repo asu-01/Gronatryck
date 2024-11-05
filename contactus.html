@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="css/custom_bootstrap.css" />
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/contactus.css" />
+    <link rel="stylesheet" href="css/form.css" />
     <!-- Länkar till Stoltz typsnitt från Adobe fonts -->
     <link rel="stylesheet" href="https://use.typekit.net/zlf3fvp.css" />
   </head>
@@ -124,7 +125,7 @@
       </nav>
     </header>
 
-    <section class="container">
+<section class="container">
   <div class="contactus-container">
     <h2 class="text-color-dark-2">Kontakta oss</h2>
 
@@ -166,6 +167,49 @@
   </div>
 </section>
 <div class="swirl-pattern swirl-pattern--rotate"></div>
+
+<section class="container">
+  <div class="contactus-content">
+  <div class="contactus-text contactus-text--">
+  <h4 class="text-color-dark-2">Hittar du inte vad du söker i vår webbshop?</h4>
+  <p>Hör gärna av dig till oss om du har frågor genom att använda kontaktformuläret nedan! Eller se våra vanliga frågor. Vi har en hel del hållbara produkter som inte ligger ute på vår sida. Sen jobbar vi även direkt med producenter runt om i Europa och Indien där vi kan ta fram helt unika plagg eller produkter. Vi kan erbjuda special producerade plagg där både produkt och tryck är GOTS-certifierade.</p>
+</div>
+  <div class="contactus-text">
+  <h4 class="text-color-dark-2">Återförsäljare?</h4>
+  <p>Jobbar du åt en byrå, ett profilföretag eller tryckeri och letar efter en trygg partner inom hållbara profilprodukter?
+    Fyll i kontaktformuläret nedan så återkommer vi med mer information om vad vi kan erbjuda dig som återförsäljare.
+  </p>
+</div>
+
+  
+</div>
+<div class="customer-form-container">
+  <h3 class="text-color-dark-2">Kontaktformulär</h3>
+  <form class="customer-form" action="">
+      <label for="name">Namn</label>
+      <input class="input-field round-corner" type="text" id="name" placeholder="För- och efternamn" required>
+      
+      <label for="email">E-post</label>
+      <input class="input-field round-corner" type="email" id="email" placeholder="exempel@gmail.se" required>
+      
+      <label for="company">Företag/Organisation</label>
+      <input class="input-field round-corner" type="text" id="company" placeholder="Fyll i ditt företag/organisation här">
+      
+      <label for="subject">Meddelande</label>
+      <textarea class="input-field round-corner" id="subject" name="subject" placeholder="Skriv ditt meddelande här" style="height:9rem"></textarea>
+      
+      <label>Ladda upp ditt tryck här</label>
+      <div class="upload-box-container round-corner">
+          <img src="visuals/icons/gronatryck_upload_icon.svg" alt="upload icon">
+          <p class="text-color-dark-2">Droppa dina filer här eller <a href="">ladda upp</a></p>
+          <p class="text-color-primary">Tillåtna filformat: jpg, jpeg, eps, cdr, ai, pdf & png</p>
+      </div>
+      
+      <button type="submit" class="button--submit text-color-offwhite round-corner" id="submitButton">Skicka iväg!</button>
+  </form>
+</div>
+
+</section>
 
 
     <!-----------Footer ----------->
@@ -353,5 +397,7 @@
         <p class="small">Copyright 2024 &copy; Gröna tryck</p>
       </div>
     </footer>
+    <script src="js/dropdown.js"></script>
+    <script src="js/sendform.js"></script>
   </body>
 </html>

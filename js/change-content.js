@@ -19,10 +19,18 @@ function changeData(e) {
       ).innerHTML = `+${product.colors.length} färger`;
       largeImg.setAttribute("src", product.img);
 
+      //   const smallImg = document.querySelectorAll(".product-img--small");
+
+      //   for (let i = 0; i < product.colors.length; i++) {
+      //     smallImg[i].setAttribute("src", color.url[i]);
+      //   }
+
       product.colors.forEach((color) => {
-        document
-          .querySelector(".product-img--small")
-          .setAttribute("src", color.url);
+        const smallImg = document.querySelectorAll(".product-img--small");
+
+        for (let i = 0; i < smallImg.length; i++) {
+          smallImg[i].setAttribute("src", color.url);
+        }
       });
     }
   }

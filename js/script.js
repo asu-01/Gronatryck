@@ -158,17 +158,17 @@ const JSONdata = [
       {
         colorName: "Gräddvit",
         colorCode: "#e8e0ca",
-        url: "/visuals/img/Knoxer_Natural Raw_Packshot_Front_Main_0.jpg",
+        url: "visuals/img/Knoxer_Natural Raw_Packshot_Front_Main_0.jpg",
       },
       {
         colorName: "Mörkblå",
         colorCode: "#091933",
-        url: "/visuals/img/Knoxer_French Navy_Packshot_Front_Main_0.jpg",
+        url: "visuals/img/Knoxer_French Navy_Packshot_Front_Main_0.jpg",
       },
       {
         colorName: "Svart",
         colorCode: "#0f1112",
-        url: "/visuals/img/Knoxer_French Navy_Packshot_Front_Main_0.jpg",
+        url: "visuals/img/Knoxer_Black_Packshot_Front_Main_0.jpg",
       },
     ],
     priceList: [
@@ -248,13 +248,13 @@ const JSONdata = [
     img: "visuals/img/grona_tryck_card_6.jpg",
     colors: [
       {
-        colorName: "Vit",
-        colorCode: "#9c541f",
+        colorName: "Ljusblå",
+        colorCode: "#edffff",
         url: "visuals/img/grona_tryck_card_2.jpg",
       },
       {
-        colorName: "Beige",
-        colorCode: "#a6987e",
+        colorName: "Vit",
+        colorCode: "#ffffff",
         url: "visuals/img/grona_tryck_card_2.jpg",
       },
     ],
@@ -299,8 +299,8 @@ const JSONdata = [
         url: "visuals/img/grona_tryck_card_2.jpg",
       },
       {
-        colorName: "Beige",
-        colorCode: "#a6987e",
+        colorName: "Svart",
+        colorCode: "#131414",
         url: "visuals/img/grona_tryck_card_2.jpg",
       },
     ],
@@ -341,12 +341,7 @@ const JSONdata = [
     colors: [
       {
         colorName: "Vit",
-        colorCode: "#9c541f",
-        url: "visuals/img/grona_tryck_card_2.jpg",
-      },
-      {
-        colorName: "Beige",
-        colorCode: "#a6987e",
+        colorCode: "#ffffff",
         url: "visuals/img/grona_tryck_card_2.jpg",
       },
     ],
