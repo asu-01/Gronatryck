@@ -7,16 +7,34 @@ function articleIdGenerator() {
 // JavaScript med produktinformation
 const JSONdata = [
   {
-    article: `${articleIdGenerator()}`,
-    category: "T-shirt",
+    articleId: `${articleIdGenerator()}`,
+    category: "T-shirts",
     title: "Classic Bomull",
-    img: {
-      Röd: "visuals/img/grona_tryck_card_2.jpg",
-      Beige: "visuals/img/t-shirt/gronatryck_product_2.jpg",
-      Vit: "visuals/img/t-shirt/gronatryck_product_3.jpg",
-    },
-    color: ["Röd", "Beige", "Vit"],
-    prices: [
+    desc: "",
+    img: "visuals/img/grona_tryck_card_2.jpg",
+    colors: [
+      {
+        colorName: "Tegelröd",
+        colorCode: "#913d23",
+        url: "visuals/img/grona_tryck_card_2.jpg",
+      },
+      {
+        colorName: "Beige",
+        colorCode: "#2dab11",
+        url: "visuals/img/grona_tryck_card_2.jpg",
+      },
+      {
+        colorName: "Beige",
+        colorCode: "#ecf0eb",
+        url: "visuals/img/grona_tryck_card_2.jpg",
+      },
+    ],
+    priceList: [
+      {
+        minAmount: 25,
+        maxAmount: 49,
+        price: 100,
+      },
       {
         minAmount: 50,
         maxAmount: 99,
@@ -25,30 +43,319 @@ const JSONdata = [
       {
         minAmount: 100,
         maxAmount: 249,
-        price: 200,
+        price: 300,
       },
       {
         minAmount: 250,
         maxAmount: 499,
-        price: 200,
+        price: 400,
       },
       {
         minAmount: 500,
-        price: 200,
+        price: 500,
       },
     ],
   },
   {
-    article: `${articleIdGenerator()}`,
+    articleId: `${articleIdGenerator()}`,
     category: "Västar",
+    title: "Varm väst",
+    desc: "",
+    img: "visuals/img/grona_tryck_card_4.jpg",
+    colors: [
+      {
+        colorName: "Röd",
+        colorCode: "#9c541f",
+        url: "visuals/img/grona_tryck_card_2.jpg",
+      },
+      {
+        colorName: "Beige",
+        colorCode: "#a6987e",
+        url: "visuals/img/grona_tryck_card_2.jpg",
+      },
+    ],
+    priceList: [
+      {
+        minAmount: 25,
+        maxAmount: 49,
+        price: 100,
+      },
+      {
+        minAmount: 50,
+        maxAmount: 99,
+        price: 200,
+      },
+      {
+        minAmount: 100,
+        maxAmount: 249,
+        price: 300,
+      },
+      {
+        minAmount: 250,
+        maxAmount: 499,
+        price: 400,
+      },
+      {
+        minAmount: 500,
+        maxAmount: 1000,
+        price: 500,
+      },
+    ],
+  },
+  {
+    articleId: `${articleIdGenerator()}`,
+    category: "Jackor",
+    title: "Pufferjacka",
+    desc: "",
+    img: "visuals/img/grona_tryck_card_5.jpg",
+    colors: [
+      {
+        colorName: "Röd",
+        colorCode: "#9c541f",
+        url: "visuals/img/grona_tryck_card_2.jpg",
+      },
+      {
+        colorName: "Beige",
+        colorCode: "#a6987e",
+        url: "visuals/img/grona_tryck_card_2.jpg",
+      },
+    ],
+    priceList: [
+      {
+        minAmount: 25,
+        maxAmount: 49,
+        price: 100,
+      },
+      {
+        minAmount: 50,
+        maxAmount: 99,
+        price: 200,
+      },
+      {
+        minAmount: 100,
+        maxAmount: 249,
+        price: 300,
+      },
+      {
+        minAmount: 250,
+        maxAmount: 499,
+        price: 400,
+      },
+      {
+        minAmount: 500,
+        maxAmount: 1000,
+        price: 500,
+      },
+    ],
+  },
+  {
+    articleId: `${articleIdGenerator()}`,
+    category: "Sweatshirts",
+    title: "Mysig sweatshirt",
+    desc: "",
+    img: "visuals/img/grona_tryck_card_3.jpg",
+    colors: [
+      {
+        colorName: "Röd",
+        colorCode: "#9c541f",
+        url: "visuals/img/grona_tryck_card_2.jpg",
+      },
+      {
+        colorName: "Beige",
+        colorCode: "#a6987e",
+        url: "visuals/img/grona_tryck_card_2.jpg",
+      },
+    ],
+    priceList: [
+      {
+        minAmount: 25,
+        maxAmount: 49,
+        price: 100,
+      },
+      {
+        minAmount: 50,
+        maxAmount: 99,
+        price: 200,
+      },
+      {
+        minAmount: 100,
+        maxAmount: 249,
+        price: 300,
+      },
+      {
+        minAmount: 250,
+        maxAmount: 499,
+        price: 400,
+      },
+      {
+        minAmount: 500,
+        maxAmount: 1000,
+        price: 500,
+      },
+    ],
+  },
+  {
+    articleId: `${articleIdGenerator()}`,
+    category: "Väskor",
+    title: "Totebag",
+    desc: "",
+    img: "visuals/img/Tote Bag_White_Studio_Front_Main_6.jpg",
+    colors: [
+      {
+        colorName: "Vit",
+        colorCode: "#9c541f",
+        url: "visuals/img/grona_tryck_card_2.jpg",
+      },
+      {
+        colorName: "Beige",
+        colorCode: "#a6987e",
+        url: "visuals/img/grona_tryck_card_2.jpg",
+      },
+    ],
+    priceList: [
+      {
+        minAmount: 25,
+        maxAmount: 49,
+        price: 100,
+      },
+      {
+        minAmount: 50,
+        maxAmount: 99,
+        price: 200,
+      },
+      {
+        minAmount: 100,
+        maxAmount: 249,
+        price: 300,
+      },
+      {
+        minAmount: 250,
+        maxAmount: 499,
+        price: 400,
+      },
+      {
+        minAmount: 500,
+        maxAmount: 1000,
+        price: 500,
+      },
+    ],
+  },
+  {
+    articleId: `${articleIdGenerator()}`,
+    category: "Huvtröjor",
+    title: "Huvtröja",
+    desc: "",
+    img: "visuals/img/grona_tryck_card_6.jpg",
+    colors: [
+      {
+        colorName: "Vit",
+        colorCode: "#9c541f",
+        url: "visuals/img/grona_tryck_card_2.jpg",
+      },
+      {
+        colorName: "Beige",
+        colorCode: "#a6987e",
+        url: "visuals/img/grona_tryck_card_2.jpg",
+      },
+    ],
+    priceList: [
+      {
+        minAmount: 25,
+        maxAmount: 49,
+        price: 100,
+      },
+      {
+        minAmount: 50,
+        maxAmount: 99,
+        price: 200,
+      },
+      {
+        minAmount: 100,
+        maxAmount: 249,
+        price: 300,
+      },
+      {
+        minAmount: 250,
+        maxAmount: 499,
+        price: 400,
+      },
+      {
+        minAmount: 500,
+        maxAmount: 1000,
+        price: 500,
+      },
+    ],
+  },
+  {
+    articleId: `${articleIdGenerator()}`,
+    category: "Jackor",
+    title: "Jacka",
+    desc: "",
+    img: "visuals/img/grona_tryck_card_8.jpg",
+    colors: [
+      {
+        colorName: "Beige",
+        colorCode: "#9c541f",
+        url: "visuals/img/grona_tryck_card_2.jpg",
+      },
+      {
+        colorName: "Beige",
+        colorCode: "#a6987e",
+        url: "visuals/img/grona_tryck_card_2.jpg",
+      },
+    ],
+    priceList: [
+      {
+        minAmount: 25,
+        maxAmount: 49,
+        price: 100,
+      },
+      {
+        minAmount: 50,
+        maxAmount: 99,
+        price: 200,
+      },
+      {
+        minAmount: 100,
+        maxAmount: 249,
+        price: 300,
+      },
+      {
+        minAmount: 250,
+        maxAmount: 499,
+        price: 400,
+      },
+      {
+        minAmount: 500,
+        maxAmount: 1000,
+        price: 500,
+      },
+    ],
+  },
+  {
+    articleId: `${articleIdGenerator()}`,
+    category: "T-shirts",
     title: "Classic Bomull",
-    img: {
-      Röd: "visuals/img/grona_tryck_card_4.jpg",
-      Beige: "visuals/img/t-shirt/gronatryck_product_2.jpg",
-      Vit: "visuals/img/t-shirt/gronatryck_product_3.jpg",
-    },
-    color: ["Röd", "Beige", "Vit"],
-    prices: [
+    desc: "",
+    img: "visuals/img/grona_tryck_card_1.jpg",
+    colors: [
+      {
+        colorName: "Vit",
+        colorCode: "#9c541f",
+        url: "visuals/img/grona_tryck_card_2.jpg",
+      },
+      {
+        colorName: "Beige",
+        colorCode: "#a6987e",
+        url: "visuals/img/grona_tryck_card_2.jpg",
+      },
+    ],
+    priceList: [
+      {
+        minAmount: 25,
+        maxAmount: 49,
+        price: 100,
+      },
       {
         minAmount: 50,
         maxAmount: 99,
@@ -83,10 +390,12 @@ window.onload = function printData() {
   const parsedJSON = JSON.parse(retrievedData);
 
   parsedJSON.forEach((result) => {
-    const content = `<div class="card">
-          <a href="product.html">
+    // const item = result["color"].forEach((item) => item.url);
+
+    const content = `<div id="${result.articleId}" class="card">
+          <a href="product.html?id=${result.articleId}">
             <img
-              src="${Object.values(result.img)[0]}"
+              src="${result.img}"
               class="card-img-top"
               title="Vit t-shirt i bomull"
               alt="En tjej klädd i en vit t-shirt"
@@ -99,63 +408,69 @@ window.onload = function printData() {
             <div class="card-body card__body--popular">
               <p class="text-color-dark text-sm">${result.category}</p>
               <h5 class="text-color-primary">${result.title}</h5>
-              <div class="card-dot-container">
-                <button
-                  class="dot dot-color-1"
+              <div id="colorContainer" class="card-dot-container"> 
+                <input
+                  class="dot dot-color"
                   type="button"
                   aria-label="Färg 1"
-                ></button>
-                <button
-                  class="dot dot-color-2"
+                ></input>
+                <input
+                  class="dot dot-color"
                   type="button"
                   aria-label="Färg 2"
-                ></button>
-                <button
-                  class="dot dot-color-3"
+                ></input>
+                <input
+                  class="dot dot-color"
                   type="button"
                   aria-label="Färg 3"
-                ></button>
-                <p class="text-color-dark text-xs">+${
-                  result.color.length
-                } färger</p>
+                ></input>
+                <p class="text-color-dark text-xs">+${result.colors.length} färger</p>
               </div>
               <div class="card-price-container">
                 <p class="text-color-medium text-sm">minimum 25 st.</p>
-                <p class="text-color-dark text-sm">från ${
-                  result.prices[0].price
-                } kr/st</p>
+                <p class="text-color-dark text-sm">från ${result.priceList[0].price} kr/st</p>
               </div>
             </div>
           </a>
         </div>`;
 
     cardContainer.innerHTML += content;
+
+    // for (color of result.colors) {
+    //   console.log(color);
+    //   const colorDot = (document.querySelector(
+    //     ".dot-color"
+    //   ).style.backgroundColor = color.colorCode);
+
+    //   console.log(colorDot);
+    // }
   });
 };
-
-// let minAmount = prices.map((a) => a.minAmount);
-// let maxAmount = prices.map((a) => a.maxAmount);
 
 const retrievedData = localStorage.getItem("json-products");
 const parsedJSON = JSON.parse(retrievedData);
 
-const amountBtn = document.querySelector(".button-quantity");
+// Eventlyssnare för input i mängdfunktion
+const amountInput = document.querySelector(".input-box");
+amountInput.addEventListener("input", getPrice);
+
+// Eventlyssnare för +/- knappar i mängdfunktion
+const amountBtn = document.querySelectorAll(".button-quantity button");
 console.log(amountBtn);
 
-const amountInput = document.querySelector(".input-box");
-
-amountInput.addEventListener("input", getPrice);
-amountBtn.addEventListener("click", getPrice);
-
-// console.log(amount);
+amountBtn.forEach((btn) => {
+  btn.addEventListener("click", getPrice);
+});
 
 // Hämtar rätt pris beroende på antal produkter (WIP)
 function getPrice() {
+  // Loopar igenom alla produkter i objekt och loopar igenom pris arrayen.
   parsedJSON.forEach((product) => {
-    const priceList = product.prices;
-    for (const priceItem of priceList) {
+    const prices = product.priceList;
+    for (const priceItem of prices) {
       let amount = amountInput.value;
-      if (priceItem.minAmount < amount && amount < priceItem.maxAmount) {
+      // Antal produkter jämförs gentemot prismängds intervallet som finns i objektet och läggs in på sidan.
+      if (priceItem.minAmount <= amount && amount <= priceItem.maxAmount) {
         document.querySelector(
           "h5"
         ).innerHTML = `Estimerat pris: ${priceItem.price}kr`;
@@ -164,64 +479,19 @@ function getPrice() {
   });
 }
 
-// Gör JSON-objekt till modul för att kunnas användas på andra sidor.
-// module.exports = JSONdata;
+// Lägger till rätt data på produktsida beroende på valt produktcard (WIP)
 
-// JSON data hämtas från localStorage.
+document.addEventListener("DOMContentLoaded", changeData);
 
-/*
-// Lägg till data
-function add(value) {
-  var retrievedData = localStorage.getItem("json-products");
-
-  retrievedData = retrievedData ? JSON.parse(retrievedData) : {};
-
-  retrievedData.products.push(value);
-
-  localStorage.setItem("json-products", JSON.stringify(retrievedData));
+function changeData(e) {
+  for (product of parsedJSON) {
+    let productId = new URLSearchParams(window.location.search).get("id");
+    if (productId === product.article) {
+      document.querySelector("h4").innerHTML = product.title;
+      document.querySelector(
+        ".card-dot-container p"
+      ).innerHTML = `+${product.color.length} färger`;
+      // document.querySelectorAll(".dot-color").style.backgroundColor = ;
+    }
+  }
 }
-
-// Test för att se om det går att lägga till data.
-
-add({
-  article: `${articleIdGenerator()}`,
-  title: "Byxor",
-  color: "Beige",
-  size: "L",
-  prices: {
-    25: 563,
-    50: 570,
-    100: 563,
-    250: 478,
-    500: 450,
-  },
-});
-
-// Kontrollerar lista efter produkt har lagts till
-const UpdatedList = localStorage.getItem("json-products");
-console.log(UpdatedList);
-
-*/
-
-// for (const product of productArray) {
-//   const valueArray = Object.values(product);
-//   for (const value of valueArray) {
-//     const dataPlaceHolder = document.createElement("p");
-//     dataPlaceHolder.innerHTML = value;
-//     // document.getElementById("body").appendChild(dataPlaceHolder);
-//   }
-// }
-
-// const amountTest = 32;
-// const articleIdTest = 1000;
-
-// // Funktion för att hämta ut rätt pris baserat på mängd, WIP.
-// function getPrice() {
-//   for (product of productArray) {
-//     console.log(product.article);
-//   }
-// }
-
-// Jag vill ha ut priset för en specifik artikel baserad på antalet produkter som en användare klickar i.
-
-// getPrice();

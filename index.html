@@ -20,6 +20,7 @@
     <link rel="stylesheet" href="css/style.css" />
   </head> 
   <body id="body">
+    
     <!--Header-->
     <header>
       <!--Navigation-->
@@ -123,7 +124,7 @@
           <div class="nav-icons">
               <img src="/visuals/icons/gronatryck_icon_search.svg" alt="Öppna sökfunktion">
               <img src="/visuals/icons/gronatryck_icon_user.svg" alt="Gå till mina sidor">
-              <a href="order-list.html"><img src="/visuals/icons/gronatryck_icon_bag (1).svg" alt="Gå till din beställningslista"></a>
+              <a href="order-list.html"><img class="icon-orderbag" src="/visuals/icons/gronatryck_icon_bag (1).svg" alt="Gå till din beställningslista"></a>
                 <!-- Hamburger menu icon for mobile -->
               <img class="hamburger-icon" src="visuals/icons/hamburger_menu_icon.svg" alt="Hamburgar meny, tre streck">
             </div>
@@ -200,7 +201,7 @@
           <div class="slide-text">
               <h1 class="text-color-offwhite">Din miljömedvetna profilbutik</h1>
               <p class="text-color-offwhite">Gröna Tryck är din miljömedvetna butik för hållbara profilkläder och reklamprodukter i norra Europa. Vi erbjuder rättvisemärkta och ekologiska produkter med tryck samt miljösmarta marknadsföringslösningar. Oavsett dina behov, finns vi här för att hjälpa!</p>
-              <button class="button-primary text-color-offwhite ">Utforska nu</button>
+              <a href="store.html"><button class="button-primary text-color-offwhite ">Utforska nu</button></a>
             </div>
       </div>
       <div class="hero-slide">
@@ -231,8 +232,10 @@
 
 </div>
 
-
-
+<!-- Chat bubble ikon -->
+<div class="chat-icon">
+  <img src="visuals/icons/gronatryck_chatbubble.svg" alt="chat icon">
+  </div>
     
     
     <!--Nyheter cards-->
@@ -273,7 +276,7 @@
 
     <!-- Populära produkter  -->
 
-    <section>
+    <section itemscope itemtype="https://schema.org/Product">
       
       <div class="card-slider-container">
         <h3 class="text-color-dark-2 card-slider-heading">Populära produkter</h3>
@@ -290,9 +293,9 @@
               <p class="text-color-dark">T-shirt</p>
               <h5 class="text-color-primary">Classic bomull</h5>
               <div class="card-dot-container">
-                <button class="dot dot-color-1" type="button" aria-label="Färg 1"></button>
-                <button class="dot dot-color-2" type="button" aria-label="Färg 2"></button>
-                <button class="dot dot-color-3" type="button" aria-label="Färg 3"></button>
+                <input class="dot dot-color-1" type="button" aria-label="Färg 1"></input>
+                <input class="dot dot-color-2" type="button" aria-label="Färg 2"></input>
+                <input class="dot dot-color-3" type="button" aria-label="Färg 3"></input>
                 <p class="text-color-dark text-xs">+5 färger</p>
                 </div>
                 <div class="card-price-container">
@@ -312,9 +315,9 @@
               <p class="text-color-dark">T-shirt</p>
               <h5 class="text-color-primary">Crafter heritage</h5>
               <div class="card-dot-container">
-                <button class="dot dot-color-1" type="button" aria-label="Färg 1"></button>
-                <button class="dot dot-color-2" type="button" aria-label="Färg 2"></button>
-                <button class="dot dot-color-3" type="button" aria-label="Färg 3"></button>
+                <input class="dot dot-color-1" type="button" aria-label="Färg 1"></input>
+                <input class="dot dot-color-2" type="button" aria-label="Färg 2"></input>
+                <input class="dot dot-color-3" type="button" aria-label="Färg 3"></input>
                 <p class="text-color-dark text-xs">+5 färger</p>
                 </div>
                 <div class="card-price-container">
@@ -334,9 +337,9 @@
               <p class="text-color-dark">Sweatshirts & huvtröjor</p>
               <h5 class="text-color-primary">Knoxer natural</h5>
               <div class="card-dot-container">
-                <button class="dot dot-color-1" type="button" aria-label="Färg 1"></button>
-                <button class="dot dot-color-2" type="button" aria-label="Färg 2"></button>
-                <button class="dot dot-color-3" type="button" aria-label="Färg 3"></button>
+                <input class="dot dot-color-1" type="button" aria-label="Färg 1"></input>
+                <input class="dot dot-color-2" type="button" aria-label="Färg 2"></input>
+                <input class="dot dot-color-3" type="button" aria-label="Färg 3"></input>
                 <p class="text-color-dark text-xs">+5 färger</p>
                 </div>
                 <div class="card-price-container">
@@ -356,9 +359,9 @@
               <p class="text-color-dark">Jackor & västar </p>
               <h5 class="text-color-primary">Liner desert</h5>
               <div class="card-dot-container">
-                <button class="dot dot-color-1" type="button" aria-label="Färg 1"></button>
-                <button class="dot dot-color-2" type="button" aria-label="Färg 2"></button>
-                <button class="dot dot-color-3" type="button" aria-label="Färg 3"></button>
+                <input class="dot dot-color-1" type="button" aria-label="Färg 1"></input>
+                <input class="dot dot-color-2" type="button" aria-label="Färg 2"></input>
+                <input class="dot dot-color-3" type="button" aria-label="Färg 3"></input>
                 <p class="text-color-dark text-xs">+5 färger</p>
                 </div>
                 <div class="card-price-container">
@@ -464,12 +467,12 @@
     </section>
 
     
-    <div class="swirl-pattern" alt="hej"></div>
+    <div class="swirl-pattern" alt="swirl pattern from logo"></div>
 
     <!-- Hållbart-->
      <section class="card-section--two">
       <h2 class="text-color-dark-2">Hållbart</h2>
-      <p class="text-color-dark-2 card-section-info">Utöver att våra produkter är ekologiskt framställda, strävar vi efter en hållbar helhet där miljöhänsyn styr hela verksamheten. Vårt mål är att hjälpa kunder och partners att förstå hur okontrollerad bomullsproduktion påverkar människor och natur. Genom beslut med miljöfokus och tredjepartskontroller säkerställer vi att våra produkter är hållbara. Vi lever med denna filosofi i allt vi gör – från att källsortera till att ta cykeln eller tåget till möten, använda gröna servrar och dricka ekologiskt kaffe. Våra noggrant utvalda leverantörer och deras certifikat beskrivs tydligt på varje produktsida.</p>
+      <p class="text-color-dark-2 card-section-info">Utöver att våra produkter är ekologiskt framställda, strävar vi efter en hållbar helhet där miljöhänsyn styr hela verksamheten. Vårt mål är att hjälpa kunder och partners att förstå hur okontrollerad bomullsproduktion påverkar människor och natur. Genom beslut med miljöfokus och tredjepartskontroller säkerställer vi att våra produkter är hållbara. Vi lever med denna filosofi i allt vi gör – från att källsortera till att ta cykeln eller tåget till möten, använda gröna servrar och dricka ekologiskt kaffe. </p>
 
       <div class="card-container">
         <div class="card">
@@ -534,13 +537,13 @@
 
     <!-- Recensioner-->
 
-    <section class="review-section">
+    <section itemscope itemtype="https://schema.org/Review" class="review-section">
       <h3 class="text-color-dark-2">Recensioner</h3>
       <div class="review-card-container"> 
-        <div class="review-card round-corner">
+        <div itemprop="reviewBody" class="review-card round-corner">
           <p class="text-color-primary"><q>Kunniga. Omtänksamma. Noggranna. Hållbara!</q>
             Michael Eldborn, 2018.</p>
-            <div class="review-icons">
+            <div itemprop="reviewRating" class="review-icons">
               <img src="/visuals/icons/gronatryck_icon_ star_filled.svg">
               <img src="/visuals/icons/gronatryck_icon_ star_filled.svg">
               <img src="/visuals/icons/gronatryck_icon_ star_filled.svg">
@@ -548,10 +551,10 @@
               <img src="/visuals/icons/gronatryck_icon_star.svg">
             </div>
         </div>
-        <div class="review-card round-corner">
+        <div itemprop="reviewBody" class="review-card round-corner">
           <p class="text-color-primary"><q>Kunniga. Omtänksamma. Noggranna. Hållbara!</q>
             Michael Eldborn, 2018.</p>
-          <div class="review-icons">
+          <div itemprop="reviewRating" class="review-icons">
           <img src="/visuals/icons/gronatryck_icon_ star_filled.svg">
           <img src="/visuals/icons/gronatryck_icon_ star_filled.svg">
           <img src="/visuals/icons/gronatryck_icon_ star_filled.svg">

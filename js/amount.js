@@ -29,6 +29,6 @@ function decreaseAmount(e) {
 
   let amount = input.value;
   amount--;
-  amount < 1 ? (amount = 1) : "";
+  amount < 25 ? (amount = 25) : "";
   input.value = amount;
 }

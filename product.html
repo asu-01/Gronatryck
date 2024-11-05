@@ -100,7 +100,9 @@
                   <svg class="arrow " width="15" height="10" viewBox="0 0 15 10" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M1.78846 1.5L7.89423 9L14 1.5" stroke="#44725A" stroke-width="2" stroke-linecap="round"
                         stroke-linejoin="round" />
-                </svg></a>
+                </svg>
+        
+              </a>
               
                 <div id="dropdownList" class="dropdown">
                   <div class="dropdown-content round-corner text-color-offwhite">
@@ -116,7 +118,8 @@
         <div class="nav-icons">
             <img src="/visuals/icons/gronatryck_icon_search.svg" alt="Öppna sökfunktion">
             <img src="/visuals/icons/gronatryck_icon_user.svg" alt="Gå till mina sidor">
-            <a href="order-list.html"><img src="/visuals/icons/gronatryck_icon_bag (1).svg" alt="Gå till din beställningslista"></a>
+            <a href="order-list.html"><img class="icon-orderbag" src="/visuals/icons/gronatryck_icon_bag (1).svg" alt="Gå till din beställningslista">
+            <span class="icon-orderbag--amount"><p class="text-color-offwhite">1</p></span></a>
               <!-- Hamburger menu icon for mobile -->
             <img class="hamburger-icon" src="visuals/icons/hamburger_menu_icon.svg" alt="Hamburgar meny, tre streck">
           </div>
@@ -124,8 +127,10 @@
       </div>
     </nav>
   </header>
+
+
   <!-- Breadcumbs för sortiment -->
-  <section class="container catalogue">
+  <section class="catalogue">
     <div class="breadcrumb text-color-primary">
       <a href="index.html">Hem</a>
       <img class="arrow--right" src="/visuals/icons/arrow_icon.svg" />
@@ -168,7 +173,7 @@
       </div>
       <!-- Produkt information -->
       <div class="product-text-container">
-        <h4 class="text-color-dark-2">Classic fit</h4>
+        <h4 id="articleName" class="text-color-dark-2">Classic fit</h4>
         <p class="text-color-dark-2">
           Unisex t-shirt unikt infärgade i vintagenyanser där varje tröja
           skiljer sig lite från nästa. Infärgningen finns i åtta olika varianter
@@ -190,7 +195,8 @@
             <input
               type="number"
               class="input-box"
-              value="10"
+              id="quantityInput"
+              value="25"
               min="10"
               max="100"
             />
@@ -200,47 +206,42 @@
         <div>
           <h6 class="text-color-dark-2">Färger</h6>
           <div class="card-dot-container">
-            <button
+            <!-- <input
               class="dot dot-color-1 dot--large dot-active"
               type="button"
               aria-label="Färg 1"
-            ></button>
-            <button
+            ></input>
+            <input
               class="dot dot-color-2 dot--large"
               type="button"
               aria-label="Färg 2"
-            ></button>
-            <button
+            ></input>
+            <input
               class="dot dot-color-3 dot--large"
               type="button"
               aria-label="Färg 3"
-            ></button>
-            <button
+            ></input>
+            <input
               class="dot dot-color-4 dot--large"
               type="button"
               aria-label="Färg 4"
-            ></button>
-            <button
+            ></input>
+            <input
               class="dot dot-color-5 dot--large"
               type="button"
               aria-label="Färg 5"
-            ></button>
+            ></input> -->
             <p class="text-color-dark text-xs">+5 färger</p>
           </div>
         </div>
         <div>
-          <h5 class="text-color-dark-2">Estimerat pris: 600kr</h5>
+          <h5 class="text-color-dark-2">Estimerat pris: 100kr</h5>
         </div>
-        <button class="button-primary text-color-offwhite">
-          Beställ nu
-          <img
-            class="arrow arrow--small arrow--right"
-            src="/visuals/icons/arrow_icon_white.svg"
-          />
+        <button onclick="showAlertBox(), addToList()" class="button-primary text-color-offwhite">
+          Lägg till
         </button>
         <button class="button-secondary text-color-offwhite">
           Kontakta oss
-          <img class="arrow--right" src="/visuals/icons/arrow_icon.svg" />
         </button>
         <p class="text-color-dark-2 product-extra-infobox">
           Ingen order är bindande fören vi har gått igenom allt och godkänt
@@ -404,24 +405,21 @@
               <p class="text-color-dark">T-shirt</p>
               <h5 class="text-color-primary">Classic bomull</h5>
               <div class="card-dot-container">
-                <button
+                <input
                   class="dot dot-color-1"
                   type="button"
-                  value="Röd"
                   aria-label="Färg 1"
-                ></button>
-                <button
+                ></input>
+                <input
                   class="dot dot-color-2"
                   type="button"
-                  value="Beige"
                   aria-label="Färg 2"
-                ></button>
-                <button
+                ></input>
+                <input
                   class="dot dot-color-3"
                   type="button"
-                  value="Vit"
                   aria-label="Färg 3"
-                ></button>
+                ></input>
                 <p class="text-color-dark text-xs">+5 färger</p>
               </div>
               <div class="card-price-container">
@@ -443,21 +441,21 @@
               <p class="text-color-dark">T-shirt</p>
               <h5 class="text-color-primary">Crafter heritage</h5>
               <div class="card-dot-container">
-                <button
+                <input
                   class="dot dot-color-1"
                   type="button"
                   aria-label="Färg 1"
-                ></button>
-                <button
+                ></input>
+                <input
                   class="dot dot-color-2"
                   type="button"
                   aria-label="Färg 2"
-                ></button>
-                <button
+                ></input>
+                <input
                   class="dot dot-color-3"
                   type="button"
                   aria-label="Färg 3"
-                ></button>
+                ></input>
                 <p class="text-color-dark text-xs">+5 färger</p>
               </div>
               <div class="card-price-container">
@@ -479,21 +477,21 @@
               <p class="text-color-dark">Sweatshirts & huvtröjor</p>
               <h5 class="text-color-primary">Knoxer natural</h5>
               <div class="card-dot-container">
-                <button
+                <input
                   class="dot dot-color-1"
                   type="button"
                   aria-label="Färg 1"
-                ></button>
-                <button
+                ></input>
+                <input
                   class="dot dot-color-2"
                   type="button"
                   aria-label="Färg 2"
-                ></button>
-                <button
+                ></input>
+                <input
                   class="dot dot-color-3"
                   type="button"
                   aria-label="Färg 3"
-                ></button>
+                ></input>
                 <p class="text-color-dark text-xs">+5 färger</p>
               </div>
               <div class="card-price-container">
@@ -520,21 +518,21 @@
               <p class="text-color-dark">Jackor & västar</p>
               <h5 class="text-color-primary">Liner desert</h5>
               <div class="card-dot-container">
-                <button
-                  class="dot dot-color-1"
+                <input
+                  class="dot dot-color"
                   type="button"
                   aria-label="Färg 1"
-                ></button>
-                <button
-                  class="dot dot-color-2"
+                ></input>
+                <input
+                  class="dot dot-color"
                   type="button"
                   aria-label="Färg 2"
-                ></button>
-                <button
-                  class="dot dot-color-3"
+                ></input>
+                <input
+                  class="dot dot-color"
                   type="button"
                   aria-label="Färg 3"
-                ></button>
+                ></input>
                 <p class="text-color-dark text-xs">+5 färger</p>
               </div>
               <div class="card-price-container">
@@ -547,6 +545,27 @@
       </div>
     </div>
   </section>
+
+
+
+  <!-- alertbox/pop up for orderlist -->
+<div id="alertBox" class="alert-box-container round-corner">
+  <div class="alert-box-content">
+    <h6 id="alertArticlename" class="text-color-offwhite"></h6>
+    <div class="alert-box-details">
+      <div class="alert-box-img">
+      <img src="visuals/img/t-shirt/gronatryck_product_1.jpg" alt="">
+    </div>
+      <!-- <p id="alertArticlename" class="text-color-offwhite"></p> -->
+      <p id="alertQuantity" class="text-color-offwhite"></p>
+    </div>
+    <button class="button-primary"><a class=" text-color-offwhite" href="order-list.html">Gå till beställning</a></button>
+    <button onclick="hideAlertBoxAndBubble()" class="button-secondary">Ångra</button>
+      
+
+    </div>
+  </div>
+
 
   <!-----------Footer ----------->
   <footer>
@@ -627,9 +646,10 @@
 
 
   <script src="js/script.js"></script>
-  <script src="js/dropdown.js"></script>
-  <script src="js/add-to-cart.js"></script>
   <script src="js/amount.js"></script>
   <script src="js/color.js"></script>
   <script src="js/price.js"></script>
+  <script src="js/dropdown.js"></script>
+  <script src="js/adding-product.js"></script>
+  <script src="js/order-list.js"></script>
 </body>

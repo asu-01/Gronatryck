@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="css/custom_bootstrap.css" />
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/form.css" />
+    <link rel="stylesheet" href="css/confirmation.css" />
+    <link rel="stylesheet" href="css/store.css" />
     <!-- Länkar till Stoltz typsnitt från Adobe fonts -->
     <link rel="stylesheet" href="https://use.typekit.net/zlf3fvp.css" />
   </head>
@@ -124,14 +126,23 @@
       </nav>
     </header>
     <section class="container">
+      <div class="breadcrumb text-color-primary">
+        <a href="index.html">Hem</a>
+        <img class="arrow--right" src="/visuals/icons/arrow_icon.svg" />
+        <a href="store.html">Sortiment</a>
+        <img class="arrow--right" src="/visuals/icons/arrow_icon.svg" />
+        <a href="order-list.html">Beställningslista</a>
+        <img class="arrow--right" src="/visuals/icons/arrow_icon.svg" />
+        <a>Kontaktformulär</a>
+      </div>
       <div class="customer-form-container">
           <h3 class="text-color-dark-2">Kontaktformulär</h3>
           <form class="customer-form" action="">
               <label for="name">Namn</label>
-              <input class="input-field round-corner" type="text" id="name" placeholder="Namn Namnsson" required>
+              <input class="input-field round-corner" type="text" id="name" placeholder="För- och efternamn" required>
               
               <label for="email">E-post</label>
-              <input class="input-field round-corner" type="email" id="email" placeholder="exempel@gmail.com" required>
+              <input class="input-field round-corner" type="email" id="email" placeholder="exempel@gmail.se" required>
               
               <label for="company">Företag/Organisation</label>
               <input class="input-field round-corner" type="text" id="company" placeholder="Fyll i ditt företag/organisation här">
@@ -142,11 +153,12 @@
               <label>Ladda upp ditt tryck här</label>
               <div class="upload-box-container round-corner">
                   <img src="visuals/icons/gronatryck_upload_icon.svg" alt="upload icon">
-                  <p class="text-color-dark-2">Droppa filer eller <a href="">ladda upp</a></p>
-                  <p class="text-color-primary">Stödjer filer som JPG, PNG, PDF</p>
+                  <p class="text-color-dark-2">Droppa dina filer här eller <a href="">ladda upp</a></p>
+                  <p class="text-color-primary">Tillåtna filformat: jpg, jpeg, eps, cdr, ai, pdf & png</p>
               </div>
               
-              <button type="submit" class="button--submit text-color-offwhite round-corner">Skicka iväg!</button>
+              <button type="button" class="button--submit text-color-offwhite round-corner" id="submitButton">Skicka iväg!</button>
+    </form>
           </form>
       </div>
   </section>
@@ -339,5 +351,6 @@
     </footer>
     <!-- javascript for header and footer -->
     <script src="js/dropdown.js"></script>
+    <script src="js/sendform.js"></script>
   </body>
 </html>

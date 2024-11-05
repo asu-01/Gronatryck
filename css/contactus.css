@@ -1,0 +1,37 @@
+.contactus-container {
+  margin: 5% auto;
+}
+
+.contactus-content {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+.swirl-pattern {
+  height: 45vh;
+}
+
+.contactus-text-container {
+  flex: 1;
+}
+
+.contactus-img {
+  flex: 0 0 500px;
+}
+
+.contactus-img img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .contactus-content {
+    flex-direction: column;
+    align-items: center;
+  }
+  .contactus-img {
+    width: 100%;
+  }
+}

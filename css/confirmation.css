@@ -1,0 +1,97 @@
+.confirmation-content {
+  margin-top: 5%;
+  margin-bottom: 5%;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 80vh;
+}
+
+.container .confirmation-content {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.confirmation-text {
+  width: 50%;
+  margin-right: 5rem;
+}
+
+.container .breadcrumb {
+  margin-top: 5%;
+}
+
+.confirmation-img {
+  width: 40%;
+}
+.confirmation-img img {
+  width: 100%;
+  height: 40rem;
+  object-fit: cover;
+}
+
+@media screen and (max-width: 992px) {
+  .confirmation-content {
+    display: flex;
+    flex-direction: column;
+    height: 110vh;
+  }
+  .confirmation-img {
+    width: 100%;
+  }
+  .confirmation-img img {
+    width: 100%;
+    height: 35rem;
+    object-fit: cover;
+  }
+  .confirmation-text {
+    width: 100%;
+  }
+  .confirmation-text h3 {
+    font-size: 2rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  .confirmation-content {
+    height: 125vh;
+  }
+  .confirmation-text {
+    width: 100%;
+  }
+  .confirmation-img {
+    width: 100%;
+  }
+  .confirmation-img img {
+    width: 100%;
+    height: 40rem;
+    object-fit: cover;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .confirmation-content {
+    height: 110vh;
+    margin: 1rem;
+  }
+
+  .confirmation-text {
+    width: 90%;
+  }
+  .confirmation-text h3 {
+    font-size: 2rem;
+  }
+  .confirmation-text button {
+    width: 100%;
+    text-align: center;
+    margin-top: 1rem;
+  }
+  .confirmation-img {
+    width: 100%;
+  }
+  .confirmation-img img {
+    width: 90%;
+    height: 30rem;
+    object-fit: cover;
+  }
+}
