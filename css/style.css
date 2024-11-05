@@ -74,7 +74,6 @@ h2 {
 h3 {
   /* 39px */
   font-size: 2.441rem;
-  font-weight: 900;
 }
 h4 {
   /* 31px */
@@ -96,6 +95,10 @@ p {
 .small {
   /* 12px */
   font-size: 0.8rem;
+}
+
+.text--bold {
+  font-weight: 900;
 }
 
 /* Spacing and layout sizes  */
@@ -496,7 +499,6 @@ a:hover {
 
 .card-slider-heading {
   margin-left: 4rem;
-  font-weight: 900;
   margin-bottom: 1.4rem;
 }
 
