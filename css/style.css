@@ -522,6 +522,8 @@ a {
   margin: 0px 5px 0px 0px;
   transform: translateY(1px);
   border: none;
+  font-size: 0;
+  line-height: 0;
 }
 
 /* .dot-color-1 {
