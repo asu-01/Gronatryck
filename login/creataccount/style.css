@@ -18,6 +18,7 @@
 
 body{
     background-color: var(--primary-color);
+    overflow-x: hidden;
 }
 
 .container{
@@ -35,8 +36,8 @@ h2{
     font-weight: 700;
     font-style: normal;
     margin-top: 14%;
+    margin-left: 22%;
     color: var(--secoundary-color);
-    
 }
 
 .priv-comp-btn{
@@ -177,10 +178,12 @@ h2{
 
 .tab-content h3 {
     margin-top: 0;
+    color: var(--primary-color);
 }
 
 .tab-content p {
     font-size: 16px;
+    color: var(--primary-color);
 }
 
 .extra-content {
