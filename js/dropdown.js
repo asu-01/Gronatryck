@@ -142,6 +142,7 @@ document.addEventListener("click", (event) => {
 
 
 
+
 // ---------   toggle functionality for mobile footer --------------------//
 
 function toggleLinks(linkId) {

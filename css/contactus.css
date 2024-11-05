@@ -44,7 +44,11 @@
 }
 
 .customer-form-container--small {
+  margin-top: 3rem;
   width: 70%;
+}
+.customer-form-container--small h3 {
+  font-size: 2rem;
 }
 
 /* Responsive adjustments */

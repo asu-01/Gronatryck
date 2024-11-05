@@ -241,6 +241,7 @@ a:hover {
 .dropdown-subcategory.open,
 .dropdown.open {
   display: block;
+  z-index: 1000;
 }
 
 .dropdown-subcategory a {
