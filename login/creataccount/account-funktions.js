@@ -45,13 +45,12 @@ document.getElementById('createAccountForm')?.addEventListener('submit', functio
     const password = document.getElementById('password').value;
     const confirmPassword = document.getElementById('confirmPassword').value;
 
-    // Simple lösenord konfirmation
+    
     if (password !== confirmPassword) {
         alert("Lösenorden matchar inte!");
         return;
     }
 
-    // Spara användarinformation i localstorage
     const userData = {
         name: name,
         email: email,
@@ -64,7 +63,7 @@ document.getElementById('createAccountForm')?.addEventListener('submit', functio
     window.location.href = 'privat-Login.html';
 });
 
-// Login för privata användare
+// Login funktion för privata användare
 document.getElementById('loginForm')?.addEventListener('submit', function(event) {
     event.preventDefault();
 
@@ -89,25 +88,21 @@ document.getElementById('loginForm')?.addEventListener('submit', function(event)
     }
 });
 
-// Funktion för knapparna i admin
 function openTab(button) {
     const tabName = button.id === 'orders-btn' ? 'orders' :
                     button.id === 'customers-btn' ? 'customers' :
                     button.id === 'allOrders-btn' ? 'allOrders' : '';
 
-    // Gömma alla tab content
     const tabContents = document.querySelectorAll('.tab-content');
     tabContents.forEach(function(content) {
         content.style.display = 'none';
     });
 
-    // Tar bort active classen från alla knappar
     const tabButtons = document.querySelectorAll('.tab-btn');
     tabButtons.forEach(function(btn) {
         btn.classList.remove('active');
     });
 
-    // Visa innehållet av varje tab och lägga till activ funktionen på den klickade knappen
     document.getElementById(tabName).style.display = 'block';
     button.classList.add('active');
 }
@@ -115,7 +110,7 @@ function openTab(button) {
 document.addEventListener('DOMContentLoaded', function () {
     let currentEditCustomer = null;
 
-    // Funktion för att ladda in kund listan i localstorage
+    // Funktion för att ladda in kund listan i localstorage (funkar inte om den är i slutet av funktion)
     loadCustomers();
 
     function loadCustomers() {
@@ -185,17 +180,17 @@ document.addEventListener('DOMContentLoaded', function () {
         buttonContainer.style.justifyContent = 'space-between';
         buttonContainer.style.width = '100%';
 
-        editButton.style.backgroundColor = '#faf7eb';
-        editButton.style.color = '#1d4231';
+        editButton.style.backgroundColor = '#1d4231';
+        editButton.style.color = '#faf7eb';
         editButton.style.padding = '10px';
-        editButton.style.border = '2px solid';
         editButton.style.borderRadius = '10px';
+        editButton.style.border = '2px solid #1d4231';
         editButton.style.width = '48%';
         editButton.style.cursor = 'pointer';
         editButton.style.transition = 'background-color 0.3s ease, color 0.3s ease';
         
-        deleteButton.style.backgroundColor = '#faf7eb';
-        deleteButton.style.color = '#dc3545';
+        deleteButton.style.backgroundColor = '#dc3545';
+        deleteButton.style.color = '#faf7eb';
         deleteButton.style.padding = '10px';
         deleteButton.style.border = '2px solid #dc3545';
         deleteButton.style.width = '48%';
@@ -203,26 +198,24 @@ document.addEventListener('DOMContentLoaded', function () {
         deleteButton.style.cursor = 'pointer';
         deleteButton.style.transition = 'background-color 0.3s ease, color 0.3s ease';
 
-        //funktion för hover effect
         editButton.addEventListener('mouseenter', function () {
-            editButton.style.backgroundColor = '#1d4231';
-            editButton.style.color = '#faf7eb';
-            editButton.style.border = '2px solid #1d4231';
-        });
-    
-        editButton.addEventListener('mouseleave', function () {
             editButton.style.backgroundColor = '#faf7eb';
             editButton.style.color = '#1d4231';
         });
+    
+        editButton.addEventListener('mouseleave', function () {
+            editButton.style.backgroundColor = '#1d4231';
+            editButton.style.color = '#faf7eb';
+        });
 
         deleteButton.addEventListener('mouseenter', function () {
-            deleteButton.style.backgroundColor = '#dc3545';
-            deleteButton.style.color = '#faf7eb';
+            deleteButton.style.backgroundColor = '#faf7eb';
+            deleteButton.style.color = '#dc3545';
         });
     
         deleteButton.addEventListener('mouseleave', function () {
-            deleteButton.style.backgroundColor = '#faf7eb';
-            deleteButton.style.color = '#dc3545';
+            deleteButton.style.backgroundColor = '#dc3545';
+            deleteButton.style.color = '#faf7eb';
         });
 
         buttonContainer.appendChild(editButton);
@@ -268,7 +261,7 @@ document.addEventListener('DOMContentLoaded', function () {
             modal.style.display = 'flex';
         }
         
-        // Close modal
+        // stäng ändrings modalen
         document.querySelector('.close-btn').addEventListener('click', function () {
             document.getElementById('edit-modal').style.display = 'none';
         });
@@ -290,7 +283,6 @@ document.addEventListener('DOMContentLoaded', function () {
     }    
 
 });
-
 
 //funktion för pågående ordrar
 
@@ -374,6 +366,7 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     }
 
+    //funktion för att flytta levererade ordrar till alla ordrar (taben)
     addOrderBtn.addEventListener('click', addOrder);
 
     function moveToDelivered(index) {
@@ -395,7 +388,7 @@ document.addEventListener('DOMContentLoaded', function () {
     function loadDeliveredOrders() {
         allOrdersContainer.innerHTML = '';
         
-        
+        //funktion för att organizera alla tidigare köp beroende på månad och år
         const groupedOrders = {};
         for (const [companyName, orders] of Object.entries(deliveredOrders)) {
             orders.forEach(order => {
@@ -432,8 +425,8 @@ document.addEventListener('DOMContentLoaded', function () {
                 });
     
                 
-                viewOrdersButton.style.backgroundColor = '#faf7eb';
-                viewOrdersButton.style.color = '#1d4231';
+                viewOrdersButton.style.backgroundColor = '#1d4231';
+                viewOrdersButton.style.color = '#faf7eb';
                 viewOrdersButton.style.width = 'auto'; 
                 viewOrdersButton.style.padding = '10px';
                 viewOrdersButton.style.borderRadius = '10px';
@@ -442,12 +435,12 @@ document.addEventListener('DOMContentLoaded', function () {
     
                 
                 viewOrdersButton.addEventListener('mouseover', function () {
-                    viewOrdersButton.style.backgroundColor = '#1d4231';
-                    viewOrdersButton.style.color = '#faf7eb';
-                });
-                viewOrdersButton.addEventListener('mouseout', function () {
                     viewOrdersButton.style.backgroundColor = '#faf7eb';
                     viewOrdersButton.style.color = '#1d4231';
+                });
+                viewOrdersButton.addEventListener('mouseout', function () {
+                    viewOrdersButton.style.backgroundColor = '#1d4231';
+                    viewOrdersButton.style.color = '#faf7eb';
                 });
     
                 buttonsContainer.appendChild(viewOrdersButton);
@@ -491,7 +484,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 <h4>Ordernummer: ${order.ordernumber}</h4>
                 <p>Pris: ${order.price} kr</p>
                 <p>Produktinformation: ${order.productInfo}</p>
-                <p>Status: <span class="status">${order.status}</span></p>
+                <p>Status: <span class="status">levererat</span></p>
             `;
             companyOrdersDisplay.appendChild(orderDiv);
         });
@@ -534,15 +527,6 @@ function updateDeliveredOrdersTab() {
 
         companyTab.appendChild(viewOrdersButton);
         allOrdersContainer.appendChild(companyTab);
+
     }
 }
-
-
-
-
-
-
-
-
-
-
