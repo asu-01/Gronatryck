@@ -1,5 +1,4 @@
 
-
 @import url('https://use.typekit.net/zlf3fvp.css');
 
 :root{
@@ -7,13 +6,6 @@
     --secoundary-color: rgba(250, 247, 235, 100);
     --input-strokes: rgba(209, 219, 214, 100);
     --lightgreen: rgba(157, 181, 151, 100);
-}
-
-*{
-    font-family: "stolzl", sans-serif;
-    width: 100%;
-    margin: 0;
-    padding: 0;
 }
 
 body{
@@ -35,9 +27,15 @@ h2{
     font-size: 3.3vw;
     font-weight: 700;
     font-style: normal;
-    margin-top: 14%;
-    margin-left: 22%;
+    margin-top: 2%;
+    margin-left: 20%;
+    margin-bottom: 1%;
     color: var(--secoundary-color);
+}
+
+h6{
+    margin-bottom: 1.5%;
+    color: var(--primary-color);
 }
 
 .priv-comp-btn{
@@ -77,6 +75,7 @@ h2{
 .btn:hover{
     background-color: var(--primary-color);
     color: var(--secoundary-color);
+    transition: background-color 0.3s;
 }
 
 .login-form{
@@ -122,6 +121,7 @@ h2{
 .submit:hover{
     background-color: var(--secoundary-color);
     color: var(--primary-color);
+    transition: background-color 0.3s;
 }
 .register-link{
     margin-top: 3%;
@@ -164,6 +164,7 @@ h2{
 .sidebar .tab-btn:hover, .sidebar .tab-btn.active {
     background-color: var(--secoundary-color);
     color: var(--primary-color);
+    transition: background-color 0.3s;
 }
 
 .content {
@@ -178,6 +179,7 @@ h2{
 
 .tab-content h3 {
     margin-top: 0;
+    margin-bottom: 1%;
     color: var(--primary-color);
 }
 
@@ -229,6 +231,7 @@ h2{
 .customer-name:hover {
     background-color: var(--primary-color);
     color: var(--secoundary-color);
+    transition: background-color 0.3s;
 }
 
 .customer-details {
@@ -256,16 +259,22 @@ h2{
 #add-customer-btn{
     display: flex;
     justify-content: center;
-    width: 10%;
+    width: 20%;
     padding: 10px; 
     margin-top: 20px; 
-    margin-left: 85%;
+    margin-left: 75%;
     background-color: var(--primary-color); 
     color: var(--secoundary-color); 
     border: 2px solid var(--primary-color);
     border-radius: 10px; 
     cursor: pointer; 
     font-size: 16px; 
+}
+
+#add-customer-btn:hover {
+    background-color: var(--secoundary-color);
+    color: var(--primary-color);
+    transition: background-color 0.3s;
 }
 
 .modal {
@@ -351,11 +360,13 @@ h2{
     border-radius: 10px;
     cursor: pointer;
     transition: background-color 0.3s;
-    width: 26%;
+    width: 29%;
 }
 
 #add-order-btn:hover {
-    background-color: #45a049;
+    background-color: var(--secoundary-color);
+    color: var(--primary-color);
+    transition: background-color 0.3s;
 }
 
 .order {
@@ -381,12 +392,19 @@ h2{
 }
 
 .delete-order-btn {
-    background-color: #f44336;
-    color: white;
-    border: none;
+    background-color: red;
+    color: var(--secoundary-color);
+    border: 2px solid red;
+    border-radius: 10px;
+    padding: 1%;
+    width: 20%;
+    margin-top: 1%;
+    margin-left: 80%;
     transition: background-color 0.3s;
 }
 
 .delete-order-btn:hover {
-    background-color: #e53935;
+    background-color: var(--secoundary-color);
+    color: red;
+    transition: background-color 0.3s;
 }

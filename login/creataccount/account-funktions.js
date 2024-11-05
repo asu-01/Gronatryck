@@ -26,14 +26,6 @@ window.onload = function() {
             openTab(this);
         });
     });
-
-    document.getElementById('customer1-btn').addEventListener('click', function() {
-        toggleCustomerDetails('customer1-details');
-    });
-
-    document.getElementById('customer2-btn').addEventListener('click', function() {
-        toggleCustomerDetails('customer2-details');
-    });
 };
 
 // Funktion för att skapa konto och lagra konto information
@@ -78,10 +70,8 @@ document.getElementById('loginForm')?.addEventListener('submit', function(event)
 
     // Kollar om login infon är samma som fördefinerade infon
     if (loginEmail === adminEmail && loginPassword === adminPassword) {
-        alert('Admin inloggning lyckades!');
         window.location.href = 'admin.html';
     } else if (storeduser && storeduser.email === loginEmail && storeduser.password === loginPassword) {
-        alert('Inloggning lyckades!');
         window.location.href = 'index.html';
     } else {
         alert('Felaktig e-post eller lösenord. Försök igen');
@@ -174,7 +164,7 @@ document.addEventListener('DOMContentLoaded', function () {
         const editButton = customerDiv.querySelector('.edit-customer-btn');
         const deleteButton = customerDiv.querySelector('.delete-customer-btn');
 
-        //funktioner för att ändra utseende på radera och ändra knappar
+        //styles för att ändra utseende på radera och ändra knappar
         const buttonContainer = document.createElement('div');
         buttonContainer.style.display = 'flex';
         buttonContainer.style.justifyContent = 'space-between';
@@ -262,9 +252,9 @@ document.addEventListener('DOMContentLoaded', function () {
         }
         
         // stäng ändrings modalen
-        document.querySelector('.close-btn').addEventListener('click', function () {
-            document.getElementById('edit-modal').style.display = 'none';
-        });
+        //document.querySelector('.close-btn').addEventListener('click', function () {
+        //    document.getElementById('edit-modal').style.display = 'none';
+        //});
 
         document.getElementById('save-edit-btn').addEventListener('click', function () {
             const customers = JSON.parse(localStorage.getItem('customers')) || [];
@@ -284,7 +274,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 });
 
-//funktion för pågående ordrar
+//funktion för att lägga till ordrar och hantera pågående ordrar
 
 document.addEventListener('DOMContentLoaded', function () {
     const ordersContainer = document.getElementById('order-list');
@@ -307,8 +297,8 @@ document.addEventListener('DOMContentLoaded', function () {
             orderDiv.dataset.index = index;
 
             orderDiv.innerHTML = `
-                <h4>Ordernummer: ${order.ordernumber}</h4>
-                <h4>Företagsnamn: ${order.companyName}</h4>
+                <p>Ordernummer: ${order.ordernumber}</p>
+                <p>Företagsnamn: ${order.companyName}</p>
                 <p>Pris: ${order.price} kr</p>
                 <p>Produktinformation: ${order.productInfo}</p>
                 <p>Status: <span class="status">${order.status}</span></p>
@@ -341,7 +331,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     function saveOrders(orders) {
         localStorage.setItem('orders', JSON.stringify(orders));
-        localStorage.setItem('lastOrderNumber', orderNumber - 1);
+        localStorage.setItem('lastOrderNumber', + 1);
         loadOrders();
     }
 
@@ -409,7 +399,7 @@ document.addEventListener('DOMContentLoaded', function () {
         for (const [monthYear, companies] of Object.entries(groupedOrders)) {
             const monthYearTab = document.createElement('div');
             monthYearTab.classList.add('month-year-tab');
-            monthYearTab.innerHTML = `<h3>${monthYear}</h3>`;
+            monthYearTab.innerHTML = `<h6>${monthYear}</h6>`;
     
             
             const buttonsContainer = document.createElement('div');
@@ -459,7 +449,7 @@ document.addEventListener('DOMContentLoaded', function () {
         
         const companyOrdersDisplay = document.createElement('div');
         companyOrdersDisplay.classList.add('company-orders-display');
-        companyOrdersDisplay.innerHTML = `<h3>Beställningar för ${companyName}</h3>`;
+        companyOrdersDisplay.innerHTML = `<h5>Beställningar för ${companyName}</h5>`;
     
         const backButton = document.createElement('button');
         backButton.textContent = "Tillbaka";
@@ -472,7 +462,7 @@ document.addEventListener('DOMContentLoaded', function () {
         backButton.style.borderRadius = '10px';
         backButton.style.border = '2px solid #1d4231';
         backButton.style.cursor = 'pointer';
-        backButton.style.marginLeft = '89.2%';
+        backButton.style.marginLeft = '88%';
         backButton.style.marginBottom = '10px';
     
         companyOrdersDisplay.appendChild(backButton);
@@ -481,7 +471,7 @@ document.addEventListener('DOMContentLoaded', function () {
             const orderDiv = document.createElement('div');
             orderDiv.classList.add('order');
             orderDiv.innerHTML = `
-                <h4>Ordernummer: ${order.ordernumber}</h4>
+                <p>Ordernummer: ${order.ordernumber}</p>
                 <p>Pris: ${order.price} kr</p>
                 <p>Produktinformation: ${order.productInfo}</p>
                 <p>Status: <span class="status">levererat</span></p>
