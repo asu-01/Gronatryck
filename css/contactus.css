@@ -6,18 +6,19 @@
   margin-bottom: 4%;
 }
 
-/* .contactus-text {
-  width:;
-} */
+.contactus-text--smaller {
+  width: 50%;
+}
 
-.contactus-text h6 {
+.contactus-text h6,
+.contactus-text h4 {
   font-weight: 900;
 }
 
 .contactus-content {
   display: flex;
   flex-direction: row;
- gap: 2%;
+  gap: 2%;
 }
 .swirl-pattern {
   height: 45vh;
@@ -41,9 +42,8 @@
   border-radius: 8px;
 }
 
- .customer-form-container {
+.customer-form-container {
   width: 70%;
-
 }
 
 /* Responsive adjustments */

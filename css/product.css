@@ -31,13 +31,6 @@
   height: auto;
 }
 
-.product-extra-infobox {
-  margin-top: 1rem;
-  padding: 1rem;
-  border-radius: 1rem;
-  border: 2px solid var(--primary-green);
-}
-
 /* Large image styling */
 .product-img--large {
   width: 100%;
