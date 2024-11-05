@@ -1,30 +1,32 @@
 .contactus-container {
-  margin: 5% auto;
+  margin-top: 5%;
+}
+
+.contactus-text-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2%;
+  height: 80vh;
+  width: 100%;
 }
 
 .contactus-container h2 {
-  margin-bottom: 4%;
+  margin-bottom: 3rem;
 }
-
-/* .contactus-text {
-  width:;
-} */
-
 .contactus-text h6 {
-  font-weight: 900;
+  margin-bottom: 1rem;
+}
+.contactus-text {
+  width: 100%;
 }
 
 .contactus-content {
   display: flex;
   flex-direction: row;
- gap: 2%;
+  gap: 2%;
 }
 .swirl-pattern {
   height: 45vh;
-}
-
-.contactus-text-container {
-  flex: 1;
 }
 
 .contactus-text {
@@ -32,7 +34,7 @@
 }
 
 .contactus-img {
-  flex: 0 0 500px;
+  flex: 0 0 600px;
 }
 
 .contactus-img img {
@@ -41,9 +43,12 @@
   border-radius: 8px;
 }
 
- .customer-form-container {
+.customer-form-container--small {
+  margin-top: 3rem;
   width: 70%;
-
+}
+.customer-form-container--small h3 {
+  font-size: 2rem;
 }
 
 /* Responsive adjustments */

@@ -26,7 +26,6 @@
 body {
   background-color: var(--secondary-off-white);
   font-family: "stolzl", sans-serif;
-
 }
 
 /* Färg klasser för text */
@@ -75,7 +74,6 @@ h2 {
 h3 {
   /* 39px */
   font-size: 2.441rem;
-  font-weight: 900;
 }
 h4 {
   /* 31px */
@@ -97,6 +95,10 @@ p {
 .small {
   /* 12px */
   font-size: 0.8rem;
+}
+
+.text--bold {
+  font-weight: 900;
 }
 
 /* Spacing and layout sizes  */
@@ -125,8 +127,22 @@ p {
   /* 6.6662rem */
 }
 
+/* Links  */
 a {
   text-decoration: none;
+  color: var(--primary-new);
+}
+
+a:hover {
+  text-decoration: underline;
+  color: var(--primary-green);
+}
+
+.text-infobox--border {
+  margin-top: 1rem;
+  padding: 1rem;
+  border-radius: 1rem;
+  border: 2px solid var(--primary-green);
 }
 
 /* Navbar */
@@ -225,6 +241,7 @@ a {
 .dropdown-subcategory.open,
 .dropdown.open {
   display: block;
+  z-index: 1000;
 }
 
 .dropdown-subcategory a {
@@ -289,7 +306,7 @@ a {
   border-radius: 10px;
   padding: 0.6rem 1rem 0.6rem 1rem;
   background-color: var(--secondary-off-white);
-  border: 2px solid var(--primary-new);
+  border: 2px solid var(--primary-green);
   text-align: right;
   color: var(--primary-green);
 }
@@ -340,24 +357,22 @@ a {
 }
 
 .chat-icon {
-  position: fixed;    
-  bottom: 20px;          
-  right: 20px;           
-  width: 3.5rem;         
-  height: 3.5rem;   
-  border-radius: 50%;        
-  cursor: pointer;       
-  z-index: 1000;         
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 1000;
   display: flex;
   align-items: center;
   justify-content: center;
   background-color: var(--primary-new);
 }
 .chat-icon img {
- width: 5vh;
+  width: 5vh;
 }
-
-
 
 /*--------------- Nyheter sektionen -------------*/
 
@@ -485,7 +500,6 @@ a {
 
 .card-slider-heading {
   margin-left: 4rem;
-  font-weight: 900;
   margin-bottom: 1.4rem;
 }
 
@@ -831,6 +845,7 @@ a {
 }
 .footer-logo {
   height: 15vh;
+  cursor: pointer;
 }
 
 .footer-icons {
