@@ -13,15 +13,17 @@ window.onload = function printColor() {
 
   for (product of parsedJSON) {
     let productId = new URLSearchParams(window.location.search).get("id");
-    for (color of product.colors) {
-      const dot = ` <input
+    if (productId === product.articleId) {
+      for (color of product.colors) {
+        const dot = ` <input
         class="dot dot-color dot--large"
         type="button"
         aria-label="Färg 1"
         style="background-color: ${color.colorCode};"
       ></input>`;
 
-      cardDotContainer.insertAdjacentHTML("afterbegin", dot);
+        cardDotContainer.insertAdjacentHTML("afterbegin", dot);
+      }
     }
   }
 };
