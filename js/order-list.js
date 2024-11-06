@@ -12,6 +12,7 @@ function loadListData() {
 
   for (product of productListData) {
     const productListContainer = document.querySelector(".order-list");
+    let productColor = localStorage.getItem("color");
 
     const productItem = ` 
       <div class="order-list-item">
@@ -21,7 +22,7 @@ function loadListData() {
               </div>
               <div class="item-group-1">
                   <h6 class="bold">${product.title}</h6>
-                  <p>Färg: Ljusgrå</p>
+                  <p>Färg: ${productColor}</p>
                   <div class="button-quantity">
                       <button class="minus" aria-label="Decrease">&minus;</button>
                       <input
@@ -53,13 +54,15 @@ function loadListData() {
   }
 }
 
+let productColor = document.querySelector(".dot-active");
+
 // Spara ner produkter som är tillagda i beställningslista i localstorage (WIP)
 function addToList() {
   let productId = new URLSearchParams(window.location.search).get("id");
+  let productColor = localStorage.getItem("color");
 
   // Hämtar alla produktval som användaren matat in på produktsidan
   let productAmount = amountInput.value;
-  let productColor = document.querySelector(".active");
 
   //   productColor = productColor.forEach((color) => color.style.backgroundColor);
 

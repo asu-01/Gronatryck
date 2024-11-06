@@ -44,6 +44,15 @@ function showSlides(n) {
   }
 }
 
+// Add keyboard navigation
+document.addEventListener("keydown", function (event) {
+  if (event.key === "ArrowRight") {
+    changeSlide(1); // Move to the next slide
+  } else if (event.key === "ArrowLeft") {
+    changeSlide(-1); // Move to the previous slide
+  }
+});
+
 // ---------------   Popular cards ---------------------- //
 // let cardIndex = 1; // Start with the first card
 // showCards(cardIndex, "card-wrapper"); // Display the first set of visible cards
