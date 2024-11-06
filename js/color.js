@@ -1,6 +1,11 @@
 // Hämta produktbild
 const productImg = document.querySelector(".product-img--large");
 
+const cardDotContainer = document.querySelector(".card-dot-container");
+const cardDotText = document.querySelector(".card-dot-container p");
+
+console.log(cardDotContainer);
+
 // Hämta färg-knappar
 const colorBtn = document.querySelectorAll(".dot");
 
@@ -8,23 +13,34 @@ window.onload = function printColor() {
   const retrievedData = localStorage.getItem("json-products");
   const parsedJSON = JSON.parse(retrievedData);
 
-  const cardDotContainer = document.querySelector(".card-dot-container");
   const colorBtn = document.querySelectorAll(".dot");
 
   for (product of parsedJSON) {
     let productId = new URLSearchParams(window.location.search).get("id");
     if (productId === product.articleId) {
       for (color of product.colors) {
-        const dot = ` <input
-        class="dot dot-color dot--large"
-        type="button"
-        value="${color.colorName}",
-        aria-label="Färg 1"
-        onclick="changeColorImg(this.value)"
-        style="background-color: ${color.colorCode};"
-      ></input>`;
+        let inputElement = document.createElement("input");
+        Object.assign(inputElement, {
+          className: "dot dot-color dot--large",
+          type: "button",
+          value: `${color.colorName}`,
+          ariaLabel: "färg",
+          onclick: "changeColorImg(this.value)",
+          style: `background-color: ${color.colorCode} ;`,
+        });
 
-        cardDotContainer.insertAdjacentHTML("afterbegin", dot);
+        cardDotContainer.prepend(inputElement);
+
+        //     const dot = ` <input
+        //     class="dot dot-color dot--large"
+        //     type="button"
+        //     value="${color.colorName}",
+        //     aria-label="Färg 1"
+        //     onclick="changeColorImg(this.value)"
+        //     style="background-color: ${color.colorCode};"
+        //   ></input>`;
+
+        // cardDotContainer.insertAdjacentHTML("afterbegin", inputElement);
       }
     }
   }
