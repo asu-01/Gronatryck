@@ -331,7 +331,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     function saveOrders(orders) {
         localStorage.setItem('orders', JSON.stringify(orders));
-        localStorage.setItem('lastOrderNumber', + 1);
+        localStorage.setItem('lastOrderNumber', ordernumber);
         loadOrders();
     }
 
