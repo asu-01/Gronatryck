@@ -31,17 +31,6 @@ window.onload = function printColor() {
         inputElement.setAttribute("onclick", "changeColorImg(this.value)");
 
         cardDotContainer.prepend(inputElement);
-
-        //     const dot = ` <input
-        //     class="dot dot-color dot--large"
-        //     type="button"
-        //     value="${color.colorName}",
-        //     aria-label="Färg 1"
-        //     onclick="changeColorImg(this.value)"
-        //     style="background-color: ${color.colorCode};"
-        //   ></input>`;
-
-        // cardDotContainer.insertAdjacentHTML("afterbegin", inputElement);
       }
     }
   }
