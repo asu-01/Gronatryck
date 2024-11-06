@@ -1,6 +1,6 @@
 /* Hämtar Input element */
 const input = document.querySelector(".input-box");
-console.log(input);
+// console.log(input);
 
 /* Hämtar alla knappar */
 const btn = document.querySelectorAll("button");
@@ -12,7 +12,7 @@ const increaseBtn = btn.item(1);
 decreaseBtn.addEventListener("click", decreaseAmount);
 increaseBtn.addEventListener("click", increaseAmount);
 
-console.log(decreaseBtn, increaseBtn);
+// console.log(decreaseBtn, increaseBtn);
 
 /* Funktion för att öka mängd */
 function increaseAmount(e) {

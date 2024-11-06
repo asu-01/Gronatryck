@@ -7,10 +7,23 @@ document.addEventListener("DOMContentLoaded", function () {
     // Update the article name in the alert box
     const articleName = document.getElementById("articleName").textContent;
 
-    // Update the alert box with the quantity
+    // Retrieve cart products from localStorage
+    const cartProducts =
+      JSON.parse(localStorage.getItem("cart-products")) || [];
+
+    // Check if there's at least one product and access its color
+    let colorName = "unknown"; // Default if color is not found
+    if (cartProducts.length > 0) {
+      const product = cartProducts[0]; // Adjust as needed for the specific product
+      colorName = product.color || "unknown"; // Fallback if color is missing
+    }
+
+    // Update the alert box with the quantity and color name
     document.getElementById(
       "alertQuantity"
-    ).textContent = `Antal: ${quantity} st. Färg: Röd.`;
+    ).textContent = `Antal: ${quantity} st. Färg: ${colorName}.`;
+
+    // Display the alert box
     document.getElementById("alertBox").style.display = "flex";
 
     // Update the article name in the alert box
