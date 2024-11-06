@@ -384,7 +384,7 @@ a:hover {
   background-position: bottom;
   background-repeat: no-repeat;
   margin-top: 3rem;
-  background-size: 180rem;
+  background-size: 160rem;
   margin-bottom: 30rem;
 }
 
@@ -1120,6 +1120,7 @@ a:hover {
     width: 4vw;
   }
 
+
   /* Vilka är vi  */
 
   .card-section-two-info p {
@@ -1158,9 +1159,8 @@ a:hover {
 @media screen and (max-width: 768px) {
   /* Text container hero slideshow */
   .slide-text {
-    top: 50%;
+    top: 40%;
     left: 15%;
-    height: 60%;
   }
 
   .slide-text h1 {
@@ -1283,6 +1283,12 @@ a:hover {
     stroke: var(--secondary-off-white);
   }
 
+  /* Hero */
+
+  .arrow--medium, .arrow--medium img {
+    display: none;
+}
+
   /* news section */
   .news-img-text h3 {
     font-size: 1.71rem;
@@ -1349,10 +1355,6 @@ a:hover {
 
   .review-card p {
     font-size: 90%;
-  }
-
-  .review-icons {
-    height: 1vh;
   }
 
   /*------------ Mobile footer */
@@ -1461,19 +1463,76 @@ a:hover {
 @media screen and (max-width: 576px) {
   /* nav header */
   .slide-text {
-    top: 40%;
+    top: 30%;
     left: 15%;
     width: 80%;
   }
 
+  .slide-text h1 {
+    width: 80%;
+    font-size: 1.6rem;
+  }
+
   .slide-text p {
-    font-size: 0.9rem;
+    font-size: 0.8rem;
     width: 95%;
   }
 
-  .swirl-pattern {
-    height: 20vh;
+  .arrow--medium, .arrow--medium img {
+    width: 1.6rem;
+}
+
+  .background-block {
+    background-size: 100rem;
+    height: 90vh;
   }
+
+  /* News */
+
+   .card-img-container-one {
+    grid-column: 1 / span 2;
+    grid-row: 1 / span 1;
+  }
+
+  .card-img-container-two  {
+    grid-column: 1 / span 2;
+    grid-row: 2 / span 1;
+  }
+
+  .card-img-container-three {
+    grid-column: 1 / span 2;
+    grid-row: 3 / span 1;
+  }
+
+  /* Swirl */
+  .swirl-pattern {
+    height: 30vh;
+  }
+
+  /* General */
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  p {
+    font-size: 0.8rem;
+  }
+
+  /* Reviews */
+
+  .review-card-container {
+    flex-direction: column;
+  }
+
+  .review-card {
+    width: 100%;
+  }
+
+  .review-card p {
+    font-size: 80%;
+  }
+
   /* Mobile footer  */
   .footer-logo {
     justify-content: center;

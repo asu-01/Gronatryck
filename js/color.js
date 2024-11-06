@@ -94,7 +94,8 @@ function changeColorImg(value) {
 // Sätter styling på den aktivt valda färgen
 function active(e) {
   colorBtn.forEach((btn) => {
-    btn.classList.remove("dot-active");
+    // btn.classList.remove("dot-active");'
+    btn.focus();
   });
-  e.target.classList.add("dot-active");
+  //   e.target.classList.add("dot-active");
 }
