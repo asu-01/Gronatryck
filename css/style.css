@@ -376,7 +376,6 @@ a:hover {
 
 /*--------------- Nyheter sektionen -------------*/
 
-
 .news {
   margin: 0rem 1.1rem 0rem 1.1rem;
 }
@@ -1109,7 +1108,6 @@ a:hover {
     width: 4vw;
   }
 
-
   /* Vilka är vi  */
 
   .card-section-two-info p {
@@ -1148,12 +1146,12 @@ a:hover {
 @media screen and (max-width: 768px) {
   /* Text container hero slideshow */
   .slide-text {
-    top: 30%;
+    top: 50%;
     left: 15%;
   }
 
   .slide-text h1 {
-    width: 100%;
+    width: 90%;
     font-size: 2.015rem;
   }
   .slide-text p {
@@ -1473,17 +1471,17 @@ a:hover {
     width: 95%;
   }
 
-  .arrow--medium, .arrow--medium img {
+  .arrow--medium,
+  .arrow--medium img {
     width: 1.6rem;
     display: none;
-}
+  }
 
-.card-section-two {
-  height: 90vh;
-  background-size: 80vh;
-  margin-bottom: 2rem;
-}
-
+  .card-section-two {
+    height: 90vh;
+    background-size: 80vh;
+    margin-bottom: 2rem;
+  }
 
   /* Swirl */
   .swirl-pattern {

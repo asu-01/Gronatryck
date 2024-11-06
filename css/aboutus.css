@@ -4,6 +4,33 @@
   height: 170vh;
 }
 
+.aboutus-hero {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.aboutus-icons {
+  position: absolute;
+  width: 90%;
+  height: auto;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+}
+
+.aboutus-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+
 .aboutus-swirl {
   height: 120vh;
   background-image: url(/visuals/patterns/swirl/swirl_1_ny_alternative_green.svg);
@@ -50,4 +77,28 @@
 .aboutus-img--small {
   width: 100%;
   object-fit: cover;
+}
+
+@media (max-width: 992px) {
+  .aboutus-text {
+    width: 60%;
+  }
+  .aboutus-img-wrapper {
+    display: flex;
+    width: 20rem;
+    height: 30rem;
+  }
+}
+@media (max-width: 768px) {
+  .aboutus-text {
+    width: 90%;
+  }
+  .aboutus-text h3 {
+    font-size: 2rem;
+  }
+  .aboutus-img-wrapper {
+    display: flex;
+    width: 20rem;
+    height: 20rem;
+  }
 }
