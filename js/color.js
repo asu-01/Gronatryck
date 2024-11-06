@@ -4,7 +4,7 @@ const productImg = document.querySelector(".product-img--large");
 const cardDotContainer = document.querySelector(".card-dot-container");
 const cardDotText = document.querySelector(".card-dot-container p");
 
-console.log(cardDotContainer);
+// console.log(cardDotContainer);
 
 // Hämta färg-knappar
 const colorBtn = document.querySelectorAll(".dot");
@@ -25,9 +25,10 @@ window.onload = function printColor() {
           type: "button",
           value: `${color.colorName}`,
           ariaLabel: "färg",
-          onclick: "changeColorImg(this.value)",
           style: `background-color: ${color.colorCode} ;`,
         });
+
+        inputElement.setAttribute("onclick", "changeColorImg(this.value)");
 
         cardDotContainer.prepend(inputElement);
 
@@ -48,7 +49,7 @@ window.onload = function printColor() {
 
 // Hämta bild-knappar
 const imgBtn = document.querySelectorAll(".product-img--small");
-console.log(imgBtn);
+// console.log(imgBtn);
 
 // Eventlyssnare
 imgBtn.forEach((img) => {
@@ -73,7 +74,7 @@ function changeColorImg(value) {
   const parsedJSON = JSON.parse(retrievedData);
   let productId = new URLSearchParams(window.location.search).get("id");
 
-  console.log("Hej", parsedJSON);
+  //   console.log("Hej", parsedJSON);
   for (product of parsedJSON) {
     if (productId === product.articleId) {
       for (color of product.colors) {
@@ -82,7 +83,7 @@ function changeColorImg(value) {
           //   let colorArray = [];
           //   colorArray = currentColor ? currentColor : [];
           //   colorArray.push(value);
-          let colorName = localStorage.setItem("color", value);
+          //   let colorName = localStorage.setItem("color", value);
           productImg.setAttribute("src", color.url);
         }
       }

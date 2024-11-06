@@ -1,4 +1,4 @@
-console.log(productImg);
+// console.log(productImg);
 
 // Lägger till rätt data på produktsida beroende på valt produktcard (WIP)
 

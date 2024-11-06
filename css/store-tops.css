@@ -17,7 +17,7 @@
 @media screen and (max-width: 992px) {
 
     .catalogue-category a {
-        width: calc((100% - 1.5rem) / 2);
+        width: calc((100% - 1rem) / 2);
     }
 
     .catalogue-category a:nth-child(5) {

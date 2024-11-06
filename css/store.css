@@ -54,7 +54,7 @@
 }
 
 .catalogue-products .card {
-    width: calc((100% - 4.5rem) / 4);
+    width: calc((100% - 3rem) / 4);
     height: calc((100% - 4.5rem) / 3);
 }
 
@@ -119,7 +119,7 @@ a:active {
     } */
 
     .catalogue-products .card {
-        width: calc((100% - 3rem) / 3);
+        width: calc((100% - 2rem) / 3);
     }
     
 }
@@ -136,7 +136,7 @@ a:active {
     }
 
     .catalogue-category a {
-        width: calc((50% - 2.25rem) / 2);
+        width: calc((50% - 1.5rem) / 2);
         height: 8rem;
         overflow: hidden;
     }
@@ -148,11 +148,11 @@ a:active {
     }
 
     .catalogue-category a:nth-child(-n + 3) {
-        width: calc((100% - 1.5rem) / 2);
+        width: calc((100% - 1rem) / 2);
     }
     
     .catalogue-products .card {
-        width: calc((100% - 1.5rem) / 2)
+        width: calc((100% - 1rem) / 2)
     }
 
     .card-body .text-sm {
