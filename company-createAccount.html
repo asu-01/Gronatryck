@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://use.typekit.net/zlf3fvp.css">
     <link rel="stylesheet" href="login/creataccount/style.css">
     <link rel="stylesheet" href="css/style.css">
     <title>Skapa konto, Privat</title>
@@ -131,19 +132,19 @@
         </div>
 
         <div class="login-form">
-            <span>Företag/organisation</span>
+            <span>Företag/organisation*</span>
             <input type="text" placeholder="Skriv namn" class="input-field" required>
 
-            <span>E-post till företag</span>
+            <span>E-post*</span>
             <input type="email" placeholder="exampel@gmail.com" class="input-field" required>
 
             <span>Land/region</span>
             <input type="text" id="region" placeholder="Välj land eller region" class="input-field" required>
 
-            <span>Välj ett lösenord</span>
+            <span>Välj ett lösenord*</span>
             <input type="password" placeholder="***********" class="input-field" required>
 
-            <span>Bekräfta ditt lösenord</span>    
+            <span>Bekräfta ditt lösenord*</span>    
             <input type="password" placeholder="***********" class="input-field" required>
 
             <div class="buttons">
@@ -157,6 +158,83 @@
         </div>
 
     </div>
+
+    <!-----------Footer ----------->
+    <footer>
+      <div class="footer-container">
+        <div class="footer-content">
+          <!-- Logo -->
+          <img class="footer-logo" src="visuals/logo/gronatryck_horizontal_offwhite_rgb.svg" alt="grona tryck logotype">
+          <div class="footer-icons-container footer-icons-container--hallbart">
+            <img class="footer-icons" src="visuals/icons/gronatryck_icon_organicproduction.svg" alt="Ikon för organisk produktion">
+            <img class="footer-icons" src="visuals/icons/gronatryck_icon_recycledmaterial.svg" alt="Ikon för återvinnet material ">
+            <img class="footer-icons" src="visuals/icons/gronatryck_icon_fairtrademark.svg" alt="Fairtrademark ikon">
+            <img class="footer-icons" src="visuals/icons/gronatryck_icon_phthalate-free.svg" alt="Ikon för ftalatfri">
+          </div>
+        </div>
+    
+        <div class="footer-content">
+          <p class="footer-links-heading">Kontakt <button class="toggle-links" onclick="toggleLinks('kontakt-links')"><svg width="15" height="10" viewBox="0 0 15 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M1.78846 1.5L7.89423 9L14 1.5" stroke="#faf7eb" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" />
+        </svg></button></p>
+          
+          <div class="hidden-links" id="kontakt-links">
+            <p class="text-color-offwhite"><img class="footer-icons footer-icons-small" src="visuals/icons/mail_icon_offwhite.svg" alt="Brev ikon">kontakt@gronatryck.se</p>
+            <p class="text-color-offwhite"><img class="footer-icons footer-icons-small" src="visuals/icons/phone_offwhite.svg" alt="Mobil ikon"> +46 090 13 13 40</p>
+            <div class="footer-wrapper">
+              <img class="footer-icons footer-icons-small" src="visuals/icons/gronatryck_icon_pin_offwhite.svg" alt="Kartnål ikon">
+              <div class="block-line">
+                <p class="text-color-offwhite">Västra Kyrkogatan 1B</p>
+                <p class="text-color-offwhite">903 29 Umeå</p>
+                <p class="text-color-offwhite">Sverige</p>
+              </div>
+            </div>
+          </div>
+        </div>
+    
+        <div class="footer-content">
+          <p class="footer-links-heading">Läs mer <button class="toggle-links" onclick="toggleLinks('las-mer-links')"><svg width="15" height="10" viewBox="0 0 15 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M1.78846 1.5L7.89423 9L14 1.5" stroke="#faf7eb" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" />
+        </svg></button></p>
+          
+          <div class="hidden-links" id="las-mer-links">
+            <a class="links" href="#">Certifikat och märkningar</a>
+            <a class="links" href="#">Våra klädmärken</a>
+            <a class="links" href="#">Kontakta oss</a>
+            <a class="links" href="#">Vanliga frågor</a>
+          </div>
+        </div>
+    
+        <div class="footer-content">
+          <p class="footer-links-heading">Snabba Länkar <button class="toggle-links" onclick="toggleLinks('snabba-lankar-links')"><svg width="15" height="10" viewBox="0 0 15 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M1.78846 1.5L7.89423 9L14 1.5" stroke="#faf7eb" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" />
+        </svg></button></p>
+          
+          <div class="hidden-links" id="snabba-lankar-links">
+            <a class="links" href="#">Vi bakom företaget</a>
+            <a class="links" href="#">Jobba hos oss</a>
+            <a class="links" href="#">Köpvillkor</a>
+            <a class="links" href="#">Logga in</a>
+          </div>
+        </div>
+    
+        <div class="footer-content">
+          <p class="footer-links-heading">Sociala medier</p>
+          <div class="footer-icons-container footer-icons-container-left">
+            <a href="http://www.instagram.com/gronatryck/"><img class="footer-icons footer-icons-medium" src="visuals/icons/gronatryck_icon_instagram.svg" alt="Instagram logotyp och länk"></a>
+            <a href="https://www.facebook.com/gronatryck/?locale=sv_SE"><img class="footer-icons footer-icons-medium" src="visuals/icons/gronatryck_icon_facebook.svg" alt="Facebook logotyp och länk"></a>
+            <a href="https://www.linkedin.com/company/gronatryck/?originalSubdomain=se"><img class="footer-icons footer-icons-medium" src="visuals/icons/gronatryck_icon_linkedin.svg" alt="Linkedin logotyp och länk"></a>
+            <a href="https://www.youtube.com/channel/UCmp_MT60FRolVuW2af3fSIg"><img class="footer-icons footer-icons-medium" src="visuals/icons/gronatryck_icon_youtube.svg" alt="Youtube logotyp och länk"></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-copyright">
+        <p class="small">Copyright 2024 &copy; Gröna tryck </p>
+      </div>
+    </footer>
     <script src="login/creataccount/account-funktions.js"></script>
     <script src="js/dropdown.js"></script>
 </body>
