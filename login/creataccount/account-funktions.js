@@ -290,12 +290,12 @@ document.addEventListener('DOMContentLoaded', function () {
     function loadOrders() {
         const orders = JSON.parse(localStorage.getItem('orders')) || [];
         ordersContainer.innerHTML = '';
-
+    
         orders.forEach((order, index) => {
             const orderDiv = document.createElement('div');
             orderDiv.classList.add('order');
             orderDiv.dataset.index = index;
-
+    
             orderDiv.innerHTML = `
                 <button class="delete-order-btn">Radera order</button>
                 <p>Ordernummer: ${order.ordernumber}</p>
@@ -310,24 +310,27 @@ document.addEventListener('DOMContentLoaded', function () {
                     <option value="levererat" ${order.status === 'levererat' ? 'selected' : ''}>Levererat</option>
                 </select>
             `;
-
-            ordersContainer.appendChild(orderDiv);
-
+    
             const statusSelect = orderDiv.querySelector('.status-update');
+            ordersContainer.appendChild(orderDiv);
+    
+            // Update status when changed
             statusSelect.addEventListener('change', function () {
+                const orders = JSON.parse(localStorage.getItem('orders')) || [];
+                orders[index].status = statusSelect.value;
+                saveOrders(orders);
+    
                 if (statusSelect.value === 'levererat') {
                     if (confirm("Är du säker på att du vill flytta ordern till 'Alla Beställningar'?")) {
                         moveToDelivered(index);
                     }
+                } else {
+                    orderDiv.querySelector('.status').textContent = statusSelect.value;
                 }
-            });
-
-            const deleteButton = orderDiv.querySelector('.delete-order-btn');
-            deleteButton.addEventListener('click', function () {
-                deleteOrder(index);
             });
         });
     }
+    
 
     function saveOrders(orders) {
         localStorage.setItem('orders', JSON.stringify(orders));
@@ -349,11 +352,18 @@ document.addEventListener('DOMContentLoaded', function () {
                 productInfo,
                 status: 'bearbetas'
             });
+            orderNumber++;
             saveOrders(orders);
             clearOrderForm();
         } else {
             alert('Alla fält måste vara ifyllda!');
         }
+    }
+
+    function saveOrders(orders) {
+        localStorage.setItem('orders', JSON.stringify(orders));
+        localStorage.setItem('lastOrderNumber', orderNumber);
+        loadOrders(); 
     }
 
     //funktion för att flytta levererade ordrar till alla ordrar (taben)
@@ -372,7 +382,7 @@ document.addEventListener('DOMContentLoaded', function () {
         localStorage.setItem('deliveredOrders', JSON.stringify(deliveredOrders));
 
         loadOrders();
-        updateDeliveredOrdersTab();
+        loadDeliveredOrders(); 
     }
 
     function loadDeliveredOrders() {
