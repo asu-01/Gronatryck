@@ -179,10 +179,10 @@ document.addEventListener('DOMContentLoaded', function () {
         editButton.style.cursor = 'pointer';
         editButton.style.transition = 'background-color 0.3s ease, color 0.3s ease';
         
-        deleteButton.style.backgroundColor = '#dc3545';
+        deleteButton.style.backgroundColor = 'red';
         deleteButton.style.color = '#faf7eb';
         deleteButton.style.padding = '10px';
-        deleteButton.style.border = '2px solid #dc3545';
+        deleteButton.style.border = '2px solid red';
         deleteButton.style.width = '48%';
         deleteButton.style.borderRadius = '10px';
         deleteButton.style.cursor = 'pointer';
@@ -200,11 +200,11 @@ document.addEventListener('DOMContentLoaded', function () {
 
         deleteButton.addEventListener('mouseenter', function () {
             deleteButton.style.backgroundColor = '#faf7eb';
-            deleteButton.style.color = '#dc3545';
+            deleteButton.style.color = 'red';
         });
     
         deleteButton.addEventListener('mouseleave', function () {
-            deleteButton.style.backgroundColor = '#dc3545';
+            deleteButton.style.backgroundColor = 'red';
             deleteButton.style.color = '#faf7eb';
         });
 
@@ -297,6 +297,7 @@ document.addEventListener('DOMContentLoaded', function () {
             orderDiv.dataset.index = index;
 
             orderDiv.innerHTML = `
+                <button class="delete-order-btn">Radera order</button>
                 <p>Ordernummer: ${order.ordernumber}</p>
                 <p>Företagsnamn: ${order.companyName}</p>
                 <p>Pris: ${order.price} kr</p>
@@ -308,7 +309,6 @@ document.addEventListener('DOMContentLoaded', function () {
                     <option value="skickad" ${order.status === 'skickad' ? 'selected' : ''}>Skickad</option>
                     <option value="levererat" ${order.status === 'levererat' ? 'selected' : ''}>Levererat</option>
                 </select>
-                <button class="delete-order-btn">Radera order</button>
             `;
 
             ordersContainer.appendChild(orderDiv);

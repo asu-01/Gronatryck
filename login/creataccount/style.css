@@ -9,8 +9,12 @@
 }
 
 body{
-    background-color: var(--primary-color);
+    background-color: var(--secoundary-color);
     overflow-x: hidden;
+}
+
+#body{
+    background-color: var(--primary-color);
 }
 
 .container{
@@ -100,7 +104,7 @@ h6{
 }
 
 .password-container {
-    display: flex; /* Use flexbox for password row */
+    display: flex;
     align-items: first baseline;
 }
 
@@ -326,15 +330,6 @@ h6{
 
 /*css för pågående ordrar*/
 
-.order {
-    width: 95%;
-    padding: 10px;
-    border: 2px solid var(--primary-color);
-    border-radius: 10px;
-    background-color: var(--secoundary-color);
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
-}
-
 
 #add-order-form {
     display: flex;
@@ -369,14 +364,6 @@ h6{
     transition: background-color 0.3s;
 }
 
-.order {
-    border: 1px solid #ddd;
-    padding: 10px;
-    margin-bottom: 10px;
-    display: flex;
-    flex-direction: column;
-}
-
 .order h4, .order p {
     margin: 5px 0;
 }
@@ -391,6 +378,19 @@ h6{
     width: 100%;
 }
 
+.order {
+    width: 95%;
+    padding: 10px;
+    border: 1px solid var(--primary-color);
+    border-top: hidden;
+    border-left: hidden;
+    border-right: hidden;
+    padding: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
 .delete-order-btn {
     background-color: red;
     color: var(--secoundary-color);
@@ -398,7 +398,6 @@ h6{
     border-radius: 10px;
     padding: 1%;
     width: 20%;
-    margin-top: 1%;
     margin-left: 80%;
     transition: background-color 0.3s;
 }
@@ -408,3 +407,6 @@ h6{
     color: red;
     transition: background-color 0.3s;
 }
+
+
+
