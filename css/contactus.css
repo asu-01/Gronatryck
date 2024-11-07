@@ -17,7 +17,8 @@
   margin-bottom: 1rem;
 }
 .contactus-text {
-  width: 100%;
+  width: 50%;
+  height: 45%;
 }
 
 .contactus-content {
@@ -52,12 +53,31 @@
 }
 
 /* Responsive adjustments */
-@media (max-width: 768px) {
+@media (max-width: 1200px) {
+  .contactus-img {
+    flex: 0 0 400px;
+  }
+}
+@media (max-width: 992px) {
   .contactus-content {
     flex-direction: column;
     align-items: center;
   }
+  .contactus-text {
+    width: 100%;
+    height: 45%;
+  }
+  .contactus-container h2 {
+    font-size: 2rem;
+  }
   .contactus-img {
     width: 100%;
   }
+  .customer-form-container--small {
+    margin-top: 3rem;
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
 }
