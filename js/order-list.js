@@ -98,11 +98,11 @@ function addToList() {
 
   cartProducts = [];
 
-  console.log(cartProducts);
-
   /* Kontrollerar om beställningslistan innehåller något sen tidigare, 
     om sant ersätts behålls den gamla, om falskt skapas en ny tom array. */
   cartProducts = currentCartData ? currentCartData : [];
+
+  console.log(cartProducts);
 
   // Den tillagda produkten läggs till i en ny tom lista eller i den föregående.
   cartProducts.push(product);
@@ -116,16 +116,20 @@ function removeFromList(id) {
   const productListData = JSON.parse(JsonData);
   console.log(id);
 
-  // Filtrera ut produkten som har tagits bort.
-  let updatedList = productListData.filter(function (array) {
-    return array.id !== id;
-  });
+  const index = productListData.findIndex((articleId) => articleId.id === id);
+  productListData.splice(index, 1);
 
-  console.log(updatedList);
+  // Filtrera ut produkten som har tagits bort.
+  //   let updatedList = productListData.filter(function (array) {
+  //     return array.id !== id;
+  //   });
+
+  console.log(productListData);
+  document.querySelector(".order-list").innerHTML = "";
 
   // Uppdatera cart-products med lista
-  localStorage.setItem("cart-products", JSON.stringify(updatedList));
-  //   loadListData();
+  localStorage.setItem("cart-products", JSON.stringify(productListData));
+  loadListData();
 }
 
 function calculatePrice() {
