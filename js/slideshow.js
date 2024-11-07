@@ -53,6 +53,13 @@ document.addEventListener("keydown", function (event) {
   }
 });
 
+// Test which image is being shown in the console
+window.addEventListener('load', () => {
+  const picture = document.querySelector('picture');
+  const source = picture.querySelector('source');
+  console.log('Image src: ', source.srcset);
+});
+
 // ---------------   Popular cards ---------------------- //
 // let cardIndex = 1; // Start with the first card
 // showCards(cardIndex, "card-wrapper"); // Display the first set of visible cards
