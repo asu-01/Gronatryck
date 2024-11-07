@@ -138,6 +138,68 @@ a:hover {
   color: var(--primary-green);
 }
 
+/* Search icon and search bar for header */
+.search-icon {
+  cursor: pointer;
+}
+
+.search-bar {
+  position: fixed;
+  top: 10.5%;
+  left: 55%;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  display: none;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.search-bar.show {
+  display: block;
+}
+
+.search-bar form {
+  background-color: var(--primary-new);
+  opacity: 0.9;
+  width: 600px;
+  height: 50px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.search-bar input {
+  all: unset;
+  color: var(--secondary-off-white);
+  height: 100%;
+  width: 100%;
+  padding: 0 1.5rem;
+  line-height: 50px;
+}
+
+.search-bar input::placeholder {
+  color: var(--secondary-off-white);
+  opacity: 0.8;
+  text-align: start;
+  border: 1px solid blue;
+}
+
+.search-bar button {
+  all: unset;
+  cursor: pointer;
+  width: 4rem;
+  height: 1.5rem;
+}
+
+.search-bar svg {
+  fill: currentColor;
+  width: 3rem;
+  height: 1.5rem;
+}
+
 .text-infobox--border {
   margin-top: 1rem;
   padding: 1rem;
