@@ -310,6 +310,13 @@ document.addEventListener('DOMContentLoaded', function () {
                     <option value="levererat" ${order.status === 'levererat' ? 'selected' : ''}>Levererat</option>
                 </select>
             `;
+
+            const deleteButton = orderDiv.querySelector('.delete-order-btn');
+            deleteButton.addEventListener('click', function () {
+                if (confirm("Är du säker på att du vill radera denna order?")) {
+                    deleteOrder(index);  // Call the deleteOrder function with the current index
+                }
+            });
     
             const statusSelect = orderDiv.querySelector('.status-update');
             ordersContainer.appendChild(orderDiv);
@@ -496,10 +503,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
     function deleteOrder(index) {
         const orders = JSON.parse(localStorage.getItem('orders')) || [];
-        if (confirm(`Är du säker på att du vill radera order för ${orders[index].companyName}?`)) {
-            orders.splice(index, 1);
-            saveOrders(orders);
-        }
+        orders.splice(index, 1);
+        localStorage.setItem('orders', JSON.stringify(orders));
+        loadOrders();
     }
 
     function clearOrderForm() {
