@@ -78,6 +78,8 @@ function addToList() {
     .querySelector(".product-img-container img")
     .getAttribute("src");
 
+  console.log(productColor);
+
   // Valda värden samlas ihop till ett objekt
   let product = {
     id: productId,

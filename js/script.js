@@ -16,12 +16,12 @@ const JSONdata = [
       {
         colorName: "Beige",
         colorCode: "#cfb4a5",
-        url: "visuals/img/t-shirt/gronatryck_product_1.jpg",
+        url: "visuals/img/t-shirt/gronatryck_product_3.jpg",
       },
       {
         colorName: "Vit",
         colorCode: "#ffffff",
-        url: "visuals/img/grona_tryck_card_2.jpg",
+        url: "visuals/img/t-shirt/gronatryck_product_4.jpg",
       },
       {
         colorName: "Tegelröd",
@@ -66,12 +66,12 @@ const JSONdata = [
       {
         colorName: "Beige",
         colorCode: "#a6987e",
-        url: "visuals/img/grona_tryck_card_2.jpg",
+        url: "visuals/img/Liner_Desert Dust_Packshot_Front_Main_0.jpg",
       },
       {
         colorName: "Svart",
         colorCode: "#0f1112",
-        url: "visuals/img/grona_tryck_card_2.jpg",
+        url: "visuals/img/Liner_Black_Packshot_Front_Main_0.jpg",
       },
     ],
     priceList: [
@@ -112,12 +112,12 @@ const JSONdata = [
       {
         colorName: "Camoflauge",
         colorCode: "#485942",
-        url: "visuals/img/grona_tryck_card_2.jpg",
+        url: "visuals/img/Stanley Voyager_Khaki_Packshot_Front_Main_0.jpg",
       },
       {
         colorName: "Turkos",
         colorCode: "#0a3837",
-        url: "visuals/img/grona_tryck_card_2.jpg",
+        url: "visuals/img/Stanley Voyager_Stargazer_Packshot_Front_Main_0.jpg",
       },
     ],
     priceList: [
@@ -209,7 +209,7 @@ const JSONdata = [
       {
         colorName: "Vit",
         colorCode: "#ffffff",
-        url: "visuals/img/grona_tryck_card_2.jpg",
+        url: "visuals/img/Tote Bag_White_Studio_Front_Main_6.jpg",
       },
     ],
     priceList: [
@@ -249,13 +249,13 @@ const JSONdata = [
     colors: [
       {
         colorName: "Ljusblå",
-        colorCode: "#edffff",
-        url: "visuals/img/grona_tryck_card_2.jpg",
+        colorCode: "#a5c6d4",
+        url: "visuals/img/Stella Nora_Blue Ice_Packshot_Front_Main_0.jpg",
       },
       {
-        colorName: "Vit",
-        colorCode: "#ffffff",
-        url: "visuals/img/grona_tryck_card_2.jpg",
+        colorName: "Rosa",
+        colorCode: "#bf6d8f",
+        url: "visuals/img/Stella Nora_Bubble Pink_Packshot_Front_Main_0.jpg",
       },
     ],
     priceList: [
@@ -295,13 +295,13 @@ const JSONdata = [
     colors: [
       {
         colorName: "Beige",
-        colorCode: "#9c541f",
-        url: "visuals/img/grona_tryck_card_2.jpg",
+        colorCode: "#b8aa91",
+        url: "visuals/img/Stanley Guider_Desert Dust_Packshot_Front_Main_0.jpg",
       },
       {
-        colorName: "Svart",
-        colorCode: "#131414",
-        url: "visuals/img/grona_tryck_card_2.jpg",
+        colorName: "Blå",
+        colorCode: "#2b579e",
+        url: "visuals/img/Stanley Guider_Mindful Blue_Packshot_Front_Main_0.jpg",
       },
     ],
     priceList: [
