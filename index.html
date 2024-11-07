@@ -149,49 +149,64 @@
 <div class="hero-image" role="img" aria-label="En grupp varmklädda människor i en skog">   
   <div class="hero-slideshow">
       <div class="hero-slide active">
-          <img class="hero-slides" src="visuals/img/gronatryck_image_slide_1.jpg" alt="Hero Image 1">
+          <!-- <img class="hero-slides" src="visuals/img/gronatryck_image_slide_1.jpg" alt="Hero Image 1"> -->
           <!-- Responsiv hero image -->
-         <!-- <picture class="hero-slides">
-            <source
+          <picture class="hero-slides">
+            <!-- WebP Image Source -->
+            <source 
               type="image/webp"
               srcset="
-              /visuals/img/hero slideshow/jpg/webp/gronatryck_pictures_headerimage_01_256.webp   256w,
-              /visuals/img/hero slideshow/jpg/webp/gronatryck_pictures_headerimage_01_512.webp  512w,
-              /visuals/img/hero slideshow/jpg/webp/gronatryck_pictures_headerimage_01_750.webp  750w,
-              /visuals/img/hero slideshow/jpg/webp/gronatryck_pictures_headerimage_01_860.webp   860w,
-              /visuals/img/hero slideshow/jpg/webp/gronatryck_pictures_headerimage_01_1024.webp 1024w,
-              /visuals/img/hero slideshow/jpg/webp/gronatryck_pictures_headerimage_01_2048.webp 2048w
-              "
+                visuals/img/hero_slideshow/webp/gronatryck_pictures_headerimage_01_256.webp 256w, 
+                visuals/img/hero_slideshow/webp/gronatryck_pictures_headerimage_01_512.webp 512w, 
+                visuals/img/hero_slideshow/webp/gronatryck_pictures_headerimage_01_750.webp 750w,
+                visuals/img/hero_slideshow/webp/gronatryck_pictures_headerimage_01_860.webp 860w, 
+                visuals/img/hero_slideshow/webp/gronatryck_pictures_headerimage_01_1024.webp 1024w,
+                visuals/img/hero_slideshow/webp/gronatryck_pictures_headerimage_01_2048.webp 2048w"
               sizes="
-              (min-width: 1200px) 40vw,
-              (min-width: 992px) 45vw,
-              (min-width: 768px) 50vw,
-                  100vw"
-              alt="Gröna tryck webp image"
+                (min-width: 1200px) 40vw,
+                (min-width: 992px) 45vw,
+                (min-width: 768px) 50vw,
+                100vw"
             />
+            
+            <!-- JPG Image Source (for browsers that do not support WebP) -->
             <source
               type="image/jpeg"
               srcset="
-              /visuals/img/hero slideshow/jpg/gronatryck_pictures_headerimage_01_256.jpg  256w,
-              /visuals/img/hero slideshow/jpg/gronatryck_pictures_headerimage_01_512.jpg  512w,
-              /visuals/img/hero slideshow/jpg/gronatryck_pictures_headerimage_01_750.jpg   750w,
-              /visuals/img/hero slideshow/jpg/gronatryck_pictures_headerimage_01_860.jpg   860w,
-              /visuals/img/hero slideshow/jpg/gronatryck_pictures_headerimage_01_1024.jpg 1024w,
-              /visuals/img/hero slideshow/jpg/gronatryck_pictures_headerimage_01_2048.jpg 2048w
-              "
+                visuals/img/hero_slideshow/jpg/gronatryck_pictures_headerimage_01_256.jpg 256w,
+                visuals/img/hero_slideshow/jpg/gronatryck_pictures_headerimage_01_512.jpg 512w,
+                visuals/img/hero_slideshow/jpg/gronatryck_pictures_headerimage_01_750.jpg 750w,
+                visuals/img/hero_slideshow/jpg/gronatryck_pictures_headerimage_01_860.jpg 860w,
+                visuals/img/hero_slideshow/jpg/gronatryck_pictures_headerimage_01_1024.jpg 1024w,
+                visuals/img/hero_slideshow/jpg/gronatryck_pictures_headerimage_01_2048.jpg 2048w"
               sizes="
-              (min-width: 1200px) 40vw,
-              (min-width: 992px) 45vw,
-              (min-width: 768px) 50vw,
-               100vw"
-              alt="Gröna tryck hero image 1 in jpeg"
+                (min-width: 1200px) 40vw,
+                (min-width: 992px) 45vw,
+                (min-width: 768px) 50vw,
+                100vw"
             />
-
-            <img
-              src="visuals/img/hero slideshow/jpg/gronatryck_pictures_headerimage_01_750.jpg"
-              alt="image of gröna tryck photoshoot"
+          
+            <!-- PNG Image Source (for cases where both WebP and JPG are not supported) -->
+            <source
+              type="image/png"
+              srcset="
+                visuals/img/hero_slideshow/png/gronatryck_pictures_headerimage_01_256.png 256w,
+                visuals/img/hero_slideshow/png/gronatryck_pictures_headerimage_01_512.png 512w,
+                visuals/img/hero_slideshow/png/gronatryck_pictures_headerimage_01_750.png 750w,
+                visuals/img/hero_slideshow/png/gronatryck_pictures_headerimage_01_860.png 860w,
+                visuals/img/hero_slideshow/png/gronatryck_pictures_headerimage_01_1024.png 1024w,
+                visuals/img/hero_slideshow/png/gronatryck_pictures_headerimage_01_2048.png 2048w"
+              sizes="
+                (min-width: 1200px) 40vw,
+                (min-width: 992px) 45vw,
+                (min-width: 768px) 50vw,
+                100vw"
             />
-          </picture> -->
+            
+            <!-- Fallback Image (for browsers that do not support <picture>) -->
+            <img class="hero-slides" src="visuals/img/gronatryck_image_slide_1.jpg" alt="Hero Image 1">
+          </picture>
+          
           
           
           
