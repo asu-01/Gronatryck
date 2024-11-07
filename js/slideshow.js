@@ -56,8 +56,8 @@ document.addEventListener("keydown", function (event) {
 // Test which image is being shown in the console
 window.addEventListener('load', () => {
   const picture = document.querySelector('picture');
-  const img = picture.querySelector('img');
-  console.log('Image src: ', img.src); // Logs the final image source being used
+  const source = picture.querySelector('source');
+  console.log('Image src: ', source.srcset);
 });
 
 // ---------------   Popular cards ---------------------- //
