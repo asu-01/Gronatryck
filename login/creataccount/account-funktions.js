@@ -359,7 +359,6 @@ document.addEventListener('DOMContentLoaded', function () {
                 productInfo,
                 status: 'bearbetas'
             });
-            orderNumber++;
             saveOrders(orders);
             clearOrderForm();
         } else {
