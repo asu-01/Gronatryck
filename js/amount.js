@@ -1,6 +1,22 @@
 /* Hämtar Input element */
 const input = document.querySelector(".input-box");
-// console.log(input);
+console.log(input);
+
+const parentContainer = document.querySelector(".order-list");
+
+// // Använder event delegation för att hitta plus-knapp
+// parentContainer.addEventListener("click", function (event) {
+//   if (event.target.classList.contains("plus")) {
+//     console.log("button clicked");
+//   }
+// });
+
+// // Använder event delegation för att hitta minus-knapp
+// parentContainer.addEventListener("click", function (event) {
+//   if (event.target.classList.contains("minus")) {
+//     console.log("button clicked");
+//   }
+// });
 
 /* Hämtar alla knappar */
 const btn = document.querySelectorAll("button");
@@ -12,7 +28,7 @@ const increaseBtn = btn.item(1);
 decreaseBtn.addEventListener("click", decreaseAmount);
 increaseBtn.addEventListener("click", increaseAmount);
 
-// console.log(decreaseBtn, increaseBtn);
+console.log(decreaseBtn, increaseBtn);
 
 /* Funktion för att öka mängd */
 function increaseAmount(e) {

@@ -9,5 +9,11 @@
   width: 50%;
 }
 
-.stanleystella-img-wrapper {
+.video-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 4rem;
+  margin-bottom: 4rem;
 }

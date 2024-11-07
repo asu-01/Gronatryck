@@ -13,8 +13,11 @@ function loadListData() {
   for (product of productListData) {
     const productListContainer = document.querySelector(".order-list");
 
-    const productItem = ` 
-      <div class="order-list-item">
+    let listItem = document.createElement("article");
+    let line = document.createElement("hr");
+    listItem.classList.add("order-list-item");
+
+    const productContent = ` 
           <div class="item-wrapper">
               <div class="item-image ">
                   <img class="round-corner" src="${product.img}" />
@@ -23,7 +26,7 @@ function loadListData() {
                   <h6 class="bold">${product.title}</h6>
                   <p>Färg: ${product.color}</p>
                   <div class="button-quantity">
-                      <button class="minus" aria-label="Decrease">&minus;</button>
+                      <button class="minus" onclick="decreaseAmount()" aria-label="Decrease">&minus;</button>
                       <input
                       type="number"
                       class="input-box"
@@ -32,7 +35,7 @@ function loadListData() {
                       max="100"
                       name="amount"
                       />
-                      <button class="plus" aria-label="Increase">&plus;</button>
+                      <button class="plus" onclick="increaseAmount()" aria-label="Increase">&plus;</button>
                   </div>
                   <!-- <form class="amount">
                       <div class="amount-decrease"><img src="/visuals/icons/gronatryck_icon_minus (1).svg" /></div>
@@ -45,11 +48,13 @@ function loadListData() {
               <button id="${product.id}" class="item-delete" onclick="removeFromList(this.id)">Ta bort</button>
               <p class="bold">${product.price} kr</p>
           </div>
-      </div> 
-      <hr class=""></hr>
       `;
 
-    productListContainer.innerHTML += productItem;
+    listItem.innerHTML = productContent;
+    productListContainer.prepend(listItem);
+    listItem.after(line);
+
+    // productListContainer.innerHTML += productItem;
   }
 }
 
@@ -72,6 +77,8 @@ function addToList() {
   let productImg = document
     .querySelector(".product-img-container img")
     .getAttribute("src");
+
+  console.log(productColor);
 
   // Valda värden samlas ihop till ett objekt
   let product = {
