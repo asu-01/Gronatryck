@@ -552,6 +552,10 @@ a:hover {
   margin-bottom: 1.4rem;
 }
 
+.hidden-card {
+  display: none;
+}
+
 .card-news-icon {
   position: absolute;
   top: 10px;
@@ -1388,6 +1392,16 @@ a:hover {
     font-size: 1rem;
     margin-left: 1rem;
     margin-bottom: 1rem;
+  }
+
+  /* Search bar */
+  .search-bar {
+    top: 8%;
+    left: 0%;
+  }
+  .search-bar form {
+    width: 95%;
+    margin-left: 1rem;
   }
 
   /* News */
