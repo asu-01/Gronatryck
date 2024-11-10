@@ -115,15 +115,28 @@
           </ul>
 
           <div class="nav-icons">
-              <img src="/visuals/icons/gronatryck_icon_search.svg" alt="Öppna sökfunktion">
-              <a href="privat-Login.html"><img src="/visuals/icons/gronatryck_icon_user.svg" alt="Gå till mina sidor"></a>
-              <a href="order-list.html"><img src="/visuals/icons/gronatryck_icon_bag (1).svg" alt="Gå till din beställningslista"></a>
-                <!-- Hamburger menu icon for mobile -->
-              <img class="hamburger-icon" src="visuals/icons/hamburger_menu_icon.svg" alt="Hamburgar meny, tre streck">
-            </div>
+            <img class="search-icon" id="search-icon" src="/visuals/icons/gronatryck_icon_search.svg" alt="Öppna sökfunktion">
+            <a href="privat-Login.html"><img src="/visuals/icons/gronatryck_icon_user.svg" alt="Gå till mina sidor"></a>
+            <a href="order-list.html"><img class="icon-orderbag" src="/visuals/icons/gronatryck_icon_bag (1).svg" alt="Gå till din beställningslista"></a>
+              <!-- Hamburger menu icon for mobile -->
+            <img class="hamburger-icon" src="visuals/icons/hamburger_menu_icon.svg" alt="Hamburgar meny, tre streck">
           </div>
         </div>
-      </nav>
+      </div>
+    </nav>
+
+<!-- Search ikon function -->
+<div class="search-bar" id="search-bar">
+<form id="form" class="round-corner"> 
+<input type="search" id="query" name="q" placeholder="Sök på vårt innehåll..."
+aria-label="Sök igenom innehåll på hemsidan" role="search">
+<button><svg data-name="Lager 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60.81 60.56">
+  <path
+      d="M60.26 57.42 39.84 37c3.28-3.92 5.25-8.95 5.25-14.45C45.1 10.12 34.98 0 22.55 0S0 10.12 0 22.55 10.11 45.1 22.55 45.1c5.62 0 10.77-2.07 14.72-5.48l20.4 20.4c1.72 1.62 4.28-.69 2.6-2.6Zm-37.71-16c-10.41 0-18.87-8.46-18.87-18.87S12.14 3.67 22.55 3.67s18.87 8.47 18.87 18.88-8.46 18.87-18.87 18.87Z"
+      style="fill: #faf7eb" data-name="Lager 5" />
+</svg></button>
+</form>
+</div>
     </header>
     <!--Alla kategorier-->
     <section class="catalogue">
@@ -881,5 +894,6 @@
     </footer>
     <script src="js/dropdown.js"></script>
     <script src="js/script.js"></script>
+    <script src="js/searchbar.js"></script>
   </body>
 </html>
