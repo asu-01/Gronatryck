@@ -68,11 +68,6 @@ function changeColorImg(value) {
     if (productId === product.articleId) {
       for (color of product.colors) {
         if (value === color.colorName) {
-          //   let currentColor = localStorage.getItem("color");
-          //   let colorArray = [];
-          //   colorArray = currentColor ? currentColor : [];
-          //   colorArray.push(value);
-          //   let colorName = localStorage.setItem("color", value);
           productImg.setAttribute("src", color.url);
         }
       }
