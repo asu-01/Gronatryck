@@ -121,7 +121,7 @@
           </ul>
 
           <div class="nav-icons">
-              <img src="/visuals/icons/gronatryck_icon_search.svg" alt="Öppna sökfunktion">
+              <img class="search-icon" id="search-icon" src="/visuals/icons/gronatryck_icon_search.svg" alt="Öppna sökfunktion">
               <a href="privat-Login.html"><img src="/visuals/icons/gronatryck_icon_user.svg" alt="Gå till mina sidor"></a>
               <a href="order-list.html"><img class="icon-orderbag" src="/visuals/icons/gronatryck_icon_bag (1).svg" alt="Gå till din beställningslista"></a>
                 <!-- Hamburger menu icon for mobile -->
@@ -130,54 +130,81 @@
           </div>
         </div>
       </nav>
+
+<!-- Search ikon function -->
+ <div class="search-bar" id="search-bar">
+<form id="form" class="round-corner"> 
+  <input type="search" id="query" name="q" placeholder="Sök på vårt innehåll..."
+  aria-label="Sök igenom innehåll på hemsidan" role="search">
+  <button><svg data-name="Lager 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60.81 60.56">
+    <path
+        d="M60.26 57.42 39.84 37c3.28-3.92 5.25-8.95 5.25-14.45C45.1 10.12 34.98 0 22.55 0S0 10.12 0 22.55 10.11 45.1 22.55 45.1c5.62 0 10.77-2.07 14.72-5.48l20.4 20.4c1.72 1.62 4.28-.69 2.6-2.6Zm-37.71-16c-10.41 0-18.87-8.46-18.87-18.87S12.14 3.67 22.55 3.67s18.87 8.47 18.87 18.88-8.46 18.87-18.87 18.87Z"
+        style="fill: #faf7eb" data-name="Lager 5" />
+</svg></button>
+</form>
+</div>
+
   
    <!-- Hero Section -->
 <div class="hero-image" role="img" aria-label="En grupp varmklädda människor i en skog">   
   <div class="hero-slideshow">
       <div class="hero-slide active">
-          <img class="hero-slides" src="visuals/img/gronatryck_image_slide_1.jpg" alt="Hero Image 1">
+          <!-- <img class="hero-slides" src="visuals/img/gronatryck_image_slide_1.jpg" alt="Hero Image 1"> -->
           <!-- Responsiv hero image -->
-         <!-- <picture class="hero-slides">
-            <source
+          <picture>
+            <!-- WebP image Source -->
+            <source class="hero-slides"
               type="image/webp"
               srcset="
-              /visuals/img/hero slideshow/jpg/webp/gronatryck_pictures_headerimage_01_256.webp   256w,
-              /visuals/img/hero slideshow/jpg/webp/gronatryck_pictures_headerimage_01_512.webp  512w,
-              /visuals/img/hero slideshow/jpg/webp/gronatryck_pictures_headerimage_01_750.webp  750w,
-              /visuals/img/hero slideshow/jpg/webp/gronatryck_pictures_headerimage_01_860.webp   860w,
-              /visuals/img/hero slideshow/jpg/webp/gronatryck_pictures_headerimage_01_1024.webp 1024w,
-              /visuals/img/hero slideshow/jpg/webp/gronatryck_pictures_headerimage_01_2048.webp 2048w
-              "
+                visuals/img/hero_slideshow/webp/gronatryck_pictures_headerimage_01_256.webp 256w, 
+                visuals/img/hero_slideshow/webp/gronatryck_pictures_headerimage_01_512.webp 512w, 
+                visuals/img/hero_slideshow/webp/gronatryck_pictures_headerimage_01_750.webp 750w,
+                visuals/img/hero_slideshow/webp/gronatryck_pictures_headerimage_01_860.webp 860w, 
+                visuals/img/hero_slideshow/webp/gronatryck_pictures_headerimage_01_1024.webp 1024w,
+                visuals/img/hero_slideshow/webp/gronatryck_pictures_headerimage_01_2048.webp 2048w"
               sizes="
+                (min-width: 1200px) 40vw,
+                (min-width: 992px) 45vw,
+                (min-width: 768px) 50vw,
+                100vw"
+            />
+            <source
+            type="image/png"
+            srcset="
+              visuals/img/hero_slideshow/png/gronatryck_pictures_headerimage_01_256.png 256w,
+              visuals/img/hero_slideshow/png/gronatryck_pictures_headerimage_01_512.png 512w,
+              visuals/img/hero_slideshow/png/gronatryck_pictures_headerimage_01_750.png 750w,
+              visuals/img/hero_slideshow/png/gronatryck_pictures_headerimage_01_860.png 860w,
+              visuals/img/hero_slideshow/png/gronatryck_pictures_headerimage_01_1024.png 1024w,
+              visuals/img/hero_slideshow/png/gronatryck_pictures_headerimage_01_2048.png 2048w"
+            sizes="
               (min-width: 1200px) 40vw,
               (min-width: 992px) 45vw,
               (min-width: 768px) 50vw,
-                  100vw"
-              alt="Gröna tryck webp image"
-            />
+              100vw"
+          />
+    
             <source
               type="image/jpeg"
               srcset="
-              /visuals/img/hero slideshow/jpg/gronatryck_pictures_headerimage_01_256.jpg  256w,
-              /visuals/img/hero slideshow/jpg/gronatryck_pictures_headerimage_01_512.jpg  512w,
-              /visuals/img/hero slideshow/jpg/gronatryck_pictures_headerimage_01_750.jpg   750w,
-              /visuals/img/hero slideshow/jpg/gronatryck_pictures_headerimage_01_860.jpg   860w,
-              /visuals/img/hero slideshow/jpg/gronatryck_pictures_headerimage_01_1024.jpg 1024w,
-              /visuals/img/hero slideshow/jpg/gronatryck_pictures_headerimage_01_2048.jpg 2048w
-              "
+                visuals/img/hero_slideshow/jpg/gronatryck_pictures_headerimage_01_256.jpg 256w,
+                visuals/img/hero_slideshow/jpg/gronatryck_pictures_headerimage_01_512.jpg 512w,
+                visuals/img/hero_slideshow/jpg/gronatryck_pictures_headerimage_01_750.jpg 750w,
+                visuals/img/hero_slideshow/jpg/gronatryck_pictures_headerimage_01_860.jpg 860w,
+                visuals/img/hero_slideshow/jpg/gronatryck_pictures_headerimage_01_1024.jpg 1024w,
+                visuals/img/hero_slideshow/jpg/gronatryck_pictures_headerimage_01_2048.jpg 2048w"
               sizes="
-              (min-width: 1200px) 40vw,
-              (min-width: 992px) 45vw,
-              (min-width: 768px) 50vw,
-               100vw"
-              alt="Gröna tryck hero image 1 in jpeg"
+                (min-width: 1200px) 40vw,
+                (min-width: 992px) 45vw,
+                (min-width: 768px) 50vw,
+                100vw"
             />
+          
 
-            <img
-              src="visuals/img/hero slideshow/jpg/gronatryck_pictures_headerimage_01_750.jpg"
-              alt="image of gröna tryck photoshoot"
-            />
-          </picture> -->
+            <!-- Fallback image (for browsers that do not support <picture>) -->
+            <img class="hero-slides" src="visuals/img/gronatryck_image_slide_1.jpg" alt="Hero Image 1">
+          </picture>
+          
           
           
           
@@ -634,5 +661,6 @@
     <script src="js/dropdown.js"></script>
     <script src="js/animation.js"></script>
     <script src="js/slideshow.js"></script>
+    <script src="js/searchbar.js"></script>
   </body>
 </html>
