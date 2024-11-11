@@ -36,22 +36,23 @@ const JSONdata = [
         price: 100,
       },
       {
-        minAmount: 50,
+        minAmount: 49,
         maxAmount: 99,
         price: 200,
       },
       {
-        minAmount: 100,
+        minAmount: 99,
         maxAmount: 249,
         price: 300,
       },
       {
-        minAmount: 250,
+        minAmount: 249,
         maxAmount: 499,
         price: 400,
       },
       {
-        minAmount: 500,
+        minAmount: 499,
+        maxAmount: 1000,
         price: 500,
       },
     ],
@@ -81,22 +82,22 @@ const JSONdata = [
         price: 100,
       },
       {
-        minAmount: 50,
+        minAmount: 49,
         maxAmount: 99,
         price: 200,
       },
       {
-        minAmount: 100,
+        minAmount: 99,
         maxAmount: 249,
         price: 300,
       },
       {
-        minAmount: 250,
+        minAmount: 249,
         maxAmount: 499,
         price: 400,
       },
       {
-        minAmount: 500,
+        minAmount: 499,
         maxAmount: 1000,
         price: 500,
       },
@@ -178,22 +179,22 @@ const JSONdata = [
         price: 100,
       },
       {
-        minAmount: 50,
+        minAmount: 49,
         maxAmount: 99,
         price: 200,
       },
       {
-        minAmount: 100,
+        minAmount: 99,
         maxAmount: 249,
         price: 300,
       },
       {
-        minAmount: 250,
+        minAmount: 249,
         maxAmount: 499,
         price: 400,
       },
       {
-        minAmount: 500,
+        minAmount: 499,
         maxAmount: 1000,
         price: 500,
       },
@@ -219,22 +220,22 @@ const JSONdata = [
         price: 100,
       },
       {
-        minAmount: 50,
+        minAmount: 49,
         maxAmount: 99,
         price: 200,
       },
       {
-        minAmount: 100,
+        minAmount: 99,
         maxAmount: 249,
         price: 300,
       },
       {
-        minAmount: 250,
+        minAmount: 249,
         maxAmount: 499,
         price: 400,
       },
       {
-        minAmount: 500,
+        minAmount: 499,
         maxAmount: 1000,
         price: 500,
       },
@@ -447,6 +448,8 @@ const parsedJSON = JSON.parse(retrievedData);
 
 // Eventlyssnare för input i mängdfunktion
 const amountInput = document.querySelector(".input-box");
+console.log(amountInput);
+
 amountInput.addEventListener("input", getPrice);
 
 // Eventlyssnare för +/- knappar i mängdfunktion
@@ -458,7 +461,9 @@ amountBtn.forEach((btn) => {
 });
 
 // Hämtar rätt pris beroende på antal produkter (WIP)
-function getPrice() {
+function getPrice(e) {
+  console.log(e);
+
   // Loopar igenom alla produkter i objekt och loopar igenom pris arrayen.
   parsedJSON.forEach((product) => {
     for (const priceItem of product.priceList) {

@@ -11,9 +11,11 @@ increaseBtn.addEventListener("click", increaseAmount);
 
 /* Function to increase the quantity */
 function increaseAmount() {
-  let amount = parseInt(input.value, 10) || 0; 
-  if (amount < 1000) {  // Only increase if below the max value
+  let amount = parseInt(input.value, 10) || 0;
+  if (amount < 1000) {
+    // Only increase if below the max value
     amount++;
+    console.log(amount);
     input.value = amount;
   }
 }
@@ -21,8 +23,11 @@ function increaseAmount() {
 /* Function to decrease the quantity */
 function decreaseAmount() {
   let amount = parseInt(input.value, 10) || 0; // Convert input value to a number, default to 0 if NaN
-  if (amount > 10) {  // Only decrease if above the min value
+
+  if (amount > 10) {
+    // Only decrease if above the min value
     amount--;
+    console.log(amount);
     input.value = amount;
   }
 }
