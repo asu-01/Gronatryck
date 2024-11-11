@@ -303,6 +303,11 @@ a:hover {
   z-index: 1;
 }
 
+/* Added extra width to Om oss dropdown */
+.nav-links > li:nth-child(3) .dropdown-content {
+  padding: 2rem 4rem 2rem 2rem;
+}
+
 .dropdown-links {
   width: 12rem;
 }
