@@ -18,51 +18,44 @@ function loadListData() {
     listItem.classList.add("order-list-item");
 
     const productContent = ` 
-          <div class="item-wrapper">
-              <div class="item-image ">
-                  <img class="round-corner" src="${product.img}" />
-              </div>
-              <div class="item-group-1">
-                  <h6 class="bold">${product.title}</h6>
-                  <p>Färg: ${product.color}</p>
-                  <div class="button-quantity">
-                      <button class="minus" onclick="decreaseAmount()" aria-label="Decrease">&minus;</button>
-                      <input
-                      type="number"
-                      class="input-box"
-                      value="${product.amount}"
-                      min="10"
-                      max="100"
-                      name="amount"
-                      />
-                      <button class="plus" onclick="increaseAmount()" aria-label="Increase">&plus;</button>
-                  </div>
-                  <!-- <form class="amount">
-                      <div class="amount-decrease"><img src="/visuals/icons/gronatryck_icon_minus (1).svg" /></div>
-                      <input type="text" class="amount-input" value="0"></input>
-                      <div class="amount-increase"><img src="/visuals/icons/gronatryck_icon_plus (1).svg" /></div>
-                  </form> -->
-              </div>
-          </div>
-          <div class="item-group-2">
-              <button id="${product.id}" class="item-delete" onclick="removeFromList(this.id)">Ta bort</button>
-              <p class="bold">${product.price} kr</p>
-          </div>
-      `;
-
+        <div class="item-wrapper">
+            <div class="item-image ">
+                <img class="round-corner" src="${product.img}" />
+            </div>
+            <div class="item-group-1">
+                <h6 class="bold">${product.title}</h6>
+                <p>Färg: ${product.color}</p> <!-- Ensure product.color reflects the chosen color -->
+                <div class="button-quantity">
+                    <button class="minus" onclick="decreaseAmount()" aria-label="Decrease">&minus;</button>
+                    <input
+                    type="number"
+                    class="input-box"
+                    value="${product.amount}"
+                    min="10"
+                    max="100"
+                    name="amount"
+                    />
+                    <button class="plus" onclick="increaseAmount()" aria-label="Increase">&plus;</button>
+                </div>
+            </div>
+        </div>
+        <div class="item-group-2">
+            <button id="${product.id}" class="item-delete" onclick="removeFromList(this.id)">Ta bort</button>
+            <p class="bold">${product.price} kr</p>
+        </div>
+    `;
     listItem.innerHTML = productContent;
     productListContainer.prepend(listItem);
     listItem.after(line);
+}
 
-    // productListContainer.innerHTML += productItem;
-  }
 }
 
 // Spara ner produkter som är tillagda i beställningslista i localstorage (WIP)
 function addToList() {
   let productId = new URLSearchParams(window.location.search).get("id");
-  //   let productColor = localStorage.getItem("color");
-  let productColor = document.querySelector(".dot-color").value;
+  let productColor = localStorage.getItem("selectedColor"); // Retrieve the selected color
+
 
   // Hämtar alla produktval som användaren matat in på produktsidan
   let productAmount = amountInput.value;
@@ -85,7 +78,7 @@ function addToList() {
     id: productId,
     img: productImg,
     title: productTitle,
-    color: productColor,
+    color: productColor || "Unknown Color",
     amount: productAmount,
     price: productPrice,
   };
