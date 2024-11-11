@@ -1,52 +1,3 @@
-/* Dropdown sortiment */
-// const dropdownBtn = document.getElementById("dropdownContainer");
-// const dropdownList = document.getElementById("dropdownList");
-
-// dropdownBtn.addEventListener("mouseenter", () => {
-//   dropdownList.style.display = "block";
-// });
-
-// dropdownBtn.addEventListener("mouseleave", () => {
-//   dropdownList.style.display = "none";
-// });
-
-// ---------- toggle functionality for desktop navigation --------------------//
-// const dropdownBtn = document.getElementsByClassName("dropdown-btn");
-// const dropdownList = document.getElementsByClassName("dropdown");
-
-// console.log(dropdownList);
-// console.log(dropdownBtn);
-
-// /* Function to determine if the screen is mobile */
-// function isMobile() {
-//   return window.innerWidth <= 768;
-// }
-
-// /* Add event listeners for toggling dropdown menus */
-// for (let i = 0; i < dropdownBtn.length; i++) {
-//   dropdownBtn[i].addEventListener("click", () => {
-//     if (!isMobile()) {
-//       // Check if not on mobile
-//       dropdownList[i].classList.toggle("open");
-//     }
-//   });
-
-//   dropdownList[i].addEventListener("click", () => {
-//     dropdownList[i].classList.remove("open");
-//   });
-// }
-
-// /* Dropdown for subcategory */
-// const expandBtn = document.getElementById("expand");
-// const subcategory = document.getElementById("subcategory");
-
-// expandBtn.addEventListener("click", (e) => {
-//   if (!isMobile()) {
-//     // Check if not on mobile
-//     subcategory.classList.toggle("open");
-//   }
-// });
-
 // ---------  Hamburger icon and navigation links ------ //
  
 const hamburgerIcon = document.querySelector(".hamburger-icon");
@@ -143,14 +94,18 @@ document.addEventListener("click", (event) => {
 
 
 
-// ---------   toggle functionality for mobile footer --------------------//
+// ---------   Mobile footer menu --------------------//
 
 function toggleLinks(linkId) {
   const links = document.getElementById(linkId);
+  const arrow = links.previousElementSibling.querySelector('.arrow'); // Get the arrow icon
+
   if (links.style.display === "none" || links.style.display === "") {
     links.style.display = "flex"; // Show the links
+    arrow.classList.add('rotated'); // Rotate the arrow
   } else {
     links.style.display = "none"; // Hide the links
+    arrow.classList.remove('rotated'); // Reset the rotation
   }
 }
 

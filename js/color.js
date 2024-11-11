@@ -68,11 +68,6 @@ function changeColorImg(value) {
     if (productId === product.articleId) {
       for (color of product.colors) {
         if (value === color.colorName) {
-          //   let currentColor = localStorage.getItem("color");
-          //   let colorArray = [];
-          //   colorArray = currentColor ? currentColor : [];
-          //   colorArray.push(value);
-          //   let colorName = localStorage.setItem("color", value);
           productImg.setAttribute("src", color.url);
         }
       }
@@ -104,4 +99,24 @@ function active(e) {
     btn.focus();
   });
   //   e.target.classList.add("dot-active");
+}
+
+// For adding-product.js/ selected color for alertbox 
+function changeColorImg(value) {
+  const retrievedData = localStorage.getItem("json-products");
+  const parsedJSON = JSON.parse(retrievedData);
+  let productId = new URLSearchParams(window.location.search).get("id");
+
+  for (const product of parsedJSON) {
+    if (productId === product.articleId) {
+      for (const color of product.colors) {
+        if (value === color.colorName) {
+          productImg.setAttribute("src", color.url);
+
+          // Save the selected color to localStorage without calling showAlertBox
+          localStorage.setItem("selectedColor", color.colorName);
+        }
+      }
+    }
+  }
 }

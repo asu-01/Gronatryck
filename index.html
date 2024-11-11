@@ -3,8 +3,6 @@
     h20alsun Alva Sundberg
     h22oliha Olivia Hansson
     h22harwi Harvi Sami William
-    
-  
     ----->
 
 <!DOCTYPE html>
@@ -13,7 +11,17 @@
     <meta charset="UTF-8" />
     <meta name="author" content="Alva Sundberg och Olivia Hansson" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Project Gronatryck</title>
+    <title>Grönatryck - Din miljömedvetna profilbutik</title>
+    <meta name="description" content="Handla miljö- & rättvisemärkta profilkläder och skräddarsy de med eget screentryck eller broderi" />
+    <!-- OpenGraph Linkedin-->
+     <meta property='og:locale:alternate' content="sv_SE" />
+     <meta property='og:type' content="website"/>
+     <meta property='og:title' content="Grönatryck - Din miljömedvetna profilbutik"/>
+     <meta property='og:image' content=""/>
+     <meta property='og:image:alt' content=""/>
+     <meta property='og:description' content="Handla miljö- & rättvisemärkta profilkläder och skräddarsy de med eget screentryck eller broderi"/>
+     <meta property='og:url' content=""/>
+    <!-- Stylesheets-->
     <link rel="stylesheet" href="css/custom_bootstrap.css" />
     <!-- Länkar till Stoltz typsnitt från Adobe fonts -->
     <link rel="stylesheet" href="https://use.typekit.net/zlf3fvp.css">
@@ -26,7 +34,7 @@
       <!--Navigation-->
       <nav class="nav">
         <div class="nav-container">
-          <a href="index.html"><img class="nav-logo" src="/visuals/logo/gronatryck_horizontal_green_rgb.svg" title="Logotyp för grönatryck" alt="En cirkelformad logotyp placerad brevid texten grönatryck och som innehåller bokstaven G samt texturen av trädringar"></a>
+          <a href="index.html"><img class="nav-logo" src="/visuals/logo/gronatryck_horizontal_green_rgb.svg" title="Logotyp för grönatryck" alt="Logotyp för grönatryck" alt="En cirkelformad logotyp som innehåller bokstaven G samt texturen av trädringar, placerad brevid texten grönatryck"></a>
           <ul class="nav-links">
                 <li>
                   <a href="index.html">Hem</a>
@@ -144,15 +152,18 @@
 </form>
 </div>
 
+<!-- Scroll to top button -->
+<button class="scroll-to-top" onclick="topFunction()" id="scroll-to-top" title="Scroll to top" aria-label="Scroll to top"><img src="visuals/icons/arrow_icon_white.svg" alt="Arrow bubble button"></button> 
+
   
    <!-- Hero Section -->
-<div class="hero-image" role="img" aria-label="En grupp varmklädda människor i en skog">   
+<div class="hero-image" role="img">   
   <div class="hero-slideshow">
       <div class="hero-slide active">
           <!-- <img class="hero-slides" src="visuals/img/gronatryck_image_slide_1.jpg" alt="Hero Image 1"> -->
           <!-- Responsiv hero image -->
           <picture>
-            <!-- WebP image Source -->
+            <!-- webp image source -->
             <source class="hero-slides"
               type="image/webp"
               srcset="
@@ -168,6 +179,7 @@
                 (min-width: 768px) 50vw,
                 100vw"
             />
+            <!-- png image source -->
             <source
             type="image/png"
             srcset="
@@ -183,7 +195,7 @@
               (min-width: 768px) 50vw,
               100vw"
           />
-    
+    <!-- jpg image source -->
             <source
               type="image/jpeg"
               srcset="
@@ -202,11 +214,8 @@
           
 
             <!-- Fallback image (for browsers that do not support <picture>) -->
-            <img class="hero-slides" src="visuals/img/gronatryck_image_slide_1.jpg" alt="Hero Image 1">
+            <img class="hero-slides" src="visuals/img/gronatryck_image_slide_1.jpg" alt="En grupp människor i en skog, klädda i varm kläder från grönatryck">
           </picture>
-          
-          
-          
           
           
           <div class="slide-text">
@@ -216,7 +225,7 @@
             </div>
       </div>
       <div class="hero-slide">
-          <img class="hero-slides" src="visuals/img/gronatryck_image_slide_2.jpg" alt="Hero Image 2">
+          <img class="hero-slides" src="visuals/img/gronatryck_image_slide_2.jpg" alt="En grupp människor som har på sig grönatryck tröjor, är ute i naturen och har kul">
           <div class="slide-text">
               <h1 class="text-color-offwhite">Vår officiella partner Stanley Stella</h1>
               <p class="text-color-offwhite">Deras utbud finns i vårt sortiment!</p>
@@ -224,7 +233,7 @@
           </div>
       </div>
       <div class="hero-slide">
-          <img class="hero-slides" src="visuals/img/gronatryck_image_slide_3.jpg" alt="Hero Image 3">
+          <img class="hero-slides" src="visuals/img/gronatryck_image_slide_3.jpg" alt="Ett varmtonat landskap med träsk och skog">
           <div class="slide-text">
               <h1 class="text-color-offwhite">Vi bakom Gröna tryck</h1>
               <p class="text-color-offwhite">Vi erbjuder ett brett utbud av hållbara kläder som är både stiliga och miljövänliga. Läs mer om oss och hur vi startade resan mot en hållbar framtid!</p>
@@ -298,7 +307,6 @@
           <!-- <div class="card-wrapper"> -->
           <article class="card">
             <img src="visuals/img/grona_tryck_card_1.jpg" class="card-img-top" alt="...">
-            <img class="card-news-icon" src="/visuals/icons/product_news_icon.svg" alt="Klädnyhet!">
             <div class="card-body">
               <p class="text-color-dark">T-shirt</p>
               <h5 class="text-color-primary">Classic bomull</h5>
@@ -364,7 +372,6 @@
         <div class="card-container card-container--popular">
           <div class="card">
             <img src="visuals/img/grona_tryck_card_4.jpg" class="card-img-top" alt="...">
-            <img class="card-news-icon" src="/visuals/icons/product_news_icon.svg" alt="Klädnyhet!">
             <div class="card-body">
               <p class="text-color-dark">Jackor & västar </p>
               <h5 class="text-color-primary">Liner desert</h5>
@@ -582,7 +589,7 @@
       <div class="footer-container">
         <div class="footer-content">
           <!-- Logo -->
-          <img class="footer-logo" src="visuals/logo/gronatryck_horizontal_offwhite_rgb.svg" alt="grona tryck logotype">
+          <img class="footer-logo" src="visuals/logo/gronatryck_horizontal_offwhite_rgb.svg" alt="Grönatryck Logotyp">
           <div class="footer-icons-container footer-icons-container--hallbart">
             <img class="footer-icons" src="visuals/icons/gronatryck_icon_organicproduction.svg" alt="Ikon för organisk produktion">
             <img class="footer-icons" src="visuals/icons/gronatryck_icon_recycledmaterial.svg" alt="Ikon för återvinnet material ">
@@ -592,7 +599,7 @@
         </div>
     
         <div class="footer-content">
-          <p class="footer-links-heading">Kontakt <button class="toggle-links" onclick="toggleLinks('kontakt-links')"><svg width="15" height="10" viewBox="0 0 15 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <p class="footer-links-heading">Kontakt <button class="toggle-links" onclick="toggleLinks('kontakt-links')"><svg class="arrow" width="15" height="10" viewBox="0 0 15 10" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M1.78846 1.5L7.89423 9L14 1.5" stroke="#faf7eb" stroke-width="2" stroke-linecap="round"
                 stroke-linejoin="round" />
         </svg></button></p>
@@ -612,7 +619,7 @@
         </div>
     
         <div class="footer-content">
-          <p class="footer-links-heading">Läs mer <button class="toggle-links" onclick="toggleLinks('las-mer-links')"><svg width="15" height="10" viewBox="0 0 15 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <p class="footer-links-heading">Läs mer <button class="toggle-links" onclick="toggleLinks('las-mer-links')"><svg class="arrow" width="15" height="10" viewBox="0 0 15 10" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M1.78846 1.5L7.89423 9L14 1.5" stroke="#faf7eb" stroke-width="2" stroke-linecap="round"
                 stroke-linejoin="round" />
         </svg></button></p>
@@ -626,7 +633,7 @@
         </div>
     
         <div class="footer-content">
-          <p class="footer-links-heading">Snabba Länkar <button class="toggle-links" onclick="toggleLinks('snabba-lankar-links')"><svg width="15" height="10" viewBox="0 0 15 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <p class="footer-links-heading">Snabba Länkar <button class="toggle-links" onclick="toggleLinks('snabba-lankar-links')"><svg class="arrow" width="15" height="10" viewBox="0 0 15 10" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M1.78846 1.5L7.89423 9L14 1.5" stroke="#faf7eb" stroke-width="2" stroke-linecap="round"
                 stroke-linejoin="round" />
         </svg></button></p>
@@ -662,5 +669,6 @@
     <script src="js/animation.js"></script>
     <script src="js/slideshow.js"></script>
     <script src="js/searchbar.js"></script>
+    <script src="js/scroll-to-top.js"></script>
   </body>
 </html>

@@ -260,6 +260,30 @@ a:hover {
   display: none;
 }
 
+/* Scroll to top button */
+
+.scroll-to-top {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  width: 2.5rem;
+  height: 2.5rem;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 99;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--primary-new);
+}
+
+.scroll-to-top img {
+  width: 2vh;
+  transform: rotate(180deg);
+}
+
 /* Navbar Dropdown */
 
 .dropdown {
@@ -550,6 +574,10 @@ a:hover {
 .card-slider-heading {
   margin-left: 4rem;
   margin-bottom: 1.4rem;
+}
+
+.hidden-card {
+  display: none;
 }
 
 .card-news-icon {
@@ -1388,6 +1416,16 @@ a:hover {
     font-size: 1rem;
     margin-left: 1rem;
     margin-bottom: 1rem;
+  }
+
+  /* Search bar */
+  .search-bar {
+    top: 8%;
+    left: 0%;
+  }
+  .search-bar form {
+    width: 95%;
+    margin-left: 1rem;
   }
 
   /* News */

@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="author" content="Alva Sundberg och Olivia Hansson" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Project Gronatryck</title>
+    <title>Grönatryck - Kontakta oss</title>
     <link rel="stylesheet" href="css/custom_bootstrap.css" />
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/contactus.css" />
@@ -18,7 +18,7 @@
       <!--Navigation-->
       <nav class="nav">
         <div class="nav-container">
-          <a href="index.html"><img class="nav-logo" src="/visuals/logo/gronatryck_horizontal_green_rgb.svg" title="Logotyp för grönatryck" alt="En cirkelformad logotyp placerad brevid texten grönatryck och som innehåller bokstaven G samt texturen av trädringar"></a>
+          <a href="index.html"><img class="nav-logo" src="/visuals/logo/gronatryck_horizontal_green_rgb.svg" title="Logotyp för grönatryck" alt="Logotyp för grönatryck" alt="En cirkelformad logotyp som innehåller bokstaven G samt texturen av trädringar, placerad brevid texten grönatryck"></a>
           <ul class="nav-links">
                 <li>
                   <a href="index.html">Hem</a>
@@ -114,15 +114,28 @@
           </ul>
 
           <div class="nav-icons">
-              <img src="/visuals/icons/gronatryck_icon_search.svg" alt="Öppna sökfunktion">
-              <a href="privat-Login.html"><img src="/visuals/icons/gronatryck_icon_user.svg" alt="Gå till mina sidor"></a>
-              <a href="order-list.html"><img src="/visuals/icons/gronatryck_icon_bag (1).svg" alt="Gå till din beställningslista"></a>
-                <!-- Hamburger menu icon for mobile -->
-              <img class="hamburger-icon" src="visuals/icons/hamburger_menu_icon.svg" alt="Hamburgar meny, tre streck">
-            </div>
+            <img class="search-icon" id="search-icon" src="/visuals/icons/gronatryck_icon_search.svg" alt="Öppna sökfunktion">
+            <a href="privat-Login.html"><img src="/visuals/icons/gronatryck_icon_user.svg" alt="Gå till mina sidor"></a>
+            <a href="order-list.html"><img class="icon-orderbag" src="/visuals/icons/gronatryck_icon_bag (1).svg" alt="Gå till din beställningslista"></a>
+              <!-- Hamburger menu icon for mobile -->
+            <img class="hamburger-icon" src="visuals/icons/hamburger_menu_icon.svg" alt="Hamburgar meny, tre streck">
+          </div>
           </div>
         </div>
       </nav>
+      <!-- Search ikon function -->
+ <div class="search-bar" id="search-bar">
+  <form id="form" class="round-corner"> 
+    <input type="search" id="query" name="q" placeholder="Sök på vårt innehåll..."
+    aria-label="Sök igenom innehåll på hemsidan" role="search">
+    <button><svg data-name="Lager 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60.81 60.56">
+      <path
+          d="M60.26 57.42 39.84 37c3.28-3.92 5.25-8.95 5.25-14.45C45.1 10.12 34.98 0 22.55 0S0 10.12 0 22.55 10.11 45.1 22.55 45.1c5.62 0 10.77-2.07 14.72-5.48l20.4 20.4c1.72 1.62 4.28-.69 2.6-2.6Zm-37.71-16c-10.41 0-18.87-8.46-18.87-18.87S12.14 3.67 22.55 3.67s18.87 8.47 18.87 18.88-8.46 18.87-18.87 18.87Z"
+          style="fill: #faf7eb" data-name="Lager 5" />
+  </svg></button>
+  </form>
+  </div>
+
     </header>
 
 <section class="container">
@@ -162,12 +175,12 @@
       </div>
 
       <div class="contactus-img">
-        <img src="visuals/img/contactus/gronatryck_pictures_contact-us.jpg" alt="two people modelling clothes for Gröna tryck">
+        <img src="visuals/img/contactus/gronatryck_pictures_contact-us.jpg" title="Exempel på Grönatrycks produkter" alt="Två personer som modellerar kläder för Gröna tryck">
       </div>
     </div>
   </div>
 </section>
-<div class="swirl-pattern swirl-pattern--rotate"></div>
+<div class="swirl-pattern swirl-pattern--rotate" alt=""></div>
 
 <section class="container">
   <div class="contactus-content">
@@ -204,7 +217,7 @@
       
       <label>Ladda upp ditt tryck här</label>
       <div class="upload-box-container round-corner">
-          <img src="visuals/icons/gronatryck_upload_icon.svg" alt="upload icon">
+          <img src="visuals/icons/gronatryck_upload_icon.svg" alt="Uppladdningsikon">
           <p class="text-color-dark-2">Droppa dina filer här eller <a href="">ladda upp</a></p>
           <p class="text-color-primary">Tillåtna filformat: jpg, jpeg, eps, cdr, ai, pdf & png</p>
       </div>
@@ -215,7 +228,7 @@
 </div>
 
 </section>
-<div class="swirl-pattern"></div>
+<div class="swirl-pattern" alt=""></div>
 
 
     <!-----------Footer ----------->
@@ -226,7 +239,7 @@
           <img
             class="footer-logo"
             src="visuals/logo/gronatryck_horizontal_offwhite_rgb.svg"
-            alt="grona tryck logotype"
+            alt="Grönatryck Logotyp"
           />
           <div class="footer-icons-container footer-icons-container--hallbart">
             <img
@@ -405,5 +418,6 @@
     </footer>
     <script src="js/dropdown.js"></script>
     <script src="js/sendform.js"></script>
+    <script src="js/searchbar.js"></script>
   </body>
 </html>

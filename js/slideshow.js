@@ -60,7 +60,7 @@ window.addEventListener('load', () => {
   console.log('Image src: ', source.srcset);
 });
 
-// ---------------   Popular cards ---------------------- //
+// ---------------   Popular cards slider ---------------------- //
 // let cardIndex = 1; // Start with the first card
 // showCards(cardIndex, "card-wrapper"); // Display the first set of visible cards
 
@@ -95,4 +95,8 @@ window.addEventListener('load', () => {
 //   }
 // }
 
-// ---------------   Popular cards ---------------------- //
+
+
+
+
+
