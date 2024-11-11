@@ -174,9 +174,9 @@
                 visuals/img/hero_slideshow/webp/gronatryck_pictures_headerimage_01_1024.webp 1024w,
                 visuals/img/hero_slideshow/webp/gronatryck_pictures_headerimage_01_2048.webp 2048w"
               sizes="
-                (min-width: 1200px) 40vw,
-                (min-width: 992px) 45vw,
-                (min-width: 768px) 50vw,
+                (max-width: 1200px) 40vw,
+                (max-width: 992px) 45vw,
+                (max-width: 768px) 50vw,
                 100vw"
             />
             <!-- png image source -->
@@ -190,14 +190,14 @@
               visuals/img/hero_slideshow/png/gronatryck_pictures_headerimage_01_1024.png 1024w,
               visuals/img/hero_slideshow/png/gronatryck_pictures_headerimage_01_2048.png 2048w"
             sizes="
-              (min-width: 1200px) 40vw,
-              (min-width: 992px) 45vw,
-              (min-width: 768px) 50vw,
+              (max-width: 1200px) 40vw,
+              (max-width: 992px) 45vw,
+              (max-width: 768px) 50vw,
               100vw"
           />
-    <!-- jpg image source -->
+        <!-- jpg image source -->
             <source
-              type="image/jpeg"
+              type="image/jpg"
               srcset="
                 visuals/img/hero_slideshow/jpg/gronatryck_pictures_headerimage_01_256.jpg 256w,
                 visuals/img/hero_slideshow/jpg/gronatryck_pictures_headerimage_01_512.jpg 512w,
@@ -206,9 +206,9 @@
                 visuals/img/hero_slideshow/jpg/gronatryck_pictures_headerimage_01_1024.jpg 1024w,
                 visuals/img/hero_slideshow/jpg/gronatryck_pictures_headerimage_01_2048.jpg 2048w"
               sizes="
-                (min-width: 1200px) 40vw,
-                (min-width: 992px) 45vw,
-                (min-width: 768px) 50vw,
+                (max-width: 1200px) 40vw,
+                (max-width: 992px) 45vw,
+                (max-width: 768px) 50vw,
                 100vw"
             />
           
@@ -300,21 +300,23 @@
       <div class="card-slider-container">
         <h3 class="text-color-dark-2 card-slider-heading text--bold">Populära produkter</h3>
       <div class="card-slider">
+         <!-- Left arrow button -->
         <button class="arrow arrow--left" aria-label="Scroll left" onclick="changeCardSlide(-1)">
           <img class="arrow--medium" src="visuals/icons/arrow_icon.svg" alt="Scroll left">
         </button>
         <div class="card-container card-container--popular">
+              <!-- Cards will be dynamically added here -->
           <!-- <div class="card-wrapper"> -->
-          <article class="card">
+          <!-- <article class="card" id="1000">
             <img src="visuals/img/grona_tryck_card_1.jpg" class="card-img-top" alt="...">
             <div class="card-body">
               <p class="text-color-dark">T-shirt</p>
               <h5 class="text-color-primary">Classic bomull</h5>
               <div class="card-dot-container">
-                <input class="dot dot-color-1" type="button" aria-label="Färg 1"></input>
-                <input class="dot dot-color-2" type="button" aria-label="Färg 2"></input>
-                <input class="dot dot-color-3" type="button" aria-label="Färg 3"></input>
+    
+              
                 <p class="text-color-dark text-xs">+5 färger</p>
+          
                 </div>
                 <div class="card-price-container">
                   <p class="text-color-medium text-sm">minimum 25 st.</p>
@@ -333,9 +335,7 @@
               <p class="text-color-dark">T-shirt</p>
               <h5 class="text-color-primary">Crafter heritage</h5>
               <div class="card-dot-container">
-                <input class="dot dot-color-1" type="button" aria-label="Färg 1"></input>
-                <input class="dot dot-color-2" type="button" aria-label="Färg 2"></input>
-                <input class="dot dot-color-3" type="button" aria-label="Färg 3"></input>
+               
                 <p class="text-color-dark text-xs">+5 färger</p>
                 </div>
                 <div class="card-price-container">
@@ -355,9 +355,7 @@
               <p class="text-color-dark">Sweatshirts & huvtröjor</p>
               <h5 class="text-color-primary">Knoxer natural</h5>
               <div class="card-dot-container">
-                <input class="dot dot-color-1" type="button" aria-label="Färg 1"></input>
-                <input class="dot dot-color-2" type="button" aria-label="Färg 2"></input>
-                <input class="dot dot-color-3" type="button" aria-label="Färg 3"></input>
+                
                 <p class="text-color-dark text-xs">+5 färger</p>
                 </div>
                 <div class="card-price-container">
@@ -376,9 +374,7 @@
               <p class="text-color-dark">Jackor & västar </p>
               <h5 class="text-color-primary">Liner desert</h5>
               <div class="card-dot-container">
-                <input class="dot dot-color-1" type="button" aria-label="Färg 1"></input>
-                <input class="dot dot-color-2" type="button" aria-label="Färg 2"></input>
-                <input class="dot dot-color-3" type="button" aria-label="Färg 3"></input>
+                
                 <p class="text-color-dark text-xs">+5 färger</p>
                 </div>
                 <div class="card-price-container">
@@ -387,100 +383,12 @@
                 </div>
             </div>
           </div>
-         </div>
-
-       
-      
-        <!-- four extra cards for slideshow -->
-        <!-- <div class="card-container card-container--popular">
-          <div class="card">
-            <img src="visuals/img/grona_tryck_card_5.jpg" class="card-img-top" alt="...">
-    <img class="card-news-icon" src="/visuals/icons/product_news_icon.svg" alt="Klädnyhet!"> 
-            <div class="card-body">
-              <p class="text-color-dark">Jackor & västar</p>
-              <h5 class="text-color-primary">Wind bomber</h5>
-              <div class="card-dot-container">
-                <button class="dot dot-color-1" type="button" aria-label="Färg 1"></button>
-                <button class="dot dot-color-2" type="button" aria-label="Färg 2"></button>
-                <button class="dot dot-color-3" type="button" aria-label="Färg 3"></button>
-                <p class="text-color-dark text-xs">+5 färger</p>
-                </div>
-                <div class="card-price-container">
-                  <p class="text-color-medium text-sm">minimum 25 st.</p>
-                  <p class="text-color-dark text-sm">från 410 kr/st</p>
-                </div>
-            </div>
-          </div>
-         </div>
-      
-        <div class="card-container card-container--popular">
-          <div class="card" >
-            <img src="visuals/img/grona_tryck_card_6.jpg" class="card-img-top" alt="...">
-            <img class="card-news-icon" src="/visuals/icons/product_news_icon.svg" alt="Klädnyhet!"> 
-            <div class="card-body">
-              <p class="text-color-dark">Sweatshirts & huvtröjor</p>
-              <h5 class="text-color-primary">Basic crop</h5>
-              <div class="card-dot-container">
-                <button class="dot dot-color-1" type="button" aria-label="Färg 1"></button>
-                <button class="dot dot-color-2" type="button" aria-label="Färg 2"></button>
-                <button class="dot dot-color-3" type="button" aria-label="Färg 3"></button>
-                <p class="text-color-dark text-xs">+5 färger</p>
-                </div>
-                <div class="card-price-container">
-                  <p class="text-color-medium text-sm">minimum 25 st.</p>
-                  <p class="text-color-dark text-sm">från 410 kr/st</p>
-                </div>
-            </div>
-          </div>
-         </div>
-      
-        <div class="card-container card-container--popular">
-          <div class="card" >
-            <img src="visuals/img/grona_tryck_card_7.jpg" class="card-img-top" alt="...">
-            <img class="card-news-icon" src="/visuals/icons/product_news_icon.svg" alt="Klädnyhet!"> 
-            <div class="card-body">
-              <p class="text-color-dark">Sweatshirts & huvtröjor</p>
-              <h5 class="text-color-primary">Classic hoodie</h5>
-              <div class="card-dot-container">
-                <button class="dot dot-color-1" type="button" aria-label="Färg 1"></button>
-                <button class="dot dot-color-2" type="button" aria-label="Färg 2"></button>
-                <button class="dot dot-color-3" type="button" aria-label="Färg 3"></button>
-                <p class="text-color-dark text-xs">+5 färger</p>
-                </div>
-                <div class="card-price-container">
-                  <p class="text-color-medium text-sm">minimum 25 st.</p>
-                  <p class="text-color-dark text-sm">från 410 kr/st</p>
-                </div>
-            </div>
-          </div>
-         </div>
-
-        <div class="card-container card-container--popular">
-          <div class="card" >
-            <img src="visuals/img/grona_tryck_card_8.jpg" class="card-img-top" alt="...">
-            <img class="card-news-icon" src="/visuals/icons/product_news_icon.svg" alt="Klädnyhet!"> 
-            <div class="card-body">
-              <p class="text-color-dark">Jackor & västar</p>
-              <h5 class="text-color-primary">Warming cotton</h5>
-              <div class="card-dot-container">
-                <button class="dot dot-color-1" type="button" aria-label="Färg 1"></button>
-                <button class="dot dot-color-2" type="button" aria-label="Färg 2"></button>
-                <button class="dot dot-color-3" type="button" aria-label="Färg 3"></button>
-                <p class="text-color-dark text-xs">+5 färger</p>
-                </div>
-                <div class="card-price-container">
-                  <p class="text-color-medium text-sm">minimum 25 st.</p>
-                  <p class="text-color-dark text-sm">från 410 kr/st</p>
-                </div>
-            </div>
-          </div>
-         </div>
-        </div> -->
-           <!-- Arrow for scrolling right -->
-           <button class="arrow arrow--right" aria-label="Scroll right" onclick="changeCardSlide(1)">
-            <img class="arrow--medium" src="visuals/icons/arrow_icon.svg" alt="Scroll right">
-          </button>
+         </div> -->
         </div>
+        <!-- Arrow for scrolling right -->
+        <button class="arrow arrow--right" aria-label="Scroll right" onclick="changeCardSlide(1)">
+          <img class="arrow--medium" src="visuals/icons/arrow_icon.svg" alt="Scroll right">
+        </button>
     </section>
 
     
@@ -668,7 +576,10 @@
     <script src="js/dropdown.js"></script>
     <script src="js/animation.js"></script>
     <script src="js/slideshow.js"></script>
+    <script src="js/script.js"></script>
     <script src="js/searchbar.js"></script>
     <script src="js/scroll-to-top.js"></script>
+    <script src="js/color.js"></script>
+    <script src="js/popular-cards.js"></script>
   </body>
 </html>
