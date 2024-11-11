@@ -402,7 +402,7 @@ window.onload = function printData() {
               alt="Klädnyhet!"
             />
             <div class="card-body card__body--popular">
-              <p class="text-color-dark text-sm">${result.category}</p>
+              <p itemprop="category" class="text-color-dark text-sm">${result.category}</p>
               <h5 class="text-color-primary">${result.title}</h5>
               <div id="colorContainer" class="card-dot-container"> 
                 <input
