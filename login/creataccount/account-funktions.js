@@ -125,7 +125,6 @@ document.addEventListener('DOMContentLoaded', function () {
                 </div>
             `;
             customerList.appendChild(customerDiv);
-
             attachCustomerListeners(customerDiv, customer);
         });
     }
@@ -136,24 +135,38 @@ document.addEventListener('DOMContentLoaded', function () {
         loadCustomers();
     }
 
-    // Event listener för lägga till kunder
     document.getElementById('add-customer-btn').addEventListener('click', function () {
-        const newOrganization = prompt('Skriv företags namn:'); 
-        const newName = prompt('Skriv kontakt person:'); 
-        const newEmail = prompt('Skriv kontakt personens e-post:');
-        const newPhone = prompt('Skriv kontakt personens mobilnummer:');
-        const newOrgNumber = prompt('Skriv företags nummer:');
+        document.getElementById('add-customer-modal').style.display = 'flex';
+    });
+
+    document.getElementById('close-add-customer-modal').addEventListener('click', function () {
+        document.getElementById('add-customer-modal').style.display = 'none';
+    });
+
+    // Event listener för lägga till kunder
+    document.getElementById('add-customer-form').addEventListener('submit', function (e) {
+        e.preventDefault();
+
+        const newOrganization = document.getElementById('new-organization').value;
+        const newName = document.getElementById('new-name').value;
+        const newEmail = document.getElementById('new-email').value;
+        const newPhone = document.getElementById('new-phone').value;
+        const newOrgNumber = document.getElementById('new-org-number').value;
 
         if (newOrganization && newName && newEmail && newPhone && newOrgNumber) {
             const customers = JSON.parse(localStorage.getItem('customers')) || [];
             customers.push({
-                organization: newOrganization, 
-                name: newName, 
+                organization: newOrganization,
+                name: newName,
                 email: newEmail,
                 phone: newPhone,
                 orgNumber: newOrgNumber
             });
             saveCustomers(customers);
+
+            // Clear form fields and hide modal
+            document.getElementById('add-customer-form').reset();
+            document.getElementById('add-customer-modal').style.display = 'none';
         }
     });
 
@@ -220,12 +233,27 @@ document.addEventListener('DOMContentLoaded', function () {
         //funktion och Event listener för radera knappen
         deleteButton.addEventListener('click', function () {
             const customerIndex = customerDiv.dataset.index;
-            const customers = JSON.parse(localStorage.getItem('customers')) || [];
-
-            if (confirm(`Are you sure you want to delete ${customerName.textContent}?`)) {
+            const customerName = customer.organization;
+        
+            const deleteConfirmModal = document.getElementById('delete-confirm-modal');
+            deleteConfirmModal.style.display = 'flex';
+        
+            // bekräfta knapp
+            const confirmDeleteBtn = document.getElementById('confirm-delete-btn');
+            confirmDeleteBtn.onclick = function () {
+                const customers = JSON.parse(localStorage.getItem('customers')) || [];
                 customers.splice(customerIndex, 1);
                 saveCustomers(customers);
-            }
+        
+                
+                deleteConfirmModal.style.display = 'none';
+            };
+        
+            // avbryt knapp
+            const cancelDeleteBtn = document.getElementById('cancel-delete-btn');
+            cancelDeleteBtn.onclick = function () {
+                deleteConfirmModal.style.display = 'none';
+            };
         });
 
         //funktion och Event listener för ändra knappen
@@ -250,11 +278,6 @@ document.addEventListener('DOMContentLoaded', function () {
         
             modal.style.display = 'flex';
         }
-        
-        // stäng ändrings modalen
-        //document.querySelector('.close-btn').addEventListener('click', function () {
-        //    document.getElementById('edit-modal').style.display = 'none';
-        //});
 
         document.getElementById('save-edit-btn').addEventListener('click', function () {
             const customers = JSON.parse(localStorage.getItem('customers')) || [];
