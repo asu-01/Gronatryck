@@ -260,6 +260,30 @@ a:hover {
   display: none;
 }
 
+/* Scroll to top button */
+
+.scroll-to-top {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  width: 2.5rem;
+  height: 2.5rem;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 99;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--primary-new);
+}
+
+.scroll-to-top img {
+  width: 2vh;
+  transform: rotate(180deg);
+}
+
 /* Navbar Dropdown */
 
 .dropdown {
