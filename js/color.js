@@ -49,13 +49,18 @@ imgBtn.forEach((img) => {
 //   btn.addEventListener("click", active);
 // });
 
+modelImage = productImg.getAttribute("src");
+
 // Byter den stora produktbilden beroende på vilken liten produktbild som klickas på
 function changeImg(e) {
   console.log(e.target);
 
-  let imgSrc = e.target.getAttribute("src");
-  productImg.setAttribute("src", imgSrc);
-  console.log(imgSrc);
+  let modelImage = productImg.getAttribute("src");
+  let targetImgSrc = e.target.getAttribute("src");
+
+  productImg.setAttribute("src", targetImgSrc);
+  e.target.setAttribute("src", modelImage);
+  e.target.classList.add("product-display-img");
 }
 
 function changeColorImg(value) {
@@ -101,7 +106,7 @@ function active(e) {
   //   e.target.classList.add("dot-active");
 }
 
-// For adding-product.js/ selected color for alertbox 
+// For adding-product.js/ selected color for alertbox
 function changeColorImg(value) {
   const retrievedData = localStorage.getItem("json-products");
   const parsedJSON = JSON.parse(retrievedData);
@@ -111,7 +116,14 @@ function changeColorImg(value) {
     if (productId === product.articleId) {
       for (const color of product.colors) {
         if (value === color.colorName) {
+          let modelImg = productImg.getAttribute("src");
           productImg.setAttribute("src", color.url);
+
+          imgBtn.forEach((img) => {
+            img.getAttribute("src") === color.url
+              ? img.setAttribute("src", modelImg)
+              : "";
+          });
 
           // Save the selected color to localStorage without calling showAlertBox
           localStorage.setItem("selectedColor", color.colorName);

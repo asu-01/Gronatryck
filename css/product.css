@@ -52,6 +52,11 @@
   max-width: 12rem;
 }
 
+/* Styling added with javascript, when product img is changed by user */
+.product-display-img {
+  object-fit: cover;
+}
+
 /* Quantity button for product */
 .button-quantity {
   display: flex;
