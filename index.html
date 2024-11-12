@@ -299,14 +299,16 @@
       
       <div class="card-slider-container">
         <h3 class="text-color-dark-2 card-slider-heading text--bold">Populära produkter</h3>
-      <div class="card-slider">
-         <!-- Left arrow button -->
         <button class="arrow arrow--left" aria-label="Scroll left" onclick="changeCardSlide(-1)">
           <img class="arrow--medium" src="visuals/icons/arrow_icon.svg" alt="Scroll left">
         </button>
+        <div class="card-slider">
+         <!-- Left arrow button -->
+        
         <div class="card-container card-container--popular">
-              <!-- Cards will be dynamically added here -->
-          <!-- <div class="card-wrapper"> -->
+        
+          <!-- Cards will be dynamically added here -->
+  
           <!-- <article class="card" id="1000">
             <img src="visuals/img/grona_tryck_card_1.jpg" class="card-img-top" alt="...">
             <div class="card-body">
@@ -384,11 +386,20 @@
             </div>
           </div>
          </div> -->
+        
+        
         </div>
-        <!-- Arrow for scrolling right -->
-        <button class="arrow arrow--right" aria-label="Scroll right" onclick="changeCardSlide(1)">
-          <img class="arrow--medium" src="visuals/icons/arrow_icon.svg" alt="Scroll right">
-        </button>
+         
+         
+      </div>
+       <!-- Arrow for scrolling right -->
+       <button class="arrow arrow--right" aria-label="Scroll right" onclick="changeCardSlide(1)">
+        <img class="arrow--medium" src="visuals/icons/arrow_icon.svg" alt="Scroll right">
+      </button>
+    
+    </div>
+     
+       
     </section>
 
     
@@ -399,7 +410,7 @@
       <h2 class="text-color-dark-2">Hållbart</h2>
       <p class="text-color-dark-2 card-section-info">Utöver att våra produkter är ekologiskt framställda, strävar vi efter en hållbar helhet där miljöhänsyn styr hela verksamheten. Vårt mål är att hjälpa kunder och partners att förstå hur okontrollerad bomullsproduktion påverkar människor och natur. Genom beslut med miljöfokus och tredjepartskontroller säkerställer vi att våra produkter är hållbara. Vi lever med denna filosofi i allt vi gör – från att källsortera till att ta cykeln eller tåget till möten, använda gröna servrar och dricka ekologiskt kaffe. </p>
 
-      <div class="card-container">
+      <div class="card-container card-container--hallbart">
         <div class="card">
           <div class="card__image-container card__image--gots">
           </div>
@@ -576,7 +587,6 @@
     <script src="js/dropdown.js"></script>
     <script src="js/animation.js"></script>
     <script src="js/slideshow.js"></script>
-    <script src="js/script.js"></script>
     <script src="js/searchbar.js"></script>
     <script src="js/scroll-to-top.js"></script>
     <script src="js/color.js"></script>
