@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://use.typekit.net/zlf3fvp.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="login/creataccount/style.css">
     <title>Admin Panel</title>
@@ -12,7 +13,7 @@
     <header>
         <nav class="nav">
             <div class="nav-container">
-              <a href="index.html"><img class="nav-logo" src="/visuals/logo/gronatryck_horizontal_green_rgb.svg" title="Logotyp för grönatryck" alt="En cirkelformad logotyp placerad brevid texten grönatryck och som innehåller bokstaven G samt texturen av trädringar"></a>
+              <a href="index.html"><img class="nav-logo" src="/visuals/logo/gronatryck_horizontal_green_rgb.svg" title="Logotyp för grönatryck" alt="Logotyp för grönatryck" alt="En cirkelformad logotyp som innehåller bokstaven G samt texturen av trädringar, placerad brevid texten grönatryck"></a>
               <ul class="nav-links">
                     <li>
                       <a href="index.html">Hem</a>
@@ -155,6 +156,22 @@
                     </div>
 
             </div>
+
+            <div id="add-customer-modal" class="add-customer-modal">
+              <div class="add-customer-modal-content">
+                  <span class="close-btn" id="close-add-customer-modal">&times;</span>
+                  <h6>Lägg till kund</h6>
+                  <form id="add-customer-form">
+                      <input type="text" id="new-organization" placeholder="Företagsnamn" required>
+                      <input type="text" id="new-name" placeholder="Kontaktperson" required>
+                      <input type="email" id="new-email" placeholder="E-post" required>
+                      <input type="tel" id="new-phone" placeholder="Mobilnummer" required>
+                      <input type="text" id="new-org-number" placeholder="Företagsnummer" required>
+                      <button type="submit">Lägg till</button>
+                  </form>
+              </div>
+          </div>
+
             <div id="edit-modal" class="modal" style="display: none;">
                 <div class="modal-content">
                     <span class="close-btn">&times;</span>
@@ -179,6 +196,14 @@
                 
             </div>
 
+            <div id="delete-confirm-modal" class="delete-confirm-modal" style="display: none;">
+              <div class="delete-confirm-modal-content">
+                  <p>Är du säker på att du vill radera denna kund?</p>
+                  <button id="confirm-delete-btn">Bekräfta</button>
+                  <button id="cancel-delete-btn">Avbryt</button>
+              </div>
+          </div>
+
             <div class="tab-content" id="allOrders" style="display: none;">
                 <h3>Alla Beställningar</h3>
             </div>
@@ -190,7 +215,7 @@
       <div class="footer-container">
         <div class="footer-content">
           <!-- Logo -->
-          <img class="footer-logo" src="visuals/logo/gronatryck_horizontal_offwhite_rgb.svg" alt="grona tryck logotype">
+          <img class="footer-logo" src="visuals/logo/gronatryck_horizontal_offwhite_rgb.svg" alt="Grönatryck Logotyp">
           <div class="footer-icons-container footer-icons-container--hallbart">
             <img class="footer-icons" src="visuals/icons/gronatryck_icon_organicproduction.svg" alt="Ikon för organisk produktion">
             <img class="footer-icons" src="visuals/icons/gronatryck_icon_recycledmaterial.svg" alt="Ikon för återvinnet material ">

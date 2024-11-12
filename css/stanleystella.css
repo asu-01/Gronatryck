@@ -1,3 +1,4 @@
+
 .stanleystella-content {
   margin-top: 3rem;
   display: flex;
@@ -16,4 +17,38 @@
   align-items: center;
   margin-top: 4rem;
   margin-bottom: 4rem;
+}
+
+.video-container video {
+  width: 100%;
+}
+
+/* Media Queries */
+
+@media screen and (max-width: 1200px){
+  
+}
+
+@media screen and (max-width: 992px){
+
+  .stanleystella-content {
+    flex-direction: column;
+  }
+
+  .stanleystella-text {
+    width: 80%;
+  }
+  
+}
+
+@media screen and (max-width: 768px){
+
+  .swirl-pattern {
+    height: 55vh;
+  }
+
+  .stanleystella-text {
+    width: 100%;
+  }
+  
 }

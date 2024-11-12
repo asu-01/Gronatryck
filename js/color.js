@@ -49,13 +49,18 @@ imgBtn.forEach((img) => {
 //   btn.addEventListener("click", active);
 // });
 
+modelImage = productImg.getAttribute("src");
+
 // Byter den stora produktbilden beroende på vilken liten produktbild som klickas på
 function changeImg(e) {
   console.log(e.target);
 
-  let imgSrc = e.target.getAttribute("src");
-  productImg.setAttribute("src", imgSrc);
-  console.log(imgSrc);
+  let modelImage = productImg.getAttribute("src");
+  let targetImgSrc = e.target.getAttribute("src");
+
+  productImg.setAttribute("src", targetImgSrc);
+  e.target.setAttribute("src", modelImage);
+  e.target.classList.add("product-display-img");
 }
 
 function changeColorImg(value) {
@@ -68,11 +73,6 @@ function changeColorImg(value) {
     if (productId === product.articleId) {
       for (color of product.colors) {
         if (value === color.colorName) {
-          //   let currentColor = localStorage.getItem("color");
-          //   let colorArray = [];
-          //   colorArray = currentColor ? currentColor : [];
-          //   colorArray.push(value);
-          //   let colorName = localStorage.setItem("color", value);
           productImg.setAttribute("src", color.url);
         }
       }
@@ -104,4 +104,32 @@ function active(e) {
     btn.focus();
   });
   //   e.target.classList.add("dot-active");
+}
+
+// For adding-product.js/ selected color for alertbox
+function changeColorImg(value) {
+  const retrievedData = localStorage.getItem("json-products");
+  const parsedJSON = JSON.parse(retrievedData);
+  let productId = new URLSearchParams(window.location.search).get("id");
+
+  for (const product of parsedJSON) {
+    if (productId === product.articleId) {
+      for (const color of product.colors) {
+        if (value === color.colorName) {
+          let modelImg = productImg.getAttribute("src");
+          productImg.setAttribute("src", color.url);
+
+          imgBtn.forEach((img) => {
+            if (img.getAttribute("src") === color.url) {
+              img.setAttribute("src", modelImg);
+              img.classList.add("product-display-img");
+            }
+          });
+
+          // Save the selected color to localStorage without calling showAlertBox
+          localStorage.setItem("selectedColor", color.colorName);
+        }
+      }
+    }
+  }
 }

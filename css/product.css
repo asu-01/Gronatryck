@@ -34,7 +34,6 @@
 /* Large image styling */
 .product-img--large {
   width: 100%;
-  grid-row: 1;
   margin-bottom: 1rem;
   cursor: pointer;
 }
@@ -44,7 +43,6 @@
   justify-content: space-between;
   gap: 3%;
   width: 100%;
-  grid-row: 2;
   cursor: pointer;
 }
 
@@ -52,7 +50,11 @@
 .product-img--small {
   width: 100%;
   max-width: 12rem;
-  grid-row: 2;
+}
+
+/* Styling added with javascript, when product img is changed by user */
+.product-display-img {
+  object-fit: cover;
 }
 
 /* Quantity button for product */
@@ -155,6 +157,18 @@
   margin-bottom: 5rem;
   overflow: hidden;
 }
+
+.card-container--related {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1%;
+}
+
+.card-container--related .card {
+  flex: 1 1 24%;
+  max-width: 24%;
+}
+
 /* alert box for order list */
 .alert-box-container {
   display: flex;
@@ -237,6 +251,10 @@
   .alert-box-container {
     top: 21%;
     left: 78%;
+  }
+
+  .card-container--related .card {
+    max-width: 100%;
   }
 }
 
