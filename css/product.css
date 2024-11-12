@@ -157,6 +157,18 @@
   margin-bottom: 5rem;
   overflow: hidden;
 }
+
+.card-container--related {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1%;
+}
+
+.card-container--related .card {
+  flex: 1 1 24%;
+  max-width: 24%;
+}
+
 /* alert box for order list */
 .alert-box-container {
   display: flex;
@@ -239,6 +251,10 @@
   .alert-box-container {
     top: 21%;
     left: 78%;
+  }
+
+  .card-container--related .card {
+    max-width: 100%;
   }
 }
 

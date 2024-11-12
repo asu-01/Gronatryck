@@ -1050,9 +1050,8 @@ a:hover {
   .card-slider {
     margin: 0;
   }
-
   .card-container--popular .card {
-    flex: 0 0 calc(25% - 2%);
+    flex: 1;
   }
 
   .card-slider-container {
