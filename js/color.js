@@ -120,9 +120,10 @@ function changeColorImg(value) {
           productImg.setAttribute("src", color.url);
 
           imgBtn.forEach((img) => {
-            img.getAttribute("src") === color.url
-              ? img.setAttribute("src", modelImg)
-              : "";
+            if (img.getAttribute("src") === color.url) {
+              img.setAttribute("src", modelImg);
+              img.classList.add("product-display-img");
+            }
           });
 
           // Save the selected color to localStorage without calling showAlertBox

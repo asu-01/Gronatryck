@@ -36,12 +36,19 @@
   }
 
   .stanleystella-text {
-    width: 100%;
+    width: 80%;
   }
   
 }
 
 @media screen and (max-width: 768px){
 
+  .swirl-pattern {
+    height: 55vh;
+  }
+
+  .stanleystella-text {
+    width: 100%;
+  }
   
 }
