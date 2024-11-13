@@ -9,6 +9,7 @@ const cardDotText = document.querySelector(".card-dot-container p");
 // Hämta färg-knappar
 const colorBtn = document.querySelectorAll(".dot");
 
+// Skriver ut färger på produktsida
 window.onload = function printColor() {
   const retrievedData = localStorage.getItem("json-products");
   const parsedJSON = JSON.parse(retrievedData);
@@ -25,7 +26,7 @@ window.onload = function printColor() {
           type: "button",
           value: `${color.colorName}`,
           ariaLabel: "färg",
-          style: `background-color: ${color.colorCode} ;`,
+          style: `background-color: ${color.colorCode};`,
         });
 
         inputElement.setAttribute("onclick", "changeColorImg(this.value)");
@@ -63,22 +64,22 @@ function changeImg(e) {
   e.target.classList.add("product-display-img");
 }
 
-function changeColorImg(value) {
-  const retrievedData = localStorage.getItem("json-products");
-  const parsedJSON = JSON.parse(retrievedData);
-  let productId = new URLSearchParams(window.location.search).get("id");
+// function changeColorImg(value) {
+//   const retrievedData = localStorage.getItem("json-products");
+//   const parsedJSON = JSON.parse(retrievedData);
+//   let productId = new URLSearchParams(window.location.search).get("id");
 
-  //   console.log("Hej", parsedJSON);
-  for (product of parsedJSON) {
-    if (productId === product.articleId) {
-      for (color of product.colors) {
-        if (value === color.colorName) {
-          productImg.setAttribute("src", color.url);
-        }
-      }
-    }
-  }
-}
+//   //   console.log("Hej", parsedJSON);
+//   for (product of parsedJSON) {
+//     if (productId === product.articleId) {
+//       for (color of product.colors) {
+//         if (value === color.colorName) {
+//           productImg.setAttribute("src", color.url);
+//         }
+//       }
+//     }
+//   }
+// }
 
 //   let found = false;
 
@@ -106,7 +107,8 @@ function active(e) {
   //   e.target.classList.add("dot-active");
 }
 
-// For adding-product.js/ selected color for alertbox
+/* For changing img based on selected color and saving the 
+selected color to display in alertbox */
 function changeColorImg(value) {
   const retrievedData = localStorage.getItem("json-products");
   const parsedJSON = JSON.parse(retrievedData);
