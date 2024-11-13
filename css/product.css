@@ -41,14 +41,15 @@
 .product-img-wrapper--small {
   display: flex;
   justify-content: space-between;
-  gap: 1rem;
-  width: calc((100% - 2rem) / 3);
+  gap: 3%;
+  width: 100%;
   cursor: pointer;
 }
 
 /* Small images styling */
 .product-img--small {
   width: 100%;
+  max-width: 12rem;
 }
 
 /* Styling added with javascript, when product img is changed by user */
@@ -342,11 +343,10 @@
 
   .product-img-wrapper--small {
     display: flex;
-    width: calc((100% - 2rem) / 3);
   }
 
   .product-img--small {
-    width: 100%;
+    max-width: 48%;
     margin-bottom: 1.5rem;
   }
 
