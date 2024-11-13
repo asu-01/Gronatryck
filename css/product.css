@@ -125,6 +125,10 @@
   border-bottom: 1px solid var(--primary-new);
 }
 
+.product-menu-item.expanded {
+  border: none;
+}
+
 .product-menu-arrow {
   display: flex;
 }
@@ -142,11 +146,11 @@
 
 .arrow--small {
   cursor: pointer;
-  transition: transform 0.3s; /* Smooth rotation for the arrow */
+  transition: transform 0.3s;
 }
 
 .arrow--small.rotated {
-  transform: rotate(180deg); /* Rotate the arrow when open */
+  transform: rotate(180deg);
 }
 
 /* Related products */
