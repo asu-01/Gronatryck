@@ -11,7 +11,7 @@ const JSONdata = [
     category: "T-shirts",
     title: "Classic Bomull",
     desc: "",
-    img: "visuals/img/grona_tryck_card_2.jpg",
+    img: "visuals/img/products/gronatryck_card_2.jpg",
     colors: [
       {
         colorName: "Beige",
@@ -62,7 +62,7 @@ const JSONdata = [
     category: "Västar",
     title: "Varm väst",
     desc: "",
-    img: "visuals/img/grona_tryck_card_4.jpg",
+    img: "visuals/img/products/gronatryck_card_4.jpg",
     colors: [
       {
         colorName: "Beige",
@@ -108,7 +108,7 @@ const JSONdata = [
     category: "Jackor",
     title: "Pufferjacka",
     desc: "",
-    img: "visuals/img/grona_tryck_card_5.jpg",
+    img: "visuals/img/products/gronatryck_card_5.jpg",
     colors: [
       {
         colorName: "Camoflauge",
@@ -154,7 +154,7 @@ const JSONdata = [
     category: "Sweatshirts",
     title: "Mysig sweatshirt",
     desc: "",
-    img: "visuals/img/grona_tryck_card_3.jpg",
+    img: "visuals/img/products/gronatryck_card_3.jpg",
     colors: [
       {
         colorName: "Gräddvit",
@@ -246,7 +246,7 @@ const JSONdata = [
     category: "Huvtröjor",
     title: "Huvtröja",
     desc: "",
-    img: "visuals/img/grona_tryck_card_6.jpg",
+    img: "visuals/img/products/gronatryck_card_6.jpg",
     colors: [
       {
         colorName: "Ljusblå",
@@ -292,7 +292,7 @@ const JSONdata = [
     category: "Jackor",
     title: "Jacka",
     desc: "",
-    img: "visuals/img/grona_tryck_card_8.jpg",
+    img: "visuals/img/products/gronatryck_card_8.jpg",
     colors: [
       {
         colorName: "Beige",
@@ -338,7 +338,7 @@ const JSONdata = [
     category: "T-shirts",
     title: "Classic Bomull",
     desc: "",
-    img: "visuals/img/grona_tryck_card_1.jpg",
+    img: "visuals/img/products/gronatryck_card_1.jpg",
     colors: [
       {
         colorName: "Vit",
