@@ -88,6 +88,9 @@
     width: 20rem;
     height: 30rem;
   }
+  .aboutus-swirl--rotated {
+    height: 140vh;
+  }
 }
 @media (max-width: 768px) {
   .aboutus-text {

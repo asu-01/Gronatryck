@@ -16,7 +16,7 @@
   --monochrome-white: #ffffff;
 }
 
-/* Förinställningar för hela sidan*/
+/* Förinställningar för hela sidan  */
 * {
   padding: 0;
   margin: 0;
@@ -49,12 +49,10 @@ body {
   color: var(--primary-green);
 }
 
-/* Border-radius klass*/
+/* Border-radius klass  */
 .round-corner {
   border-radius: 10px;
 }
-
-/* font stilar */
 
 /* Typescale för rubriker och brödtext */
 h1 {
@@ -1034,11 +1032,10 @@ a:hover {
   }
 
   .nav-icons img {
-    /* width: 5vh; */
     cursor: pointer;
   }
 
-  /* popular section */
+  /*--------- popular section --------------*/
   .card-slider-container .arrow {
     display: none;
   }
@@ -1147,15 +1144,15 @@ a:hover {
     height: 150vh;
   }
 
-  /* Hållbart  */
+  /*------------ Hållbart  ------------*/
   .card-section--two .card-section-info {
     width: 70%;
   }
-  /* Reviews */
+  /*---------- Reviews ------------*/
   .review-icons {
     height: 2vh;
   }
-  /* Mobile footer  */
+  /*--------------- Mobile footer  -------------*/
 
   .footer-content {
     display: flex;
@@ -1197,7 +1194,7 @@ a:hover {
     height: 10%;
   }
 
-  /* news  */
+  /* nyheter  */
   .news-img-text h3 {
     font-size: 2.01rem;
   }
@@ -1258,7 +1255,7 @@ a:hover {
   }
 }
 
-/*-------- Mobile screens media queries ------------*/
+/*--------  media queries for mobile screens ------------*/
 @media screen and (max-width: 768px) {
   /* Text container hero slideshow */
   .slide-text {
@@ -1410,6 +1407,7 @@ a:hover {
 
   .nav-links.open {
     display: flex;
+    z-index: 4;
   }
 
   .dropdown .dropdown.open {

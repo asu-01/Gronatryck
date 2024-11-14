@@ -405,21 +405,9 @@ window.onload = function printData() {
               <p itemprop="category" class="text-color-dark text-sm">${result.category}</p>
               <h5 class="text-color-primary">${result.title}</h5>
               <div id="colorContainer" class="card-dot-container"> 
-                <input
-                  class="dot dot-color"
-                  type="button"
-                  aria-label="Färg 1"
-                ></input>
-                <input
-                  class="dot dot-color"
-                  type="button"
-                  aria-label="Färg 2"
-                ></input>
-                <input
-                  class="dot dot-color"
-                  type="button"
-                  aria-label="Färg 3"
-                ></input>
+              ${result.colors.map((color, index) => `
+                <input class="dot dot-color-${index + 1}" type="button" aria-label="Färg ${index + 1}" style="background-color: ${color.colorCode};">
+            `).join('')}
                 <p class="text-color-dark text-xs">+${result.colors.length} färger</p>
               </div>
               <div class="card-price-container">

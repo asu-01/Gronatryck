@@ -1,4 +1,3 @@
-
 // Hämta produktbild
 const productImg = document.querySelector(".product-img--large");
 
