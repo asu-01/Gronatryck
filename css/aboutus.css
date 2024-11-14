@@ -51,7 +51,6 @@
 .aboutus-content {
   margin-top: 5%;
   display: flex;
-  flex-wrap: wrap;
   width: 90%;
   justify-content: space-between;
   margin-left: 5%;
@@ -79,29 +78,71 @@
   object-fit: cover;
 }
 
-@media (max-width: 992px) {
+@media screen and (max-width: 1200px){
+  
   .aboutus-text {
     width: 60%;
   }
+  
   .aboutus-img-wrapper {
     display: flex;
     width: 20rem;
     height: 30rem;
   }
-  .aboutus-swirl--rotated {
-    height: 140vh;
-  }
 }
-@media (max-width: 768px) {
+
+@media (max-width: 992px) {
+
   .aboutus-text {
-    width: 90%;
+    /* margin-top: 2rem; */
+    width: 70%;
   }
+
   .aboutus-text h3 {
     font-size: 2rem;
   }
+
+  .aboutus-text p {
+    font-size: 0.9rem;
+  }
+
   .aboutus-img-wrapper {
     display: flex;
     width: 20rem;
     height: 20rem;
+  }
+
+  .aboutus-swirl--rotated {
+    height: 140vh;
+  }
+}
+
+@media (max-width: 768px) {
+
+  .aboutus-content {
+    flex-direction: column;
+  }
+
+  .aboutus-text {
+    width: 90%;
+  }
+
+  .aboutus-text h3 {
+    margin-top: 2rem;
+    font-size: 2rem;
+  }
+
+  .aboutus-img-wrapper {
+    display: flex;
+    width: 20rem;
+    height: 16rem;
+  }
+}
+
+
+@media (max-width: 576px) {
+
+  .aboutus-text {
+    width: 100%;
   }
 }

@@ -12,21 +12,25 @@ const JSONdata = [
     title: "Classic Bomull",
     desc: "",
     img: "visuals/img/products/gronatryck_card_2.jpg",
+    alt: "En kille med tegelröd t-shirt",
     colors: [
       {
         colorName: "Beige",
         colorCode: "#cfb4a5",
         url: "visuals/img/products/gronatryck_beige_tshirt.jpg",
+        alt: "En beige t-shirt",
       },
       {
         colorName: "Vit",
         colorCode: "#ffffff",
         url: "visuals/img/products/gronatryck_white_tshirt.jpg",
+        alt: "En vit t-shirt",
       },
       {
         colorName: "Tegelröd",
         colorCode: "#913d23",
         url: "visuals/img/products/gronatryck_red_tshirt.jpg",
+        alt: "En vit t-shirt",
       },
     ],
     priceList: [
@@ -63,16 +67,19 @@ const JSONdata = [
     title: "Varm väst",
     desc: "",
     img: "visuals/img/products/gronatryck_card_4.jpg",
+    alt: "En tjej och kille med en mjuk beige väst, med hög krage och en ficka framtill",
     colors: [
       {
         colorName: "Beige",
         colorCode: "#a6987e",
         url: "visuals/img/products/gronatryck_beige_vest.jpg",
+        alt: "En mjuk beige väst, med hög krage och en ficka framtill",
       },
       {
         colorName: "Svart",
         colorCode: "#0f1112",
         url: "visuals/img/products/gronatryck_black_vest.jpg",
+        alt: "En mjuk svart väst, med hög krage och en ficka framtill",
       },
     ],
     priceList: [
@@ -109,16 +116,19 @@ const JSONdata = [
     title: "Pufferjacka",
     desc: "",
     img: "visuals/img/products/gronatryck_card_5.jpg",
+    alt: "En tjej med en pufferjacka i turkos med huva och dragkedja",
     colors: [
       {
         colorName: "Camoflauge",
         colorCode: "#485942",
         url: "visuals/img/products/gronatryck_green_pufferjacket.jpg",
+        alt: "En pufferjacka i militärgrön med huva och dragkedja",
       },
       {
         colorName: "Turkos",
         colorCode: "#0a3837",
         url: "visuals/img/products/gronatryck_turquoise_pufferjacket.jpg",
+        alt: "En pufferjacka i turkos med huva och dragkedja",
       },
     ],
     priceList: [
@@ -155,21 +165,25 @@ const JSONdata = [
     title: "Mysig sweatshirt",
     desc: "",
     img: "visuals/img/products/gronatryck_card_3.jpg",
+    alt: "En tjej och en kille med gräddvita sweatshirts",
     colors: [
       {
         colorName: "Gräddvit",
         colorCode: "#e8e0ca",
         url: "visuals/img/products/gronatryck_cream_sweatshirt.jpg",
+        alt: "En gräddvit sweatshirt",
       },
       {
         colorName: "Mörkblå",
         colorCode: "#091933",
         url: "visuals/img/products/gronatryck_blue_sweatshirt.jpg",
+        alt: "En mörkblå sweatshirt",
       },
       {
         colorName: "Svart",
         colorCode: "#0f1112",
         url: "visuals/img/products/gronatryck_black_sweatshirt.jpg",
+        alt: "En svart sweatshirt",
       },
     ],
     priceList: [
@@ -206,11 +220,13 @@ const JSONdata = [
     title: "Totebag",
     desc: "",
     img: "visuals/img/products/gronatryck_white_totebag.jpg",
+    alt: "En tjej med en totebag, hängades över axeln",
     colors: [
       {
         colorName: "Vit",
         colorCode: "#ffffff",
         url: "visuals/img/products/gronatryck_white_totebag.jpg",
+        alt: "En vit totebag",
       },
     ],
     priceList: [
@@ -247,16 +263,19 @@ const JSONdata = [
     title: "Huvtröja",
     desc: "",
     img: "visuals/img/products/gronatryck_card_6.jpg",
+    alt: "Två tjejer med croppad huvtröja",
     colors: [
       {
         colorName: "Ljusblå",
         colorCode: "#a5c6d4",
         url: "visuals/img/products/gronatryck_white_hoodie.jpg",
+        alt: "En ljusblå croppad huvtröja",
       },
       {
         colorName: "Rosa",
         colorCode: "#bf6d8f",
         url: "visuals/img/products/gronatryck_pink_hoodie.jpg",
+        alt: "En rosa croppad huvtröja",
       },
     ],
     priceList: [

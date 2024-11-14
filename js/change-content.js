@@ -1,6 +1,6 @@
 // console.log(productImg);
 
-// Lägger till rätt data på produktsida beroende på valt produktcard (WIP)
+// Lägger till rätt data på produktsida beroende på valt produktcard
 
 document.addEventListener("DOMContentLoaded", changeData);
 
@@ -18,10 +18,12 @@ function changeData(e) {
         ".card-dot-container p"
       ).innerHTML = `+${product.colors.length} färger`;
       largeImg.setAttribute("src", product.img);
+      largeImg.setAttribute("alt", product.alt);
 
       const smallImg = document.querySelectorAll(".product-img--small");
       product.colors.forEach((colorImg, index) => {
         smallImg[index].setAttribute("src", colorImg.url);
+        smallImg[index].setAttribute("alt", colorImg.alt);
       });
     }
   }

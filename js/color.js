@@ -10,7 +10,6 @@ imgBtn.forEach((img) => {
   img.addEventListener("click", changeImg);
 });
 
-
 modelImage = productImg.getAttribute("src");
 
 // // Byter den stora produktbilden beroende på vilken liten produktbild som klickas på
@@ -54,29 +53,32 @@ function changeColorImg(value) {
   }
 }
 
-
 function printColor() {
   const retrievedData = localStorage.getItem("json-products");
   const parsedJSON = JSON.parse(retrievedData);
-  const cardDotContainer = document.querySelector(".product-container .card-dot-container");
+  const cardDotContainer = document.querySelector(
+    ".product-container .card-dot-container"
+  );
 
   // Find the current product based on the URL `id` parameter
   let productId = new URLSearchParams(window.location.search).get("id");
-  const product = parsedJSON.find(item => item.articleId === productId);
+  const product = parsedJSON.find((item) => item.articleId === productId);
 
   if (product && cardDotContainer) {
-      // Add color dots dynamically
-      product.colors.forEach((color, index) => {
-          let inputElement = document.createElement("input");
-          Object.assign(inputElement, {
-              className: "dot dot-color dot--large",
-              type: "button",
-              ariaLabel: `färg ${index + 1}`,
-              style: `background-color: ${color.colorCode};`,
-          });
-          inputElement.addEventListener("click", () => changeColorImg(color.colorName));
-          cardDotContainer.prepend(inputElement);
+    // Add color dots dynamically
+    product.colors.forEach((color, index) => {
+      let inputElement = document.createElement("input");
+      Object.assign(inputElement, {
+        className: "dot dot-color dot--large",
+        type: "button",
+        ariaLabel: `färg ${index + 1}`,
+        style: `background-color: ${color.colorCode};`,
       });
+      inputElement.addEventListener("click", () =>
+        changeColorImg(color.colorName)
+      );
+      cardDotContainer.prepend(inputElement);
+    });
   }
 }
 
@@ -85,14 +87,16 @@ function changeColorImg(value) {
   const parsedJSON = JSON.parse(retrievedData);
   let productId = new URLSearchParams(window.location.search).get("id");
   const productImg = document.querySelector(".product-img--large");
-  
-  const product = parsedJSON.find(item => item.articleId === productId);
+
+  const product = parsedJSON.find((item) => item.articleId === productId);
   if (product) {
-      const selectedColor = product.colors.find(color => color.colorName === value);
-      if (selectedColor) {
-          productImg.setAttribute("src", selectedColor.url);
-          localStorage.setItem("selectedColor", selectedColor.colorName);
-      }
+    const selectedColor = product.colors.find(
+      (color) => color.colorName === value
+    );
+    if (selectedColor) {
+      productImg.setAttribute("src", selectedColor.url);
+      localStorage.setItem("selectedColor", selectedColor.colorName);
+    }
   }
 }
 
