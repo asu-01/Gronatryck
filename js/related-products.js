@@ -12,7 +12,7 @@ window.onload = function printRelatedProducts() {
         // Construct product cards dynamically
         const content = `
             <div class="card">
-                <img src="${product.img}" class="card-img-top" alt="${product.title}">
+                <a href="store.html"><img src="${product.img}" class="card-img-top" alt="${product.title}">
                 <div class="card-body">
                     <p class="text-color-dark">${product.category}</p>
                     <h5 class="text-color-primary">${product.title}</h5>
@@ -26,7 +26,7 @@ window.onload = function printRelatedProducts() {
                         <p class="text-color-medium text-sm">minimum 25 st.</p>
                         <p class="text-color-dark text-sm">från ${product.priceList[0].price} kr/st</p>
                     </div>
-                </div>
+                </div></a> 
             </div>`;
 
         // Append the product card to the container
