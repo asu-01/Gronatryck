@@ -5,25 +5,35 @@ document.addEventListener("DOMContentLoaded", function () {
   window.showAlertBox = function () {
     const quantity = document.getElementById("quantityInput").value;
     const articleName = document.getElementById("articleName").textContent;
-
-    // Retrieve the selected color from localStorage
     const colorName = localStorage.getItem("selectedColor") || "unknown";
+    const productImgSrc = document.querySelector(".product-img--large").src;
 
-    // Update the alert box with quantity and color
+    // Update the alert box text
     document.getElementById("alertQuantity").textContent = `Antal: ${quantity} st. Färg: ${colorName}.`;
+    document.getElementById("alertArticlename").textContent = `${articleName} har lagts till i beställningslistan!`;
     document.getElementById("alertBox").style.display = "flex";
 
-    // Update the article name in the alert box
-    document.getElementById("alertArticlename").textContent = `${articleName} har lagts till i beställningslistan!`;
+    // Get the alert box image container
+    const alertImageContainer = document.querySelector(".alert-box-img");
 
+    // Clear any existing image
+    alertImageContainer.innerHTML = "";
+
+    // Dynamically create and set up the image element
+    const imgElement = document.createElement("img");
+    imgElement.classList.add("round-corner");
+    imgElement.src = productImgSrc;
+
+    // Append the new image element to the container
+    alertImageContainer.appendChild(imgElement);
+
+    // Update the amount bubble
     const amountBubble = document.getElementsByClassName("icon-orderbag--amount")[0];
     amountBubble.style.display = "flex";
-
-    // Update the amount in the bubble
     amountBubble.querySelector("p").textContent = quantity;
 
+    // Reset and start the alert timer
     clearTimeout(alertTimer);
-
     alertTimer = setTimeout(() => {
       hideAlertBox();
     }, 5000);
@@ -45,13 +55,3 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   };
 });
-
-// Function to change quantity
-function changeQuantity(amount) {
-  const quantityInput = document.getElementById("quantityInput");
-  const newValue = parseInt(quantityInput.value) + amount;
-
-  if (newValue >= parseInt(quantityInput.min) && newValue <= parseInt(quantityInput.max)) {
-    quantityInput.value = newValue;
-  }
-}
