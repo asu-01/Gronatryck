@@ -738,19 +738,19 @@ a:hover {
 }
 
 .card__image--gots {
-  background-image: url(/visuals/img/gots_card_image_icon.jpg);
+  background-image: url(../visuals/img/sustainable/gots_card_image_icon.jpg)
 }
 
 .card__image--enviroment {
-  background-image: url(/visuals/img/enviroment_card_image_icon.jpg);
+  background-image: url(../visuals/img/sustainable/enviroment_card_image_icon.jpg)
 }
 
 .card__image--print {
-  background-image: url(/visuals/img/print_card_image_icon.jpg);
+  background-image: url(../visuals/img/sustainable/print_card_image_icon.jpg)
 }
 
 .card__image--workingconditions {
-  background-image: url(/visuals/img/workingconditions_card_image_icon_.jpg);
+  background-image: url(../visuals/img/sustainable/workingconditions_card_image_icon_.jpg)
 }
 
 .card-body-color {

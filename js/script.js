@@ -16,17 +16,17 @@ const JSONdata = [
       {
         colorName: "Beige",
         colorCode: "#cfb4a5",
-        url: "visuals/img/t-shirt/gronatryck_product_3.jpg",
+        url: "visuals/img/products/gronatryck_beige_tshirt.jpg",
       },
       {
         colorName: "Vit",
         colorCode: "#ffffff",
-        url: "visuals/img/t-shirt/gronatryck_product_4.jpg",
+        url: "visuals/img/products/gronatryck_white_tshirt.jpg",
       },
       {
         colorName: "Tegelröd",
         colorCode: "#913d23",
-        url: "visuals/img/t-shirt/gronatryck_product_1.jpg",
+        url: "visuals/img/products/gronatryck_red_tshirt.jpg",
       },
     ],
     priceList: [
@@ -67,12 +67,12 @@ const JSONdata = [
       {
         colorName: "Beige",
         colorCode: "#a6987e",
-        url: "visuals/img/Liner_Desert Dust_Packshot_Front_Main_0.jpg",
+        url: "visuals/img/products/gronatryck_beige_vest.jpg",
       },
       {
         colorName: "Svart",
         colorCode: "#0f1112",
-        url: "visuals/img/Liner_Black_Packshot_Front_Main_0.jpg",
+        url: "visuals/img/products/gronatryck_black_vest.jpg",
       },
     ],
     priceList: [
@@ -113,12 +113,12 @@ const JSONdata = [
       {
         colorName: "Camoflauge",
         colorCode: "#485942",
-        url: "visuals/img/Stanley Voyager_Khaki_Packshot_Front_Main_0.jpg",
+        url: "visuals/img/products/gronatryck_green_pufferjacket.jpg",
       },
       {
         colorName: "Turkos",
         colorCode: "#0a3837",
-        url: "visuals/img/Stanley Voyager_Stargazer_Packshot_Front_Main_0.jpg",
+        url: "visuals/img/products/gronatryck_turquoise_pufferjacket.jpg",
       },
     ],
     priceList: [
@@ -159,17 +159,17 @@ const JSONdata = [
       {
         colorName: "Gräddvit",
         colorCode: "#e8e0ca",
-        url: "visuals/img/Knoxer_Natural Raw_Packshot_Front_Main_0.jpg",
+        url: "visuals/img/products/gronatryck_cream_sweatshirt.jpg",
       },
       {
         colorName: "Mörkblå",
         colorCode: "#091933",
-        url: "visuals/img/Knoxer_French Navy_Packshot_Front_Main_0.jpg",
+        url: "visuals/img/products/gronatryck_blue_sweatshirt.jpg",
       },
       {
         colorName: "Svart",
         colorCode: "#0f1112",
-        url: "visuals/img/Knoxer_Black_Packshot_Front_Main_0.jpg",
+        url: "visuals/img/products/gronatryck_black_sweatshirt.jpg",
       },
     ],
     priceList: [
@@ -205,12 +205,12 @@ const JSONdata = [
     category: "Väskor",
     title: "Totebag",
     desc: "",
-    img: "visuals/img/Tote Bag_White_Studio_Front_Main_6.jpg",
+    img: "visuals/img/products/gronatryck_white_totebag.jpg",
     colors: [
       {
         colorName: "Vit",
         colorCode: "#ffffff",
-        url: "visuals/img/Tote Bag_White_Studio_Front_Main_6.jpg",
+        url: "visuals/img/products/gronatryck_white_totebag.jpg",
       },
     ],
     priceList: [
@@ -251,12 +251,12 @@ const JSONdata = [
       {
         colorName: "Ljusblå",
         colorCode: "#a5c6d4",
-        url: "visuals/img/Stella Nora_Blue Ice_Packshot_Front_Main_0.jpg",
+        url: "visuals/img/products/gronatryck_white_hoodie.jpg",
       },
       {
         colorName: "Rosa",
         colorCode: "#bf6d8f",
-        url: "visuals/img/Stella Nora_Bubble Pink_Packshot_Front_Main_0.jpg",
+        url: "visuals/img/products/gronatryck_pink_hoodie.jpg",
       },
     ],
     priceList: [
@@ -297,12 +297,12 @@ const JSONdata = [
       {
         colorName: "Beige",
         colorCode: "#b8aa91",
-        url: "visuals/img/Stanley Guider_Desert Dust_Packshot_Front_Main_0.jpg",
+        url: "visuals/img/products/gronatryck_beige_jacket.jpg",
       },
       {
         colorName: "Blå",
         colorCode: "#2b579e",
-        url: "visuals/img/Stanley Guider_Mindful Blue_Packshot_Front_Main_0.jpg",
+        url: "visuals/img/products/gronatryck_blue_jacket.jpg",
       },
     ],
     priceList: [
@@ -343,7 +343,7 @@ const JSONdata = [
       {
         colorName: "Vit",
         colorCode: "#ffffff",
-        url: "visuals/img/grona_tryck_card_2.jpg",
+        url: "visuals/img/grona_tryck_card_1.jpg",
       },
     ],
     priceList: [
@@ -402,17 +402,31 @@ window.onload = function printData() {
               alt="Klädnyhet!"
             />
             <div class="card-body card__body--popular">
-              <p itemprop="category" class="text-color-dark text-sm">${result.category}</p>
+              <p itemprop="category" class="text-color-dark text-sm">${
+                result.category
+              }</p>
               <h5 class="text-color-primary">${result.title}</h5>
               <div id="colorContainer" class="card-dot-container"> 
-              ${result.colors.map((color, index) => `
-                <input class="dot dot-color-${index + 1}" type="button" aria-label="Färg ${index + 1}" style="background-color: ${color.colorCode};">
-            `).join('')}
-                <p class="text-color-dark text-xs">+${result.colors.length} färger</p>
+              ${result.colors
+                .map(
+                  (color, index) => `
+                <input class="dot dot-color-${
+                  index + 1
+                }" type="button" aria-label="Färg ${
+                    index + 1
+                  }" style="background-color: ${color.colorCode};">
+            `
+                )
+                .join("")}
+                <p class="text-color-dark text-xs">+${
+                  result.colors.length
+                } färger</p>
               </div>
               <div class="card-price-container">
                 <p class="text-color-medium text-sm">minimum 25 st.</p>
-                <p class="text-color-dark text-sm">från ${result.priceList[0].price} kr/st</p>
+                <p class="text-color-dark text-sm">från ${
+                  result.priceList[0].price
+                } kr/st</p>
               </div>
             </div>
           </a>
