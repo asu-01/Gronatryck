@@ -16,7 +16,7 @@
   --monochrome-white: #ffffff;
 }
 
-/* Förinställningar för hela sidan*/
+/* Förinställningar för hela sidan  */
 * {
   padding: 0;
   margin: 0;
@@ -49,12 +49,10 @@ body {
   color: var(--primary-green);
 }
 
-/* Border-radius klass*/
+/* Border-radius klass  */
 .round-corner {
   border-radius: 10px;
 }
-
-/* font stilar */
 
 /* Typescale för rubriker och brödtext */
 h1 {
@@ -303,6 +301,11 @@ a:hover {
   z-index: 1;
 }
 
+/* Added extra width to Om oss dropdown */
+.nav-links > li:nth-child(3) .dropdown-content {
+  padding: 2rem 4rem 2rem 2rem;
+}
+
 .dropdown-links {
   width: 12rem;
 }
@@ -378,7 +381,7 @@ a:hover {
 }
 
 .button-primary {
-  display: inline;
+  display: inline-block;
   border: none;
   border-radius: 10px;
   padding: 0.6rem 1rem 0.6rem 1rem;
@@ -386,10 +389,10 @@ a:hover {
   text-align: center;
 }
 .button-secondary {
-  display: inline;
+  display: inline-block;
   border: none;
   border-radius: 10px;
-  padding: 0.6rem 1rem 0.6rem 1rem;
+  padding: 0.5rem 1rem 0.5rem 1rem;
   background-color: var(--secondary-off-white);
   border: 2px solid var(--primary-green);
   text-align: right;
@@ -561,10 +564,18 @@ a:hover {
 .card-slider {
   display: flex;
   justify-content: center;
-  flex-wrap: wrap;
-  overflow: hidden;
-  width: 100%;
+  align-items: center;
+  width: 94%;
   gap: 2%;
+  position: relative;
+  overflow: hidden;
+  margin-left: 4rem;
+}
+
+.card-container--popular {
+  display: flex;
+  transition: transform 0.3s ease-in-out;
+  width: calc(25% * 4 - 2%);
 }
 
 .card-container--popular .card {
@@ -576,8 +587,24 @@ a:hover {
   margin-bottom: 1.4rem;
 }
 
-.hidden-card {
-  display: none;
+.card-slider .arrow {
+  position: absolute;
+  top: 50%;
+  z-index: 10;
+}
+.card-slider-container {
+  position: relative;
+}
+.card-slider-container .arrow--left {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+}
+
+.card-slider-container .arrow--right {
+  position: absolute;
+  right: 2px;
+  top: 50%;
 }
 
 .card-news-icon {
@@ -616,24 +643,6 @@ a:hover {
   font-size: 0;
   line-height: 0;
 }
-
-/* .dot-color-1 {
-  background-color: #e2ebea;
-}
-
-.dot-color-2 {
-  background-color: #1c4230;
-}
-
-.dot-color-3 {
-  background-color: #d4af85;
-}
-.dot-color-4 {
-  background-color: #e14635;
-}
-.dot-color-5 {
-  background-color: #1710a6;
-} */
 
 .dot--large {
   height: 18px;
@@ -695,13 +704,11 @@ a:hover {
 .card-container {
   display: flex;
   gap: 2%;
-  flex-wrap: wrap;
   flex: 1;
   width: 100%;
 }
 
 .card-container .card {
-  flex: 1;
   display: flex;
   flex-direction: column;
   border-radius: 0.5rem;
@@ -709,8 +716,14 @@ a:hover {
   min-width: 15rem;
 }
 
+.card-container--hallbart {
+  flex-wrap: wrap;
+}
+
 .card-container--hallbart .card {
-  max-width: calc(25% - 2%);
+  display: flex;
+  /* max-width: calc(25% - 2%); */
+  flex: 1;
 }
 
 .card__image-container {
@@ -725,19 +738,19 @@ a:hover {
 }
 
 .card__image--gots {
-  background-image: url(/visuals/img/gots_card_image_icon.jpg);
+  background-image: url(../visuals/img/sustainable/gronatryck_gots_card.jpg);
 }
 
 .card__image--enviroment {
-  background-image: url(/visuals/img/enviroment_card_image_icon.jpg);
+  background-image: url(../visuals/img/sustainable/gronatryck_enviroment_card.jpg);
 }
 
 .card__image--print {
-  background-image: url(/visuals/img/print_card_image_icon.jpg);
+  background-image: url(../visuals/img/sustainable/gronatryck_print_card.jpg);
 }
 
 .card__image--workingconditions {
-  background-image: url(/visuals/img/workingconditions_card_image_icon_.jpg);
+  background-image: url(../visuals/img/sustainable/gronatryck_workingconditions_card.jpg);
 }
 
 .card-body-color {
@@ -1019,13 +1032,24 @@ a:hover {
   }
 
   .nav-icons img {
-    /* width: 5vh; */
     cursor: pointer;
   }
 
-  /* popular section */
-  .card-slider .arrow {
+  /*--------- popular section --------------*/
+  .card-slider-container .arrow {
     display: none;
+  }
+
+  .card-container {
+    flex-wrap: wrap;
+  }
+
+  .card-slider {
+    margin: 0;
+  }
+
+  .card-container--popular .card {
+    flex: 1;
   }
 
   .card-slider-container {
@@ -1120,15 +1144,15 @@ a:hover {
     height: 150vh;
   }
 
-  /* Hållbart  */
+  /*------------ Hållbart  ------------*/
   .card-section--two .card-section-info {
     width: 70%;
   }
-  /* Reviews */
+  /*---------- Reviews ------------*/
   .review-icons {
     height: 2vh;
   }
-  /* Mobile footer  */
+  /*--------------- Mobile footer  -------------*/
 
   .footer-content {
     display: flex;
@@ -1170,7 +1194,7 @@ a:hover {
     height: 10%;
   }
 
-  /* news  */
+  /* nyheter  */
   .news-img-text h3 {
     font-size: 2.01rem;
   }
@@ -1231,7 +1255,7 @@ a:hover {
   }
 }
 
-/*-------- Mobile screens media queries ------------*/
+/*--------  media queries for mobile screens ------------*/
 @media screen and (max-width: 768px) {
   /* Text container hero slideshow */
   .slide-text {
@@ -1383,6 +1407,7 @@ a:hover {
 
   .nav-links.open {
     display: flex;
+    z-index: 4;
   }
 
   .dropdown .dropdown.open {

@@ -49,7 +49,12 @@
 /* Small images styling */
 .product-img--small {
   width: 100%;
-  max-width: 12rem;
+  max-width: 30%;
+}
+
+/* Styling added with javascript, when product img is changed by user */
+.product-display-img {
+  object-fit: cover;
 }
 
 /* Quantity button for product */
@@ -121,6 +126,10 @@
   border-bottom: 1px solid var(--primary-new);
 }
 
+.product-menu-item.expanded {
+  border: none;
+}
+
 .product-menu-arrow {
   display: flex;
 }
@@ -138,11 +147,11 @@
 
 .arrow--small {
   cursor: pointer;
-  transition: transform 0.3s; /* Smooth rotation for the arrow */
+  transition: transform 0.3s;
 }
 
 .arrow--small.rotated {
-  transform: rotate(180deg); /* Rotate the arrow when open */
+  transform: rotate(180deg);
 }
 
 /* Related products */
@@ -152,6 +161,18 @@
   margin-bottom: 5rem;
   overflow: hidden;
 }
+
+.card-container--related {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1%;
+}
+
+.card-container--related .card {
+  flex: 1 1 24%;
+  max-width: 24%;
+}
+
 /* alert box for order list */
 .alert-box-container {
   display: flex;
@@ -234,6 +255,10 @@
   .alert-box-container {
     top: 21%;
     left: 78%;
+  }
+
+  .card-container--related .card {
+    max-width: 100%;
   }
 }
 
@@ -342,7 +367,6 @@
   }
 
   .button-quantity {
-    width: 29rem;
     height: 3rem;
   }
 

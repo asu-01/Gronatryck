@@ -5,12 +5,14 @@
     <meta name="author" content="Alva Sundberg och Olivia Hansson" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Grönatryck - produkt</title>
+    <!-- stylesheets -->
     <link rel="stylesheet" href="css/custom_bootstrap.css" />
-    <!-- Länkar till Stoltz typsnitt från Adobe fonts -->
-    <link rel="stylesheet" href="https://use.typekit.net/zlf3fvp.css" />
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/product.css" />
     <link rel="stylesheet" href="css/store.css" />
+    <!-- Länkar till Stoltz typsnitt från Adobe fonts -->
+    <link rel="stylesheet" href="https://use.typekit.net/zlf3fvp.css" />
+
   </head>
 </html>
 <body>
@@ -25,51 +27,50 @@
               </li>
                
             
-              <!--Dropdown sortiment desktop -->
-              <li id="dropdownContainer">
-                <a id="dropdownLink" class="dropdown-btn " href="#">Sortiment 
-                  <!-- <img class="arrow " src="visuals/icons/arrow_icon.svg" alt="En nedåtvänd pil för att visa att sortiment-länken kan utökas"> -->
-                  <svg class="arrow " width="15" height="10" viewBox="0 0 15 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M1.78846 1.5L7.89423 9L14 1.5" stroke="#44725A" stroke-width="2" stroke-linecap="round"
-                        stroke-linejoin="round" />
-                </svg>
-                </a>
-                  
-            
-                <div id="dropdownList" class="dropdown">
-                  <div class="dropdown-content round-corner text-color-offwhite product-info--hidden">
-                    <div class="dropdown-links">
-                      <a href="#">Nyheter</a>
-                      <a href="#">Märken A-O</a>
-                      <a href="#">Bästsäljare</a>
-                      <a href="#">Träning</a>
-                      <a href="#">Friluftsliv</a>
-                      <a href="#">Restlager</a>
-                    </div>
-                    <div class="dropdown-links">
-                      <a href="store.html">Alla kategorier</a>
-                      <a id="expand" href="store-tops.html">Överdelar</a>
-                       <!--Underkategorier till överdelar-->
-                      <div id="subcategory" class="dropdown-subcategory">
-                        <a href="#">T-shirts</a>
-                        <a href="#">Huvtröjor</a>
-                        <a href="#">Jackor</a>
-                        <a href="#">Skjortor</a>
-                        <a href="#">Linnen & Tunikor</a>
+                <!--Dropdown sortiment desktop -->
+                <li id="dropdownContainer">
+                  <a id="dropdownLink" class="dropdown-btn" href="#">Sortiment 
+                    <svg class="arrow " width="15" height="10" viewBox="0 0 15 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M1.78846 1.5L7.89423 9L14 1.5" stroke="#44725A" stroke-width="2" stroke-linecap="round"
+                          stroke-linejoin="round" />
+                    </svg>
+                  </a>
+                    
+              
+                  <div id="dropdownList" class="dropdown">
+                    <div class="dropdown-content round-corner text-color-offwhite">
+                      <div class="dropdown-links">
+                        <a href="#">Nyheter</a>
+                        <a href="#">Märken A-O</a>
+                        <a href="#">Bästsäljare</a>
+                        <a href="#">Träning</a>
+                        <a href="#">Friluftsliv</a>
+                        <a href="#">Restlager</a>
                       </div>
-                      <!--slut-->
-                      <a href="#">Underdelar</a>
-                      <a href="#">Övrigt</a>
-                      <a href="#">Tjänster</a>
+                      <div class="dropdown-links">
+                        <a href="store.html">Alla kategorier</a>
+                        <a id="expand" href="store-tops.html">Överdelar</a>
+                         <!--Underkategorier till överdelar-->
+                        <div id="subcategory" class="dropdown-subcategory">
+                          <a href="#">T-shirts</a>
+                          <a href="#">Huvtröjor</a>
+                          <a href="#">Jackor</a>
+                          <a href="#">Skjortor</a>
+                          <a href="#">Linnen & Tunikor</a>
+                        </div>
+                        <!--slut-->
+                        <a href="#">Underdelar</a>
+                        <a href="#">Övrigt</a>
+                        <a href="#">Tjänster</a>
+                      </div>
                     </div>
-                  </div>
-                </div> 
-              </li>
+                  </div> 
+                </li>
        
         
               <!--Dropdown om oss-->
               <li>
-              <a class="dropdown-btn" href="#">Om oss  <!-- <img class="arrow " src="visuals/icons/arrow_icon.svg" alt="En nedåtvänd pil för att visa att sortiment-länken kan utökas"> -->
+              <a class="dropdown-btn" href="#">Om oss 
                 <svg class="arrow " width="15" height="10" viewBox="0 0 15 10" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M1.78846 1.5L7.89423 9L14 1.5" stroke="#44725A" stroke-width="2" stroke-linecap="round"
                       stroke-linejoin="round" />
@@ -96,7 +97,7 @@
   
               <!--Dropdown kontakt-->
               <li>
-                <a class="dropdown-btn" href="#">Kontakt  <!-- <img class="arrow " src="visuals/icons/arrow_icon.svg" alt="En nedåtvänd pil för att visa att sortiment-länken kan utökas"> -->
+                <a class="dropdown-btn" href="#">Kontakt 
                   <svg class="arrow " width="15" height="10" viewBox="0 0 15 10" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M1.78846 1.5L7.89423 9L14 1.5" stroke="#44725A" stroke-width="2" stroke-linecap="round"
                         stroke-linejoin="round" />
@@ -159,6 +160,7 @@
 
   <section class="container">
     <!-- Produkt bilder  -->
+    <!-- Bilder länkar och alt text läggs in med hjälp av javascript -->
     <div class="product-container">
       <div class="product-img-container">
         <img
@@ -194,12 +196,12 @@
           sweatshirts.
         </p>
         <div class="product-img-certificates">
-          <img src="visuals/certificates/fairwear.svg" alt="" />
+          <img src="visuals/certificates logos//fairwear.svg" alt="Fairwear certificate logo" />
           <img
-            src="visuals/certificates/organic-blende-content-standard.svg"
-            alt=""
+            src="visuals/certificates logos//organic-blende-content-standard.svg"
+            alt="Organic blende content standard certificate logo"
           />
-          <img src="visuals/certificates/peta-approved-vegan.svg" alt="" />
+          <img src="visuals/certificates logos//peta-approved-vegan.svg" alt="Peta approved vegan certificate logo" />
         </div>
         <div>
           <h6 class="text-color-dark-2">Antal</h6>
@@ -219,31 +221,7 @@
         <div>
           <h6 class="text-color-dark-2">Färger</h6>
           <div class="card-dot-container">
-            <!-- <input
-              class="dot dot-color-1 dot--large dot-active"
-              type="button"
-              aria-label="Färg 1"
-            ></input>
-            <input
-              class="dot dot-color-2 dot--large"
-              type="button"
-              aria-label="Färg 2"
-            ></input>
-            <input
-              class="dot dot-color-3 dot--large"
-              type="button"
-              aria-label="Färg 3"
-            ></input>
-            <input
-              class="dot dot-color-4 dot--large"
-              type="button"
-              aria-label="Färg 4"
-            ></input>
-            <input
-              class="dot dot-color-5 dot--large"
-              type="button"
-              aria-label="Färg 5"
-            ></input> -->
+            
             <p class="text-color-dark text-xs">+5 färger</p>
           </div>
         </div>
@@ -253,9 +231,9 @@
         <button onclick="showAlertBox(), addToList()" class="button-primary text-color-offwhite">
           Lägg till
         </button>
-        <a href="contactus.html"><button class="button-secondary text-color-offwhite">
+        <a href="contactus.html" class="button-secondary text-color-offwhite">
           Kontakta oss
-        </button></a>
+        </a>
         <p class="text-color-dark-2 text-infobox--border">
           Ingen order är bindande fören vi har gått igenom allt och godkänt
           beställningen tillsammans med er.
@@ -400,162 +378,10 @@
 
       <!-- Relaterade produkter  -->
       <section class="container related-products"> 
-      <h4 class="text-color-dark-2">Relaterade produkter</h4>
-      <div class="card-slider">
-        <div class="card-container card-container--popular">
-          <article class="card">
-            <img
-              src="visuals/img/grona_tryck_card_1.jpg"
-              class="card-img-top"
-              alt="..."
-            />
-            <img
-              class="card-news-icon"
-              src="/visuals/icons/product_news_icon.svg"
-              alt="Klädnyhet!"
-            />
-            <div class="card-body">
-              <p class="text-color-dark">T-shirt</p>
-              <h5 class="text-color-primary">Classic bomull</h5>
-              <div class="card-dot-container">
-                <input
-                  class="dot dot-color-1"
-                  type="button"
-                  aria-label="Färg 1"
-                ></input>
-                <input
-                  class="dot dot-color-2"
-                  type="button"
-                  aria-label="Färg 2"
-                ></input>
-                <input
-                  class="dot dot-color-3"
-                  type="button"
-                  aria-label="Färg 3"
-                ></input>
-                <p class="text-color-dark text-xs">+5 färger</p>
-              </div>
-              <div class="card-price-container">
-                <p class="text-color-medium text-sm">minimum 25 st.</p>
-                <p class="text-color-dark text-sm">från 410 kr/st</p>
-              </div>
-            </div>
-          </article>
+      <h5 class="text-color-dark-2 ">Relaterade produkter</h5>
+        <div class="card-container card-container--related">
+          <!-- Cards will be dynamically added here with javascript -->
         </div>
-
-        <div class="card-container card-container--popular">
-          <article class="card">
-            <img
-              src="visuals/img/grona_tryck_card_6.jpg"
-              class="card-img-top"
-              alt="..."
-            />
-            <div class="card-body">
-              <p class="text-color-dark">T-shirt</p>
-              <h5 class="text-color-primary">Crafter heritage</h5>
-              <div class="card-dot-container">
-                <input
-                  class="dot dot-color-1"
-                  type="button"
-                  aria-label="Färg 1"
-                ></input>
-                <input
-                  class="dot dot-color-2"
-                  type="button"
-                  aria-label="Färg 2"
-                ></input>
-                <input
-                  class="dot dot-color-3"
-                  type="button"
-                  aria-label="Färg 3"
-                ></input>
-                <p class="text-color-dark text-xs">+5 färger</p>
-              </div>
-              <div class="card-price-container">
-                <p class="text-color-medium text-sm">minimum 25 st.</p>
-                <p class="text-color-dark text-sm">från 410 kr/st</p>
-              </div>
-            </div>
-          </article>
-        </div>
-
-        <div class="card-container card-container--popular">
-          <article class="card">
-            <img
-              src="visuals/img/grona_tryck_card_3.jpg"
-              class="card-img-top"
-              alt="..."
-            />
-            <div class="card-body">
-              <p class="text-color-dark">Sweatshirts & huvtröjor</p>
-              <h5 class="text-color-primary">Knoxer natural</h5>
-              <div class="card-dot-container">
-                <input
-                  class="dot dot-color-1"
-                  type="button"
-                  aria-label="Färg 1"
-                ></input>
-                <input
-                  class="dot dot-color-2"
-                  type="button"
-                  aria-label="Färg 2"
-                ></input>
-                <input
-                  class="dot dot-color-3"
-                  type="button"
-                  aria-label="Färg 3"
-                ></input>
-                <p class="text-color-dark text-xs">+5 färger</p>
-              </div>
-              <div class="card-price-container">
-                <p class="text-color-medium text-sm">minimum 25 st.</p>
-                <p class="text-color-dark text-sm">från 410 kr/st</p>
-              </div>
-            </div>
-          </article>
-        </div>
-
-        <div class="card-container card-container--popular">
-          <article class="card">
-            <img
-              src="visuals/img/grona_tryck_card_4.jpg"
-              class="card-img-top"
-              alt="..."
-            />
-            <img
-              class="card-news-icon"
-              src="/visuals/icons/product_news_icon.svg"
-              alt="Klädnyhet!"
-            />
-            <div class="card-body">
-              <p class="text-color-dark">Jackor & västar</p>
-              <h5 class="text-color-primary">Liner desert</h5>
-              <div class="card-dot-container">
-                <input
-                  class="dot dot-color"
-                  type="button"
-                  aria-label="Färg 1"
-                ></input>
-                <input
-                  class="dot dot-color"
-                  type="button"
-                  aria-label="Färg 2"
-                ></input>
-                <input
-                  class="dot dot-color"
-                  type="button"
-                  aria-label="Färg 3"
-                ></input>
-                <p class="text-color-dark text-xs">+5 färger</p>
-              </div>
-              <div class="card-price-container">
-                <p class="text-color-medium text-sm">minimum 25 st.</p>
-                <p class="text-color-dark text-sm">från 410 kr/st</p>
-              </div>
-            </div>
-          </article>
-        </div>
-      </div>
     </div>
   </section>
 
@@ -567,11 +393,13 @@
     <h6 id="alertArticlename" class="text-color-offwhite"></h6>
     <div class="alert-box-details">
       <div class="alert-box-img">
-      <img src="visuals/img/t-shirt/gronatryck_product_1.jpg" alt="">
+    <!-- add selected product img here dynamically -->
     </div>
-      <p id="alertQuantity" class="text-color-offwhite"></p>
+      <p id="alertQuantity" class="text-color-offwhite">
+        <!-- add selected product title and colour here dynamically -->
+      </p>
     </div>
-    <button class="button-primary"><a class=" text-color-offwhite" href="order-list.html">Gå till beställning</a></button>
+    <a class=" button-primary text-color-offwhite" href="order-list.html">Gå till beställning</a>
     <button onclick="hideAlertBoxAndBubble()" class="button-secondary">Ångra</button>
       
 
@@ -666,4 +494,5 @@
   <script src="js/order-list.js"></script>
   <script src="js/change-content.js"></script>
   <script src="js/searchbar.js"></script>
+  <script src="js/related-products.js"></script>
 </body>

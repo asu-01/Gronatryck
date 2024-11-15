@@ -139,56 +139,62 @@ aria-label="Sök igenom innehåll på hemsidan" role="search">
 
     </header>
     <!--Alla kategorier-->
+
+     
     <section itemscope itemtype="https://schema.org/Product" class="catalogue">
       <div class="breadcrumb text-color-primary">
         <a href="index.html">Hem</a>
-        <img class="arrow--right" src="/visuals/icons/arrow_icon.svg" />
-        <a>Alla Kategorier</a>
+        <img class="arrow--right" src="/visuals/icons/arrow_icon.svg" alt="En grön pil ikon för att visa föregående och aktuell sida" />
+        <a>Alla kategorier</a>
       </div>
       <div class="catalogue-container">
         <h2 class="text-color-primary">Alla kategorier</h2>
         <div class="catalogue-category">
           <a href="store-tops.html">
-            <img
+            <img 
               class="round-corner"
-              src="visuals/img/Puffer Gilet_French Navy_Duo_Front_Main_0.jpg"
+              src="visuals/img/category/gronatryck_category_tops.jpg"
+              alt="Bild på en kille och tjej med blåa västar"
+              aria-label="Välj kategori överdelar"
             />
             <p class="category-text">Överdelar</p>
           </a>
           <a href="#">
-            <img
+            <img 
               class="round-corner"
-              src="/visuals/img/Premium-ekologiska-sweatpants-185-Khaki_Duo-1024x1024.jpg"
+              src="visuals/img/category/gronatryck_category_pants.jpg"
+              alt="En kille och tjej med gröna mjukis byxor"
+              aria-label="Välj kategori underdelar"
             />
             <p class="category-text">Underdelar</p>
           </a>
           <a href="#"
-            ><img
+            ><img 
               class="round-corner"
-              src="visuals/img/Tote Bag_White_Studio_Front_Main_6.jpg"
+              src="visuals/img/products/gronatryck_white_totebag.jpg"
+              alt="En tjej som bär en vit totebag runt axeln"
+              aria-label="Välj kategori accessoarer"
             />
             <p class="category-text">Accessoarer</p>
           </a>
           <a href="#"
             ><img
               class="round-corner"
-              src="/visuals/img/Isolerad-vattenflaska-av-rostfritt-stal-med-hangare-bw-2207-1024x1024.jpg"
+              src="visuals/img/category/gronatryck_category_other.jpg"
+              alt="Bild på en termos för produktkategori övrigt"
+              aria-label="Välj kategori övrigt"
             />
             <p class="category-text">Övrigt</p>
           </a>
           <a href="#">
             <img
               class="round-corner"
-              src="visuals/img/jan-losert-x5gjBh8VNWM-unsplash.jpg"
+              src="visuals/img/category/gronatryck_category_service.jpg"
+              alt="Bild på en datorsetup för produktkategori tjänster"
+              aria-label="Välj kategori tjänster"
             />
             <p class="category-text">Tjänster</p>
           </a>
-
-          <!-- <p>Överdelar</p>
-          <p>Underdelar</p>
-          <p>Accessoarer</p>
-          <p>Övrigt</p>
-          <p>Tjänster</p> -->
         </div>
       </div>
       <div class="catalogue-filter text-color-primary">
@@ -196,576 +202,19 @@ aria-label="Sök igenom innehåll på hemsidan" role="search">
           <img
             class="filter-icon text-color-primary"
             src="/visuals/icons/gronatryck_icon_filter01.svg"
+            alt="filter ikon"
           />
           Sortera
         </p>
         <p>
           Visa 12st
-          <img src="/visuals/icons/arrow_icon.svg" />
+          <img src="/visuals/icons/arrow_icon.svg" alt="Nedåt vänd pil ikon" />
         </p>
       </div>
       <div class="catalogue-products">
-        <!-- Produkt cards-->
-        <!-- <div class="card">
-          <a href="product.html">
-            <img
-              src="/visuals/img/grona_tryck_card_2.jpg"
-              class="card-img-top"
-              title="Vit t-shirt i bomull"
-              alt="En tjej klädd i en vit t-shirt"
-            />
-            <img
-              class="card-news-icon"
-              src="/visuals/icons/product_news_icon.svg"
-              alt="Klädnyhet!"
-            />
-            <div class="card-body card__body--popular">
-              <p class="text-color-dark text-sm">T-shirt</p>
-              <h5 class="text-color-primary">Classic fit</h5>
-              <div class="card-dot-container">
-                <button
-                  class="dot dot-color-1"
-                  type="button"
-                  aria-label="Färg 1"
-                ></button>
-                <button
-                  class="dot dot-color-2"
-                  type="button"
-                  aria-label="Färg 2"
-                ></button>
-                <button
-                  class="dot dot-color-3"
-                  type="button"
-                  aria-label="Färg 3"
-                ></button>
-                <p class="text-color-dark text-xs">+5 färger</p>
-              </div>
-              <div class="card-price-container">
-                <p class="text-color-medium text-sm">minimum 25 st.</p>
-                <p class="text-color-dark text-sm">från 410 kr/st</p>
-              </div>
-            </div>
-          </a>
-        </div>
-
-        <div class="card">
-          <div class="card__image-container--popular">
-            <img
-              src="/visuals/img/grona_tryck_card_1.jpg"
-              class="card-img-top"
-              title="Vit t-shirt i bomull"
-              alt="En tjej klädd i en vit t-shirt"
-            />
-            <img
-              class="card-news-icon"
-              src="/visuals/icons/product_news_icon.svg"
-              alt="Klädnyhet!"
-            />
-            <button class="card-heart-icon" type="button" aria-label="Lägg till i favoriter">
-            <svg  width="30" height="auto" viewBox="0 0 143 130" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M64.3268 126.845L12.2268 74.7448C-7.17321 55.3448 -0.873207 30.4448 13.0268 15.5448C27.5268 0.0447998 52.1268 -6.9552 71.6268 9.2448C90.7268 -6.5552 115.127 0.744804 129.627 16.2448C143.527 31.1448 149.927 55.8448 131.027 74.7448L78.9268 126.845C75.1268 130.645 69.0268 131.145 64.4268 126.845H64.3268ZM76.7268 16.7448C73.8268 19.3448 69.2268 19.1448 66.5268 16.7448C35.3268 -10.1552 -11.0732 39.1448 18.6268 68.3448L70.7268 120.445C71.2268 120.945 72.0268 120.945 72.5268 120.445L124.627 68.3448C153.827 40.1448 106.827 -9.2552 76.7268 16.7448Z" fill="#1C4230"/>
-              </svg>
-          </button>
-          </div>
-          <div class="card-body card__body--popular">
-            <p class="text-color-dark text-sm">T-shirt</p>
-            <h5 class="text-color-primary">Classic bomull</h5>
-            <div class="card-dot-container">
-              <button
-                class="dot dot-color-1"
-                type="button"
-                aria-label="Färg 1"
-              ></button>
-              <button
-                class="dot dot-color-2"
-                type="button"
-                aria-label="Färg 2"
-              ></button>
-              <button
-                class="dot dot-color-3"
-                type="button"
-                aria-label="Färg 3"
-              ></button>
-              <p class="text-color-dark text-xs">+5 färger</p>
-            </div>
-            <div class="card-price-container">
-              <p class="text-color-medium text-sm">minimum 25 st.</p>
-              <p class="text-color-dark text-sm">från 410 kr/st</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="card">
-          <div class="card__image-container--popular">
-            <img
-              src="/visuals/img/grona_tryck_card_1.jpg"
-              class="card-img-top"
-              title="Vit t-shirt i bomull"
-              alt="En tjej klädd i en vit t-shirt"
-            />
-            <img
-              class="card-news-icon"
-              src="/visuals/icons/product_news_icon.svg"
-              alt="Klädnyhet!"
-            />
-            <button class="card-heart-icon" type="button" aria-label="Lägg till i favoriter">
-            <svg  width="30" height="auto" viewBox="0 0 143 130" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M64.3268 126.845L12.2268 74.7448C-7.17321 55.3448 -0.873207 30.4448 13.0268 15.5448C27.5268 0.0447998 52.1268 -6.9552 71.6268 9.2448C90.7268 -6.5552 115.127 0.744804 129.627 16.2448C143.527 31.1448 149.927 55.8448 131.027 74.7448L78.9268 126.845C75.1268 130.645 69.0268 131.145 64.4268 126.845H64.3268ZM76.7268 16.7448C73.8268 19.3448 69.2268 19.1448 66.5268 16.7448C35.3268 -10.1552 -11.0732 39.1448 18.6268 68.3448L70.7268 120.445C71.2268 120.945 72.0268 120.945 72.5268 120.445L124.627 68.3448C153.827 40.1448 106.827 -9.2552 76.7268 16.7448Z" fill="#1C4230"/>
-              </svg>
-          </button> 
-          </div>
-          <div class="card-body card__body--popular">
-            <p class="text-color-dark text-sm">T-shirt</p>
-            <h5 class="text-color-primary">Classic bomull</h5>
-            <div class="card-dot-container">
-              <button
-                class="dot dot-color-1"
-                type="button"
-                aria-label="Färg 1"
-              ></button>
-              <button
-                class="dot dot-color-2"
-                type="button"
-                aria-label="Färg 2"
-              ></button>
-              <button
-                class="dot dot-color-3"
-                type="button"
-                aria-label="Färg 3"
-              ></button>
-              <p class="text-color-dark text-xs">+5 färger</p>
-            </div>
-            <div class="card-price-container">
-              <p class="text-color-medium text-sm">minimum 25 st.</p>
-              <p class="text-color-dark text-sm">från 410 kr/st</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="card">
-          <div class="card__image-container--popular">
-            <img
-              src="/visuals/img/grona_tryck_card_1.jpg"
-              class="card-img-top"
-              title="Vit t-shirt i bomull"
-              alt="En tjej klädd i en vit t-shirt"
-            />
-            <img
-              class="card-news-icon"
-              src="/visuals/icons/product_news_icon.svg"
-              alt="Klädnyhet!"
-            />
-            <button class="card-heart-icon" type="button" aria-label="Lägg till i favoriter">
-            <svg  width="30" height="auto" viewBox="0 0 143 130" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M64.3268 126.845L12.2268 74.7448C-7.17321 55.3448 -0.873207 30.4448 13.0268 15.5448C27.5268 0.0447998 52.1268 -6.9552 71.6268 9.2448C90.7268 -6.5552 115.127 0.744804 129.627 16.2448C143.527 31.1448 149.927 55.8448 131.027 74.7448L78.9268 126.845C75.1268 130.645 69.0268 131.145 64.4268 126.845H64.3268ZM76.7268 16.7448C73.8268 19.3448 69.2268 19.1448 66.5268 16.7448C35.3268 -10.1552 -11.0732 39.1448 18.6268 68.3448L70.7268 120.445C71.2268 120.945 72.0268 120.945 72.5268 120.445L124.627 68.3448C153.827 40.1448 106.827 -9.2552 76.7268 16.7448Z" fill="#1C4230"/>
-              </svg>
-          </button>
-          </div>
-          <div class="card-body card__body--popular">
-            <p class="text-color-dark text-sm">T-shirt</p>
-            <h5 class="text-color-primary">Classic bomull</h5>
-            <div class="card-dot-container">
-              <button
-                class="dot dot-color-1"
-                type="button"
-                aria-label="Färg 1"
-              ></button>
-              <button
-                class="dot dot-color-2"
-                type="button"
-                aria-label="Färg 2"
-              ></button>
-              <button
-                class="dot dot-color-3"
-                type="button"
-                aria-label="Färg 3"
-              ></button>
-              <p class="text-color-dark text-xs">+5 färger</p>
-            </div>
-            <div class="card-price-container">
-              <p class="text-color-medium text-sm">minimum 25 st.</p>
-              <p class="text-color-dark text-sm">från 410 kr/st</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="card">
-          <div class="card__image-container--popular">
-            <img
-              src="/visuals/img/grona_tryck_card_1.jpg"
-              class="card-img-top"
-              title="Vit t-shirt i bomull"
-              alt="En tjej klädd i en vit t-shirt"
-            />
-            <img
-              class="card-news-icon"
-              src="/visuals/icons/product_news_icon.svg"
-              alt="Klädnyhet!"
-            />
-            <button class="card-heart-icon" type="button" aria-label="Lägg till i favoriter">
-            <svg  width="30" height="auto" viewBox="0 0 143 130" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M64.3268 126.845L12.2268 74.7448C-7.17321 55.3448 -0.873207 30.4448 13.0268 15.5448C27.5268 0.0447998 52.1268 -6.9552 71.6268 9.2448C90.7268 -6.5552 115.127 0.744804 129.627 16.2448C143.527 31.1448 149.927 55.8448 131.027 74.7448L78.9268 126.845C75.1268 130.645 69.0268 131.145 64.4268 126.845H64.3268ZM76.7268 16.7448C73.8268 19.3448 69.2268 19.1448 66.5268 16.7448C35.3268 -10.1552 -11.0732 39.1448 18.6268 68.3448L70.7268 120.445C71.2268 120.945 72.0268 120.945 72.5268 120.445L124.627 68.3448C153.827 40.1448 106.827 -9.2552 76.7268 16.7448Z" fill="#1C4230"/>
-              </svg>
-          </button>
-          </div>
-          <div class="card-body card__body--popular">
-            <p class="text-color-dark text-sm">T-shirt</p>
-            <h5 class="text-color-primary">Classic bomull</h5>
-            <div class="card-dot-container">
-              <button
-                class="dot dot-color-1"
-                type="button"
-                aria-label="Färg 1"
-              ></button>
-              <button
-                class="dot dot-color-2"
-                type="button"
-                aria-label="Färg 2"
-              ></button>
-              <button
-                class="dot dot-color-3"
-                type="button"
-                aria-label="Färg 3"
-              ></button>
-              <p class="text-color-dark text-xs">+5 färger</p>
-            </div>
-            <div class="card-price-container">
-              <p class="text-color-medium text-sm">minimum 25 st.</p>
-              <p class="text-color-dark text-sm">från 410 kr/st</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="card">
-          <div class="card__image-container--popular">
-            <img
-              src="/visuals/img/grona_tryck_card_1.jpg"
-              class="card-img-top"
-              title="Vit t-shirt i bomull"
-              alt="En tjej klädd i en vit t-shirt"
-            />
-            <img
-              class="card-news-icon"
-              src="/visuals/icons/product_news_icon.svg"
-              alt="Klädnyhet!"
-            />
-            <button class="card-heart-icon" type="button" aria-label="Lägg till i favoriter">
-            <svg  width="30" height="auto" viewBox="0 0 143 130" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M64.3268 126.845L12.2268 74.7448C-7.17321 55.3448 -0.873207 30.4448 13.0268 15.5448C27.5268 0.0447998 52.1268 -6.9552 71.6268 9.2448C90.7268 -6.5552 115.127 0.744804 129.627 16.2448C143.527 31.1448 149.927 55.8448 131.027 74.7448L78.9268 126.845C75.1268 130.645 69.0268 131.145 64.4268 126.845H64.3268ZM76.7268 16.7448C73.8268 19.3448 69.2268 19.1448 66.5268 16.7448C35.3268 -10.1552 -11.0732 39.1448 18.6268 68.3448L70.7268 120.445C71.2268 120.945 72.0268 120.945 72.5268 120.445L124.627 68.3448C153.827 40.1448 106.827 -9.2552 76.7268 16.7448Z" fill="#1C4230"/>
-              </svg>
-          </button>
-          </div>
-          <div class="card-body card__body--popular">
-            <p class="text-color-dark text-sm">T-shirt</p>
-            <h5 class="text-color-primary">Classic bomull</h5>
-            <div class="card-dot-container">
-              <button
-                class="dot dot-color-1"
-                type="button"
-                aria-label="Färg 1"
-              ></button>
-              <button
-                class="dot dot-color-2"
-                type="button"
-                aria-label="Färg 2"
-              ></button>
-              <button
-                class="dot dot-color-3"
-                type="button"
-                aria-label="Färg 3"
-              ></button>
-              <p class="text-color-dark text-xs">+5 färger</p>
-            </div>
-            <div class="card-price-container">
-              <p class="text-color-medium text-sm">minimum 25 st.</p>
-              <p class="text-color-dark text-sm">från 410 kr/st</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="card">
-          <div class="card__image-container--popular">
-            <img
-              src="/visuals/img/grona_tryck_card_1.jpg"
-              class="card-img-top"
-              title="Vit t-shirt i bomull"
-              alt="En tjej klädd i en vit t-shirt"
-            />
-            <img
-              class="card-news-icon"
-              src="/visuals/icons/product_news_icon.svg"
-              alt="Klädnyhet!"
-            />
-             <button class="card-heart-icon" type="button" aria-label="Lägg till i favoriter">
-            <svg  width="30" height="auto" viewBox="0 0 143 130" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M64.3268 126.845L12.2268 74.7448C-7.17321 55.3448 -0.873207 30.4448 13.0268 15.5448C27.5268 0.0447998 52.1268 -6.9552 71.6268 9.2448C90.7268 -6.5552 115.127 0.744804 129.627 16.2448C143.527 31.1448 149.927 55.8448 131.027 74.7448L78.9268 126.845C75.1268 130.645 69.0268 131.145 64.4268 126.845H64.3268ZM76.7268 16.7448C73.8268 19.3448 69.2268 19.1448 66.5268 16.7448C35.3268 -10.1552 -11.0732 39.1448 18.6268 68.3448L70.7268 120.445C71.2268 120.945 72.0268 120.945 72.5268 120.445L124.627 68.3448C153.827 40.1448 106.827 -9.2552 76.7268 16.7448Z" fill="#1C4230"/>
-              </svg>
-          </button> 
-          </div>
-          <div class="card-body card__body--popular">
-            <p class="text-color-dark text-sm">T-shirt</p>
-            <h5 class="text-color-primary">Classic bomull</h5>
-            <div class="card-dot-container">
-              <button
-                class="dot dot-color-1"
-                type="button"
-                aria-label="Färg 1"
-              ></button>
-              <button
-                class="dot dot-color-2"
-                type="button"
-                aria-label="Färg 2"
-              ></button>
-              <button
-                class="dot dot-color-3"
-                type="button"
-                aria-label="Färg 3"
-              ></button>
-              <p class="text-color-dark text-xs">+5 färger</p>
-            </div>
-            <div class="card-price-container">
-              <p class="text-color-medium text-sm">minimum 25 st.</p>
-              <p class="text-color-dark text-sm">från 410 kr/st</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="card">
-          <div class="card__image-container--popular">
-            <img
-              src="/visuals/img/grona_tryck_card_1.jpg"
-              class="card-img-top"
-              title="Vit t-shirt i bomull"
-              alt="En tjej klädd i en vit t-shirt"
-            />
-            <img
-              class="card-news-icon"
-              src="/visuals/icons/product_news_icon.svg"
-              alt="Klädnyhet!"
-            />
-             <button class="card-heart-icon" type="button" aria-label="Lägg till i favoriter">
-            <svg  width="30" height="auto" viewBox="0 0 143 130" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M64.3268 126.845L12.2268 74.7448C-7.17321 55.3448 -0.873207 30.4448 13.0268 15.5448C27.5268 0.0447998 52.1268 -6.9552 71.6268 9.2448C90.7268 -6.5552 115.127 0.744804 129.627 16.2448C143.527 31.1448 149.927 55.8448 131.027 74.7448L78.9268 126.845C75.1268 130.645 69.0268 131.145 64.4268 126.845H64.3268ZM76.7268 16.7448C73.8268 19.3448 69.2268 19.1448 66.5268 16.7448C35.3268 -10.1552 -11.0732 39.1448 18.6268 68.3448L70.7268 120.445C71.2268 120.945 72.0268 120.945 72.5268 120.445L124.627 68.3448C153.827 40.1448 106.827 -9.2552 76.7268 16.7448Z" fill="#1C4230"/>
-              </svg>
-          </button>
-          </div>
-          <div class="card-body card__body--popular">
-            <p class="text-color-dark text-sm">T-shirt</p>
-            <h5 class="text-color-primary">Classic bomull</h5>
-            <div class="card-dot-container">
-              <button
-                class="dot dot-color-1"
-                type="button"
-                aria-label="Färg 1"
-              ></button>
-              <button
-                class="dot dot-color-2"
-                type="button"
-                aria-label="Färg 2"
-              ></button>
-              <button
-                class="dot dot-color-3"
-                type="button"
-                aria-label="Färg 3"
-              ></button>
-              <p class="text-color-dark text-xs">+5 färger</p>
-            </div>
-            <div class="card-price-container">
-              <p class="text-color-medium text-sm">minimum 25 st.</p>
-              <p class="text-color-dark text-sm">från 410 kr/st</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="card">
-          <div class="card__image-container--popular">
-            <img
-              src="/visuals/img/grona_tryck_card_1.jpg"
-              class="card-img-top"
-              title="Vit t-shirt i bomull"
-              alt="En tjej klädd i en vit t-shirt"
-            />
-            <img
-              class="card-news-icon"
-              src="/visuals/icons/product_news_icon.svg"
-              alt="Klädnyhet!"
-            />
-            <button class="card-heart-icon" type="button" aria-label="Lägg till i favoriter">
-            <svg  width="30" height="auto" viewBox="0 0 143 130" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M64.3268 126.845L12.2268 74.7448C-7.17321 55.3448 -0.873207 30.4448 13.0268 15.5448C27.5268 0.0447998 52.1268 -6.9552 71.6268 9.2448C90.7268 -6.5552 115.127 0.744804 129.627 16.2448C143.527 31.1448 149.927 55.8448 131.027 74.7448L78.9268 126.845C75.1268 130.645 69.0268 131.145 64.4268 126.845H64.3268ZM76.7268 16.7448C73.8268 19.3448 69.2268 19.1448 66.5268 16.7448C35.3268 -10.1552 -11.0732 39.1448 18.6268 68.3448L70.7268 120.445C71.2268 120.945 72.0268 120.945 72.5268 120.445L124.627 68.3448C153.827 40.1448 106.827 -9.2552 76.7268 16.7448Z" fill="#1C4230"/>
-              </svg>
-          </button>
-          </div>
-          <div class="card-body card__body--popular">
-            <p class="text-color-dark text-sm">T-shirt</p>
-            <h5 class="text-color-primary">Classic bomull</h5>
-            <div class="card-dot-container">
-              <button
-                class="dot dot-color-1"
-                type="button"
-                aria-label="Färg 1"
-              ></button>
-              <button
-                class="dot dot-color-2"
-                type="button"
-                aria-label="Färg 2"
-              ></button>
-              <button
-                class="dot dot-color-3"
-                type="button"
-                aria-label="Färg 3"
-              ></button>
-              <p class="text-color-dark text-xs">+5 färger</p>
-            </div>
-            <div class="card-price-container">
-              <p class="text-color-medium text-sm">minimum 25 st.</p>
-              <p class="text-color-dark text-sm">från 410 kr/st</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="card">
-          <div class="card__image-container--popular">
-            <img
-              src="/visuals/img/grona_tryck_card_1.jpg"
-              class="card-img-top"
-              title="Vit t-shirt i bomull"
-              alt="En tjej klädd i en vit t-shirt"
-            />
-            <img
-              class="card-news-icon"
-              src="/visuals/icons/product_news_icon.svg"
-              alt="Klädnyhet!"
-            />
-             <button class="card-heart-icon" type="button" aria-label="Lägg till i favoriter">
-            <svg  width="30" height="auto" viewBox="0 0 143 130" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M64.3268 126.845L12.2268 74.7448C-7.17321 55.3448 -0.873207 30.4448 13.0268 15.5448C27.5268 0.0447998 52.1268 -6.9552 71.6268 9.2448C90.7268 -6.5552 115.127 0.744804 129.627 16.2448C143.527 31.1448 149.927 55.8448 131.027 74.7448L78.9268 126.845C75.1268 130.645 69.0268 131.145 64.4268 126.845H64.3268ZM76.7268 16.7448C73.8268 19.3448 69.2268 19.1448 66.5268 16.7448C35.3268 -10.1552 -11.0732 39.1448 18.6268 68.3448L70.7268 120.445C71.2268 120.945 72.0268 120.945 72.5268 120.445L124.627 68.3448C153.827 40.1448 106.827 -9.2552 76.7268 16.7448Z" fill="#1C4230"/>
-              </svg>
-          </button>
-          </div>
-          <div class="card-body card__body--popular">
-            <p class="text-color-dark text-sm">T-shirt</p>
-            <h5 class="text-color-primary">Classic bomull</h5>
-            <div class="card-dot-container">
-              <button
-                class="dot dot-color-1"
-                type="button"
-                aria-label="Färg 1"
-              ></button>
-              <button
-                class="dot dot-color-2"
-                type="button"
-                aria-label="Färg 2"
-              ></button>
-              <button
-                class="dot dot-color-3"
-                type="button"
-                aria-label="Färg 3"
-              ></button>
-              <p class="text-color-dark text-xs">+5 färger</p>
-            </div>
-            <div class="card-price-container">
-              <p class="text-color-medium text-sm">minimum 25 st.</p>
-              <p class="text-color-dark text-sm">från 410 kr/st</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="card">
-          <div class="card__image-container--popular">
-            <img
-              src="/visuals/img/grona_tryck_card_1.jpg"
-              class="card-img-top"
-              title="Vit t-shirt i bomull"
-              alt="En tjej klädd i en vit t-shirt"
-            />
-            <img
-              class="card-news-icon"
-              src="/visuals/icons/product_news_icon.svg"
-              alt="Klädnyhet!"
-            />
-            <button class="card-heart-icon" type="button" aria-label="Lägg till i favoriter">
-            <svg  width="30" height="auto" viewBox="0 0 143 130" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M64.3268 126.845L12.2268 74.7448C-7.17321 55.3448 -0.873207 30.4448 13.0268 15.5448C27.5268 0.0447998 52.1268 -6.9552 71.6268 9.2448C90.7268 -6.5552 115.127 0.744804 129.627 16.2448C143.527 31.1448 149.927 55.8448 131.027 74.7448L78.9268 126.845C75.1268 130.645 69.0268 131.145 64.4268 126.845H64.3268ZM76.7268 16.7448C73.8268 19.3448 69.2268 19.1448 66.5268 16.7448C35.3268 -10.1552 -11.0732 39.1448 18.6268 68.3448L70.7268 120.445C71.2268 120.945 72.0268 120.945 72.5268 120.445L124.627 68.3448C153.827 40.1448 106.827 -9.2552 76.7268 16.7448Z" fill="#1C4230"/>
-              </svg>
-          </button>
-          </div>
-          <div class="card-body card__body--popular">
-            <p class="text-color-dark text-sm">T-shirt</p>
-            <h5 class="text-color-primary">Classic bomull</h5>
-            <div class="card-dot-container">
-              <button
-                class="dot dot-color-1"
-                type="button"
-                aria-label="Färg 1"
-              ></button>
-              <button
-                class="dot dot-color-2"
-                type="button"
-                aria-label="Färg 2"
-              ></button>
-              <button
-                class="dot dot-color-3"
-                type="button"
-                aria-label="Färg 3"
-              ></button>
-              <p class="text-color-dark text-xs">+5 färger</p>
-            </div>
-            <div class="card-price-container">
-              <p class="text-color-medium text-sm">minimum 25 st.</p>
-              <p class="text-color-dark text-sm">från 410 kr/st</p>
-            </div>
-          </div>
-        </div>
-
-
-        <div class="card">
-          <div class="card__image-container--popular">
-            <img
-              src="/visuals/img/grona_tryck_card_1.jpg"
-              class="card-img-top"
-              title="Vit t-shirt i bomull"
-              alt="En tjej klädd i en vit t-shirt"
-            />
-            <img
-              class="card-news-icon"
-              src="/visuals/icons/product_news_icon.svg"
-              alt="Klädnyhet!"
-            />
-            <button class="card-heart-icon" type="button" aria-label="Lägg till i favoriter">
-            <svg  width="30" height="auto" viewBox="0 0 143 130" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M64.3268 126.845L12.2268 74.7448C-7.17321 55.3448 -0.873207 30.4448 13.0268 15.5448C27.5268 0.0447998 52.1268 -6.9552 71.6268 9.2448C90.7268 -6.5552 115.127 0.744804 129.627 16.2448C143.527 31.1448 149.927 55.8448 131.027 74.7448L78.9268 126.845C75.1268 130.645 69.0268 131.145 64.4268 126.845H64.3268ZM76.7268 16.7448C73.8268 19.3448 69.2268 19.1448 66.5268 16.7448C35.3268 -10.1552 -11.0732 39.1448 18.6268 68.3448L70.7268 120.445C71.2268 120.945 72.0268 120.945 72.5268 120.445L124.627 68.3448C153.827 40.1448 106.827 -9.2552 76.7268 16.7448Z" fill="#1C4230"/>
-              </svg>
-          </button>
-          </div>
-          <div class="card-body card__body--popular">
-            <p class="text-color-dark text-sm">T-shirt</p>
-            <h5 class="text-color-primary">Classic bomull</h5>
-            <div class="card-dot-container">
-              <button
-                class="dot dot-color-1"
-                type="button"
-                aria-label="Färg 1"
-              ></button>
-              <button
-                class="dot dot-color-2"
-                type="button"
-                aria-label="Färg 2"
-              ></button>
-              <button
-                class="dot dot-color-3"
-                type="button"
-                aria-label="Färg 3"
-              ></button>
-              <p class="text-color-dark text-xs">+5 färger</p>
-            </div>
-            <div class="card-price-container">
-              <p class="text-color-medium text-sm">minimum 25 st.</p>
-              <p class="text-color-dark text-sm">från 410 kr/st</p>
-            </div>
-          </div>
-        </div>
-        -->
+        
+    <!-- här laddas products cards in dynamiskt via javascript -->
+     
       </div>
       <div class="catalogue-btn-container">
         <button class="catalogue-btn button-primary text-color-offwhite">

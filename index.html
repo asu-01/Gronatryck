@@ -1,5 +1,8 @@
 <!--
     Projektgrupp 4: Kollaborativt projekt
+    Lina Engman
+    Oskar Backlund
+    Saga Jusslin
     h20alsun Alva Sundberg
     h22oliha Olivia Hansson
     h22harwi Harvi Sami William
@@ -43,11 +46,11 @@
               
                 <!--Dropdown sortiment desktop -->
                 <li id="dropdownContainer">
-                  <a id="dropdownLink" class="dropdown-btn " href="#">Sortiment 
+                  <a id="dropdownLink" class="dropdown-btn" href="#">Sortiment 
                     <svg class="arrow " width="15" height="10" viewBox="0 0 15 10" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path d="M1.78846 1.5L7.89423 9L14 1.5" stroke="#44725A" stroke-width="2" stroke-linecap="round"
                           stroke-linejoin="round" />
-                  </svg>
+                    </svg>
                   </a>
                     
               
@@ -84,7 +87,7 @@
           
                 <!--Dropdown om oss-->
                 <li>
-                <a class="dropdown-btn" href="#">Om oss  <!-- <img class="arrow " src="visuals/icons/arrow_icon.svg" alt="En nedåtvänd pil för att visa att sortiment-länken kan utökas"> -->
+                <a class="dropdown-btn" href="#">Om oss 
                   <svg class="arrow " width="15" height="10" viewBox="0 0 15 10" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M1.78846 1.5L7.89423 9L14 1.5" stroke="#44725A" stroke-width="2" stroke-linecap="round"
                         stroke-linejoin="round" />
@@ -107,11 +110,10 @@
                 <li>
                 <a href="stanleystella.html">Stanley Stella</a>
                 </li>
-                
     
                 <!--Dropdown kontakt-->
                 <li>
-                  <a class="dropdown-btn" href="#">Kontakt  <!-- <img class="arrow " src="visuals/icons/arrow_icon.svg" alt="En nedåtvänd pil för att visa att sortiment-länken kan utökas"> -->
+                  <a class="dropdown-btn" href="#">Kontakt
                     <svg class="arrow " width="15" height="10" viewBox="0 0 15 10" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path d="M1.78846 1.5L7.89423 9L14 1.5" stroke="#44725A" stroke-width="2" stroke-linecap="round"
                           stroke-linejoin="round" />
@@ -160,7 +162,6 @@
 <div class="hero-image" role="img">   
   <div class="hero-slideshow">
       <div class="hero-slide active">
-          <!-- <img class="hero-slides" src="visuals/img/gronatryck_image_slide_1.jpg" alt="Hero Image 1"> -->
           <!-- Responsiv hero image -->
           <picture>
             <!-- webp image source -->
@@ -174,9 +175,9 @@
                 visuals/img/hero_slideshow/webp/gronatryck_pictures_headerimage_01_1024.webp 1024w,
                 visuals/img/hero_slideshow/webp/gronatryck_pictures_headerimage_01_2048.webp 2048w"
               sizes="
-                (min-width: 1200px) 40vw,
-                (min-width: 992px) 45vw,
-                (min-width: 768px) 50vw,
+                (max-width: 1200px) 40vw,
+                (max-width: 992px) 45vw,
+                (max-width: 768px) 50vw,
                 100vw"
             />
             <!-- png image source -->
@@ -190,14 +191,14 @@
               visuals/img/hero_slideshow/png/gronatryck_pictures_headerimage_01_1024.png 1024w,
               visuals/img/hero_slideshow/png/gronatryck_pictures_headerimage_01_2048.png 2048w"
             sizes="
-              (min-width: 1200px) 40vw,
-              (min-width: 992px) 45vw,
-              (min-width: 768px) 50vw,
+              (max-width: 1200px) 40vw,
+              (max-width: 992px) 45vw,
+              (max-width: 768px) 50vw,
               100vw"
           />
-    <!-- jpg image source -->
+        <!-- jpg image source -->
             <source
-              type="image/jpeg"
+              type="image/jpg"
               srcset="
                 visuals/img/hero_slideshow/jpg/gronatryck_pictures_headerimage_01_256.jpg 256w,
                 visuals/img/hero_slideshow/jpg/gronatryck_pictures_headerimage_01_512.jpg 512w,
@@ -206,38 +207,38 @@
                 visuals/img/hero_slideshow/jpg/gronatryck_pictures_headerimage_01_1024.jpg 1024w,
                 visuals/img/hero_slideshow/jpg/gronatryck_pictures_headerimage_01_2048.jpg 2048w"
               sizes="
-                (min-width: 1200px) 40vw,
-                (min-width: 992px) 45vw,
-                (min-width: 768px) 50vw,
+                (max-width: 1200px) 40vw,
+                (max-width: 992px) 45vw,
+                (max-width: 768px) 50vw,
                 100vw"
             />
           
 
-            <!-- Fallback image (for browsers that do not support <picture>) -->
-            <img class="hero-slides" src="visuals/img/gronatryck_image_slide_1.jpg" alt="En grupp människor i en skog, klädda i varm kläder från grönatryck">
+            <!-- fallback image (for browsers that do not support <picture>) -->
+            <img class="hero-slides" src="visuals/img/hero_slideshow/gronatryck_image_slide_1.jpg " alt="En grupp människor i en skog, klädda i varm kläder från grönatryck">
           </picture>
           
           
           <div class="slide-text">
               <h1 class="text-color-offwhite text--bold">Din miljömedvetna profilbutik</h1>
               <p class="text-color-offwhite">Gröna Tryck är din miljömedvetna butik för hållbara profilkläder och reklamprodukter i norra Europa. Vi erbjuder rättvisemärkta och ekologiska produkter med tryck samt miljösmarta marknadsföringslösningar. Oavsett dina behov, finns vi här för att hjälpa!</p>
-              <a href="store.html"><button class="button-primary text-color-offwhite ">Utforska nu</button></a>
+              <a href="store.html" class="button-primary text-color-offwhite">Utforska nu</a>
             </div>
       </div>
       <div class="hero-slide">
-          <img class="hero-slides" src="visuals/img/gronatryck_image_slide_2.jpg" alt="En grupp människor som har på sig grönatryck tröjor, är ute i naturen och har kul">
+          <img class="hero-slides" src="visuals/img/hero_slideshow/gronatryck_image_slide_2.jpg " alt="En grupp människor som har på sig grönatryck tröjor, är ute i naturen och har kul">
           <div class="slide-text">
               <h1 class="text-color-offwhite">Vår officiella partner Stanley Stella</h1>
               <p class="text-color-offwhite">Deras utbud finns i vårt sortiment!</p>
-              <button class="button-primary text-color-offwhite ">Gå till sortiment</button>
+              <a href="stanleystella.html" class="button-primary text-color-offwhite ">Gå till sortiment</a>
           </div>
       </div>
       <div class="hero-slide">
-          <img class="hero-slides" src="visuals/img/gronatryck_image_slide_3.jpg" alt="Ett varmtonat landskap med träsk och skog">
+          <img class="hero-slides" src="visuals/img/hero_slideshow/gronatryck_image_slide_3.jpg" alt="Ett varmtonat landskap med träsk och skog">
           <div class="slide-text">
               <h1 class="text-color-offwhite">Vi bakom Gröna tryck</h1>
               <p class="text-color-offwhite">Vi erbjuder ett brett utbud av hållbara kläder som är både stiliga och miljövänliga. Läs mer om oss och hur vi startade resan mot en hållbar framtid!</p>
-              <button class="button-primary text-color-offwhite">Läs mer!</button>
+              <a href="aboutus.html" class="button-primary text-color-offwhite">Läs mer!</a>
           </div>
       </div>
   </div>
@@ -252,7 +253,7 @@
 
 </div>
 
-<!-- Chat bubble ikon -->
+<!-- Chat bubble icon -->
 <div class="chat-icon">
   <img src="visuals/icons/gronatryck_chatbubble.svg" alt="chat icon">
   </div>
@@ -267,26 +268,27 @@
             <img class="news-img round-corner" src="visuals/img/news/gronatryck_news_1_hoodie.jpg" title="De nya huvtröjorna från Stanley Stella är här." alt="En man och kvinna med ljusgrå huvtröjor">
             <div class="news-img-text">
             <h3 class="text-color-offwhite">Stanley Stella har släppt nya hoodies AW24!</h3>
-            <button class="button-primary text-color-offwhite round-corner news-button"><p class="text-color-offwhite">Upptäck</p><img class="arrow arrow--small arrow--right" src="visuals/icons/arrow_icon_white.svg" alt="Pil på knapp som leder vidare till en produkt"></button>
+            <button class="button-primary text-color-offwhite round-corner news-button"><p class="text-color-offwhite">Upptäck</p><img class="arrow arrow--small arrow--right" src="visuals/icons/arrow_icon_white.svg" alt="vit pil"></button>
             </div>
           </div>
           <div class="card-img-container-two">
             <img class="news-img round-corner" src="visuals/img/news/gronatryck_news_fall_786px.jpg" title="Hösten är här och vi har fyllt på med de senaste artiklarna från de hetaste märkena!" alt="En kvinna och en man med grön lättlurvig jacka.">
             <div class="news-img-text">
             <h5 class="text-color-offwhite">Hösten är här och vi har de senaste artiklarna!</h5>
-            <button class="button-primary text-color-offwhite round-corner news-button"><p>Upptäck</p><img class="arrow arrow--small arrow--right" src="visuals/icons/arrow_icon_white.svg"></button>
+            <button class="button-primary text-color-offwhite round-corner news-button"><p>Upptäck</p><img class="arrow arrow--small arrow--right" src="visuals/icons/arrow_icon_white.svg" alt="vit pil"></button>
           </div>
           </div>
           <div class="card-img-container-three">
             <img class="news-img round-corner" src="visuals/img/news/gronatryck_news_sport_786px.jpg" title="Hösten är här och vi har fyllt på med nya artiklar!" alt="En kvinna och en man med grön lättlurvig jacka.">
             <div class="news-img-text">
             <h5 class="text-color-offwhite">Nya träningskläder finns nu på Gröna tryck. </h5>
-            <button class="button-primary text-color-offwhite round-corner news-button"><p>Upptäck</p><img class="arrow arrow--small arrow--right" src="visuals/icons/arrow_icon_white.svg"></button>
+            <button class="button-primary text-color-offwhite round-corner news-button"><p>Upptäck</p><img class="arrow arrow--small arrow--right" src="visuals/icons/arrow_icon_white.svg" alt="vit pil"></button>
           </div>
           </div>
           </div>
         </div>
       </section>
+      <!-- dekorativ linje -->
     <div class="swirl-pattern swirl-pattern--rotate"></div>
 
     <!-- Produktinformation-->
@@ -296,202 +298,39 @@
     <!-- Populära produkter  -->
 
     <section itemscope itemtype="https://schema.org/Product">
-      
       <div class="card-slider-container">
         <h3 class="text-color-dark-2 card-slider-heading text--bold">Populära produkter</h3>
-      <div class="card-slider">
-        <button class="arrow arrow--left" aria-label="Scroll left" onclick="changeCardSlide(-1)">
-          <img class="arrow--medium" src="visuals/icons/arrow_icon.svg" alt="Scroll left">
+         <!-- Left arrow button for slider -->
+        <button class="arrow arrow--left" aria-label="Bläddra åt vänster" onclick="changeCardSlide(-1)">
+          <img class="arrow--medium" src="visuals/icons/arrow_icon.svg" alt="Grön vänstervänd pil">
         </button>
+        <div class="card-slider">
+        
         <div class="card-container card-container--popular">
-          <!-- <div class="card-wrapper"> -->
-          <article class="card">
-            <img src="visuals/img/grona_tryck_card_1.jpg" class="card-img-top" alt="...">
-            <div class="card-body">
-              <p class="text-color-dark">T-shirt</p>
-              <h5 class="text-color-primary">Classic bomull</h5>
-              <div class="card-dot-container">
-                <input class="dot dot-color-1" type="button" aria-label="Färg 1"></input>
-                <input class="dot dot-color-2" type="button" aria-label="Färg 2"></input>
-                <input class="dot dot-color-3" type="button" aria-label="Färg 3"></input>
-                <p class="text-color-dark text-xs">+5 färger</p>
-                </div>
-                <div class="card-price-container">
-                  <p class="text-color-medium text-sm">minimum 25 st.</p>
-                  <p class="text-color-dark text-sm">från 410 kr/st</p>
-                </div>
-            </div>
-          </article>
-        </div>
+        
+          <!-- Cards will be dynamically added here, popular-cards.js -->
       
+        </div>
          
-          <div class="card-container card-container--popular">
-          <article class="card">
-            <img src="visuals/img/grona_tryck_card_2.jpg" class="card-img-top" alt="...">
-            <img class="card-news-icon" src="/visuals/icons/product_news_icon.svg" alt="Klädnyhet!">
-            <div class="card-body">
-              <p class="text-color-dark">T-shirt</p>
-              <h5 class="text-color-primary">Crafter heritage</h5>
-              <div class="card-dot-container">
-                <input class="dot dot-color-1" type="button" aria-label="Färg 1"></input>
-                <input class="dot dot-color-2" type="button" aria-label="Färg 2"></input>
-                <input class="dot dot-color-3" type="button" aria-label="Färg 3"></input>
-                <p class="text-color-dark text-xs">+5 färger</p>
-                </div>
-                <div class="card-price-container">
-                  <p class="text-color-medium text-sm">minimum 25 st.</p>
-                  <p class="text-color-dark text-sm">från 410 kr/st</p>
-                </div>
-            </div>
-          </article>
-         </div>
-      
-      
-        <div class="card-container card-container--popular">
-          <div class="card">
-            <img src="visuals/img/grona_tryck_card_3.jpg" class="card-img-top" alt="...">
-            <img class="card-news-icon" src="/visuals/icons/product_news_icon.svg" alt="Klädnyhet!">
-            <div class="card-body">
-              <p class="text-color-dark">Sweatshirts & huvtröjor</p>
-              <h5 class="text-color-primary">Knoxer natural</h5>
-              <div class="card-dot-container">
-                <input class="dot dot-color-1" type="button" aria-label="Färg 1"></input>
-                <input class="dot dot-color-2" type="button" aria-label="Färg 2"></input>
-                <input class="dot dot-color-3" type="button" aria-label="Färg 3"></input>
-                <p class="text-color-dark text-xs">+5 färger</p>
-                </div>
-                <div class="card-price-container">
-                  <p class="text-color-medium text-sm">minimum 25 st.</p>
-                  <p class="text-color-dark text-sm">från 410 kr/st</p>
-                </div>
-            </div>
-          </div>
-         </div>
-      
-      
-        <div class="card-container card-container--popular">
-          <div class="card">
-            <img src="visuals/img/grona_tryck_card_4.jpg" class="card-img-top" alt="...">
-            <div class="card-body">
-              <p class="text-color-dark">Jackor & västar </p>
-              <h5 class="text-color-primary">Liner desert</h5>
-              <div class="card-dot-container">
-                <input class="dot dot-color-1" type="button" aria-label="Färg 1"></input>
-                <input class="dot dot-color-2" type="button" aria-label="Färg 2"></input>
-                <input class="dot dot-color-3" type="button" aria-label="Färg 3"></input>
-                <p class="text-color-dark text-xs">+5 färger</p>
-                </div>
-                <div class="card-price-container">
-                  <p class="text-color-medium text-sm">minimum 25 st.</p>
-                  <p class="text-color-dark text-sm">från 410 kr/st</p>
-                </div>
-            </div>
-          </div>
-         </div>
-
-       
-      
-        <!-- four extra cards for slideshow -->
-        <!-- <div class="card-container card-container--popular">
-          <div class="card">
-            <img src="visuals/img/grona_tryck_card_5.jpg" class="card-img-top" alt="...">
-    <img class="card-news-icon" src="/visuals/icons/product_news_icon.svg" alt="Klädnyhet!"> 
-            <div class="card-body">
-              <p class="text-color-dark">Jackor & västar</p>
-              <h5 class="text-color-primary">Wind bomber</h5>
-              <div class="card-dot-container">
-                <button class="dot dot-color-1" type="button" aria-label="Färg 1"></button>
-                <button class="dot dot-color-2" type="button" aria-label="Färg 2"></button>
-                <button class="dot dot-color-3" type="button" aria-label="Färg 3"></button>
-                <p class="text-color-dark text-xs">+5 färger</p>
-                </div>
-                <div class="card-price-container">
-                  <p class="text-color-medium text-sm">minimum 25 st.</p>
-                  <p class="text-color-dark text-sm">från 410 kr/st</p>
-                </div>
-            </div>
-          </div>
-         </div>
-      
-        <div class="card-container card-container--popular">
-          <div class="card" >
-            <img src="visuals/img/grona_tryck_card_6.jpg" class="card-img-top" alt="...">
-            <img class="card-news-icon" src="/visuals/icons/product_news_icon.svg" alt="Klädnyhet!"> 
-            <div class="card-body">
-              <p class="text-color-dark">Sweatshirts & huvtröjor</p>
-              <h5 class="text-color-primary">Basic crop</h5>
-              <div class="card-dot-container">
-                <button class="dot dot-color-1" type="button" aria-label="Färg 1"></button>
-                <button class="dot dot-color-2" type="button" aria-label="Färg 2"></button>
-                <button class="dot dot-color-3" type="button" aria-label="Färg 3"></button>
-                <p class="text-color-dark text-xs">+5 färger</p>
-                </div>
-                <div class="card-price-container">
-                  <p class="text-color-medium text-sm">minimum 25 st.</p>
-                  <p class="text-color-dark text-sm">från 410 kr/st</p>
-                </div>
-            </div>
-          </div>
-         </div>
-      
-        <div class="card-container card-container--popular">
-          <div class="card" >
-            <img src="visuals/img/grona_tryck_card_7.jpg" class="card-img-top" alt="...">
-            <img class="card-news-icon" src="/visuals/icons/product_news_icon.svg" alt="Klädnyhet!"> 
-            <div class="card-body">
-              <p class="text-color-dark">Sweatshirts & huvtröjor</p>
-              <h5 class="text-color-primary">Classic hoodie</h5>
-              <div class="card-dot-container">
-                <button class="dot dot-color-1" type="button" aria-label="Färg 1"></button>
-                <button class="dot dot-color-2" type="button" aria-label="Färg 2"></button>
-                <button class="dot dot-color-3" type="button" aria-label="Färg 3"></button>
-                <p class="text-color-dark text-xs">+5 färger</p>
-                </div>
-                <div class="card-price-container">
-                  <p class="text-color-medium text-sm">minimum 25 st.</p>
-                  <p class="text-color-dark text-sm">från 410 kr/st</p>
-                </div>
-            </div>
-          </div>
-         </div>
-
-        <div class="card-container card-container--popular">
-          <div class="card" >
-            <img src="visuals/img/grona_tryck_card_8.jpg" class="card-img-top" alt="...">
-            <img class="card-news-icon" src="/visuals/icons/product_news_icon.svg" alt="Klädnyhet!"> 
-            <div class="card-body">
-              <p class="text-color-dark">Jackor & västar</p>
-              <h5 class="text-color-primary">Warming cotton</h5>
-              <div class="card-dot-container">
-                <button class="dot dot-color-1" type="button" aria-label="Färg 1"></button>
-                <button class="dot dot-color-2" type="button" aria-label="Färg 2"></button>
-                <button class="dot dot-color-3" type="button" aria-label="Färg 3"></button>
-                <p class="text-color-dark text-xs">+5 färger</p>
-                </div>
-                <div class="card-price-container">
-                  <p class="text-color-medium text-sm">minimum 25 st.</p>
-                  <p class="text-color-dark text-sm">från 410 kr/st</p>
-                </div>
-            </div>
-          </div>
-         </div>
-        </div> -->
-           <!-- Arrow for scrolling right -->
-           <button class="arrow arrow--right" aria-label="Scroll right" onclick="changeCardSlide(1)">
-            <img class="arrow--medium" src="visuals/icons/arrow_icon.svg" alt="Scroll right">
-          </button>
-        </div>
+      </div>
+       <!-- Arrow for scrolling right for slider -->
+       <button class="arrow arrow--right" aria-label="Bläddra åt höger" onclick="changeCardSlide(1)">
+        <img class="arrow--medium" src="visuals/icons/arrow_icon.svg" alt="Grön högervänd pil">
+      </button>
+    
+    </div>
+     
     </section>
 
-    
-    <div class="swirl-pattern" alt="swirl pattern from logo"></div>
+    <!-- dekorativ linje -->
+    <div class="swirl-pattern" alt="decorative line"></div>
 
     <!-- Hållbart-->
      <section class="card-section--two">
       <h2 class="text-color-dark-2">Hållbart</h2>
       <p class="text-color-dark-2 card-section-info">Utöver att våra produkter är ekologiskt framställda, strävar vi efter en hållbar helhet där miljöhänsyn styr hela verksamheten. Vårt mål är att hjälpa kunder och partners att förstå hur okontrollerad bomullsproduktion påverkar människor och natur. Genom beslut med miljöfokus och tredjepartskontroller säkerställer vi att våra produkter är hållbara. Vi lever med denna filosofi i allt vi gör – från att källsortera till att ta cykeln eller tåget till möten, använda gröna servrar och dricka ekologiskt kaffe. </p>
 
-      <div class="card-container">
+      <div class="card-container card-container--hallbart">
         <div class="card">
           <div class="card__image-container card__image--gots">
           </div>
@@ -544,15 +383,15 @@
   Vi samarbetar med flera företag och organisationer på olika nivåer men som gemensamt delar våra värderingar. </p>
 </div>
 <div class="thumbnail-container">
-  <img class="thumbnail-image round-corner thumbnail-image--large" id="image1" src="visuals/img/brands_thumbnail.webp" alt="grönatrycks varumärken">
-  <img class="thumbnail-image round-corner" id="image2" src="visuals/img/our_friends_thumbnail_2.webp" alt="grönatrycks vänner">
-  <img class="thumbnail-image round-corner" id="image3" src="visuals/img/certificate_thumbnail.webp" alt="grönatrycks certifieringar">
+  <img class="thumbnail-image round-corner thumbnail-image--large" id="image1" src="visuals/img/thumbnail/gronatryck_brands_thumbnail.webp" alt="grönatrycks varumärken">
+  <img class="thumbnail-image round-corner" id="image2" src="visuals/img/thumbnail/gronatryck_our_friends_thumbnail_2.webp" alt="grönatrycks vänner">
+  <img class="thumbnail-image round-corner" id="image3" src="visuals/img/thumbnail/gronatryck_certificate_thumbnail.webp" alt="grönatrycks certifieringar">
 </div>
 </div>
-  
+   
 </section>
 
-    <!-- Recensioner-->
+    <!-- Recensioner sektion-->
 
     <section itemscope itemtype="https://schema.org/Review" class="review-section">
       <h2 class="text-color-dark-2">Recensioner</h2>
@@ -561,27 +400,28 @@
           <p class="text-color-primary"><q>Kunniga. Omtänksamma. Noggranna. Hållbara!</q>
             Michael Eldborn, 2018.</p>
             <div itemprop="reviewRating" class="review-icons">
-              <img src="/visuals/icons/gronatryck_icon_ star_filled.svg">
-              <img src="/visuals/icons/gronatryck_icon_ star_filled.svg">
-              <img src="/visuals/icons/gronatryck_icon_ star_filled.svg">
-              <img src="/visuals/icons/gronatryck_icon_ star_filled.svg">
-              <img src="/visuals/icons/gronatryck_icon_star.svg">
+              <img src="/visuals/icons/gronatryck_icon_ star_filled.svg" alt="ifylld grön stjärna">
+              <img src="/visuals/icons/gronatryck_icon_ star_filled.svg" alt="ifylld grön stjärna">
+              <img src="/visuals/icons/gronatryck_icon_ star_filled.svg" alt="ifylld grön stjärna">
+              <img src="/visuals/icons/gronatryck_icon_ star_filled.svg" alt="ifylld grön stjärna">
+              <img src="/visuals/icons/gronatryck_icon_star.svg" alt="ej ifylld grön stjärna">
             </div>
         </div>
         <div itemprop="reviewBody" class="review-card round-corner">
           <p class="text-color-primary"><q>Kunniga. Omtänksamma. Noggranna. Hållbara!</q>
             Michael Eldborn, 2018.</p>
           <div itemprop="reviewRating" class="review-icons">
-          <img src="/visuals/icons/gronatryck_icon_ star_filled.svg">
-          <img src="/visuals/icons/gronatryck_icon_ star_filled.svg">
-          <img src="/visuals/icons/gronatryck_icon_ star_filled.svg">
-          <img src="/visuals/icons/gronatryck_icon_ star_filled.svg">
-          <img src="/visuals/icons/gronatryck_icon_ star_filled.svg">
+          <img src="/visuals/icons/gronatryck_icon_ star_filled.svg" alt="ifylld grön stjärna">
+          <img src="/visuals/icons/gronatryck_icon_ star_filled.svg" alt="ifylld grön stjärna">
+          <img src="/visuals/icons/gronatryck_icon_ star_filled.svg" alt="ifylld grön stjärna">
+          <img src="/visuals/icons/gronatryck_icon_ star_filled.svg" alt="ifylld grön stjärna">
+          <img src="/visuals/icons/gronatryck_icon_ star_filled.svg" alt="ifylld grön stjärna">
           </div>
         </div>
     </div>
 
     </section>
+    <!-- dekorativ linje -->
     <div class="swirl-pattern--double"> </div>
 
 <!-----------Footer ----------->
@@ -670,5 +510,7 @@
     <script src="js/slideshow.js"></script>
     <script src="js/searchbar.js"></script>
     <script src="js/scroll-to-top.js"></script>
+    <script src="js/color.js"></script>
+    <script src="js/popular-cards.js"></script>
   </body>
 </html>
