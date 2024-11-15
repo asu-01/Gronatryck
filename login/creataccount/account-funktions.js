@@ -28,6 +28,56 @@ window.onload = function() {
     });
 };
 
+//funktion för mobil storlek bara
+document.addEventListener("DOMContentLoaded", () => {
+    const isMobile = window.innerWidth <= 576;
+    
+    if (isMobile){
+        const sidebar = document.querySelector(".sidebar");
+        const content = document.querySelector(".content");
+        const tabButtons = document.querySelectorAll(".tab-btn");
+        const tabContents = document.querySelectorAll(".tab-content");
+
+        const backButton = document.createElement("button");
+        backButton.id = "back-btn";
+        backButton.textContent = "Tillbaka";
+        backButton.style.display = "none";
+        backButton.classList.add("back-btn");
+        content.prepend(backButton);
+
+        
+        const handleTabSwitch = (event) => {
+            const targetId = event.target.id.replace("-btn", "");
+          
+            tabContents.forEach((content) => {
+                content.style.display = "none";
+            });
+
+            document.getElementById(targetId).style.display = "block";
+
+            sidebar.classList.add("hidden");
+            content.style.display = "block";
+
+            backButton.style.display = "block";
+        };
+
+        const handleBackClick = () => {
+            sidebar.classList.remove("hidden");
+            content.style.display = "none";
+
+            backButton.style.display = "none";
+        };
+
+        tabButtons.forEach((button) => {
+            button.addEventListener("click", handleTabSwitch);
+        });
+
+        backButton.addEventListener("click", handleBackClick);
+    }
+});
+
+
+
 // Funktion för att skapa konto och lagra konto information
 document.getElementById('createAccountForm')?.addEventListener('submit', function(event) {
     event.preventDefault();
@@ -97,26 +147,28 @@ function openTab(button) {
     button.classList.add('active');
 }
 
+
+// alla funktioner för kund hantering
 document.addEventListener('DOMContentLoaded', function () {
     let currentEditCustomer = null;
-
-    // Funktion för att ladda in kund listan i localstorage (funkar inte om den är i slutet av funktion)
+    
+    // Load customer list from local storage
     loadCustomers();
-
+    
     function loadCustomers() {
         const customerList = document.querySelector('.customer-list');
         customerList.innerHTML = '';
         const customers = JSON.parse(localStorage.getItem('customers')) || [];
-
+    
         customers.forEach((customer, index) => {
             const customerDiv = document.createElement('div');
             customerDiv.classList.add('customer');
             customerDiv.dataset.index = index;
-
+        
             customerDiv.innerHTML = `
-                <div class="customer-name">${customer.organization}</div> <!-- Display Organization Name -->
+                <div class="customer-name">${customer.organization}</div>
                 <div class="customer-details" style="display: none;">
-                    <p>Kontakt person: ${customer.name}</p> <!-- Display Contact Person Name First -->
+                    <p>Kontakt person: ${customer.name}</p>
                     <p>E-post: ${customer.email}</p>
                     <p>Mobil nummer: ${customer.phone}</p>
                     <p>Företags Nummer: ${customer.orgNumber}</p>
@@ -124,17 +176,18 @@ document.addEventListener('DOMContentLoaded', function () {
                     <button class="delete-customer-btn">Radera kund</button>
                 </div>
             `;
-            customerList.appendChild(customerDiv);
-            attachCustomerListeners(customerDiv, customer);
+                customerList.appendChild(customerDiv);
+                attachCustomerListeners(customerDiv, customer);
         });
     }
-
-    // Sparar kundinfon till localstorage
+    
+        // spara kundinfo till localstorage
     function saveCustomers(customers) {
         localStorage.setItem('customers', JSON.stringify(customers));
         loadCustomers();
     }
 
+    // Add customer modal controls
     document.getElementById('add-customer-btn').addEventListener('click', function () {
         document.getElementById('add-customer-modal').style.display = 'flex';
     });
@@ -143,7 +196,7 @@ document.addEventListener('DOMContentLoaded', function () {
         document.getElementById('add-customer-modal').style.display = 'none';
     });
 
-    // Event listener för lägga till kunder
+    //funktion för att lägga till kund
     document.getElementById('add-customer-form').addEventListener('submit', function (e) {
         e.preventDefault();
 
@@ -153,7 +206,7 @@ document.addEventListener('DOMContentLoaded', function () {
         const newPhone = document.getElementById('new-phone').value;
         const newOrgNumber = document.getElementById('new-org-number').value;
 
-        if (newOrganization && newName && newEmail && newPhone && newOrgNumber) {
+        if (newOrganization && newName && newEmail && newPhone && newOrgNumber){
             const customers = JSON.parse(localStorage.getItem('customers')) || [];
             customers.push({
                 organization: newOrganization,
@@ -164,25 +217,25 @@ document.addEventListener('DOMContentLoaded', function () {
             });
             saveCustomers(customers);
 
-            // Clear form fields and hide modal
             document.getElementById('add-customer-form').reset();
             document.getElementById('add-customer-modal').style.display = 'none';
         }
     });
 
-    // Funktion för att lägga till listeners till varje kund
+
+    //funktion för att lägga till listeners till varje kund
     function attachCustomerListeners(customerDiv, customer) {
         const customerName = customerDiv.querySelector('.customer-name');
         const customerDetails = customerDiv.querySelector('.customer-details');
         const editButton = customerDiv.querySelector('.edit-customer-btn');
         const deleteButton = customerDiv.querySelector('.delete-customer-btn');
-
-        //styles för att ändra utseende på radera och ändra knappar
+    
+        // styles för att ändra utseende på radera och ändra knappar
         const buttonContainer = document.createElement('div');
         buttonContainer.style.display = 'flex';
         buttonContainer.style.justifyContent = 'space-between';
         buttonContainer.style.width = '100%';
-
+    
         editButton.style.backgroundColor = '#1d4231';
         editButton.style.color = '#faf7eb';
         editButton.style.padding = '10px';
@@ -191,7 +244,7 @@ document.addEventListener('DOMContentLoaded', function () {
         editButton.style.width = '48%';
         editButton.style.cursor = 'pointer';
         editButton.style.transition = 'background-color 0.3s ease, color 0.3s ease';
-        
+    
         deleteButton.style.backgroundColor = 'red';
         deleteButton.style.color = '#faf7eb';
         deleteButton.style.padding = '10px';
@@ -200,7 +253,7 @@ document.addEventListener('DOMContentLoaded', function () {
         deleteButton.style.borderRadius = '10px';
         deleteButton.style.cursor = 'pointer';
         deleteButton.style.transition = 'background-color 0.3s ease, color 0.3s ease';
-
+    
         editButton.addEventListener('mouseenter', function () {
             editButton.style.backgroundColor = '#faf7eb';
             editButton.style.color = '#1d4231';
@@ -210,7 +263,7 @@ document.addEventListener('DOMContentLoaded', function () {
             editButton.style.backgroundColor = '#1d4231';
             editButton.style.color = '#faf7eb';
         });
-
+    
         deleteButton.addEventListener('mouseenter', function () {
             deleteButton.style.backgroundColor = '#faf7eb';
             deleteButton.style.color = 'red';
@@ -220,82 +273,84 @@ document.addEventListener('DOMContentLoaded', function () {
             deleteButton.style.backgroundColor = 'red';
             deleteButton.style.color = '#faf7eb';
         });
-
+    
         buttonContainer.appendChild(editButton);
         buttonContainer.appendChild(deleteButton);
         customerDetails.appendChild(buttonContainer);
-
-        // Visa kundinfo när namnet är klickad
+    
+        // visa kundinfo när namnet är klickad
         customerName.addEventListener('click', function () {
             customerDetails.style.display = customerDetails.style.display === 'none' ? 'block' : 'none';
         });
-
-        //funktion och Event listener för radera knappen
+    
+        // radera kund konfirmations modal
         deleteButton.addEventListener('click', function () {
             const customerIndex = customerDiv.dataset.index;
-            const customerName = customer.organization;
-        
-            const deleteConfirmModal = document.getElementById('delete-confirm-modal');
-            deleteConfirmModal.style.display = 'flex';
-        
-            // bekräfta knapp
-            const confirmDeleteBtn = document.getElementById('confirm-delete-btn');
-            confirmDeleteBtn.onclick = function () {
-                const customers = JSON.parse(localStorage.getItem('customers')) || [];
-                customers.splice(customerIndex, 1);
-                saveCustomers(customers);
-        
-                
-                deleteConfirmModal.style.display = 'none';
-            };
-        
-            // avbryt knapp
-            const cancelDeleteBtn = document.getElementById('cancel-delete-btn');
-            cancelDeleteBtn.onclick = function () {
-                deleteConfirmModal.style.display = 'none';
-            };
+            openDeleteConfirmModal(customerIndex);
         });
-
-        //funktion och Event listener för ändra knappen
+    
+        // ändra kund modal
         editButton.addEventListener('click', function () {
             currentEditCustomer = customerDiv.dataset.index;
             openEditModal(customer);
         });
+    }
+    
+    function openDeleteConfirmModal(customerIndex) {
+        const deleteConfirmModal = document.getElementById('delete-customer-modal');
+        deleteConfirmModal.style.display = 'block';
+    
+        const confirmDeleteBtn = document.getElementById('confirm-customer-delete-btn');
+        const cancelDeleteBtn = document.getElementById('cancel-customer-delete-btn');
 
-        function openEditModal(customer) {
-            const modal = document.getElementById('edit-modal');
-            const organizationField = document.getElementById('edit-organization');
-            const nameField = document.getElementById('edit-name');
-            const emailField = document.getElementById('edit-email');
-            const phoneField = document.getElementById('edit-phone');
-            const orgNumberField = document.getElementById('edit-org-number');
-        
-            organizationField.value = customer.organization;
-            nameField.value = customer.name;
-            emailField.value = customer.email;
-            phoneField.value = customer.phone;
-            orgNumberField.value = customer.orgNumber;
-        
-            modal.style.display = 'flex';
+        confirmDeleteBtn.onclick = function () {
+            deleteCustomer(customerIndex);
+            deleteConfirmModal.style.display = 'none';
+        };
+
+        function deleteCustomer(index) {
+            const customers = JSON.parse(localStorage.getItem('customers')) || [];
+            customers.splice(index, 1);
+            saveCustomers(customers);
         }
 
-        document.getElementById('save-edit-btn').addEventListener('click', function () {
-            const customers = JSON.parse(localStorage.getItem('customers')) || [];
-            if (currentEditCustomer !== null) {
-                customers[currentEditCustomer] = {
-                    organization: document.getElementById('edit-organization').value,
-                    name: document.getElementById('edit-name').value,
-                    email: document.getElementById('edit-email').value,
-                    phone: document.getElementById('edit-phone').value,
-                    orgNumber: document.getElementById('edit-org-number').value
-                };
-                saveCustomers(customers);
-                document.getElementById('edit-modal').style.display = 'none';
-            }
-        });
-    }    
+        cancelDeleteBtn.onclick = function () {
+            deleteConfirmModal.style.display = 'none';
+        };
 
+    }
+    
+    function openEditModal(customer) {
+        const modal = document.getElementById('edit-modal');
+        document.getElementById('edit-organization').value = customer.organization;
+        document.getElementById('edit-name').value = customer.name;
+        document.getElementById('edit-email').value = customer.email;
+        document.getElementById('edit-phone').value = customer.phone;
+        document.getElementById('edit-org-number').value = customer.orgNumber;
+        modal.style.display = 'flex';
+    }
+    
+    document.getElementById('save-edit-btn').addEventListener('click', function () {
+        const customers = JSON.parse(localStorage.getItem('customers')) || [];
+        if (currentEditCustomer !== null) {
+            customers[currentEditCustomer] = {
+                organization: document.getElementById('edit-organization').value,
+                name: document.getElementById('edit-name').value,
+                email: document.getElementById('edit-email').value,
+                phone: document.getElementById('edit-phone').value,
+                orgNumber: document.getElementById('edit-org-number').value
+            };
+            saveCustomers(customers);
+            document.getElementById('edit-modal').style.display = 'none';
+        }
+    });
+    
+        // Close edit modal
+        document.querySelector('#edit-modal .close-btn').addEventListener('click', function () {
+            document.getElementById('edit-modal').style.display = 'none';
+        });
 });
+    
 
 //funktion för att lägga till ordrar och hantera pågående ordrar
 
@@ -303,9 +358,15 @@ document.addEventListener('DOMContentLoaded', function () {
     const ordersContainer = document.getElementById('order-list');
     const addOrderBtn = document.getElementById('add-order-btn');
     const allOrdersContainer = document.getElementById('allOrders');
+    const deleteOrderModal = document.getElementById('delete-order-confirm-modal');
+    const confirmDeleteBtn = document.getElementById('confirm-order-delete-btn');
+    const cancelDeleteBtn = document.getElementById('cancel-order-delete-btn');
+    const creationDate = new Date().toISOString();
+
 
     let orderNumber = parseInt(localStorage.getItem('lastOrderNumber')) || 1;
     let deliveredOrders = JSON.parse(localStorage.getItem('deliveredOrders')) || {};
+    let deleteIndex = null;
 
     loadOrders();
     loadDeliveredOrders();
@@ -313,12 +374,12 @@ document.addEventListener('DOMContentLoaded', function () {
     function loadOrders() {
         const orders = JSON.parse(localStorage.getItem('orders')) || [];
         ordersContainer.innerHTML = '';
-    
+
         orders.forEach((order, index) => {
             const orderDiv = document.createElement('div');
             orderDiv.classList.add('order');
             orderDiv.dataset.index = index;
-    
+
             orderDiv.innerHTML = `
                 <button class="delete-order-btn">Radera order</button>
                 <p>Ordernummer: ${order.ordernumber}</p>
@@ -336,20 +397,19 @@ document.addEventListener('DOMContentLoaded', function () {
 
             const deleteButton = orderDiv.querySelector('.delete-order-btn');
             deleteButton.addEventListener('click', function () {
-                if (confirm("Är du säker på att du vill radera denna order?")) {
-                    deleteOrder(index);  // Call the deleteOrder function with the current index
-                }
+                deleteIndex = index;
+                showDeleteOrderModal();
             });
-    
+
             const statusSelect = orderDiv.querySelector('.status-update');
             ordersContainer.appendChild(orderDiv);
-    
-            // Update status when changed
+
+            // updatera status när man ändrar
             statusSelect.addEventListener('change', function () {
                 const orders = JSON.parse(localStorage.getItem('orders')) || [];
                 orders[index].status = statusSelect.value;
                 saveOrders(orders);
-    
+
                 if (statusSelect.value === 'levererat') {
                     if (confirm("Är du säker på att du vill flytta ordern till 'Alla Beställningar'?")) {
                         moveToDelivered(index);
@@ -360,11 +420,11 @@ document.addEventListener('DOMContentLoaded', function () {
             });
         });
     }
-    
+
 
     function saveOrders(orders) {
         localStorage.setItem('orders', JSON.stringify(orders));
-        localStorage.setItem('lastOrderNumber', ordernumber);
+        localStorage.setItem('lastOrderNumber', orderNumber);
         loadOrders();
     }
 
@@ -380,7 +440,8 @@ document.addEventListener('DOMContentLoaded', function () {
                 companyName,
                 price,
                 productInfo,
-                status: 'bearbetas'
+                status: 'bearbetas',
+                creationDate
             });
             saveOrders(orders);
             clearOrderForm();
@@ -421,8 +482,8 @@ document.addEventListener('DOMContentLoaded', function () {
         const groupedOrders = {};
         for (const [companyName, orders] of Object.entries(deliveredOrders)) {
             orders.forEach(order => {
-                const date = order.creationDate ? new Date(order.creationDate) : new Date(); // Use the order's creation date if available
-                const monthYear = `${date.getFullYear()}-${date.getMonth() + 1}`; // Format: YYYY-MM
+                const date = new Date(order.creationDate);
+                const monthYear = `${date.getFullYear()}-${date.getMonth() + 1}`;
                 
                 if (!groupedOrders[monthYear]) {
                     groupedOrders[monthYear] = {};
@@ -530,11 +591,30 @@ document.addEventListener('DOMContentLoaded', function () {
         loadOrders();
     }
 
+    function showDeleteOrderModal() {
+        deleteOrderModal.style.display = 'block';
+    }
+
+    function hideDeleteOrderModal() {
+        deleteOrderModal.style.display = 'none';
+    }
+
+    confirmDeleteBtn.addEventListener('click', function () {
+        if (deleteIndex !== null) {
+            deleteOrder(deleteIndex); 
+            deleteIndex = null;
+            hideDeleteOrderModal();
+        }
+    });
+
+    cancelDeleteBtn.addEventListener('click', hideDeleteOrderModal);
+
     function clearOrderForm() {
         document.getElementById('companyName').value = '';
         document.getElementById('price').value = '';
         document.getElementById('productInfo').value = '';
     }
+
 });
 
 

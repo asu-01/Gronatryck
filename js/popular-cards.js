@@ -52,9 +52,9 @@ window.onload = function printPopularProducts() {
     // Check if the screen width is less than 1200px; if so, disable sliding
     if (window.innerWidth < 1200) return;
 
-    const totalCards = parsedJSON.length;  // Total number of cards available
-    const cardsPerView = 4;                // How many cards you want to show at once
-    const maxIndex = Math.ceil(totalCards / cardsPerView) - 1;  // Maximum index for the slides
+    const totalCards = parsedJSON.length;  
+    const cardsPerView = 4;                
+    const maxIndex = Math.ceil(totalCards / cardsPerView) - 1;  
 
     // Adjust the current index based on the direction (left or right)
     currentIndex += direction;
@@ -67,16 +67,24 @@ window.onload = function printPopularProducts() {
     }
 
     // Update the card container's position based on the new index
-    const containerWidth = popularCardContainer.offsetWidth;  // Get the width of the container
+    const containerWidth = popularCardContainer.offsetWidth;  
     popularCardContainer.style.transform = `translateX(-${containerWidth * currentIndex}px)`;  // Slide the cards
   }
 
   // Re-render the cards on screen resize
   window.addEventListener('resize', () => {
-    currentIndex = 0;  // Reset to the first slide
-    popularCardContainer.style.transform = `translateX(0)`;  // Reset slider position
-    renderProducts();  // Re-render the products based on the updated screen width
+    currentIndex = 0; 
+    popularCardContainer.style.transform = `translateX(0)`;  
+    renderProducts();  
   });
+  // Add keyboard navigation
+document.addEventListener("keydown", function (event) {
+  if (event.key === "ArrowRight") {
+    changeCardSlide(1); 
+  } else if (event.key === "ArrowLeft") {
+    changeCardSlide(-1);
+  }
+});
 }
 
 
