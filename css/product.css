@@ -49,7 +49,7 @@
 /* Small images styling */
 .product-img--small {
   width: 100%;
-  max-width: 12rem;
+  max-width: 170px;
 }
 
 /* Styling added with javascript, when product img is changed by user */
