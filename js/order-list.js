@@ -20,7 +20,7 @@ function loadListData() {
     const productContent = ` 
         <div class="item-wrapper">
             <div class="item-image ">
-                <img class="round-corner" src="${product.img}" />
+                <img class="round-corner" src="${product.img}" alt="" />
             </div>
             <div class="item-group-1">
                 <h6 class="bold">${product.title}</h6>
@@ -47,15 +47,13 @@ function loadListData() {
     listItem.innerHTML = productContent;
     productListContainer.prepend(listItem);
     listItem.after(line);
-}
-
+  }
 }
 
 // Spara ner produkter som är tillagda i beställningslista i localstorage (WIP)
 function addToList() {
   let productId = new URLSearchParams(window.location.search).get("id");
   let productColor = localStorage.getItem("selectedColor"); // Retrieve the selected color
-
 
   // Hämtar alla produktval som användaren matat in på produktsidan
   let productAmount = amountInput.value;
