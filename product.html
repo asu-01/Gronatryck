@@ -231,9 +231,9 @@
         <button onclick="showAlertBox(), addToList()" class="button-primary text-color-offwhite">
           Lägg till
         </button>
-        <a href="contactus.html"><button class="button-secondary text-color-offwhite">
+        <a href="contactus.html" class="button-secondary text-color-offwhite">
           Kontakta oss
-        </button></a>
+        </a>
         <p class="text-color-dark-2 text-infobox--border">
           Ingen order är bindande fören vi har gått igenom allt och godkänt
           beställningen tillsammans med er.
@@ -393,11 +393,13 @@
     <h6 id="alertArticlename" class="text-color-offwhite"></h6>
     <div class="alert-box-details">
       <div class="alert-box-img">
-      <!-- <img class="roun" alt=""> -->
+    <!-- add selected product img here dynamically -->
     </div>
-      <p id="alertQuantity" class="text-color-offwhite"></p>
+      <p id="alertQuantity" class="text-color-offwhite">
+        <!-- add selected product title and colour here dynamically -->
+      </p>
     </div>
-    <button class="button-primary"><a class=" text-color-offwhite" href="order-list.html">Gå till beställning</a></button>
+    <a class=" button-primary text-color-offwhite" href="order-list.html">Gå till beställning</a>
     <button onclick="hideAlertBoxAndBubble()" class="button-secondary">Ångra</button>
       
 
