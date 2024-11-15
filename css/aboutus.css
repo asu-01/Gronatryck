@@ -123,19 +123,22 @@
     flex-direction: column;
   }
 
+  section:nth-child(2) h3{
+    margin-top: 2rem;
+  }
+
   .aboutus-text {
     width: 90%;
   }
 
   .aboutus-text h3 {
-    margin-top: 2rem;
     font-size: 2rem;
   }
 
   .aboutus-img-wrapper {
     display: flex;
     width: 20rem;
-    height: 16rem;
+    height: 12rem;
   }
 }
 
@@ -144,5 +147,9 @@
 
   .aboutus-text {
     width: 100%;
+  }
+
+  .aboutus-img-wrapper {
+    display: flex;
   }
 }
