@@ -427,20 +427,23 @@ h6{
     text-align: center;
 }
 .add-customer-modal-content input {
-    width: 100%;
+    width: 70%;
+    height: 50px;
     padding: 8px;
     margin: 10px 0;
     border-radius: 10px;
     border: 2px solid var(--primary-color);
 }
 .add-customer-modal-content button {
-    width: 100%;
+    width: 30%;
+    margin-top: 3%;
     padding: 10px;
     background-color: var(--primary-color);
     color: var(--secoundary-color);
     border-radius: 10px;
     border: 2px solid var(--primary-color);
     cursor: pointer;
+    transition: background-color 0.3s;
 }
 .close-btn {
     float: right;
@@ -449,7 +452,6 @@ h6{
 }
 
 .add-customer-modal-content button:hover {
-    width: 100%;
     padding: 10px;
     background-color: var(--secoundary-color);
     color: var(--primary-color);
@@ -458,6 +460,64 @@ h6{
     cursor: pointer;
 }
 
+#add-customer-form p{
+    text-align: start;
+    margin-left: 15.5%;
+    margin-bottom: 0;
+    margin-top: 3%;
+}
+
+.delete-customer-modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+}
+
+.delete-customer-modal-content {
+    background-color: #faf7eb;
+    padding: 20px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    text-align: center;
+}
+
+#confirm-customer-delete-btn {
+    padding: 10px;
+    background-color: red;
+    color: #faf7eb;
+    border: 2px solid red;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+#cancel-customer-delete-btn{
+    margin-left: 5%;
+    padding: 10px;
+    background-color: var(--primary-color);
+    color: #faf7eb;
+    border: 2px solid var(--primary-color);
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+#confirm-customer-delete-btn:hover {
+    background-color: var(--secoundary-color);
+    color: red;
+    border: 2px solid red;
+}
+
+#cancel-customer-delete-btn:hover{
+    background-color: var(--secoundary-color);
+    color: var(--primary-color);
+    border: 2px solid var(--primary-color);
+}
 
 /*css för pågående ordrar*/
 
@@ -498,7 +558,7 @@ h6{
     margin: 5px 0;
 }
 
-.status-update, .delete-order-btn {
+.status-update {
     margin-top: 5px;
     padding: 5px;
     cursor: pointer;
@@ -521,23 +581,201 @@ h6{
     flex-direction: column;
 }
 
-.delete-order-btn {
+.delete-order-confirm-modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+}
+
+.delete-confirm-order-modal-content {
+    background-color: #faf7eb;
+    padding: 20px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    text-align: center;
+}
+
+#confirm-order-delete-btn {
+    padding: 10px;
     background-color: red;
-    color: var(--secoundary-color);
+    color: #faf7eb;
     border: 2px solid red;
     border-radius: 10px;
-    padding: 1%;
-    width: 20%;
-    margin-left: 80%;
-    transition: background-color 0.3s;
+    cursor: pointer;
 }
 
-.delete-order-btn:hover {
+#cancel-order-delete-btn{
+    margin-left: 5%;
+    padding: 10px;
+    background-color: var(--primary-color);
+    color: #faf7eb;
+    border: 2px solid var(--primary-color);
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+#confirm-order-delete-btn:hover {
     background-color: var(--secoundary-color);
     color: red;
-    transition: background-color 0.3s;
+    border: 2px solid red;
 }
 
+#cancel-order-delete-btn:hover{
+    background-color: var(--secoundary-color);
+    color: var(--primary-color);
+    border: 2px solid var(--primary-color);
+}
 
+.delete-order-btn{
+    background-color: red;
+    color: var(--secoundary-color);
+    border-radius: 10px;
+    border: 2px solid red;
+    width: 10%;
+    margin-left: 90%;
+    height: 40px;
+}
+.delete-order-btn:hover{
+    background-color: var(--secoundary-color);
+    color: red;
+    border: 2px solid red;
+}
+
+@media screen and (max-width: 1154px){
+    #add-order-btn {
+        margin-right: 2%;
+    }
+
+}
+
+@media screen and (max-width: 992px){
+    .sidebar .tab-btn{
+        width: 90%;
+        margin-left: 5%;
+    }
+
+    #add-order-btn{
+        width: 15%;
+    }
+    .delete-order-btn{
+        height: 50px;
+        margin-left: 94%;
+        width: 10%;
+    }
+
+    #add-order-form {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-bottom: 20px;
+    }
+    
+    #add-order-form input {
+        flex: 1; 
+        margin-top: 1%;
+        padding: 8px;
+        width: calc(33% - 10px); 
+        border-radius: 10px;
+        border: 2px solid var(--primary-color);
+        margin-right: 2%;
+    }
+    
+    #add-order-btn {
+        margin-top: 10px;
+        padding: 8px 12px;
+        background-color: var(--primary-color);
+        color: var(--secoundary-color);
+        border: 2px solid var(--primary-color);
+        border-radius: 10px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+        width: 100%;
+        margin-right: 2%;
+    }
+}
+
+@media screen and (max-width: 768px){
+    h2{
+        font-size: xx-large;
+    }
+
+    .sidebar .tab-btn{
+        width: 150px;
+        margin-left: 0;
+    }
+
+    #add-order-form {
+        flex-direction: column; /* Arrange items in a column */
+        align-items: stretch;  /* Ensure items take full width */
+        gap: 15px; /* Add space between elements */
+    }
+
+    #add-order-form input{
+        height: 50px;
+        width: 90%;
+        margin-left: 5%;
+    }
+
+    #add-order-btn{
+        width: 90%;
+        margin-left: 5%;
+    }
+
+    .delete-order-btn{
+        width: 15%;
+        margin-left: 87%;
+    }
+
+    .delete-customer-btn{
+        width: 5px;
+    }
+
+    .edit-customer-btn{
+        width: 5px;
+    }
+}
+
+@media screen and (max-width: 576px){
+
+    .back-btn {
+        background-color: var(--primary-color);
+        color: var(--secoundary-color);
+        border: 2px solid var(--primary-color);
+        padding: 10px 20px;
+        margin: 10px;
+        font-size: 16px;
+        cursor: pointer;
+        border-radius: 10px;
+        margin-left: 76%;
+    }
+    
+    h2{
+      margin-left: 2%;
+    }
+    
+    .content{
+        display: none;
+    }
+
+    .sidebar{
+        width: 100%;
+    }
+
+    .sidebar .tab-btn{
+        width: 100%;
+        
+    }
+
+    .sidebar.hidden{
+        display: none;
+    }
+}
 
 

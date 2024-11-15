@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="https://use.typekit.net/zlf3fvp.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="login/creataccount/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin Panel</title>
 </head>
 <body id="body">
@@ -131,6 +132,7 @@
         </div>
 
         <div class="content">
+
             <div class="tab-content" id="orders" style="display: block;">
                 <h6>Pågående Orderar</h6>
                 
@@ -162,11 +164,16 @@
                   <span class="close-btn" id="close-add-customer-modal">&times;</span>
                   <h6>Lägg till kund</h6>
                   <form id="add-customer-form">
-                      <input type="text" id="new-organization" placeholder="Företagsnamn" required>
-                      <input type="text" id="new-name" placeholder="Kontaktperson" required>
-                      <input type="email" id="new-email" placeholder="E-post" required>
-                      <input type="tel" id="new-phone" placeholder="Mobilnummer" required>
-                      <input type="text" id="new-org-number" placeholder="Företagsnummer" required>
+                      <p>Företagsnamn</p>
+                      <input type="text" id="new-organization" placeholder="Vattenfall" required>
+                      <p>Kontaktperson</p>
+                      <input type="text" id="new-name" placeholder="Johan Doe" required>
+                      <p>E-post</p>
+                      <input type="email" id="new-email" placeholder="Johandoe@gmail.com" required>
+                      <p>Mobilnummer</p>
+                      <input type="tel" id="new-phone" placeholder="07xxxxxxxx" required>
+                      <p>Företagsnummer</p>
+                      <input type="text" id="new-org-number" placeholder="854xxxxx" required>
                       <button type="submit">Lägg till</button>
                   </form>
               </div>
@@ -196,13 +203,21 @@
                 
             </div>
 
-            <div id="delete-confirm-modal" class="delete-confirm-modal" style="display: none;">
-              <div class="delete-confirm-modal-content">
-                  <p>Är du säker på att du vill radera denna kund?</p>
-                  <button id="confirm-delete-btn">Bekräfta</button>
-                  <button id="cancel-delete-btn">Avbryt</button>
+            <div id="delete-customer-modal" class="delete-customer-modal" style="display: none;">
+              <div class="delete-customer-modal-content">
+                  <h6>Är du säker på att du vill radera denna kund??</h6>
+                  <button id="confirm-customer-delete-btn">Bekräfta</button>
+                  <button id="cancel-customer-delete-btn">Avbryt</button>
               </div>
-          </div>
+            </div>
+
+            <div id="delete-order-confirm-modal" class="delete-order-confirm-modal" style="display: none;">
+              <div class="delete-confirm-order-modal-content">
+                  <h6>Är du säker på att du vill radera denna order?</h6>
+                  <button id="confirm-order-delete-btn">Bekräfta</button>
+                  <button id="cancel-order-delete-btn">Avbryt</button>
+              </div>
+            </div>
 
             <div class="tab-content" id="allOrders" style="display: none;">
                 <h3>Alla Beställningar</h3>
