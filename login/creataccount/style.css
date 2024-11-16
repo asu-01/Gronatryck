@@ -703,6 +703,10 @@ h6{
         width: 100%;
         margin-right: 2%;
     }
+
+    .add-customer-modal-content{
+        width: 70%;
+    }
 }
 
 @media screen and (max-width: 768px){
@@ -744,6 +748,10 @@ h6{
     .edit-customer-btn{
         width: 5px;
     }
+
+    .add-customer-modal-content{
+        width: 100%;
+    }
 }
 
 @media screen and (max-width: 576px){
@@ -779,6 +787,10 @@ h6{
 
     .sidebar.hidden{
         display: none;
+    }
+
+    .add-customer-modal-content{
+        width: 100%;
     }
 }
 

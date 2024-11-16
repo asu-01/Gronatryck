@@ -546,14 +546,23 @@ document.addEventListener('DOMContentLoaded', function () {
     function displayCompanyOrders(companyName) {
         const companyOrders = deliveredOrders[companyName] || [];
     
-        
+        const sidebarBackButton = document.getElementById("back-btn");
+        if (sidebarBackButton) {
+            sidebarBackButton.style.display = "none";
+        }
+
         const companyOrdersDisplay = document.createElement('div');
         companyOrdersDisplay.classList.add('company-orders-display');
         companyOrdersDisplay.innerHTML = `<h5>Beställningar för ${companyName}</h5>`;
     
         const backButton = document.createElement('button');
         backButton.textContent = "Tillbaka";
-        backButton.addEventListener('click', loadDeliveredOrders);
+        backButton.addEventListener('click', () => {
+            if (sidebarBackButton) {
+                sidebarBackButton.style.display = "block";
+            }
+            loadDeliveredOrders();
+        });
 
         backButton.style.backgroundColor = '#1d4231';
         backButton.style.color = '#faf7eb';
