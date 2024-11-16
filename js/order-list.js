@@ -29,6 +29,7 @@ function loadListData() {
                     <button class="minus" onclick="decreaseAmount()" aria-label="Decrease">&minus;</button>
                     <input
                     type="number"
+                    id="quantityInput"
                     class="input-box"
                     value="${product.amount}"
                     min="10"
@@ -44,6 +45,7 @@ function loadListData() {
             <p class="bold">${product.price} kr</p>
         </div>
     `;
+
     listItem.innerHTML = productContent;
     productListContainer.prepend(listItem);
     listItem.after(line);
