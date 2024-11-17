@@ -109,6 +109,8 @@ function removeFromList(id) {
   const index = productListData.findIndex((articleId) => articleId.id === id);
   productListData.splice(index, 1);
 
+
+
   // Filtrera ut produkten som har tagits bort.
   //   let updatedList = productListData.filter(function (array) {
   //     return array.id !== id;
@@ -139,3 +141,5 @@ function runFunctions() {
   loadListData();
   calculatePrice();
 }
+
+
