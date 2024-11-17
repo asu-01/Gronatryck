@@ -1,8 +1,8 @@
 // Hämta produktbild
-const productImg = document.querySelector(".product-img--large");
+const productImg = document.querySelector(".product-img-large");
 
 // // Hämta bild-knappar
-const imgBtn = document.querySelectorAll(".product-img--small");
+const imgBtn = document.querySelectorAll(".product-img-small");
 // console.log(imgBtn);
 
 // // Eventlyssnare
@@ -69,7 +69,7 @@ function printColor() {
     product.colors.forEach((color, index) => {
       let inputElement = document.createElement("input");
       Object.assign(inputElement, {
-        className: "dot dot-color dot--large",
+        className: "dot dot-color dot-large",
         type: "button",
         ariaLabel: `färg ${index + 1}`,
         style: `background-color: ${color.colorCode};`,
@@ -86,7 +86,7 @@ function changeColorImg(value) {
   const retrievedData = localStorage.getItem("json-products");
   const parsedJSON = JSON.parse(retrievedData);
   let productId = new URLSearchParams(window.location.search).get("id");
-  const productImg = document.querySelector(".product-img--large");
+  const productImg = document.querySelector(".product-img-large");
 
   const product = parsedJSON.find((item) => item.articleId === productId);
   if (product) {

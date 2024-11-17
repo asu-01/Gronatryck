@@ -9,7 +9,7 @@ function changeData(e) {
   const retrievedData = localStorage.getItem("json-products");
   const parsedJSON = JSON.parse(retrievedData);
   // Hämta produktbild
-  const largeImg = document.querySelector(".product-img--large");
+  const largeImg = document.querySelector(".product-img-large");
 
   for (product of parsedJSON) {
     if (productId === product.articleId) {
@@ -20,7 +20,7 @@ function changeData(e) {
       largeImg.setAttribute("src", product.img);
       largeImg.setAttribute("alt", product.alt);
 
-      const smallImg = document.querySelectorAll(".product-img--small");
+      const smallImg = document.querySelectorAll(".product-img-small");
       product.colors.forEach((colorImg, index) => {
         smallImg[index].setAttribute("src", colorImg.url);
         smallImg[index].setAttribute("alt", colorImg.alt);

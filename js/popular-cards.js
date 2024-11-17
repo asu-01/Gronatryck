@@ -1,6 +1,6 @@
 // Adding eight cards on home page for popular products section with a slider function
 window.onload = function printPopularProducts() {
-  const popularCardContainer = document.querySelector(".card-container--popular");
+  const popularCardContainer = document.querySelector(".card-container-popular");
   const retrievedData = localStorage.getItem("json-products");
   const parsedJSON = JSON.parse(retrievedData);
 

@@ -32,7 +32,7 @@
 }
 
 /* Large image styling */
-.product-img--large {
+.product-img-large {
   width: 100%;
   margin-bottom: 1rem;
   cursor: pointer;
@@ -47,7 +47,7 @@
 }
 
 /* Small images styling */
-.product-img--small {
+.product-img-small {
   width: 100%;
   max-width: 30%;
 }
@@ -134,13 +134,13 @@
   display: flex;
 }
 
-.product-info--hidden {
+.product-info-hidden {
   display: none;
   margin-bottom: 1.5rem;
   border-bottom: 1px solid var(--primary-new);
 }
 
-.product-info--hidden.show {
+.product-info-hidden.show {
   display: block;
   flex-direction: column;
 }
@@ -162,13 +162,13 @@
   overflow: hidden;
 }
 
-.card-container--related {
+.card-container-related {
   display: flex;
   flex-wrap: wrap;
   gap: 1%;
 }
 
-.card-container--related .card {
+.card-container-related .card {
   flex: 1 1 24%;
   max-width: 24%;
 }
@@ -215,7 +215,7 @@
 }
 
 /* Order bag icon */
-.icon-orderbag--amount {
+.icon-orderbag-amount {
   width: 1rem;
   height: 1rem;
   background-color: var(--primary-new);
@@ -228,7 +228,7 @@
   right: 60px;
 }
 
-.icon-orderbag--amount p {
+.icon-orderbag-amount p {
   position: absolute;
   top: 2%;
   font-size: 0.7rem;
@@ -244,11 +244,11 @@
     text-align: center;
   }
 
-  .icon-orderbag--amount {
+  .icon-orderbag-amount {
     top: 3.5%;
   }
 
-  .icon-orderbag--amount p {
+  .icon-orderbag-amount p {
     top: 3%;
   }
 
@@ -257,7 +257,7 @@
     left: 78%;
   }
 
-  .card-container--related .card {
+  .card-container-related .card {
     max-width: 100%;
   }
 }
@@ -277,13 +277,13 @@
     margin-right: 2rem;
   }
 
-  .icon-orderbag--amount {
+  .icon-orderbag-amount {
     width: 0.7rem;
     height: 0.7rem;
     top: 3.5%;
   }
 
-  .icon-orderbag--amount p {
+  .icon-orderbag-amount p {
     font-size: 0.4rem;
   }
 
@@ -300,14 +300,14 @@
 }
 
 @media screen and (max-width: 768px) {
-  .icon-orderbag--amount {
+  .icon-orderbag-amount {
     width: 1rem;
     height: 1rem;
     top: 4%;
     right: 112px;
   }
 
-  .icon-orderbag--amount p {
+  .icon-orderbag-amount p {
     top: 2%;
     font-size: 0.7rem;
   }
@@ -336,7 +336,7 @@
     width: 90%;
   }
 
-  .product-img--large {
+  .product-img-large {
     width: 100%;
     margin-bottom: 1rem;
   }
@@ -345,7 +345,7 @@
     display: flex;
   }
 
-  .product-img--small {
+  .product-img-small {
     max-width: 48%;
     margin-bottom: 1.5rem;
   }

@@ -24,7 +24,7 @@ function showSlides(n) {
 
   // Loop through dots and remove "active" class
   for (let i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" active", ""); 
+    dots[i].className = dots[i].className.replace("active", ""); 
   }
 
   // Check if n exceeds the number of slides

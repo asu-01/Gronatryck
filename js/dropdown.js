@@ -116,12 +116,12 @@ function toggleLinks(linkId) {
 //-------- Toggle for menu on product page ------------//
 
 function toggleInfo(arrowElement) {
-  // Locate the next sibling element of the parent, which should be the product-info--hidden div
+  // Locate the next sibling element of the parent, which should be the product-info-hidden div
   const infoDiv = arrowElement.parentElement.nextElementSibling;
   const menuItem = arrowElement.parentElement;
 
   // Toggle the "show" class to reveal or hide the info section
-  if (infoDiv && infoDiv.classList.contains("product-info--hidden")) {
+  if (infoDiv && infoDiv.classList.contains("product-info-hidden")) {
     infoDiv.classList.toggle("show");
   }
   // Toggle the expanded border effect on the product-menu-item div

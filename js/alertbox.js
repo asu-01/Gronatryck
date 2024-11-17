@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const quantity = document.getElementById("quantityInput").value;
     const articleName = document.getElementById("articleName").textContent;
     const colorName = localStorage.getItem("selectedColor") || "unknown";
-    const productImgSrc = document.querySelector(".product-img--large").src;
+    const productImgSrc = document.querySelector(".product-img-large").src;
 
     // Update the alert box text
     document.getElementById("alertQuantity").textContent = `Antal: ${quantity} st. Färg: ${colorName}.`;
@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", function () {
     alertImageContainer.appendChild(imgElement);
 
     // Update the amount bubble
-    const amountBubble = document.getElementsByClassName("icon-orderbag--amount")[0];
+    const amountBubble = document.getElementsByClassName("icon-orderbag-amount")[0];
     amountBubble.style.display = "flex";
     amountBubble.querySelector("p").textContent = quantity;
 
@@ -49,7 +49,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   window.hideAlertBoxAndBubble = function () {
     hideAlertBox();
-    const amountBubble = document.getElementsByClassName("icon-orderbag--amount")[0];
+    const amountBubble = document.getElementsByClassName("icon-orderbag-amount")[0];
     if (amountBubble) {
       amountBubble.style.display = "none";
     }

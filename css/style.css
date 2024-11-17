@@ -572,13 +572,13 @@ a:hover {
   margin-left: 4rem;
 }
 
-.card-container--popular {
+.card-container-popular {
   display: flex;
   transition: transform 0.3s ease-in-out;
   width: calc(25% * 4 - 2%);
 }
 
-.card-container--popular .card {
+.card-container-popular .card {
   flex: 0 0 calc(25% - 2%);
 }
 
@@ -644,7 +644,7 @@ a:hover {
   line-height: 0;
 }
 
-.dot--large {
+.dot-large {
   height: 18px;
   width: 20px;
   border-radius: 50%;
@@ -1048,7 +1048,7 @@ a:hover {
     margin: 0;
   }
 
-  .card-container--popular .card {
+  .card-container-popular .card {
     flex: 1;
   }
 

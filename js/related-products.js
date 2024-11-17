@@ -1,6 +1,6 @@
 // Adding four cards without a slider to related products section
 window.onload = function printRelatedProducts() {
-    const relatedCardContainer = document.querySelector(".card-container--related");  // Adjusted for "related" products section
+    const relatedCardContainer = document.querySelector(".card-container-related");  // Adjusted for "related" products section
     const retrievedData = localStorage.getItem("json-products");
     const parsedJSON = JSON.parse(retrievedData);
 

@@ -420,7 +420,7 @@ window.onload = function printData() {
               src="/visuals/icons/product_news_icon.svg"
               alt="Klädnyhet!"
             />
-            <div class="card-body card__body--popular">
+            <div class="card-body card-body-popular">
               <p itemprop="category" class="text-color-dark text-sm">${
                 result.category
               }</p>
