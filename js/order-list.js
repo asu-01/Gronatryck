@@ -1,15 +1,15 @@
-// Kontroll av beställningsobjekt
-// console.log(productListData);
 
-// Loopar igenom tillagda produkter och skriver ut i beställningslista
 
+// Funcion runs on DOMContentLoaded
 document.addEventListener("DOMContentLoaded", runFunctions);
 
+// Loops through added products and prints the order list on the page.
 function loadListData() {
-  // Hämtar tillagda produkter
+  // Retrieve object with added products from Localstorage.
   const JsonData = localStorage.getItem("cart-products");
   const productListData = JSON.parse(JsonData);
 
+  // Loop through added products
   for (product of productListData) {
     const productListContainer = document.querySelector(".order-list");
 
@@ -53,16 +53,13 @@ function loadListData() {
   }
 }
 
-// Spara ner produkter som är tillagda i beställningslista i localstorage (WIP)
+// Save products added to the orderlist to localstorage
 function addToList() {
   let productId = new URLSearchParams(window.location.search).get("id");
   let productColor = localStorage.getItem("selectedColor"); // Retrieve the selected color
 
-  // Hämtar alla produktval som användaren matat in på produktsidan
+  // Retrieve all user choiches from the product page.
   let productAmount = amountInput.value;
-
-  //   productColor = productColor.forEach((color) => color.style.backgroundColor);
-
   let productTitle = document.getElementById("articleName").textContent;
   let productPrice = document
     .querySelector(".product-text-container h5")
@@ -74,7 +71,7 @@ function addToList() {
 
   console.log(productColor);
 
-  // Valda värden samlas ihop till ett objekt
+  // Choosen values are added to a object.
   let product = {
     id: productId,
     img: productImg,
@@ -86,25 +83,24 @@ function addToList() {
 
   console.log(product);
 
-  // Redan existerande JSON data i beställningslista hämtas och konverteras
+  // Already existing JSON data in the orderlist is retrieved and converted.
   let currentCartData = localStorage.getItem("cart-products");
   currentCartData = JSON.parse(currentCartData);
 
   cartProducts = [];
-
-  /* Kontrollerar om beställningslistan innehåller något sen tidigare, 
-    om sant ersätts behålls den gamla, om falskt skapas en ny tom array. */
+    
+  /* if the orderlist contains anything from earlier, then the old one is kept, if not 
+  a new empty array is created.*/
   cartProducts = currentCartData ? currentCartData : [];
 
   console.log(cartProducts);
 
-  // Den tillagda produkten läggs till i en ny tom lista eller i den föregående.
+  // The added product is placed in the empty array or the previous order list.
   cartProducts.push(product);
   localStorage.setItem("cart-products", JSON.stringify(cartProducts));
-  //   loadListData();
 }
 
-// Funktion till för att ta bort specifik produkt från lista
+// Function used to remove specific product from orderlist.
 function removeFromList(id) {
   const JsonData = localStorage.getItem("cart-products");
   const productListData = JSON.parse(JsonData);

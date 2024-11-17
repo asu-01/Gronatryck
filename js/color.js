@@ -1,18 +1,17 @@
-// Hämta produktbild
+// Get product image
 const productImg = document.querySelector(".product-img-large");
 
-// // Hämta bild-knappar
+// Get img buttons
 const imgBtn = document.querySelectorAll(".product-img-small");
-// console.log(imgBtn);
 
-// // Eventlyssnare
+// Add eventlistener on each small product image.
 imgBtn.forEach((img) => {
   img.addEventListener("click", changeImg);
 });
 
 modelImage = productImg.getAttribute("src");
 
-// // Byter den stora produktbilden beroende på vilken liten produktbild som klickas på
+// Change the product image depending on what small product image is clicked.
 function changeImg(e) {
   console.log(e.target);
 

@@ -39,6 +39,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }, 5000);
   };
 
+  // Hides the alertbox
   function hideAlertBox() {
     const alertBox = document.getElementById("alertBox");
     if (alertBox) {
