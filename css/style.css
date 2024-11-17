@@ -634,12 +634,12 @@ a:hover {
 
 .dot {
   display: inline-block;
-  width: 0.7rem;
-  height: 0.7rem;
+  width: 0.9rem;
+  height: 0.9rem;
   border-radius: 20px;
-  margin: 0px 5px 0px 0px;
-  transform: translateY(1px);
   border: none;
+  margin: 0px 5px 0px 0px;
+  transform: translateY(-1px);
   font-size: 0;
   line-height: 0;
 }
