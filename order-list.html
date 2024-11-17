@@ -131,9 +131,9 @@
     <section class="order">
       <div class="breadcrumb text-color-primary">
         <a href="index.html">Hem</a>
-        <img class="arrow--right" src="/visuals/icons/arrow_icon.svg" />
+        <img class="arrow--right" src="/visuals/icons/arrow_icon.svg" alt="En grön pil ikon emellan föregående och aktuell sida" />
         <a href="store.html">Sortiment</a>
-        <img class="arrow--right" src="/visuals/icons/arrow_icon.svg" />
+        <img class="arrow--right" src="/visuals/icons/arrow_icon.svg" alt="En grön pil ikon emellan föregående och aktuell sida" />
         <!-- Skapa en active klass istället för att göra det lättare att justera?-->
         <a>Beställningslista</a>
       </div>
@@ -240,7 +240,7 @@
                 <p class="bold text-color-dark-2">Totalpris</p>
                 <p id="totalPrice" class="bold text-color-dark-2">0 kr</p>
             </div>
-           <button class="order-button button-primary"> <a  class="text-color-offwhite" href="customerform.html">Gå vidare</a></button>
+           <button class="order-button button-primary text-color-offwhite" onclick="location.href = 'customerform.html';">Gå vidare</button>
         </div>
 
       </div>
@@ -282,7 +282,7 @@
     <div class="footer-content">
       <p class="footer-links-heading">
         Kontakt
-        <button class="toggle-links" onclick="toggleLinks('kontakt-links')">
+        <button class="toggle-links" aria-label="Öppna och stäng flik" onclick="toggleLinks('kontakt-links')">
           <svg
             width="15"
             height="10"
@@ -335,7 +335,7 @@
     <div class="footer-content">
       <p class="footer-links-heading">
         Läs mer
-        <button class="toggle-links" onclick="toggleLinks('las-mer-links')">
+        <button class="toggle-links" aria-label="Öppna och stäng flik" onclick="toggleLinks('las-mer-links')">
           <svg
             width="15"
             height="10"
@@ -367,6 +367,7 @@
         Snabba Länkar
         <button
           class="toggle-links"
+          aria-label="Öppna och stäng flik"
           onclick="toggleLinks('snabba-lankar-links')"
         >
           <svg
@@ -435,5 +436,6 @@
     <script src="js/dropdown.js"></script>
     <script src="/js/order-list.js"></script>
     <script src="/js/amount.js"></script>
+    <script src="js/searchbar.js"></script>
   </body>
 </html>

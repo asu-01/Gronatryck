@@ -109,11 +109,11 @@
               </ul>
     
               <div class="nav-icons">
-                  <img src="/visuals/icons/gronatryck_icon_search.svg" alt="Öppna sökfunktion">
-                  <a href="privat-Login.html"><img src="/visuals/icons/gronatryck_icon_user.svg" alt="Gå till mina sidor"></a>
-                  <a href="order-list.html"><img class="icon-orderbag" src="/visuals/icons/gronatryck_icon_bag (1).svg" alt="Gå till din beställningslista"></a>
-                    <!-- Hamburger menu icon for mobile -->
-                  <img class="hamburger-icon" src="visuals/icons/hamburger_menu_icon.svg" alt="Hamburgar meny, tre streck">
+                <img class="search-icon" id="search-icon" src="/visuals/icons/gronatryck_icon_search.svg" aria-label="Öppna sökfunktion" alt="Ikon som föreställer ett förstoringsglas">
+                <a href="#"><img src="/visuals/icons/gronatryck_icon_user.svg" aria-label="Gå till mina sidor" alt="Ikon som föreställer en person"></a>
+                <a href="order-list.html"><img class="icon-orderbag" src="/visuals/icons/gronatryck_icon_bag (1).svg" aria-label="Gå till din beställningslista" alt="Ikon som föreställer en shoppingpåse"></a>
+                  <!-- Hamburger menu icon for mobile -->
+                <img class="hamburger-icon" src="visuals/icons/hamburger_menu_icon.svg" aria-label="Öppna meny" alt="Hamburgar meny, tre streck">
                 </div>
               </div>
             </div>
@@ -174,10 +174,14 @@
         </div>
     
         <div class="footer-content">
-          <p class="footer-links-heading">Kontakt <button class="toggle-links" onclick="toggleLinks('kontakt-links')"><svg width="15" height="10" viewBox="0 0 15 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M1.78846 1.5L7.89423 9L14 1.5" stroke="#faf7eb" stroke-width="2" stroke-linecap="round"
-                stroke-linejoin="round" />
-        </svg></button></p>
+          <p class="footer-links-heading">Kontakt 
+            <button class="toggle-links" aria-label="Öppna och stäng flik" onclick="toggleLinks('kontakt-links')">
+              <svg width="15" height="10" viewBox="0 0 15 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1.78846 1.5L7.89423 9L14 1.5" stroke="#faf7eb" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round" />
+              </svg>
+            </button>
+          </p>
           
           <div class="hidden-links" id="kontakt-links">
             <p class="text-color-offwhite"><img class="footer-icons footer-icons-small" src="visuals/icons/mail_icon_offwhite.svg" alt="Brev ikon">kontakt@gronatryck.se</p>
@@ -194,10 +198,14 @@
         </div>
     
         <div class="footer-content">
-          <p class="footer-links-heading">Läs mer <button class="toggle-links" onclick="toggleLinks('las-mer-links')"><svg width="15" height="10" viewBox="0 0 15 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M1.78846 1.5L7.89423 9L14 1.5" stroke="#faf7eb" stroke-width="2" stroke-linecap="round"
-                stroke-linejoin="round" />
-        </svg></button></p>
+          <p class="footer-links-heading">Läs mer 
+            <button class="toggle-links" aria-label="Öppna och stäng flik" onclick="toggleLinks('las-mer-links')">
+              <svg width="15" height="10" viewBox="0 0 15 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1.78846 1.5L7.89423 9L14 1.5" stroke="#faf7eb" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round" />
+              </svg>
+            </button>
+          </p>
           
           <div class="hidden-links" id="las-mer-links">
             <a class="links" href="#">Certifikat och märkningar</a>
@@ -208,10 +216,15 @@
         </div>
     
         <div class="footer-content">
-          <p class="footer-links-heading">Snabba Länkar <button class="toggle-links" onclick="toggleLinks('snabba-lankar-links')"><svg width="15" height="10" viewBox="0 0 15 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M1.78846 1.5L7.89423 9L14 1.5" stroke="#faf7eb" stroke-width="2" stroke-linecap="round"
-                stroke-linejoin="round" />
-        </svg></button></p>
+          <p class="footer-links-heading">
+            Snabba Länkar 
+            <button class="toggle-links" aria-label="Öppna och stäng flik" onclick="toggleLinks('snabba-lankar-links')">
+              <svg width="15" height="10" viewBox="0 0 15 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1.78846 1.5L7.89423 9L14 1.5" stroke="#faf7eb" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round" />
+              </svg>
+            </button>
+          </p>
           
           <div class="hidden-links" id="snabba-lankar-links">
             <a class="links" href="#">Vi bakom företaget</a>

@@ -26,17 +26,18 @@ function loadListData() {
                 <h6 class="bold">${product.title}</h6>
                 <p>Färg: ${product.color}</p> <!-- Ensure product.color reflects the chosen color -->
                 <div class="button-quantity">
-                    <button class="minus" onclick="decreaseAmount()" aria-label="Decrease">&minus;</button>
+                    <button class="minus" onclick="decreaseAmount()" aria-label="Minska">&minus;</button>
                     <input
-                    type="number"
                     id="quantityInput"
                     class="input-box"
+                    type="number"
+                    aria-label="Markera fältet, skriv in eller använd tangenter för att ändra mängd"
                     value="${product.amount}"
                     min="10"
                     max="100"
                     name="amount"
                     />
-                    <button class="plus" onclick="increaseAmount()" aria-label="Increase">&plus;</button>
+                    <button class="plus" onclick="increaseAmount()" aria-label="Öka">&plus;</button>
                 </div>
             </div>
         </div>
