@@ -81,6 +81,12 @@ const JSONdata = [
         url: "visuals/img/products/gronatryck_black_vest.jpg",
         alt: "En mjuk svart väst, med hög krage och en ficka framtill",
       },
+      {
+        colorName: "",
+        colorCode: "",
+        url: "visuals/img/products/gronatryck_product_placeholder.jpg",
+        alt: "Ingen produktbild att visa",
+      },
     ],
     priceList: [
       {
@@ -129,6 +135,12 @@ const JSONdata = [
         colorCode: "#0a3837",
         url: "visuals/img/products/gronatryck_turquoise_pufferjacket.jpg",
         alt: "En pufferjacka i turkos med huva och dragkedja",
+      },
+      {
+        colorName: "",
+        colorCode: "",
+        url: "visuals/img/products/gronatryck_product_placeholder.jpg",
+        alt: "Ingen produktbild att visa",
       },
     ],
     priceList: [
@@ -228,6 +240,18 @@ const JSONdata = [
         url: "visuals/img/products/gronatryck_white_totebag.jpg",
         alt: "En vit totebag",
       },
+      {
+        colorName: "",
+        colorCode: "",
+        url: "visuals/img/products/gronatryck_product_placeholder.jpg",
+        alt: "Ingen produktbild att visa",
+      },
+      {
+        colorName: "",
+        colorCode: "",
+        url: "visuals/img/products/gronatryck_product_placeholder.jpg",
+        alt: "Ingen produktbild att visa",
+      },
     ],
     priceList: [
       {
@@ -277,6 +301,12 @@ const JSONdata = [
         url: "visuals/img/products/gronatryck_pink_hoodie.jpg",
         alt: "En rosa croppad huvtröja",
       },
+      {
+        colorName: "",
+        colorCode: "",
+        url: "visuals/img/products/gronatryck_product_placeholder.jpg",
+        alt: "Ingen produktbild att visa",
+      },
     ],
     priceList: [
       {
@@ -323,6 +353,12 @@ const JSONdata = [
         colorCode: "#2b579e",
         url: "visuals/img/products/gronatryck_blue_jacket.jpg",
       },
+      {
+        colorName: "",
+        colorCode: "",
+        url: "visuals/img/products/gronatryck_product_placeholder.jpg",
+        alt: "Ingen produktbild att visa",
+      },
     ],
     priceList: [
       {
@@ -362,7 +398,19 @@ const JSONdata = [
       {
         colorName: "Vit",
         colorCode: "#ffffff",
-        url: "visuals/img/grona_tryck_card_1.jpg",
+        url: "visuals/img/products/gronatryck_card_1.jpg",
+      },
+      {
+        colorName: "",
+        colorCode: "",
+        url: "visuals/img/products/gronatryck_product_placeholder.jpg",
+        alt: "Ingen produktbild att visa",
+      },
+      {
+        colorName: "",
+        colorCode: "",
+        url: "visuals/img/products/gronatryck_product_placeholder.jpg",
+        alt: "Ingen produktbild att visa",
       },
     ],
     priceList: [
