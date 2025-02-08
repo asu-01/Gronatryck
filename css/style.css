@@ -99,32 +99,6 @@ p {
   font-weight: 900;
 }
 
-/* Spacing and layout sizes  */
-.spacing--xs {
-  /* 8pt */
-  /* 0.6669rem */
-}
-.spacing--s {
-  /* 16pt */
-  /* 1.3331rem */
-}
-.spacing--m {
-  /* 24pt */
-  /* 2rem */
-}
-.spacing--l {
-  /* 32pt */
-  /* 2.6669rem */
-}
-.spacing--xl {
-  /* 48pt */
-  /* 4rem */
-}
-.spacing--xxl {
-  /* 80pt */
-  /* 6.6662rem */
-}
-
 /* Links  */
 a {
   text-decoration: none;
@@ -226,7 +200,7 @@ a:hover {
 }
 
 .nav-icons img {
-  width: 6vh;
+  width: 3rem;
   padding-left: 1.5rem;
 }
 
@@ -915,7 +889,7 @@ a:hover {
   display: flex;
   justify-content: end;
   gap: 1%;
-  height: 3vh;
+  height: 1.5rem;
 }
 
 /*----------- Footer -------------*/
@@ -940,16 +914,16 @@ a:hover {
 
 .footer-icons {
   display: flex;
-  height: 5vh;
+  height: 2.5rem;
 }
 
 .footer-icons-small {
-  height: 3.1vh;
+  height: 1.4rem;
   margin-right: 0.9rem;
 }
 
 .footer-icons-medium {
-  height: 4vh;
+  height: 1.9rem;
 }
 
 .footer-icons-container {
@@ -1218,7 +1192,7 @@ a:hover {
   }
 
   .nav-icons img {
-    width: 4vw;
+    width: 2.5rem;
   }
 
   /* Vilka är vi  */
@@ -1352,7 +1326,7 @@ a:hover {
   }
 
   .nav-icons img {
-    width: 6vh;
+    width: 3.5rem;
     height: 2rem;
   }
   .nav-links .arrow {
